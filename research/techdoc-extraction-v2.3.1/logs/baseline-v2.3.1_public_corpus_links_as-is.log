@@ -1,0 +1,28 @@
+{
+  "variant": "as-is",
+  "trafilatura": "2.3.1",
+  "git_head": "e2f85c965662c7df26b73290ef175b2c2a5fdca6",
+  "source_tree_dirty": false,
+  "totals": {
+    "pages": 95,
+    "with_base": 7,
+    "default": {
+      "targets": 565,
+      "mismatches": 53,
+      "pages_with_mismatch": 7
+    },
+    "fast": {
+      "targets": 563,
+      "mismatches": 47,
+      "pages_with_mismatch": 6
+    }
+  }
+}
+tests/cache/creativecommons.at.faircoin.html: base=[] default 1/4 fast 1/4 e.g. ['https://fair.coop/summercamps-faircoop-in-jura-switzerland-2017/#']
+tests/cache/ebrosia.de.zinfandel.html: base=[] default 1/8 fast 1/8 e.g. ['https://www.ebrosia.de#detail--product-properties']
+tests/cache/en.wikipedia.org.tsne.html: base=[] default 42/95 fast 42/95 e.g. ['https://en.wikipedia.org#mw-head', 'https://en.wikipedia.org#p-search']
+tests/cache/laviedesidees.fr.evaluation.html: base=[] default 6/7 fast 0/0 e.g. ['https://laviedesidees.fr#annexe', 'https://laviedesidees.fr#nb4-1']
+tests/cache/simplyscience.ch.erdoel.html: base=['http://www.simplyscience.ch/'] default 1/4 fast 1/4 e.g. ['http://www.simplyscience.ch']
+tests/cache/soundofscience.fr.1927.html: base=[] default 1/7 fast 1/7 e.g. ['https://www.soundofscience.fr#lettre']
+tests/cache/vice.com.amazon.html: base=[] default 1/16 fast 1/16 e.g. ['https://www.globalfiredata.org/updates.html#']
+exit=1

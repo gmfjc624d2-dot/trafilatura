@@ -1,0 +1,163 @@
+{
+  "schema": 1,
+  "status": "PRE-REGISTERED: written and committed before any extraction was run on these fixtures. Requirements, gates and rules are not to be edited after results are seen; post-hoc analyses go into the report, labelled as such.",
+  "matrix": {
+    "call": "trafilatura.extract(fixture_bytes, url=<fixture url>, output_format=<format>, include_links=<L>, include_tables=<T>, include_formatting=<F>, **mode_kwargs); all other arguments at their defaults",
+    "modes": {
+      "balanced": {},
+      "fast": {"fast": true},
+      "favor_precision": {"favor_precision": true},
+      "favor_recall": {"favor_recall": true}
+    },
+    "include_links": [false, true],
+    "include_tables": [false, true],
+    "include_formatting": [false, true],
+    "output_formats": ["txt", "markdown", "xml"]
+  },
+  "gates": {
+    "always": "required in every configuration",
+    "links": "required iff include_links=True; otherwise recorded as EXCLUDED_BY_OPTION",
+    "tables": "required iff include_tables=True; otherwise recorded as EXCLUDED_BY_OPTION",
+    "formatting": "required iff include_formatting=True or output_format='markdown' (documented: 'Selecting Markdown automatically includes text formatting'); otherwise EXCLUDED_BY_OPTION",
+    "structure": "required for output_format in {markdown, xml}; recorded as INFO for txt"
+  },
+  "rules": {
+    "R1_views": "txt/markdown: raw = output string; plain = raw with CommonMark backslash escapes removed (backslash followed by ASCII punctuation -> the punctuation). xml: parse the output; plain = ' '.join(root.itertext()); flat = ''.join(root.itertext()).",
+    "R2_statement": "tokens(s) = re.findall(r'\\w+', s). PASS iff tokens(statement) is a contiguous subsequence of tokens(plain).",
+    "R3_code_chars": "txt/markdown: PASS iff the code string is a substring of raw (no unescaping: an escape inserted into code is a loss). xml: PASS iff substring of flat.",
+    "R4_code_marked": "txt/markdown: PASS iff raw contains '`' + code + '`'. xml: PASS iff some element with tag 'code', or tag 'hi' with rend '#t', has ''.join(itertext()) == code.",
+    "R5_code_block": "block is compared with LF newlines and without its final newline. txt/markdown: PASS iff block is a substring of raw. xml: PASS iff block is a substring of flat. Whether the block is marked as code (markdown fence / xml <code>) is recorded as INFO.",
+    "R6_list_nesting": "markdown/txt: PASS iff there is a line L1 matching ^(\\s*)[-*+]\\s whose tokens contain tokens(parent) contiguously, and a later line L2 matching ^(\\s*)[-*+]\\s whose tokens contain tokens(item) contiguously, with indent(L2) > indent(L1). xml: PASS iff some <item> I contains tokens(item) contiguously in ' '.join(I.itertext()) and has an ancestor <item> A (A is not I) containing tokens(parent) contiguously.",
+    "R7_emphasis_marked": "txt/markdown: PASS iff raw contains m + word + m for one of the listed markdown markers m. xml: PASS iff some <hi> with rend in the listed rend values has ''.join(itertext()) == word.",
+    "R8_table_row": "txt/markdown: PASS iff some line, after strip() and removal of one leading and one trailing '|', split on '|' not preceded by a backslash, gives cells that equal the expected list after each cell is stripped, unescaped (R1) and loses one pair of enclosing backticks. xml: PASS iff some <row> has <cell> children whose whitespace-collapsed ' '.join(itertext()).strip() equal the expected list.",
+    "R9_link": "txt/markdown: PASS iff raw contains '[' + anchor + '](' + target + ')' or '[' + anchor + '](<' + target + '>)'. xml: PASS iff some <ref> has target == expected target and ''.join(itertext()).strip() == anchor.",
+    "R10_boilerplate": "INFO: the listed boilerplate strings found in plain (case-sensitive). Not a pass/fail criterion.",
+    "R11_loss": "A loss is a FAIL of a requirement whose gate is on. Every loss is reported with its configuration. Output length is recorded but never used as evidence of correctness.",
+    "R12_no_output": "If extract() returns None, every gated-on requirement is a FAIL."
+  },
+  "fixtures": {
+    "f1_prerequisite_short_intro.html": {
+      "url": "https://docs.example.org/sdk/v2/reference/connect.html",
+      "property": "central prerequisite in a short introductory paragraph",
+      "requirements": [
+        {"id": "prerequisite", "type": "statement", "gate": "always", "text": "Requires TLS 1.3 support in the host runtime."},
+        {"id": "blocking", "type": "statement", "gate": "always", "text": "It blocks until the handshake completes or the timeout expires, whichever happens first."},
+        {"id": "failure", "type": "statement", "gate": "always", "text": "the method raises a connection error that carries the negotiated protocol version"}
+      ],
+      "boilerplate": ["Skip to content", "Pricing", "Cookie settings"]
+    },
+    "f2_inline_code.html": {
+      "url": "https://docs.example.org/sdk/v2/reference/client.html",
+      "property": "inline code expressions and an indented code block",
+      "requirements": [
+        {"id": "inline-connect-chars", "type": "code_chars", "gate": "always", "code": "client.connect(timeout=30)"},
+        {"id": "inline-connect-marked", "type": "code_marked", "gate": "formatting", "code": "client.connect(timeout=30)"},
+        {"id": "inline-operator-chars", "type": "code_chars", "gate": "always", "code": "max_retries * 2 <= limit"},
+        {"id": "inline-operator-marked", "type": "code_marked", "gate": "formatting", "code": "max_retries * 2 <= limit"},
+        {"id": "never-retries", "type": "statement", "gate": "always", "text": "it never retries a request that has already been partially written to the socket"},
+        {"id": "code-block-indentation", "type": "code_block", "gate": "always", "block": "def connect(host, port=443, *, timeout=30):\n    if not host:\n        raise ValueError(\"host is required\")\n    for attempt in range(3):\n        try:\n            return Session(host, port, timeout=timeout)\n        except TimeoutError:\n            continue\n    return None"},
+        {"id": "worst-case", "type": "statement", "gate": "always", "text": "Each attempt uses the same timeout, so the worst-case blocking time is three times the configured value"}
+      ],
+      "boilerplate": ["Cookie settings"]
+    },
+    "f3_nested_list_negation.html": {
+      "url": "https://docs.example.org/sdk/v2/platforms.html",
+      "property": "nested list with a negation",
+      "requirements": [
+        {"id": "negation-arm", "type": "statement", "gate": "always", "text": "Windows on ARM is not supported."},
+        {"id": "negation-ntlm", "type": "statement", "gate": "always", "text": "Proxy authentication does not work with NTLM."},
+        {"id": "linux", "type": "statement", "gate": "always", "text": "Linux x86_64 and aarch64 with glibc 2.31 or later"},
+        {"id": "macos", "type": "statement", "gate": "always", "text": "macOS 13 or later on Apple silicon"},
+        {"id": "nesting-arm", "type": "list_nesting", "gate": "structure", "parent": "Known limitations", "item": "Windows on ARM is not supported"},
+        {"id": "nesting-linux", "type": "list_nesting", "gate": "structure", "parent": "Supported platforms", "item": "Linux x86_64 and aarch64"},
+        {"id": "not-emphasis", "type": "emphasis_marked", "gate": "formatting", "word": "not", "markdown": ["**", "__"], "rend": ["#b"]}
+      ],
+      "boilerplate": ["Changelog", "Cookie settings"]
+    },
+    "f4_typed_mapping_table.html": {
+      "url": "https://docs.example.org/sdk/v2/reference/options.html",
+      "property": "typed mapping table",
+      "requirements": [
+        {"id": "no-default-required", "type": "statement", "gate": "always", "text": "every field that has no default must be provided by the caller"},
+        {"id": "caption", "type": "statement", "gate": "tables", "text": "ClientOptions fields"},
+        {"id": "row-header", "type": "table_row", "gate": "tables", "cells": ["Field", "Type", "Required", "Default"]},
+        {"id": "row-timeout", "type": "table_row", "gate": "tables", "cells": ["timeout", "float", "no", "30.0"]},
+        {"id": "row-retries", "type": "table_row", "gate": "tables", "cells": ["retries", "int", "no", "3"]},
+        {"id": "row-headers", "type": "table_row", "gate": "tables", "cells": ["headers", "dict[str, str]", "no", "{}"]},
+        {"id": "row-endpoint-union", "type": "table_row", "gate": "tables", "cells": ["endpoint", "str | None", "yes", "none"]},
+        {"id": "eager-validation", "type": "statement", "gate": "always", "text": "Passing a string where a float is expected raises a type error immediately"}
+      ],
+      "boilerplate": ["Cookie settings"]
+    },
+    "f5_reference_links.html": {
+      "url": "https://docs.example.org/sdk/v2/reference/client.html?lang=en",
+      "property": "relative and absolute reference URLs",
+      "requirements": [
+        {"id": "read-first", "type": "statement", "gate": "always", "text": "Read the parameter list first, then the session lifecycle page"},
+        {"id": "link-fragment", "type": "link", "gate": "links", "anchor": "the parameter list", "href": "#parameters", "target": "https://docs.example.org/sdk/v2/reference/client.html?lang=en#parameters"},
+        {"id": "link-sibling", "type": "link", "gate": "links", "anchor": "session lifecycle page", "href": "session.html", "target": "https://docs.example.org/sdk/v2/reference/session.html"},
+        {"id": "link-parent", "type": "link", "gate": "links", "anchor": "the installation guide", "href": "../guide/install.html", "target": "https://docs.example.org/sdk/v2/guide/install.html"},
+        {"id": "link-query", "type": "link", "gate": "links", "anchor": "German translation", "href": "?lang=de", "target": "https://docs.example.org/sdk/v2/reference/client.html?lang=de"},
+        {"id": "link-protocol-relative", "type": "link", "gate": "links", "anchor": "client schema", "href": "//cdn.example.net/schemas/client.json", "target": "https://cdn.example.net/schemas/client.json"},
+        {"id": "link-root-relative", "type": "link", "gate": "links", "anchor": "previous major version", "href": "/sdk/v1/reference/client.html", "target": "https://docs.example.org/sdk/v1/reference/client.html"},
+        {"id": "link-absolute", "type": "link", "gate": "links", "anchor": "the HTTP semantics specification", "href": "https://spec.example.com/rfc/9110#section-15", "target": "https://spec.example.com/rfc/9110#section-15"},
+        {"id": "link-mailto", "type": "link", "gate": "links", "anchor": "the SDK team", "href": "mailto:sdk-team@example.org", "target": "mailto:sdk-team@example.org"},
+        {"id": "link-in-list", "type": "link", "gate": "links", "anchor": "the options page", "href": "options.html#endpoint", "target": "https://docs.example.org/sdk/v2/reference/options.html#endpoint"},
+        {"id": "sdk-team", "type": "statement", "gate": "always", "text": "questions go to the SDK team rather than the public tracker"}
+      ],
+      "boilerplate": ["Cookie settings"]
+    },
+    "f6_malformed.html": {
+      "url": "https://docs.example.org/sdk/v3/migration/notes.html",
+      "property": "malformed HTML (unclosed and misnested tags, stray end tags, unquoted attributes, raw & and <)",
+      "requirements": [
+        {"id": "removes-sync", "type": "statement", "gate": "always", "text": "Version 3 removes the legacy sync mode entirely"},
+        {"id": "do-not-upgrade", "type": "statement", "gate": "always", "text": "Do not upgrade while jobs are running; drain the queue first"},
+        {"id": "step-two", "type": "statement", "gate": "always", "text": "Step two: run migrate --check and read every warning"},
+        {"id": "step-three", "type": "statement", "gate": "always", "text": "Step three: restart the workers one at a time"},
+        {"id": "row-header", "type": "table_row", "gate": "tables", "cells": ["Old key", "New key"]},
+        {"id": "row-sync", "type": "table_row", "gate": "tables", "cells": ["sync_mode", "execution.mode"]},
+        {"id": "row-retry", "type": "table_row", "gate": "tables", "cells": ["retry_count", "execution.retries"]},
+        {"id": "link-changes", "type": "link", "gate": "links", "anchor": "change log", "href": "changes.html", "target": "https://docs.example.org/sdk/v3/migration/changes.html"},
+        {"id": "code-block-indentation", "type": "code_block", "gate": "always", "block": "if mode == \"sync\":\n    raise RuntimeError(\"sync mode was removed\")"},
+        {"id": "security-only", "type": "statement", "gate": "always", "text": "they receive security fixes only until the end of the year"}
+      ],
+      "boilerplate": ["Cookie settings"]
+    },
+    "f7_base_element.html": {
+      "url": "https://docs.example.org/sdk/v2/reference/client.html",
+      "property": "<base href> semantics (HTML Standard document base URL)",
+      "requirements": [
+        {"id": "fragment-statement", "type": "statement", "gate": "always", "text": "fragment links resolve against the base URL too"},
+        {"id": "link-base-relative", "type": "link", "gate": "links", "anchor": "the installation guide", "href": "guide/install.html", "target": "https://docs.example.org/sdk/v2/guide/install.html"},
+        {"id": "link-base-fragment", "type": "link", "gate": "links", "anchor": "top of the documentation root", "href": "#top", "target": "https://docs.example.org/sdk/v2/#top"},
+        {"id": "link-base-root-relative", "type": "link", "gate": "links", "anchor": "the status page", "href": "/status", "target": "https://docs.example.org/status"},
+        {"id": "link-base-subdir", "type": "link", "gate": "links", "anchor": "the options reference", "href": "reference/options.html", "target": "https://docs.example.org/sdk/v2/reference/options.html"}
+      ],
+      "boilerplate": ["Cookie settings"]
+    },
+    "f8_combined_reference_page.html": {
+      "url": "https://docs.example.org/sdk/v2/reference/publish.html?tab=python",
+      "property": "all properties on one page with heavier boilerplate",
+      "requirements": [
+        {"id": "prerequisite", "type": "statement", "gate": "always", "text": "Publishing requires an open channel."},
+        {"id": "inline-publish-chars", "type": "code_chars", "gate": "always", "code": "queue.publish(msg, confirm=True)"},
+        {"id": "inline-publish-marked", "type": "code_marked", "gate": "formatting", "code": "queue.publish(msg, confirm=True)"},
+        {"id": "row-header", "type": "table_row", "gate": "tables", "cells": ["Argument", "Type", "Required", "Default"]},
+        {"id": "row-msg-union", "type": "table_row", "gate": "tables", "cells": ["msg", "bytes | str", "yes", "none"]},
+        {"id": "row-confirm", "type": "table_row", "gate": "tables", "cells": ["confirm", "bool", "no", "False"]},
+        {"id": "row-headers", "type": "table_row", "gate": "tables", "cells": ["headers", "Mapping[str, str]", "no", "{}"]},
+        {"id": "duplicates", "type": "statement", "gate": "always", "text": "Duplicates are possible after a reconnect."},
+        {"id": "negation-delivery", "type": "statement", "gate": "always", "text": "Delivery is not guaranteed if the channel closes."},
+        {"id": "nesting-delivery", "type": "list_nesting", "gate": "structure", "parent": "Without confirmation", "item": "Delivery is not guaranteed"},
+        {"id": "not-emphasis", "type": "emphasis_marked", "gate": "formatting", "word": "not", "markdown": ["*", "_"], "rend": ["#i"]},
+        {"id": "code-block-indentation", "type": "code_block", "gate": "always", "block": "async def publish_all(queue, messages):\n    for msg in messages:\n        if not msg:\n            continue\n        await queue.publish(msg, confirm=True)"},
+        {"id": "link-fragment", "type": "link", "gate": "links", "anchor": "the argument table", "href": "#arguments", "target": "https://docs.example.org/sdk/v2/reference/publish.html?tab=python#arguments"},
+        {"id": "link-sibling", "type": "link", "gate": "links", "anchor": "consumer page", "href": "consume.html", "target": "https://docs.example.org/sdk/v2/reference/consume.html"},
+        {"id": "link-parent", "type": "link", "gate": "links", "anchor": "the delivery guide", "href": "../guide/delivery.html", "target": "https://docs.example.org/sdk/v2/guide/delivery.html"},
+        {"id": "link-absolute", "type": "link", "gate": "links", "anchor": "the protocol specification", "href": "https://spec.example.com/amqp/0-9-1", "target": "https://spec.example.com/amqp/0-9-1"}
+      ],
+      "boilerplate": ["We use cookies", "Pricing", "Related articles", "Queues at scale"]
+    }
+  }
+}

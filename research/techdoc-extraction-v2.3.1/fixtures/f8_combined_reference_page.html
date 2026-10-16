@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Queue.publish - Example SDK reference</title>
+</head>
+<body>
+<div class="cookie-banner"><p>We use cookies to improve the documentation. Cookie settings.</p></div>
+<header class="site-header">
+  <nav class="topnav"><a href="/">Example SDK</a> <a href="/sdk/v2/">Docs</a> <a href="/blog/">Blog</a> <a href="/pricing/">Pricing</a></nav>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <ul class="toc">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="queue.html">Queue</a></li>
+      <li><a href="publish.html">Queue.publish</a></li>
+      <li><a href="consume.html">Queue.consume</a></li>
+      <li><a href="errors.html">Errors</a></li>
+    </ul>
+  </aside>
+  <main id="main">
+    <article class="doc-content">
+      <h1>Queue.publish</h1>
+      <p>Publishing requires an open channel.</p>
+      <p>The publish method serialises a message, assigns it a delivery tag and hands it to the broker. Call <code>queue.publish(msg, confirm=True)</code> when the caller must know that the broker accepted the message before continuing.</p>
+      <h2 id="arguments">Arguments</h2>
+      <table>
+        <thead>
+          <tr><th>Argument</th><th>Type</th><th>Required</th><th>Default</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>msg</code></td><td><code>bytes | str</code></td><td>yes</td><td>none</td></tr>
+          <tr><td><code>confirm</code></td><td><code>bool</code></td><td>no</td><td><code>False</code></td></tr>
+          <tr><td><code>headers</code></td><td><code>Mapping[str, str]</code></td><td>no</td><td><code>{}</code></td></tr>
+        </tbody>
+      </table>
+      <h2>Delivery guarantees</h2>
+      <ul>
+        <li>With confirmation:
+          <ul>
+            <li>The message is persisted before the call returns.</li>
+            <li>Duplicates are possible after a reconnect.</li>
+          </ul>
+        </li>
+        <li>Without confirmation:
+          <ul>
+            <li>Delivery is <em>not</em> guaranteed if the channel closes.</li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Example</h2>
+      <pre><code class="language-python">async def publish_all(queue, messages):
+    for msg in messages:
+        if not msg:
+            continue
+        await queue.publish(msg, confirm=True)
+</code></pre>
+      <p>See <a href="#arguments">the argument table</a>, the <a href="consume.html">consumer page</a>, <a href="../guide/delivery.html">the delivery guide</a> and <a href="https://spec.example.com/amqp/0-9-1">the protocol specification</a> for the complete picture.</p>
+    </article>
+  </main>
+  <aside class="related">
+    <h3>Related articles</h3>
+    <ul><li><a href="/blog/queues-at-scale/">Queues at scale</a></li><li><a href="/blog/release-notes/">Release notes</a></li></ul>
+  </aside>
+</div>
+<footer class="site-footer">
+  <p>Example Docs footer. All rights reserved.</p>
+</footer>
+</body>
+</html>

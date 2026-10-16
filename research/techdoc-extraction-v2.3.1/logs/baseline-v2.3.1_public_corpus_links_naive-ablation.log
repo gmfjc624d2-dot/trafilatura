@@ -1,0 +1,22 @@
+{
+  "variant": "naive-ablation",
+  "trafilatura": "2.3.1",
+  "git_head": "e2f85c965662c7df26b73290ef175b2c2a5fdca6",
+  "source_tree_dirty": false,
+  "totals": {
+    "pages": 95,
+    "with_base": 7,
+    "default": {
+      "targets": 565,
+      "mismatches": 3,
+      "pages_with_mismatch": 1
+    },
+    "fast": {
+      "targets": 563,
+      "mismatches": 3,
+      "pages_with_mismatch": 1
+    }
+  }
+}
+tests/cache/simplyscience.ch.erdoel.html: base=['http://www.simplyscience.ch/'] default 3/4 fast 3/4 e.g. ['http://www.simplyscience.ch/teens-liesnach-archiv/articles/teens-liesnach-archiv/articles/warum-wird-das-erdoel-knapp.html', 'http://www.simplyscience.ch/teens-liesnach-archiv/articles/ueber-uns.html']
+exit=1

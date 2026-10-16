@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Platform support - Example SDK</title>
+</head>
+<body>
+<header class="site-header">
+  <nav class="topnav"><a href="/">Example SDK</a> <a href="/sdk/v2/">Docs</a> <a href="/blog/">Blog</a></nav>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <ul class="toc">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="platforms.html">Platform support</a></li>
+      <li><a href="changelog.html">Changelog</a></li>
+    </ul>
+  </aside>
+  <main id="main">
+    <article class="doc-content">
+      <h1>Platform support</h1>
+      <p>The SDK ships prebuilt wheels for the platforms listed below. Building from source is possible elsewhere, but only the listed combinations are tested in continuous integration before each release.</p>
+      <ul>
+        <li>Supported platforms:
+          <ul>
+            <li>Linux x86_64 and aarch64 with glibc 2.31 or later</li>
+            <li>macOS 13 or later on Apple silicon</li>
+          </ul>
+        </li>
+        <li>Known limitations:
+          <ul>
+            <li>Windows on ARM is <strong>not</strong> supported.</li>
+            <li>Proxy authentication does not work with NTLM.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Report platform-specific problems through the issue tracker and include the output of the diagnostics command, which lists the detected architecture, the libc version and the TLS backend.</p>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  <p>Example Docs footer. Cookie settings. All rights reserved.</p>
+</footer>
+</body>
+</html>

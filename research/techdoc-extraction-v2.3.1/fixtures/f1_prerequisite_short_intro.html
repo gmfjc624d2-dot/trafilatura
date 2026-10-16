@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Client.connect - Example SDK reference</title>
+</head>
+<body>
+<header class="site-header">
+  <a class="skip" href="#main">Skip to content</a>
+  <nav class="topnav"><a href="/">Example SDK</a> <a href="/sdk/v2/">Docs</a> <a href="/blog/">Blog</a> <a href="/pricing/">Pricing</a></nav>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <ul class="toc">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="connect.html">Client.connect</a></li>
+      <li><a href="session.html">Session</a></li>
+      <li><a href="errors.html">Errors</a></li>
+    </ul>
+  </aside>
+  <main id="main">
+    <article class="doc-content">
+      <h1>Client.connect</h1>
+      <p>Requires TLS 1.3 support in the host runtime.</p>
+      <p>The connect method opens a persistent session to the configured endpoint and negotiates the protocol version with the server. It blocks until the handshake completes or the timeout expires, whichever happens first.</p>
+      <h2>Behaviour</h2>
+      <p>Once connected, the session keeps a single multiplexed channel open and reuses it for every request issued through the client. Idle channels are closed after five minutes, and the next request transparently opens a new one.</p>
+      <p>If the handshake fails, the method raises a connection error that carries the negotiated protocol version, the server address and the underlying transport error, so that callers can decide whether a retry is useful.</p>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  <p>Example Docs footer. Cookie settings. All rights reserved.</p>
+</footer>
+</body>
+</html>

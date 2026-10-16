@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ClientOptions - Example SDK reference</title>
+</head>
+<body>
+<header class="site-header">
+  <nav class="topnav"><a href="/">Example SDK</a> <a href="/sdk/v2/">Docs</a> <a href="/blog/">Blog</a></nav>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <ul class="toc">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="options.html">ClientOptions</a></li>
+    </ul>
+  </aside>
+  <main id="main">
+    <article class="doc-content">
+      <h1>ClientOptions</h1>
+      <p>ClientOptions maps each configuration field to a type. Unknown fields are rejected when the options object is created, and every field that has no default must be provided by the caller.</p>
+      <table>
+        <caption>ClientOptions fields</caption>
+        <thead>
+          <tr><th>Field</th><th>Type</th><th>Required</th><th>Default</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>timeout</code></td><td><code>float</code></td><td>no</td><td><code>30.0</code></td></tr>
+          <tr><td><code>retries</code></td><td><code>int</code></td><td>no</td><td><code>3</code></td></tr>
+          <tr><td><code>headers</code></td><td><code>dict[str, str]</code></td><td>no</td><td><code>{}</code></td></tr>
+          <tr><td><code>endpoint</code></td><td><code>str | None</code></td><td>yes</td><td>none</td></tr>
+        </tbody>
+      </table>
+      <p>Values are validated eagerly. Passing a string where a float is expected raises a type error immediately instead of failing later during the first request.</p>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  <p>Example Docs footer. Cookie settings. All rights reserved.</p>
+</footer>
+</body>
+</html>

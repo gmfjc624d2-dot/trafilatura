@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Migration notes - Example SDK</title>
+<body>
+<div class=nav><a href=/>Example SDK</a> | <a href=/sdk/v3/>Docs</a> | <a href=/blog/>Blog</a></div>
+<div id=content class="doc-content">
+<h1>Migration notes</h2>
+<p>Version 3 removes the <b>legacy <i>sync</b> mode</i> entirely, and every call site has to move to the asynchronous client before upgrading.
+<p>Do not upgrade while jobs are running; drain the queue first & wait until the scheduler reports zero active workers.
+<ul><li>Step one: stop the scheduler<li>Step two: run <code>migrate --check</code> and read every warning<li>Step three: restart the workers one at a time</ul>
+<table><tr><th>Old key<th>New key<tr><td>sync_mode<td>execution.mode<tr><td>retry_count<td>execution.retries</table>
+</div></div></span>
+<p>After migration, the <a href=changes.html>change log</a> lists every renamed key together with the release that introduced it, so that a value of a < b in old configuration files can be traced.
+<pre>
+if mode == "sync":
+    raise RuntimeError("sync mode was removed")
+</pre>
+<p>Older releases remain available, but they receive security fixes only until the end of the year.
+<div class=footer>Example Docs footer. Cookie settings. All rights reserved.
+</body>
+</body>
+</html>

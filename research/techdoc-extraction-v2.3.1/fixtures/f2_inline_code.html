@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Client - Example SDK reference</title>
+</head>
+<body>
+<header class="site-header">
+  <nav class="topnav"><a href="/">Example SDK</a> <a href="/sdk/v2/">Docs</a> <a href="/blog/">Blog</a></nav>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <ul class="toc">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="client.html">Client</a></li>
+      <li><a href="session.html">Session</a></li>
+    </ul>
+  </aside>
+  <main id="main">
+    <article class="doc-content">
+      <h1>Client</h1>
+      <p>Call <code>client.connect(timeout=30)</code> before sending any request; the call returns <code>None</code> on success and raises on failure.</p>
+      <p>The retry budget is bounded: the client stops retrying as soon as <code>max_retries * 2 &lt;= limit</code> no longer holds, and it never retries a request that has already been partially written to the socket.</p>
+      <h2>Reference implementation</h2>
+      <p>The following function shows the connection logic used by the client. It is reproduced here so that the retry behaviour can be read in one place.</p>
+      <pre><code class="language-python">def connect(host, port=443, *, timeout=30):
+    if not host:
+        raise ValueError("host is required")
+    for attempt in range(3):
+        try:
+            return Session(host, port, timeout=timeout)
+        except TimeoutError:
+            continue
+    return None
+</code></pre>
+      <p>Each attempt uses the same timeout, so the worst-case blocking time is three times the configured value plus the time needed to resolve the host name.</p>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  <p>Example Docs footer. Cookie settings. All rights reserved.</p>
+</footer>
+</body>
+</html>
