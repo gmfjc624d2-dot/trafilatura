@@ -1,0 +1,4 @@
+$ cd /home/user/trafilatura && python tests/eval_gate.py   # patched tree, extras: [dev] only (no [all])
+     fast: F1=0.9204 (floor 0.9204)
+ fallback: F1=0.9261 (floor 0.9261)
+exit=0

@@ -1,0 +1,4 @@
+$ cd baseline-wt && PYTHONPATH=$PWD python tests/eval_gate.py   # e2f85c9, extras: [dev] only
+     fast: F1=0.9204 (floor 0.9204)
+ fallback: F1=0.9261 (floor 0.9261)
+exit=0

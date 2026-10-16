@@ -25,9 +25,8 @@ import sys
 from pathlib import Path
 from urllib.parse import urljoin
 
-from lxml import etree
-
 import trafilatura
+from lxml import etree
 from trafilatura import extract, load_html
 
 ABSOLUTE = re.compile(r"^[a-z][a-z0-9+.-]*:", re.IGNORECASE)

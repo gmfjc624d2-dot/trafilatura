@@ -20,9 +20,8 @@ from urllib.parse import urljoin
 
 import courlan
 import lxml
-from lxml import etree, html
-
 import trafilatura
+from lxml import etree, html
 from trafilatura import extract
 from trafilatura.htmlprocessing import convert_tags
 from trafilatura.settings import Extractor
@@ -199,7 +198,7 @@ def main():
         if v["convert_tags"] != "PASS":
             print(f"{'':41}convert_tags got: {got}")
         for path in ("extract_default", "extract_fast", "extract_favor_recall", "extract_favor_precision"):
-            if v[path] not in ("PASS",) and r["observed"][path] != r["observed"]["convert_tags"]:
+            if v[path] != "PASS" and r["observed"][path] != r["observed"]["convert_tags"]:
                 print(f"{'':41}{path} got: {r['observed'][path]}")
     print(f"\nfailing cases: {len(failures)} of {len(results)}")
     return 1 if failures else 0

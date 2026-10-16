@@ -1,0 +1,162 @@
+# baseline worktree e2f85c9 (e2f85c965662c7df26b73290ef175b2c2a5fdca6), trafilatura from /tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/trafilatura/__init__.py
+# tests/patched_unit_tests.py = patched tests/unit_tests.py with ONE line substituted (scratch copy, never committed):
+#   - from trafilatura.htmlprocessing import convert_tags, document_base_url, tree_cleaning
+#   + from trafilatura.htmlprocessing import convert_tags, tree_cleaning
+#   + document_base_url = getattr(trafilatura.htmlprocessing, "document_base_url", None)  # absent in 2.3.1
+$ python -m pytest -p no:cacheprovider tests/patched_unit_tests.py -k "resolves_links_against_document_url or test_document_base_url or honors_base_href or readability_links_honor_base_href" -rf --tb=line
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.7.0
+rootdir: /tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt
+configfile: pyproject.toml
+plugins: cov-7.1.0
+collected 379 items / 346 deselected / 33 selected
+
+tests/patched_unit_tests.py FFFFFF.......FFFFFFFFFFFFFFFFFFFF            [100%]
+
+=================================== FAILURES ===================================
+E   AssertionError: assert ['https://example.org#method'] == ['https://exa...=full#method']
+      
+      At index 0 diff: 'https://example.org#method' != 'https://example.org/docs/v1/api.html?view=full#method'
+      Use -v to get more diff
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1150: AssertionError: assert ['https://example.org#method'] == ['https://exa...=full#method']
+E   AssertionError: assert ['https://exa...rg/peer.html'] == ['https://exa...v1/peer.html']
+      
+      At index 0 diff: 'https://example.org/peer.html' != 'https://example.org/docs/v1/peer.html'
+      Use -v to get more diff
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1150: AssertionError: assert ['https://exa...rg/peer.html'] == ['https://exa...v1/peer.html']
+E   AssertionError: assert ['https://exa...verview.html'] == ['https://exa...verview.html']
+      
+      At index 0 diff: 'https://example.org/overview.html' != 'https://example.org/docs/overview.html'
+      Use -v to get more diff
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1150: AssertionError: assert ['https://exa...verview.html'] == ['https://exa...verview.html']
+E   AssertionError: assert ['https://exa...g?view=short'] == ['https://exa...l?view=short']
+      
+      At index 0 diff: 'https://example.org?view=short' != 'https://example.org/docs/v1/api.html?view=short'
+      Use -v to get more diff
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1150: AssertionError: assert ['https://exa...g?view=short'] == ['https://exa...l?view=short']
+E   AssertionError: assert ['https://exa...ge.html#frag'] == ['https://exa...ge.html#frag']
+      
+      At index 0 diff: 'https://example.org/sub/page.html#frag' != 'https://example.org/docs/v1/sub/page.html#frag'
+      Use -v to get more diff
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1150: AssertionError: assert ['https://exa...ge.html#frag'] == ['https://exa...ge.html#frag']
+E   AssertionError: assert ['http://other.example/guide'] == ['https://oth...xample/guide']
+      
+      At index 0 diff: 'http://other.example/guide' != 'https://other.example/guide'
+      Use -v to get more diff
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1150: AssertionError: assert ['http://other.example/guide'] == ['https://oth...xample/guide']
+E   AssertionError: assert {'link 0': 'h...w=short', ...} == {'link 0': 'h...w=short', ...}
+      
+      Omitting 5 identical items, use -vv to show
+      Differing items:
+      {'link 4': 'https://example.org/sub/page.html#frag'} != {'link 4': 'https://example.org/docs/v1/sub/page.html#frag'}
+      {'link 3': 'https://example.org?view=short'} != {'link 3': 'https://example.org/docs/v1/api.html?view=short'}
+      {'link 2': 'https://example.org/overview.html'} != {'link 2': 'https://example.org/docs/overview.html'}
+      {'link 5': 'http://other.example/guide'} != {'link 5': 'https://other.example/guide'}...
+      
+      ...Full output truncated (3 lines hidden), use '-vv' to show
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1166: AssertionError: assert {'link 0': 'h...w=short', ...} == {'link 0': 'h...w=short', ...}
+E   AssertionError: assert {'link 0': 'h...w=short', ...} == {'link 0': 'h...w=short', ...}
+      
+      Omitting 5 identical items, use -vv to show
+      Differing items:
+      {'link 4': 'https://example.org/sub/page.html#frag'} != {'link 4': 'https://example.org/docs/v1/sub/page.html#frag'}
+      {'link 3': 'https://example.org?view=short'} != {'link 3': 'https://example.org/docs/v1/api.html?view=short'}
+      {'link 2': 'https://example.org/overview.html'} != {'link 2': 'https://example.org/docs/overview.html'}
+      {'link 5': 'http://other.example/guide'} != {'link 5': 'https://other.example/guide'}...
+      
+      ...Full output truncated (3 lines hidden), use '-vv' to show
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1166: AssertionError: assert {'link 0': 'h...w=short', ...} == {'link 0': 'h...w=short', ...}
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   TypeError: 'NoneType' object is not callable
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1193: TypeError: 'NoneType' object is not callable
+E   AssertionError: assert {'sibling': '...e.org/status'} == {'sibling': '...e.org/status'}
+      
+      Omitting 1 identical items, use -vv to show
+      Differing items:
+      {'fragment': 'https://example.org#top'} != {'fragment': 'https://example.org/docs/v2/#top'}
+      {'sibling': 'https://example.org/peer.html'} != {'sibling': 'https://example.org/docs/v2/peer.html'}
+      Use -v to get more diff
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1214: AssertionError: assert {'sibling': '...e.org/status'} == {'sibling': '...e.org/status'}
+E   AssertionError: assert {'sibling': '...e.org/status'} == {'sibling': '...e.org/status'}
+      
+      Omitting 1 identical items, use -vv to show
+      Differing items:
+      {'fragment': 'https://example.org#top'} != {'fragment': 'https://example.org/docs/v2/#top'}
+      {'sibling': 'https://example.org/peer.html'} != {'sibling': 'https://example.org/docs/v2/peer.html'}
+      Use -v to get more diff
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1214: AssertionError: assert {'sibling': '...e.org/status'} == {'sibling': '...e.org/status'}
+E   AssertionError: assert {'sibling': '...t': '/status'} == {'sibling': '...e.org/status'}
+      
+      Differing items:
+      {'root': '/status'} != {'root': 'https://example.org/status'}
+      {'fragment': '#top'} != {'fragment': 'https://example.org/docs/v2/#top'}
+      {'sibling': 'peer.html'} != {'sibling': 'https://example.org/docs/v2/peer.html'}
+      Use -v to get more diff
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1214: AssertionError: assert {'sibling': '...t': '/status'} == {'sibling': '...e.org/status'}
+E   AssertionError: assert {'sibling': '...t': '/status'} == {'sibling': '...e.org/status'}
+      
+      Differing items:
+      {'root': '/status'} != {'root': 'https://example.org/status'}
+      {'fragment': '#top'} != {'fragment': 'https://example.org/docs/v2/#top'}
+      {'sibling': 'peer.html'} != {'sibling': 'https://example.org/docs/v2/peer.html'}
+      Use -v to get more diff
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1214: AssertionError: assert {'sibling': '...t': '/status'} == {'sibling': '...e.org/status'}
+E   AssertionError: assert {'peer': 'htt...mple.org#top'} == {'peer': 'htt...docs/v2/#top'}
+      
+      Differing items:
+      {'peer': 'https://example.org/peer.html'} != {'peer': 'https://example.org/docs/v2/peer.html'}
+      {'top': 'https://example.org#top'} != {'top': 'https://example.org/docs/v2/#top'}
+      Use -v to get more diff
+/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/tests/patched_unit_tests.py:1233: AssertionError: assert {'peer': 'htt...mple.org#top'} == {'peer': 'htt...docs/v2/#top'}
+=========================== short test summary info ============================
+FAILED tests/patched_unit_tests.py::test_convert_tags_resolves_links_against_document_url[#method-https://example.org/docs/v1/api.html?view=full#method]
+FAILED tests/patched_unit_tests.py::test_convert_tags_resolves_links_against_document_url[peer.html-https://example.org/docs/v1/peer.html]
+FAILED tests/patched_unit_tests.py::test_convert_tags_resolves_links_against_document_url[../overview.html-https://example.org/docs/overview.html]
+FAILED tests/patched_unit_tests.py::test_convert_tags_resolves_links_against_document_url[?view=short-https://example.org/docs/v1/api.html?view=short]
+FAILED tests/patched_unit_tests.py::test_convert_tags_resolves_links_against_document_url[./sub/page.html#frag-https://example.org/docs/v1/sub/page.html#frag]
+FAILED tests/patched_unit_tests.py::test_convert_tags_resolves_links_against_document_url[//other.example/guide-https://other.example/guide]
+FAILED tests/patched_unit_tests.py::test_extract_resolves_links_against_document_url[True]
+FAILED tests/patched_unit_tests.py::test_extract_resolves_links_against_document_url[False]
+FAILED tests/patched_unit_tests.py::test_document_base_url[-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v1/api.html?view=full]
+FAILED tests/patched_unit_tests.py::test_document_base_url[-None-None] - Type...
+FAILED tests/patched_unit_tests.py::test_document_base_url[<base href="https://cdn.example.net/ref/">-https://example.org/docs/v1/api.html?view=full-https://cdn.example.net/ref/]
+FAILED tests/patched_unit_tests.py::test_document_base_url[<base href="/docs/v2/">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v2/]
+FAILED tests/patched_unit_tests.py::test_document_base_url[<base href=" ../v2/ ">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v2/]
+FAILED tests/patched_unit_tests.py::test_document_base_url[<base href="">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v1/api.html?view=full]
+FAILED tests/patched_unit_tests.py::test_document_base_url[<base href="/first/"><base href="/second/">-https://example.org/docs/v1/api.html?view=full-https://example.org/first/]
+FAILED tests/patched_unit_tests.py::test_document_base_url[<base target="_blank"><base href="/docs/v3/">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v3/]
+FAILED tests/patched_unit_tests.py::test_document_base_url[<base href="javascript:void(0)">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v1/api.html?view=full]
+FAILED tests/patched_unit_tests.py::test_document_base_url[<base href="data:text/html,x">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v1/api.html?view=full]
+FAILED tests/patched_unit_tests.py::test_document_base_url[<base href="http://[::1">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v1/api.html?view=full]
+FAILED tests/patched_unit_tests.py::test_document_base_url[<base href="https://cdn.example.net/ref/">-None-https://cdn.example.net/ref/]
+FAILED tests/patched_unit_tests.py::test_document_base_url[<base href="/docs/v2/">-None-None]
+FAILED tests/patched_unit_tests.py::test_extract_honors_base_href[/docs/v2/-https://example.org/docs/v1/api.html?view=full-True]
+FAILED tests/patched_unit_tests.py::test_extract_honors_base_href[/docs/v2/-https://example.org/docs/v1/api.html?view=full-False]
+FAILED tests/patched_unit_tests.py::test_extract_honors_base_href[https://example.org/docs/v2/-None-True]
+FAILED tests/patched_unit_tests.py::test_extract_honors_base_href[https://example.org/docs/v2/-None-False]
+FAILED tests/patched_unit_tests.py::test_compare_extraction_readability_links_honor_base_href
+================= 26 failed, 7 passed, 346 deselected in 0.44s =================
+exit=1
