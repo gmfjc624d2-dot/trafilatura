@@ -27,7 +27,7 @@ from trafilatura import main_extractor as me
 from trafilatura.baseline import html2txt
 from trafilatura.deduplication import LRU_TEST, LRUCache
 from trafilatura.external import _prefer_readability, sanitize_tree, try_justext, try_readability
-from trafilatura.htmlprocessing import convert_tags, tree_cleaning
+from trafilatura.htmlprocessing import convert_tags, document_base_url, tree_cleaning
 from trafilatura.main_extractor import (
     _span,
     extract_content,
@@ -1112,6 +1112,127 @@ def test_sanitize_tree_absolutizes_links():
     tree, _ = sanitize_tree(doc, options)
     targets = [elem.get("target") for elem in tree.iter("ref")]
     assert "https://www.example.org/path/page" in targets
+
+
+_DOC_URL = "https://example.org/docs/v1/api.html?view=full"
+
+_RELATIVE_LINKS = [
+    # path, query and fragment of the document URL count, not only its host
+    ("#method", "https://example.org/docs/v1/api.html?view=full#method"),
+    ("peer.html", "https://example.org/docs/v1/peer.html"),
+    ("../overview.html", "https://example.org/docs/overview.html"),
+    ("?view=short", "https://example.org/docs/v1/api.html?view=short"),
+    ("./sub/page.html#frag", "https://example.org/docs/v1/sub/page.html#frag"),
+    # protocol-relative links take the document scheme, no downgrade to http
+    ("//other.example/guide", "https://other.example/guide"),
+    ("//example.org/same", "https://example.org/same"),
+    ("/reference/index.html", "https://example.org/reference/index.html"),
+    ("https://abs.example/x?y=1#z", "https://abs.example/x?y=1#z"),
+    ("http://insecure.example/y", "http://insecure.example/y"),
+    ("mailto:docs@example.org", "mailto:docs@example.org"),
+]
+
+
+@pytest.mark.parametrize(
+    ("href", "expected"),
+    [
+        *_RELATIVE_LINKS,
+        # kept as they are: template placeholders and malformed targets
+        ("{{ item.url }}", "{{ item.url }}"),
+        ("http://[::1", "http://[::1"),
+    ],
+)
+def test_convert_tags_resolves_links_against_document_url(href, expected):
+    "Regression: relative links are resolved against the full document URL, not its host."
+    tree = html.fromstring(f'<html><body><p><a href="{href}">link</a></p></body></html>')
+    converted = convert_tags(tree, core.Extractor(links=True), _DOC_URL)
+    assert [ref.get("target") for ref in converted.iter("ref")] == [expected]
+    # a protocol-relative link follows a plain HTTP document
+    if href.startswith("//"):
+        tree = html.fromstring(f'<html><body><p><a href="{href}">link</a></p></body></html>')
+        converted = convert_tags(tree, core.Extractor(links=True), "http://example.org/docs/v1/api.html")
+        assert next(converted.iter("ref")).get("target") == "http:" + href
+
+
+@pytest.mark.parametrize("fast", [True, False])
+def test_extract_resolves_links_against_document_url(fast):
+    "Regression: same resolution through extract(), in fast mode and with the fallbacks."
+    filler = "This sentence keeps the paragraph long enough for extraction. " * 3
+    links = "".join(f'<p>{filler}See <a href="{href}">link {i}</a> first.</p>' for i, (href, _) in enumerate(_RELATIVE_LINKS))
+    doc = f"<html><head><title>API</title></head><body><article><h1>API</h1>{links}</article></body></html>"
+    result = extract(doc, url=_DOC_URL, include_links=True, output_format="xml", fast=fast, config=ZERO_CONFIG)
+    targets = {ref.text: ref.get("target") for ref in etree.fromstring(result).iter("ref")}
+    assert targets == {f"link {i}": expected for i, (_, expected) in enumerate(_RELATIVE_LINKS)}
+
+
+@pytest.mark.parametrize(
+    ("head", "url", "expected"),
+    [
+        ("", _DOC_URL, _DOC_URL),
+        ("", None, None),
+        ('<base href="https://cdn.example.net/ref/">', _DOC_URL, "https://cdn.example.net/ref/"),
+        ('<base href="/docs/v2/">', _DOC_URL, "https://example.org/docs/v2/"),
+        ('<base href=" ../v2/ ">', _DOC_URL, "https://example.org/docs/v2/"),
+        ('<base href="">', _DOC_URL, _DOC_URL),
+        # the first <base> with an href attribute wins
+        ('<base href="/first/"><base href="/second/">', _DOC_URL, "https://example.org/first/"),
+        ('<base target="_blank"><base href="/docs/v3/">', _DOC_URL, "https://example.org/docs/v3/"),
+        # unusable values fall back to the document URL
+        ('<base href="javascript:void(0)">', _DOC_URL, _DOC_URL),
+        ('<base href="data:text/html,x">', _DOC_URL, _DOC_URL),
+        ('<base href="http://[::1">', _DOC_URL, _DOC_URL),
+        # without a document URL only an absolute base can be used
+        ('<base href="https://cdn.example.net/ref/">', None, "https://cdn.example.net/ref/"),
+        ('<base href="/docs/v2/">', None, None),
+    ],
+)
+def test_document_base_url(head, url, expected):
+    "The HTML document base URL: first <base href> parsed against the document URL."
+    tree = html.fromstring(f"<html><head>{head}<title>t</title></head><body><p>text</p></body></html>")
+    assert document_base_url(tree, url) == expected
+
+
+@pytest.mark.parametrize("fast", [True, False])
+@pytest.mark.parametrize(
+    ("base", "url"),
+    [
+        ("/docs/v2/", _DOC_URL),
+        # no URL given: an absolute base still applies
+        ("https://example.org/docs/v2/", None),
+    ],
+)
+def test_extract_honors_base_href(fast, base, url):
+    "Regression: <base href> sits in the <head>, which cleaning removes before tag conversion."
+    filler = "This sentence keeps the paragraph long enough for extraction. " * 3
+    body = "".join(
+        f'<p>{filler}See <a href="{href}">{name}</a> first.</p>'
+        for name, href in (("sibling", "peer.html"), ("fragment", "#top"), ("root", "/status"))
+    )
+    doc = f'<html><head><base href="{base}"><title>API</title></head><body><article>{body}</article></body></html>'
+    result = extract(doc, url=url, include_links=True, output_format="xml", fast=fast, config=ZERO_CONFIG)
+    assert {ref.text: ref.get("target") for ref in etree.fromstring(result).iter("ref")} == {
+        "sibling": "https://example.org/docs/v2/peer.html",
+        "fragment": "https://example.org/docs/v2/#top",
+        "root": "https://example.org/status",
+    }
+
+
+def test_compare_extraction_readability_links_honor_base_href(monkeypatch):
+    "Regression: links taken from the readability output resolve like on the main path."
+    readable = html.fromstring(
+        '<body><div><p><a href="peer.html">peer</a> and <a href="#top">top</a> ' + "padding " * 40 + "</p></div></body>"
+    )
+    monkeypatch.setattr(external, "try_readability", lambda tree: readable)
+    monkeypatch.setattr(external, "_prefer_readability", lambda *args: True)
+    raw = html.fromstring('<html><head><base href="/docs/v2/"></head><body><p>own</p></body></html>')
+    options = core.Extractor(url=_DOC_URL, links=True, config=ZERO_CONFIG)
+    body, _ = external.compare_extraction(
+        html.fromstring("<html><body></body></html>"), raw, etree.Element("body"), "", options
+    )
+    assert {ref.text: ref.get("target") for ref in body.iter("ref")} == {
+        "peer": "https://example.org/docs/v2/peer.html",
+        "top": "https://example.org/docs/v2/#top",
+    }
 
 
 def test_images(options):

@@ -124,7 +124,8 @@ To operate on these elements, pass the corresponding parameters to the ``extract
     >>> result = extract(downloaded, include_tables=False, include_links=True)
 
     # convert relative links to absolute links where possible
-    # (pass the same URL used to fetch "downloaded")
+    # (pass the same URL used to fetch "downloaded"; links resolve against
+    # this full URL, or against the page's <base href> if it declares one)
     >>> extract(downloaded, output_format='xml', include_links=True, url="https://www.example.org")
 
 

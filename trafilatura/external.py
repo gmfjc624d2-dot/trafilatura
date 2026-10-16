@@ -13,7 +13,7 @@ from lxml.html import HtmlElement
 
 # own
 from .baseline import basic_cleaning
-from .htmlprocessing import convert_tags, prune_unwanted_nodes, tree_cleaning
+from .htmlprocessing import convert_tags, document_base_url, prune_unwanted_nodes, tree_cleaning
 from .main_extractor import handle_image
 from .readability_lxml import Document as ReadabilityDocument  # fork
 from .settings import JUSTEXT_LANGUAGES, Extractor
@@ -96,6 +96,9 @@ def compare_extraction(
     if options.focus == "recall" and len_text > options.min_extracted_size * 10:
         return body, text
 
+    # readability output has no <head>: take the base URL for its links from the raw tree
+    base_url = document_base_url(raw_tree, options.url)
+
     # prior cleaning
     if options.focus == "precision":
         raw_tree = prune_unwanted_nodes(raw_tree, OVERALL_DISCARD_XPATH)
@@ -133,7 +136,7 @@ def compare_extraction(
 
     # post-processing: remove unwanted sections
     if use_readability:
-        body, text = sanitize_tree(body, options)  # type: ignore[arg-type]
+        body, text = sanitize_tree(body, options, base_url)  # type: ignore[arg-type]
 
     return body, text
 
@@ -174,13 +177,14 @@ def justext_rescue(tree: HtmlElement, options: Extractor) -> tuple[_Element, str
     return temppost_algo, trim(" ".join(temppost_algo.itertext()))
 
 
-def sanitize_tree(tree: HtmlElement, options: Extractor) -> tuple[HtmlElement, str]:
-    """Convert and sanitize the output from the generic algorithm (post-processing)"""
+def sanitize_tree(tree: HtmlElement, options: Extractor, url: str | None = None) -> tuple[HtmlElement, str]:
+    """Convert and sanitize the output from the generic algorithm (post-processing),
+    url being the document base URL (defaults to options.url)"""
     # 1. clean
     cleaned_tree = tree_cleaning(tree, options)
     strip_tags(cleaned_tree, "span", *(() if options.links else ("a",)))
     # 2. convert (pass url so relative links are absolutized on the fallback path)
-    cleaned_tree = convert_tags(cleaned_tree, options, options.url)
+    cleaned_tree = convert_tags(cleaned_tree, options, url or options.url)
     for elem in list(cleaned_tree.iter("graphic")):
         image = handle_image(elem, options)
         if image is None:

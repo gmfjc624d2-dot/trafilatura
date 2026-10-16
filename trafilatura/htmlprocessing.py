@@ -4,7 +4,9 @@ Functions to process nodes in HTML code.
 """
 
 import logging
+from contextlib import suppress
 from copy import deepcopy
+from urllib.parse import urljoin, urlsplit
 
 from lxml.etree import Element, SubElement, XPath, _Element, strip_tags, tostring
 from lxml.html import HtmlElement
@@ -17,7 +19,7 @@ from .settings import (
     Document,
     Extractor,
 )
-from .utils import LINK_FARM_RATIO, image_src, safe_base_url, safe_relative_url, textfilter, trim
+from .utils import LINK_FARM_RATIO, image_src, textfilter, trim
 from .xml import delete_element, meta_items, separates_inline
 
 LOGGER = logging.getLogger(__name__)
@@ -389,15 +391,34 @@ CONVERSIONS = {
 }
 
 
+def document_base_url(tree: HtmlElement, url: str | None) -> str | None:
+    """Return the URL relative links resolve against, the HTML "document base URL":
+    the first <base href> parsed against the document URL, else the document URL.
+    Needs the raw tree, tree_cleaning() removes the <head> holding the <base> element."""
+    base = tree.find(".//base[@href]")
+    if base is None:
+        return url
+    try:
+        base_url = urljoin(url or "", base.get("href", "").strip())
+        scheme = urlsplit(base_url).scheme
+    except ValueError:
+        return url
+    # a base still relative after parsing is unusable, data: and javascript: never apply
+    return url if scheme in ("", "data", "javascript") else base_url
+
+
 def convert_link(elem: HtmlElement, base_url: str | None) -> None:
     "Replace link tags and href attributes, delete the rest."
     elem.tag = "ref"
     target = elem.get("href")  # defaults to None
     elem.attrib.clear()
     if target:
-        # convert relative URLs
-        if base_url:
-            target = safe_relative_url(base_url, target) or target
+        # resolve relative URLs against the full base URL (path and query matter for
+        # "peer.html", "#frag" or "?q", "//host" takes its scheme), template placeholders
+        # such as {{url}} and malformed URLs are kept as they are
+        if base_url and not target.startswith("{"):
+            with suppress(ValueError):
+                target = urljoin(base_url, target)
         elem.set("target", target)
 
 
@@ -413,10 +434,9 @@ def convert_tags(tree: HtmlElement, options: Extractor, url: str | None = None) 
         # strip the rest
         strip_tags(tree, "a")
     else:
-        # get base URL for converting relative URLs
-        base_url = url and safe_base_url(url)
+        # url is the document base URL relative links are resolved against
         for elem in tree.iter("a", "ref"):
-            convert_link(elem, base_url)
+            convert_link(elem, url)
 
     # Yoast FAQ blocks: question headers are bold but act as titles (#471)
     for elem in tree.iter("strong"):

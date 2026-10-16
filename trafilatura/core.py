@@ -21,6 +21,7 @@ from .external import compare_extraction, justext_rescue
 from .htmlprocessing import (
     build_html_output,
     convert_tags,
+    document_base_url,
     prune_unwanted_nodes,
     tree_cleaning,
 )
@@ -186,6 +187,8 @@ def trafilatura_sequence(
     ``bare_extraction``/``extract`` instead.
     """
     is_forum = _forum_thread_page(tree)
+    # links resolve against the document base URL, read before cleaning drops the <head>
+    url = document_base_url(tree, url)
     # raw-tree prune so the external extractors inherit it too: readability would otherwise
     # pick the longest appended article over the real one
     tree = prune_unwanted_nodes(tree, RAW_TREE_PRUNE_XPATH)
