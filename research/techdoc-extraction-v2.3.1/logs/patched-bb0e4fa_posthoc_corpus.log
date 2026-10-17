@@ -1,0 +1,11 @@
+$ python research/techdoc-extraction-v2.3.1/scripts/posthoc_analysis.py corpus . research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/posthoc_corpus_classification.json   # POST-HOC
+{
+  "posthoc": true,
+  "trafilatura_file": "/home/user/trafilatura/trafilatura/__init__.py",
+  "source": "/home/user/trafilatura",
+  "counts": {
+    "default": {},
+    "fast": {}
+  }
+}
+exit=0

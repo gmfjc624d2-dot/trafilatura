@@ -1,0 +1,617 @@
+{
+  "posthoc": true,
+  "trafilatura_file": "/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/trafilatura/__init__.py",
+  "source": "/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt",
+  "counts": {
+    "default": {
+      "equivalent-form": 3,
+      "different-resource": 50
+    },
+    "fast": {
+      "equivalent-form": 3,
+      "different-resource": 44
+    }
+  },
+  "mismatches": [
+    {
+      "file": "creativecommons.at.faircoin.html",
+      "mode": "default",
+      "target": "https://fair.coop/summercamps-faircoop-in-jura-switzerland-2017/#",
+      "class": "equivalent-form"
+    },
+    {
+      "file": "creativecommons.at.faircoin.html",
+      "mode": "fast",
+      "target": "https://fair.coop/summercamps-faircoop-in-jura-switzerland-2017/#",
+      "class": "equivalent-form"
+    },
+    {
+      "file": "ebrosia.de.zinfandel.html",
+      "mode": "default",
+      "target": "https://www.ebrosia.de#detail--product-properties",
+      "class": "different-resource"
+    },
+    {
+      "file": "ebrosia.de.zinfandel.html",
+      "mode": "fast",
+      "target": "https://www.ebrosia.de#detail--product-properties",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#mw-head",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#p-search",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-MaatenHinton-1",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-2",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-3",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-4",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-5",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-6",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-7",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-8",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-9",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-10",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-11",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-MaatenHinton-1",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_note-12",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-MaatenHinton_1-0",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-MaatenHinton_1-1",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-2",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-3",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-4",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2807447",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://doi.org/10.1118%2F1.3267037",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2807447",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://www.ncbi.nlm.nih.gov/pubmed/20175497",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-5",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://doi.org/10.1093%2Fbioinformatics%2Fbtp035",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://www.ncbi.nlm.nih.gov/pubmed/19153135",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-6",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://doi.org/10.1109%2FBHI.2016.7455968",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-7",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-8",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-9",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://arxiv.org/abs/1512.01655",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://doi.org/10.1109%2Ftvcg.2016.2570755",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://www.worldcat.org/issn/1077-2626",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://www.ncbi.nlm.nih.gov/pubmed/28113434",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-10",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-11",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://arxiv.org/abs/1706.02582",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://arxiv.org/archive/cs.LG",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "https://en.wikipedia.org#cite_ref-12",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "default",
+      "target": "http://doi.org/10.1007%2F978-3-319-68474-1_13",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#mw-head",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#p-search",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-MaatenHinton-1",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-2",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-3",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-4",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-5",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-6",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-7",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-8",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-9",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-10",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-11",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-MaatenHinton-1",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_note-12",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-MaatenHinton_1-0",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-MaatenHinton_1-1",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-2",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-3",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-4",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2807447",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://doi.org/10.1118%2F1.3267037",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2807447",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://www.ncbi.nlm.nih.gov/pubmed/20175497",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-5",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://doi.org/10.1093%2Fbioinformatics%2Fbtp035",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://www.ncbi.nlm.nih.gov/pubmed/19153135",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-6",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://doi.org/10.1109%2FBHI.2016.7455968",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-7",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-8",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-9",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://arxiv.org/abs/1512.01655",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://doi.org/10.1109%2Ftvcg.2016.2570755",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://www.worldcat.org/issn/1077-2626",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://www.ncbi.nlm.nih.gov/pubmed/28113434",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-10",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-11",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://arxiv.org/abs/1706.02582",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://arxiv.org/archive/cs.LG",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "https://en.wikipedia.org#cite_ref-12",
+      "class": "different-resource"
+    },
+    {
+      "file": "en.wikipedia.org.tsne.html",
+      "mode": "fast",
+      "target": "http://doi.org/10.1007%2F978-3-319-68474-1_13",
+      "class": "different-resource"
+    },
+    {
+      "file": "laviedesidees.fr.evaluation.html",
+      "mode": "default",
+      "target": "https://laviedesidees.fr#annexe",
+      "class": "different-resource"
+    },
+    {
+      "file": "laviedesidees.fr.evaluation.html",
+      "mode": "default",
+      "target": "https://laviedesidees.fr#nb4-1",
+      "class": "different-resource"
+    },
+    {
+      "file": "laviedesidees.fr.evaluation.html",
+      "mode": "default",
+      "target": "https://laviedesidees.fr#nb4-2",
+      "class": "different-resource"
+    },
+    {
+      "file": "laviedesidees.fr.evaluation.html",
+      "mode": "default",
+      "target": "https://laviedesidees.fr#nb4-3",
+      "class": "different-resource"
+    },
+    {
+      "file": "laviedesidees.fr.evaluation.html",
+      "mode": "default",
+      "target": "https://laviedesidees.fr#nb4-4",
+      "class": "different-resource"
+    },
+    {
+      "file": "laviedesidees.fr.evaluation.html",
+      "mode": "default",
+      "target": "https://laviedesidees.fr#nb4-5",
+      "class": "different-resource"
+    },
+    {
+      "file": "simplyscience.ch.erdoel.html",
+      "mode": "default",
+      "target": "http://www.simplyscience.ch",
+      "class": "equivalent-form"
+    },
+    {
+      "file": "simplyscience.ch.erdoel.html",
+      "mode": "fast",
+      "target": "http://www.simplyscience.ch",
+      "class": "equivalent-form"
+    },
+    {
+      "file": "soundofscience.fr.1927.html",
+      "mode": "default",
+      "target": "https://www.soundofscience.fr#lettre",
+      "class": "different-resource"
+    },
+    {
+      "file": "soundofscience.fr.1927.html",
+      "mode": "fast",
+      "target": "https://www.soundofscience.fr#lettre",
+      "class": "different-resource"
+    },
+    {
+      "file": "vice.com.amazon.html",
+      "mode": "default",
+      "target": "https://www.globalfiredata.org/updates.html#",
+      "class": "equivalent-form"
+    },
+    {
+      "file": "vice.com.amazon.html",
+      "mode": "fast",
+      "target": "https://www.globalfiredata.org/updates.html#",
+      "class": "equivalent-form"
+    }
+  ]
+}

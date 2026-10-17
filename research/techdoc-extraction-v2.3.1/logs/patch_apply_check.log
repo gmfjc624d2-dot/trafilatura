@@ -1,0 +1,19 @@
+# the source diff between v2.3.1 and bb0e4fa touches only:
+ docs/usage-python.rst         |   3 +-
+ tests/unit_tests.py           | 123 +++++++++++++++++++++++++++++++++++++++++-
+ trafilatura/core.py           |   3 ++
+ trafilatura/external.py       |  14 +++--
+ trafilatura/htmlprocessing.py |  34 +++++++++---
+ 5 files changed, 163 insertions(+), 14 deletions(-)
+$ cd <pristine v2.3.1 worktree e2f85c9> && git apply --check <patch/source-fix_v2.3.1..bb0e4fa.diff>
+dirty paths before: 0
+exit=0
+$ git am --check equivalent: git apply --check <patch/0001-*.patch>
+exit=0
+$ apply, then compare the resulting source tree with bb0e4fa
+identical to bb0e4fa: trafilatura/htmlprocessing.py
+identical to bb0e4fa: trafilatura/core.py
+identical to bb0e4fa: trafilatura/external.py
+identical to bb0e4fa: tests/unit_tests.py
+identical to bb0e4fa: docs/usage-python.rst
+dirty paths after reset: 0

@@ -138,18 +138,22 @@ def main():
             totals[mode]["pages_with_mismatch"] += bool(mismatches)
         pages.append(page)
 
+    # the imported source may live in another checkout than the corpus (e.g. a baseline worktree)
+    source = Path(trafilatura.__file__).resolve().parent.parent
     report = {
         "variant": variant,
         "trafilatura": trafilatura.__version__,
-        "git_head": git(repo, "rev-parse", "HEAD"),
-        "source_tree_dirty": bool(git(repo, "status", "--porcelain", "--", "trafilatura")),
+        "trafilatura_file": trafilatura.__file__,
+        "git_head": git(source, "rev-parse", "HEAD"),
+        "source_tree_dirty": bool(git(source, "status", "--porcelain", "--", "trafilatura")),
+        "corpus_repo_head": git(repo, "rev-parse", "HEAD"),
         "totals": totals,
         "pages": pages,
     }
     (out_dir / f"public_corpus_links_{variant}.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
-    print(json.dumps({k: report[k] for k in ("variant", "trafilatura", "git_head", "source_tree_dirty", "totals")}, indent=2))
+    print(json.dumps({k: v for k, v in report.items() if k != "pages"}, indent=2))
     for page in pages:
         if page["default"]["mismatches"] or page["fast"]["mismatches"]:
             print(

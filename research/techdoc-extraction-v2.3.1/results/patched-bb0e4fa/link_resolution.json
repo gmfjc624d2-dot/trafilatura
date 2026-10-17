@@ -1,0 +1,810 @@
+{
+  "environment": {
+    "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "trafilatura": "2.3.1",
+    "trafilatura_file": "/home/user/trafilatura/trafilatura/__init__.py",
+    "git_head": "bb0e4fac70ff12b635213960c71e912bfe68e630",
+    "source_tree_dirty": false,
+    "lxml": "6.1.3",
+    "libxml2": "2.14.6",
+    "courlan": "1.4.0"
+  },
+  "document_url": "https://example.org/docs/v1/api.html?view=full",
+  "results": [
+    {
+      "case": "fragment",
+      "kind": "defect",
+      "href": "#method",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "https://example.org/docs/v1/api.html?view=full#method",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/api.html?view=full#method"
+        ],
+        "extract_default": [
+          "https://example.org/docs/v1/api.html?view=full#method"
+        ],
+        "extract_fast": [
+          "https://example.org/docs/v1/api.html?view=full#method"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/docs/v1/api.html?view=full#method"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/docs/v1/api.html?view=full#method"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "sibling",
+      "kind": "defect",
+      "href": "peer.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "https://example.org/docs/v1/peer.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_default": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_fast": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/docs/v1/peer.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "parent",
+      "kind": "defect",
+      "href": "../overview.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "https://example.org/docs/overview.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/overview.html"
+        ],
+        "extract_default": [
+          "https://example.org/docs/overview.html"
+        ],
+        "extract_fast": [
+          "https://example.org/docs/overview.html"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/docs/overview.html"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/docs/overview.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "query-only",
+      "kind": "defect",
+      "href": "?view=short",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "https://example.org/docs/v1/api.html?view=short",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/api.html?view=short"
+        ],
+        "extract_default": [
+          "https://example.org/docs/v1/api.html?view=short"
+        ],
+        "extract_fast": [
+          "https://example.org/docs/v1/api.html?view=short"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/docs/v1/api.html?view=short"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/docs/v1/api.html?view=short"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "protocol-relative-foreign",
+      "kind": "defect",
+      "href": "//other.example/guide",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "https://other.example/guide",
+      "observed": {
+        "convert_tags": [
+          "https://other.example/guide"
+        ],
+        "extract_default": [
+          "https://other.example/guide"
+        ],
+        "extract_fast": [
+          "https://other.example/guide"
+        ],
+        "extract_favor_recall": [
+          "https://other.example/guide"
+        ],
+        "extract_favor_precision": [
+          "https://other.example/guide"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "dot-sibling-dir",
+      "kind": "defect",
+      "href": "./sub/page.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "https://example.org/docs/v1/sub/page.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/sub/page.html"
+        ],
+        "extract_default": [
+          "https://example.org/docs/v1/sub/page.html"
+        ],
+        "extract_fast": [
+          "https://example.org/docs/v1/sub/page.html"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/docs/v1/sub/page.html"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/docs/v1/sub/page.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "sibling-with-fragment",
+      "kind": "defect",
+      "href": "peer.html#frag",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "https://example.org/docs/v1/peer.html#frag",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/peer.html#frag"
+        ],
+        "extract_default": [
+          "https://example.org/docs/v1/peer.html#frag"
+        ],
+        "extract_fast": [
+          "https://example.org/docs/v1/peer.html#frag"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/docs/v1/peer.html#frag"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/docs/v1/peer.html#frag"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "root-relative",
+      "kind": "control",
+      "href": "/reference/index.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "https://example.org/reference/index.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/reference/index.html"
+        ],
+        "extract_default": [
+          "https://example.org/reference/index.html"
+        ],
+        "extract_fast": [
+          "https://example.org/reference/index.html"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/reference/index.html"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/reference/index.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "protocol-relative-same-host",
+      "kind": "control",
+      "href": "//example.org/same",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "https://example.org/same",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/same"
+        ],
+        "extract_default": [
+          "https://example.org/same"
+        ],
+        "extract_fast": [
+          "https://example.org/same"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/same"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/same"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "absolute-https",
+      "kind": "control",
+      "href": "https://abs.example/x?y=1#z",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "https://abs.example/x?y=1#z",
+      "observed": {
+        "convert_tags": [
+          "https://abs.example/x?y=1#z"
+        ],
+        "extract_default": [
+          "https://abs.example/x?y=1#z"
+        ],
+        "extract_fast": [
+          "https://abs.example/x?y=1#z"
+        ],
+        "extract_favor_recall": [
+          "https://abs.example/x?y=1#z"
+        ],
+        "extract_favor_precision": [
+          "https://abs.example/x?y=1#z"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "absolute-http",
+      "kind": "control",
+      "href": "http://insecure.example/y",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "http://insecure.example/y",
+      "observed": {
+        "convert_tags": [
+          "http://insecure.example/y"
+        ],
+        "extract_default": [
+          "http://insecure.example/y"
+        ],
+        "extract_fast": [
+          "http://insecure.example/y"
+        ],
+        "extract_favor_recall": [
+          "http://insecure.example/y"
+        ],
+        "extract_favor_precision": [
+          "http://insecure.example/y"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "mailto",
+      "kind": "control",
+      "href": "mailto:docs@example.org",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [],
+      "expected": "mailto:docs@example.org",
+      "observed": {
+        "convert_tags": [
+          "mailto:docs@example.org"
+        ],
+        "extract_default": [
+          "mailto:docs@example.org"
+        ],
+        "extract_fast": [
+          "mailto:docs@example.org"
+        ],
+        "extract_favor_recall": [
+          "mailto:docs@example.org"
+        ],
+        "extract_favor_precision": [
+          "mailto:docs@example.org"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "protocol-relative-http-doc",
+      "kind": "control",
+      "href": "//other.example/guide",
+      "document_url": "http://example.org/docs/v1/api.html",
+      "base_elements": [],
+      "expected": "http://other.example/guide",
+      "observed": {
+        "convert_tags": [
+          "http://other.example/guide"
+        ],
+        "extract_default": [
+          "http://other.example/guide"
+        ],
+        "extract_fast": [
+          "http://other.example/guide"
+        ],
+        "extract_favor_recall": [
+          "http://other.example/guide"
+        ],
+        "extract_favor_precision": [
+          "http://other.example/guide"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "base-absolute-other-host",
+      "kind": "base",
+      "href": "peer.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [
+        "<base href=\"https://cdn.example.net/ref/\">"
+      ],
+      "expected": "https://cdn.example.net/ref/peer.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_default": [
+          "https://cdn.example.net/ref/peer.html"
+        ],
+        "extract_fast": [
+          "https://cdn.example.net/ref/peer.html"
+        ],
+        "extract_favor_recall": [
+          "https://cdn.example.net/ref/peer.html"
+        ],
+        "extract_favor_precision": [
+          "https://cdn.example.net/ref/peer.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "FAIL",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "base-host-root",
+      "kind": "base",
+      "href": "DE/page.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [
+        "<base href=\"https://example.org/\">"
+      ],
+      "expected": "https://example.org/DE/page.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/DE/page.html"
+        ],
+        "extract_default": [
+          "https://example.org/DE/page.html"
+        ],
+        "extract_fast": [
+          "https://example.org/DE/page.html"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/DE/page.html"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/DE/page.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "FAIL",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "base-relative-path",
+      "kind": "base",
+      "href": "peer.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [
+        "<base href=\"/docs/v2/\">"
+      ],
+      "expected": "https://example.org/docs/v2/peer.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_default": [
+          "https://example.org/docs/v2/peer.html"
+        ],
+        "extract_fast": [
+          "https://example.org/docs/v2/peer.html"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/docs/v2/peer.html"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/docs/v2/peer.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "FAIL",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "base-first-wins",
+      "kind": "base",
+      "href": "peer.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [
+        "<base href=\"/first/\">",
+        "<base href=\"/second/\">"
+      ],
+      "expected": "https://example.org/first/peer.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_default": [
+          "https://example.org/first/peer.html"
+        ],
+        "extract_fast": [
+          "https://example.org/first/peer.html"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/first/peer.html"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/first/peer.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "FAIL",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "base-target-only-skipped",
+      "kind": "base",
+      "href": "peer.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [
+        "<base target=\"_blank\">",
+        "<base href=\"/docs/v3/\">"
+      ],
+      "expected": "https://example.org/docs/v3/peer.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_default": [
+          "https://example.org/docs/v3/peer.html"
+        ],
+        "extract_fast": [
+          "https://example.org/docs/v3/peer.html"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/docs/v3/peer.html"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/docs/v3/peer.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "FAIL",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "base-javascript-ignored",
+      "kind": "base",
+      "href": "peer.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [
+        "<base href=\"javascript:void(0)\">"
+      ],
+      "expected": "https://example.org/docs/v1/peer.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_default": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_fast": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/docs/v1/peer.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "base-empty-href",
+      "kind": "base",
+      "href": "peer.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [
+        "<base href=\"\">"
+      ],
+      "expected": "https://example.org/docs/v1/peer.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_default": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_fast": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_favor_recall": [
+          "https://example.org/docs/v1/peer.html"
+        ],
+        "extract_favor_precision": [
+          "https://example.org/docs/v1/peer.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "base-fragment-link",
+      "kind": "base",
+      "href": "#method",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [
+        "<base href=\"https://cdn.example.net/ref/\">"
+      ],
+      "expected": "https://cdn.example.net/ref/#method",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/docs/v1/api.html?view=full#method"
+        ],
+        "extract_default": [
+          "https://cdn.example.net/ref/#method"
+        ],
+        "extract_fast": [
+          "https://cdn.example.net/ref/#method"
+        ],
+        "extract_favor_recall": [
+          "https://cdn.example.net/ref/#method"
+        ],
+        "extract_favor_precision": [
+          "https://cdn.example.net/ref/#method"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "FAIL",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "base-root-relative-link",
+      "kind": "base",
+      "href": "/top.html",
+      "document_url": "https://example.org/docs/v1/api.html?view=full",
+      "base_elements": [
+        "<base href=\"https://cdn.example.net/ref/\">"
+      ],
+      "expected": "https://cdn.example.net/top.html",
+      "observed": {
+        "convert_tags": [
+          "https://example.org/top.html"
+        ],
+        "extract_default": [
+          "https://cdn.example.net/top.html"
+        ],
+        "extract_fast": [
+          "https://cdn.example.net/top.html"
+        ],
+        "extract_favor_recall": [
+          "https://cdn.example.net/top.html"
+        ],
+        "extract_favor_precision": [
+          "https://cdn.example.net/top.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "FAIL",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "base-no-doc-url-absolute",
+      "kind": "base",
+      "href": "peer.html",
+      "document_url": null,
+      "base_elements": [
+        "<base href=\"https://cdn.example.net/ref/\">"
+      ],
+      "expected": "https://cdn.example.net/ref/peer.html",
+      "observed": {
+        "convert_tags": [
+          "peer.html"
+        ],
+        "extract_default": [
+          "https://cdn.example.net/ref/peer.html"
+        ],
+        "extract_fast": [
+          "https://cdn.example.net/ref/peer.html"
+        ],
+        "extract_favor_recall": [
+          "https://cdn.example.net/ref/peer.html"
+        ],
+        "extract_favor_precision": [
+          "https://cdn.example.net/ref/peer.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "FAIL",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    },
+    {
+      "case": "base-no-doc-url-relative",
+      "kind": "base",
+      "href": "peer.html",
+      "document_url": null,
+      "base_elements": [
+        "<base href=\"/docs/v2/\">"
+      ],
+      "expected": "peer.html",
+      "observed": {
+        "convert_tags": [
+          "peer.html"
+        ],
+        "extract_default": [
+          "peer.html"
+        ],
+        "extract_fast": [
+          "peer.html"
+        ],
+        "extract_favor_recall": [
+          "peer.html"
+        ],
+        "extract_favor_precision": [
+          "peer.html"
+        ]
+      },
+      "verdicts": {
+        "convert_tags": "PASS",
+        "extract_default": "PASS",
+        "extract_fast": "PASS",
+        "extract_favor_recall": "PASS",
+        "extract_favor_precision": "PASS"
+      }
+    }
+  ],
+  "failing_cases": 8
+}

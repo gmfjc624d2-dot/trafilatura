@@ -1,0 +1,10 @@
+{
+  "posthoc": true,
+  "trafilatura_file": "/home/user/trafilatura/trafilatura/__init__.py",
+  "source": "/home/user/trafilatura",
+  "counts": {
+    "default": {},
+    "fast": {}
+  },
+  "mismatches": []
+}

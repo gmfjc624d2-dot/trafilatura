@@ -1,0 +1,14 @@
+$ cd /tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt && sphinx-build --keep-going -q -b html docs <tmp>   # baseline-v2.3.1
+matplotlib is not installed, social cards will not be generated
+exit=0
+warnings: 3
+$ cd /home/user/trafilatura && sphinx-build --keep-going -q -b html docs <tmp>   # patched-bb0e4fa
+matplotlib is not installed, social cards will not be generated
+exit=0
+warnings: 3
+$ diff <baseline warnings> <patched warnings>
+identical warning lists
+--- patched warning lines:
+WARNING: failed to reach any of the inventories with the following issues:
+WARNING: failed to reach any of the inventories with the following issues:
+WARNING: failed to reach any of the inventories with the following issues:

@@ -1,0 +1,21 @@
+$ python research/techdoc-extraction-v2.3.1/scripts/coverage_check.py research/techdoc-extraction-v2.3.1/fixtures   # POST-HOC check of the REPORT.md section 6 detector, patched bb0e4fa
+f1_prerequisite_short_intro.html: 1 block(s) not in extract()
+     Example Docs footer. Cookie settings. All rights reserved.
+f2_inline_code.html: 1 block(s) not in extract()
+     Example Docs footer. Cookie settings. All rights reserved.
+f3_nested_list_negation.html: 1 block(s) not in extract()
+     Example Docs footer. Cookie settings. All rights reserved.
+f4_typed_mapping_table.html: 1 block(s) not in extract()
+     Example Docs footer. Cookie settings. All rights reserved.
+f5_reference_links.html: 1 block(s) not in extract()
+     Example Docs footer. Cookie settings. All rights reserved.
+f6_malformed.html: 3 block(s) not in extract()
+     After migration, the change log lists every renamed key together with the release that introduced it, so that a value of a < b in old config
+     if mode == "sync": raise RuntimeError("sync mode was removed")
+     Older releases remain available, but they receive security fixes only until the end of the year.
+f7_base_element.html: 1 block(s) not in extract()
+     Example Docs footer. Cookie settings. All rights reserved.
+f8_combined_reference_page.html: 2 block(s) not in extract()
+     We use cookies to improve the documentation. Cookie settings.
+     Example Docs footer. All rights reserved.
+exit=0

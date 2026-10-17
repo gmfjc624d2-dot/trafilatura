@@ -1,0 +1,7 @@
+$ python research/techdoc-extraction-v2.3.1/scripts/probe_base_survival.py   # patched bb0e4fa
+base in head  raw parent: ['head'] | after tree_cleaning: []
+base in body  raw parent: ['body'] | after tree_cleaning: ['sub/']
+base in div   raw parent: ['div'] | after tree_cleaning: ['sub/']
+base applied once:  https://example.org/docs/sub/
+base applied twice: https://example.org/docs/sub/sub/
+exit=0

@@ -1,0 +1,6316 @@
+{
+  "environment": {
+    "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "trafilatura": "2.3.1",
+    "git_head": "e2f85c965662c7df26b73290ef175b2c2a5fdca6",
+    "source_tree_dirty": false,
+    "lxml": "6.1.3",
+    "libxml2": "2.14.6",
+    "courlan": "1.4.0"
+  },
+  "expectations_sha256": "5d4177c5151924b364dafe0b5b4168b5705e06abb8d74c439840ce5806d96398",
+  "configurations": 768,
+  "losses_total": 960,
+  "losses_by_requirement": {
+    "f2_inline_code.html::inline-connect-marked": {
+      "PASS": 48,
+      "FAIL": 16,
+      "EXCLUDED_BY_OPTION": 32,
+      "INFO": 0
+    },
+    "f2_inline_code.html::inline-operator-marked": {
+      "PASS": 48,
+      "FAIL": 16,
+      "EXCLUDED_BY_OPTION": 32,
+      "INFO": 0
+    },
+    "f3_nested_list_negation.html::not-emphasis": {
+      "PASS": 48,
+      "FAIL": 16,
+      "EXCLUDED_BY_OPTION": 32,
+      "INFO": 0
+    },
+    "f5_reference_links.html::read-first": {
+      "PASS": 64,
+      "FAIL": 32,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-fragment": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-sibling": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-parent": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-query": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-protocol-relative": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-in-list": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::sdk-team": {
+      "PASS": 64,
+      "FAIL": 32,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f6_malformed.html::link-changes": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f6_malformed.html::code-block-indentation": {
+      "PASS": 0,
+      "FAIL": 96,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f6_malformed.html::security-only": {
+      "PASS": 0,
+      "FAIL": 96,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f7_base_element.html::link-base-relative": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f7_base_element.html::link-base-fragment": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f7_base_element.html::link-base-subdir": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::inline-publish-marked": {
+      "PASS": 48,
+      "FAIL": 16,
+      "EXCLUDED_BY_OPTION": 32,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::not-emphasis": {
+      "PASS": 48,
+      "FAIL": 16,
+      "EXCLUDED_BY_OPTION": 32,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::link-fragment": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::link-sibling": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::link-parent": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    }
+  },
+  "requirements": {
+    "f1_prerequisite_short_intro.html::prerequisite": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f1_prerequisite_short_intro.html::blocking": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f1_prerequisite_short_intro.html::failure": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f2_inline_code.html::inline-connect-chars": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f2_inline_code.html::inline-connect-marked": {
+      "PASS": 48,
+      "FAIL": 16,
+      "EXCLUDED_BY_OPTION": 32,
+      "INFO": 0
+    },
+    "f2_inline_code.html::inline-operator-chars": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f2_inline_code.html::inline-operator-marked": {
+      "PASS": 48,
+      "FAIL": 16,
+      "EXCLUDED_BY_OPTION": 32,
+      "INFO": 0
+    },
+    "f2_inline_code.html::never-retries": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f2_inline_code.html::code-block-indentation": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f2_inline_code.html::worst-case": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f3_nested_list_negation.html::negation-arm": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f3_nested_list_negation.html::negation-ntlm": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f3_nested_list_negation.html::linux": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f3_nested_list_negation.html::macos": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f3_nested_list_negation.html::nesting-arm": {
+      "PASS": 64,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 32
+    },
+    "f3_nested_list_negation.html::nesting-linux": {
+      "PASS": 64,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 32
+    },
+    "f3_nested_list_negation.html::not-emphasis": {
+      "PASS": 48,
+      "FAIL": 16,
+      "EXCLUDED_BY_OPTION": 32,
+      "INFO": 0
+    },
+    "f4_typed_mapping_table.html::no-default-required": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f4_typed_mapping_table.html::caption": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f4_typed_mapping_table.html::row-header": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f4_typed_mapping_table.html::row-timeout": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f4_typed_mapping_table.html::row-retries": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f4_typed_mapping_table.html::row-headers": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f4_typed_mapping_table.html::row-endpoint-union": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f4_typed_mapping_table.html::eager-validation": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f5_reference_links.html::read-first": {
+      "PASS": 64,
+      "FAIL": 32,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-fragment": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-sibling": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-parent": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-query": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-protocol-relative": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-root-relative": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-absolute": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-mailto": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::link-in-list": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f5_reference_links.html::sdk-team": {
+      "PASS": 64,
+      "FAIL": 32,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f6_malformed.html::removes-sync": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f6_malformed.html::do-not-upgrade": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f6_malformed.html::step-two": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f6_malformed.html::step-three": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f6_malformed.html::row-header": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f6_malformed.html::row-sync": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f6_malformed.html::row-retry": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f6_malformed.html::link-changes": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f6_malformed.html::code-block-indentation": {
+      "PASS": 0,
+      "FAIL": 96,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f6_malformed.html::security-only": {
+      "PASS": 0,
+      "FAIL": 96,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f7_base_element.html::fragment-statement": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f7_base_element.html::link-base-relative": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f7_base_element.html::link-base-fragment": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f7_base_element.html::link-base-root-relative": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f7_base_element.html::link-base-subdir": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::prerequisite": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::inline-publish-chars": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::inline-publish-marked": {
+      "PASS": 48,
+      "FAIL": 16,
+      "EXCLUDED_BY_OPTION": 32,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::row-header": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::row-msg-union": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::row-confirm": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::row-headers": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::duplicates": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::negation-delivery": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::nesting-delivery": {
+      "PASS": 64,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 32
+    },
+    "f8_combined_reference_page.html::not-emphasis": {
+      "PASS": 48,
+      "FAIL": 16,
+      "EXCLUDED_BY_OPTION": 32,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::code-block-indentation": {
+      "PASS": 96,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 0,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::link-fragment": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::link-sibling": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::link-parent": {
+      "PASS": 0,
+      "FAIL": 48,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    },
+    "f8_combined_reference_page.html::link-absolute": {
+      "PASS": 48,
+      "FAIL": 0,
+      "EXCLUDED_BY_OPTION": 48,
+      "INFO": 0
+    }
+  },
+  "losses": [
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "balanced L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "balanced L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "balanced L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "balanced L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "fast L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "fast L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "fast L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "fast L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "favor_precision L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "favor_precision L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "favor_precision L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "favor_precision L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "favor_recall L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "favor_recall L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "favor_recall L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "favor_recall L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-connect-marked",
+      "type": "code_marked",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f2_inline_code.html",
+      "requirement": "inline-operator-marked",
+      "type": "code_marked",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "balanced L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "balanced L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "fast L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "fast L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_precision L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_precision L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_recall L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_recall L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f3_nested_list_negation.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "read-first",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "sdk-team",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-query",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-protocol-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f5_reference_links.html",
+      "requirement": "link-in-list",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L0 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L0 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L0 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L0 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L0 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L0 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L0 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L0 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "link-changes",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "code-block-indentation",
+      "type": "code_block",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f6_malformed.html",
+      "requirement": "security-only",
+      "type": "statement",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-relative",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f7_base_element.html",
+      "requirement": "link-base-subdir",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "balanced L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "balanced L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "balanced L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "balanced L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "balanced L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "fast L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "fast L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "fast L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "fast L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "fast L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "favor_precision L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_precision L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "favor_precision L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_precision L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_precision L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "favor_recall L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_recall L0 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "favor_recall L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_recall L0 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T0 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "inline-publish-marked",
+      "type": "code_marked",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "not-emphasis",
+      "type": "emphasis_marked",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F0 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 txt"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 markdown"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-fragment",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-sibling",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    },
+    {
+      "fixture": "f8_combined_reference_page.html",
+      "requirement": "link-parent",
+      "type": "link",
+      "config": "favor_recall L1 T1 F1 xml"
+    }
+  ]
+}

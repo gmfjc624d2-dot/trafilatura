@@ -1,0 +1,25 @@
+$ PYTHONPATH=baseline-wt python research/techdoc-extraction-v2.3.1/scripts/posthoc_analysis.py matrix research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun research/techdoc-extraction-v2.3.1/fixtures   # POST-HOC
+f2_inline_code.html::inline-connect-marked                  16  explicit-include_formatting=False-on-markdown   e.g. balanced L0 T0 F0 markdown
+f2_inline_code.html::inline-operator-marked                 16  explicit-include_formatting=False-on-markdown   e.g. balanced L0 T0 F0 markdown
+f3_nested_list_negation.html::not-emphasis                  16  explicit-include_formatting=False-on-markdown   e.g. balanced L0 T0 F0 markdown
+f5_reference_links.html::read-first                         32  link-markup-interleaving   e.g. balanced L1 T0 F0 txt
+f5_reference_links.html::link-fragment                      48  wrong-link-target (got https://docs.example.org#parameters)   e.g. balanced L1 T0 F0 txt
+f5_reference_links.html::link-sibling                       48  wrong-link-target (got https://docs.example.org/session.html)   e.g. balanced L1 T0 F0 txt
+f5_reference_links.html::link-parent                        48  wrong-link-target (got https://docs.example.org/guide/install.html)   e.g. balanced L1 T0 F0 txt
+f5_reference_links.html::link-query                         48  wrong-link-target (got https://docs.example.org?lang=de)   e.g. balanced L1 T0 F0 txt
+f5_reference_links.html::link-protocol-relative             48  wrong-link-target (got http://cdn.example.net/schemas/client.json)   e.g. balanced L1 T0 F0 txt
+f5_reference_links.html::link-in-list                       48  wrong-link-target (got https://docs.example.org/options.html#endpoint)   e.g. balanced L1 T0 F0 txt
+f5_reference_links.html::sdk-team                           32  link-markup-interleaving   e.g. balanced L1 T0 F0 txt
+f6_malformed.html::code-block-indentation                   96  dropped-by-content-selection (html2txt has it: True, baseline has it: True)   e.g. balanced L0 T0 F0 txt
+f6_malformed.html::security-only                            96  dropped-by-content-selection (html2txt has it: True, baseline has it: True)   e.g. balanced L0 T0 F0 txt
+f6_malformed.html::link-changes                             48  dropped-by-content-selection (html2txt has it: True, baseline has it: True)   e.g. balanced L1 T0 F0 txt
+f7_base_element.html::link-base-relative                    48  wrong-link-target (got https://docs.example.org/guide/install.html)   e.g. balanced L1 T0 F0 txt
+f7_base_element.html::link-base-fragment                    48  wrong-link-target (got https://docs.example.org#top)   e.g. balanced L1 T0 F0 txt
+f7_base_element.html::link-base-subdir                      48  wrong-link-target (got https://docs.example.org/reference/options.html)   e.g. balanced L1 T0 F0 txt
+f8_combined_reference_page.html::inline-publish-marked      16  explicit-include_formatting=False-on-markdown   e.g. balanced L0 T0 F0 markdown
+f8_combined_reference_page.html::not-emphasis               16  explicit-include_formatting=False-on-markdown   e.g. balanced L0 T0 F0 markdown
+f8_combined_reference_page.html::link-fragment              48  wrong-link-target (got https://docs.example.org#arguments)   e.g. balanced L1 T0 F0 txt
+f8_combined_reference_page.html::link-sibling               48  wrong-link-target (got https://docs.example.org/consume.html)   e.g. balanced L1 T0 F0 txt
+f8_combined_reference_page.html::link-parent                48  wrong-link-target (got https://docs.example.org/guide/delivery.html)   e.g. balanced L1 T0 F0 txt
+classified FAIL verdicts: 960
+exit=0

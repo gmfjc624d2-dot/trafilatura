@@ -1,0 +1,96 @@
+{
+  "posthoc": true,
+  "results_dir": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun",
+  "classes": {
+    "f2_inline_code.html::inline-connect-marked": {
+      "explicit-include_formatting=False-on-markdown": 16
+    },
+    "f2_inline_code.html::inline-operator-marked": {
+      "explicit-include_formatting=False-on-markdown": 16
+    },
+    "f3_nested_list_negation.html::not-emphasis": {
+      "explicit-include_formatting=False-on-markdown": 16
+    },
+    "f5_reference_links.html::read-first": {
+      "link-markup-interleaving": 32
+    },
+    "f5_reference_links.html::link-fragment": {
+      "wrong-link-target (got https://docs.example.org#parameters)": 48
+    },
+    "f5_reference_links.html::link-sibling": {
+      "wrong-link-target (got https://docs.example.org/session.html)": 48
+    },
+    "f5_reference_links.html::link-parent": {
+      "wrong-link-target (got https://docs.example.org/guide/install.html)": 48
+    },
+    "f5_reference_links.html::link-query": {
+      "wrong-link-target (got https://docs.example.org?lang=de)": 48
+    },
+    "f5_reference_links.html::link-protocol-relative": {
+      "wrong-link-target (got http://cdn.example.net/schemas/client.json)": 48
+    },
+    "f5_reference_links.html::link-in-list": {
+      "wrong-link-target (got https://docs.example.org/options.html#endpoint)": 48
+    },
+    "f5_reference_links.html::sdk-team": {
+      "link-markup-interleaving": 32
+    },
+    "f6_malformed.html::code-block-indentation": {
+      "dropped-by-content-selection (html2txt has it: True, baseline has it: True)": 96
+    },
+    "f6_malformed.html::security-only": {
+      "dropped-by-content-selection (html2txt has it: True, baseline has it: True)": 96
+    },
+    "f6_malformed.html::link-changes": {
+      "dropped-by-content-selection (html2txt has it: True, baseline has it: True)": 48
+    },
+    "f7_base_element.html::link-base-relative": {
+      "wrong-link-target (got https://docs.example.org/guide/install.html)": 48
+    },
+    "f7_base_element.html::link-base-fragment": {
+      "wrong-link-target (got https://docs.example.org#top)": 48
+    },
+    "f7_base_element.html::link-base-subdir": {
+      "wrong-link-target (got https://docs.example.org/reference/options.html)": 48
+    },
+    "f8_combined_reference_page.html::inline-publish-marked": {
+      "explicit-include_formatting=False-on-markdown": 16
+    },
+    "f8_combined_reference_page.html::not-emphasis": {
+      "explicit-include_formatting=False-on-markdown": 16
+    },
+    "f8_combined_reference_page.html::link-fragment": {
+      "wrong-link-target (got https://docs.example.org#arguments)": 48
+    },
+    "f8_combined_reference_page.html::link-sibling": {
+      "wrong-link-target (got https://docs.example.org/consume.html)": 48
+    },
+    "f8_combined_reference_page.html::link-parent": {
+      "wrong-link-target (got https://docs.example.org/guide/delivery.html)": 48
+    }
+  },
+  "first_failing_config": {
+    "f2_inline_code.html::inline-connect-marked": "balanced L0 T0 F0 markdown",
+    "f2_inline_code.html::inline-operator-marked": "balanced L0 T0 F0 markdown",
+    "f3_nested_list_negation.html::not-emphasis": "balanced L0 T0 F0 markdown",
+    "f5_reference_links.html::read-first": "balanced L1 T0 F0 txt",
+    "f5_reference_links.html::link-fragment": "balanced L1 T0 F0 txt",
+    "f5_reference_links.html::link-sibling": "balanced L1 T0 F0 txt",
+    "f5_reference_links.html::link-parent": "balanced L1 T0 F0 txt",
+    "f5_reference_links.html::link-query": "balanced L1 T0 F0 txt",
+    "f5_reference_links.html::link-protocol-relative": "balanced L1 T0 F0 txt",
+    "f5_reference_links.html::link-in-list": "balanced L1 T0 F0 txt",
+    "f5_reference_links.html::sdk-team": "balanced L1 T0 F0 txt",
+    "f6_malformed.html::code-block-indentation": "balanced L0 T0 F0 txt",
+    "f6_malformed.html::security-only": "balanced L0 T0 F0 txt",
+    "f6_malformed.html::link-changes": "balanced L1 T0 F0 txt",
+    "f7_base_element.html::link-base-relative": "balanced L1 T0 F0 txt",
+    "f7_base_element.html::link-base-fragment": "balanced L1 T0 F0 txt",
+    "f7_base_element.html::link-base-subdir": "balanced L1 T0 F0 txt",
+    "f8_combined_reference_page.html::inline-publish-marked": "balanced L0 T0 F0 markdown",
+    "f8_combined_reference_page.html::not-emphasis": "balanced L0 T0 F0 markdown",
+    "f8_combined_reference_page.html::link-fragment": "balanced L1 T0 F0 txt",
+    "f8_combined_reference_page.html::link-sibling": "balanced L1 T0 F0 txt",
+    "f8_combined_reference_page.html::link-parent": "balanced L1 T0 F0 txt"
+  }
+}

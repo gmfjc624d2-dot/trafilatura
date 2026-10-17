@@ -1,0 +1,11 @@
+$ python research/techdoc-extraction-v2.3.1/scripts/check_expectations.py research/techdoc-extraction-v2.3.1/fixtures
+f1_prerequisite_short_intro.html: base=https://docs.example.org/sdk/v2/reference/connect.html requirements=3
+f2_inline_code.html: base=https://docs.example.org/sdk/v2/reference/client.html requirements=7
+f3_nested_list_negation.html: base=https://docs.example.org/sdk/v2/platforms.html requirements=7
+f4_typed_mapping_table.html: base=https://docs.example.org/sdk/v2/reference/options.html requirements=8
+f5_reference_links.html: base=https://docs.example.org/sdk/v2/reference/client.html?lang=en requirements=11
+f6_malformed.html: base=https://docs.example.org/sdk/v3/migration/notes.html requirements=10
+f7_base_element.html: base=https://docs.example.org/sdk/v2/ requirements=5
+f8_combined_reference_page.html: base=https://docs.example.org/sdk/v2/reference/publish.html?tab=python requirements=16
+problems: 0
+exit=0

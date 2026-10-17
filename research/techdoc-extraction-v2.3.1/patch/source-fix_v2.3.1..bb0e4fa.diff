@@ -1,0 +1,300 @@
+diff --git a/docs/usage-python.rst b/docs/usage-python.rst
+index 3afc0bd..5605575 100644
+--- a/docs/usage-python.rst
++++ b/docs/usage-python.rst
+@@ -124,7 +124,8 @@ To operate on these elements, pass the corresponding parameters to the ``extract
+     >>> result = extract(downloaded, include_tables=False, include_links=True)
+ 
+     # convert relative links to absolute links where possible
+-    # (pass the same URL used to fetch "downloaded")
++    # (pass the same URL used to fetch "downloaded"; links resolve against
++    # this full URL, or against the page's <base href> if it declares one)
+     >>> extract(downloaded, output_format='xml', include_links=True, url="https://www.example.org")
+ 
+ 
+diff --git a/tests/unit_tests.py b/tests/unit_tests.py
+index 977d4f5..f7e7440 100644
+--- a/tests/unit_tests.py
++++ b/tests/unit_tests.py
+@@ -27,7 +27,7 @@ from trafilatura import main_extractor as me
+ from trafilatura.baseline import html2txt
+ from trafilatura.deduplication import LRU_TEST, LRUCache
+ from trafilatura.external import _prefer_readability, sanitize_tree, try_justext, try_readability
+-from trafilatura.htmlprocessing import convert_tags, tree_cleaning
++from trafilatura.htmlprocessing import convert_tags, document_base_url, tree_cleaning
+ from trafilatura.main_extractor import (
+     _span,
+     extract_content,
+@@ -1114,6 +1114,127 @@ def test_sanitize_tree_absolutizes_links():
+     assert "https://www.example.org/path/page" in targets
+ 
+ 
++_DOC_URL = "https://example.org/docs/v1/api.html?view=full"
++
++_RELATIVE_LINKS = [
++    # path, query and fragment of the document URL count, not only its host
++    ("#method", "https://example.org/docs/v1/api.html?view=full#method"),
++    ("peer.html", "https://example.org/docs/v1/peer.html"),
++    ("../overview.html", "https://example.org/docs/overview.html"),
++    ("?view=short", "https://example.org/docs/v1/api.html?view=short"),
++    ("./sub/page.html#frag", "https://example.org/docs/v1/sub/page.html#frag"),
++    # protocol-relative links take the document scheme, no downgrade to http
++    ("//other.example/guide", "https://other.example/guide"),
++    ("//example.org/same", "https://example.org/same"),
++    ("/reference/index.html", "https://example.org/reference/index.html"),
++    ("https://abs.example/x?y=1#z", "https://abs.example/x?y=1#z"),
++    ("http://insecure.example/y", "http://insecure.example/y"),
++    ("mailto:docs@example.org", "mailto:docs@example.org"),
++]
++
++
++@pytest.mark.parametrize(
++    ("href", "expected"),
++    [
++        *_RELATIVE_LINKS,
++        # kept as they are: template placeholders and malformed targets
++        ("{{ item.url }}", "{{ item.url }}"),
++        ("http://[::1", "http://[::1"),
++    ],
++)
++def test_convert_tags_resolves_links_against_document_url(href, expected):
++    "Regression: relative links are resolved against the full document URL, not its host."
++    tree = html.fromstring(f'<html><body><p><a href="{href}">link</a></p></body></html>')
++    converted = convert_tags(tree, core.Extractor(links=True), _DOC_URL)
++    assert [ref.get("target") for ref in converted.iter("ref")] == [expected]
++    # a protocol-relative link follows a plain HTTP document
++    if href.startswith("//"):
++        tree = html.fromstring(f'<html><body><p><a href="{href}">link</a></p></body></html>')
++        converted = convert_tags(tree, core.Extractor(links=True), "http://example.org/docs/v1/api.html")
++        assert next(converted.iter("ref")).get("target") == "http:" + href
++
++
++@pytest.mark.parametrize("fast", [True, False])
++def test_extract_resolves_links_against_document_url(fast):
++    "Regression: same resolution through extract(), in fast mode and with the fallbacks."
++    filler = "This sentence keeps the paragraph long enough for extraction. " * 3
++    links = "".join(f'<p>{filler}See <a href="{href}">link {i}</a> first.</p>' for i, (href, _) in enumerate(_RELATIVE_LINKS))
++    doc = f"<html><head><title>API</title></head><body><article><h1>API</h1>{links}</article></body></html>"
++    result = extract(doc, url=_DOC_URL, include_links=True, output_format="xml", fast=fast, config=ZERO_CONFIG)
++    targets = {ref.text: ref.get("target") for ref in etree.fromstring(result).iter("ref")}
++    assert targets == {f"link {i}": expected for i, (_, expected) in enumerate(_RELATIVE_LINKS)}
++
++
++@pytest.mark.parametrize(
++    ("head", "url", "expected"),
++    [
++        ("", _DOC_URL, _DOC_URL),
++        ("", None, None),
++        ('<base href="https://cdn.example.net/ref/">', _DOC_URL, "https://cdn.example.net/ref/"),
++        ('<base href="/docs/v2/">', _DOC_URL, "https://example.org/docs/v2/"),
++        ('<base href=" ../v2/ ">', _DOC_URL, "https://example.org/docs/v2/"),
++        ('<base href="">', _DOC_URL, _DOC_URL),
++        # the first <base> with an href attribute wins
++        ('<base href="/first/"><base href="/second/">', _DOC_URL, "https://example.org/first/"),
++        ('<base target="_blank"><base href="/docs/v3/">', _DOC_URL, "https://example.org/docs/v3/"),
++        # unusable values fall back to the document URL
++        ('<base href="javascript:void(0)">', _DOC_URL, _DOC_URL),
++        ('<base href="data:text/html,x">', _DOC_URL, _DOC_URL),
++        ('<base href="http://[::1">', _DOC_URL, _DOC_URL),
++        # without a document URL only an absolute base can be used
++        ('<base href="https://cdn.example.net/ref/">', None, "https://cdn.example.net/ref/"),
++        ('<base href="/docs/v2/">', None, None),
++    ],
++)
++def test_document_base_url(head, url, expected):
++    "The HTML document base URL: first <base href> parsed against the document URL."
++    tree = html.fromstring(f"<html><head>{head}<title>t</title></head><body><p>text</p></body></html>")
++    assert document_base_url(tree, url) == expected
++
++
++@pytest.mark.parametrize("fast", [True, False])
++@pytest.mark.parametrize(
++    ("base", "url"),
++    [
++        ("/docs/v2/", _DOC_URL),
++        # no URL given: an absolute base still applies
++        ("https://example.org/docs/v2/", None),
++    ],
++)
++def test_extract_honors_base_href(fast, base, url):
++    "Regression: <base href> sits in the <head>, which cleaning removes before tag conversion."
++    filler = "This sentence keeps the paragraph long enough for extraction. " * 3
++    body = "".join(
++        f'<p>{filler}See <a href="{href}">{name}</a> first.</p>'
++        for name, href in (("sibling", "peer.html"), ("fragment", "#top"), ("root", "/status"))
++    )
++    doc = f'<html><head><base href="{base}"><title>API</title></head><body><article>{body}</article></body></html>'
++    result = extract(doc, url=url, include_links=True, output_format="xml", fast=fast, config=ZERO_CONFIG)
++    assert {ref.text: ref.get("target") for ref in etree.fromstring(result).iter("ref")} == {
++        "sibling": "https://example.org/docs/v2/peer.html",
++        "fragment": "https://example.org/docs/v2/#top",
++        "root": "https://example.org/status",
++    }
++
++
++def test_compare_extraction_readability_links_honor_base_href(monkeypatch):
++    "Regression: links taken from the readability output resolve like on the main path."
++    readable = html.fromstring(
++        '<body><div><p><a href="peer.html">peer</a> and <a href="#top">top</a> ' + "padding " * 40 + "</p></div></body>"
++    )
++    monkeypatch.setattr(external, "try_readability", lambda tree: readable)
++    monkeypatch.setattr(external, "_prefer_readability", lambda *args: True)
++    raw = html.fromstring('<html><head><base href="/docs/v2/"></head><body><p>own</p></body></html>')
++    options = core.Extractor(url=_DOC_URL, links=True, config=ZERO_CONFIG)
++    body, _ = external.compare_extraction(
++        html.fromstring("<html><body></body></html>"), raw, etree.Element("body"), "", options
++    )
++    assert {ref.text: ref.get("target") for ref in body.iter("ref")} == {
++        "peer": "https://example.org/docs/v2/peer.html",
++        "top": "https://example.org/docs/v2/#top",
++    }
++
++
+ def test_images(options):
+     """Test image extraction function"""
+     # file type
+diff --git a/trafilatura/core.py b/trafilatura/core.py
+index 50804bc..03e5af0 100644
+--- a/trafilatura/core.py
++++ b/trafilatura/core.py
+@@ -21,6 +21,7 @@ from .external import compare_extraction, justext_rescue
+ from .htmlprocessing import (
+     build_html_output,
+     convert_tags,
++    document_base_url,
+     prune_unwanted_nodes,
+     tree_cleaning,
+ )
+@@ -186,6 +187,8 @@ def trafilatura_sequence(
+     ``bare_extraction``/``extract`` instead.
+     """
+     is_forum = _forum_thread_page(tree)
++    # links resolve against the document base URL, read before cleaning drops the <head>
++    url = document_base_url(tree, url)
+     # raw-tree prune so the external extractors inherit it too: readability would otherwise
+     # pick the longest appended article over the real one
+     tree = prune_unwanted_nodes(tree, RAW_TREE_PRUNE_XPATH)
+diff --git a/trafilatura/external.py b/trafilatura/external.py
+index 983050f..859bb4b 100644
+--- a/trafilatura/external.py
++++ b/trafilatura/external.py
+@@ -13,7 +13,7 @@ from lxml.html import HtmlElement
+ 
+ # own
+ from .baseline import basic_cleaning
+-from .htmlprocessing import convert_tags, prune_unwanted_nodes, tree_cleaning
++from .htmlprocessing import convert_tags, document_base_url, prune_unwanted_nodes, tree_cleaning
+ from .main_extractor import handle_image
+ from .readability_lxml import Document as ReadabilityDocument  # fork
+ from .settings import JUSTEXT_LANGUAGES, Extractor
+@@ -96,6 +96,9 @@ def compare_extraction(
+     if options.focus == "recall" and len_text > options.min_extracted_size * 10:
+         return body, text
+ 
++    # readability output has no <head>: take the base URL for its links from the raw tree
++    base_url = document_base_url(raw_tree, options.url)
++
+     # prior cleaning
+     if options.focus == "precision":
+         raw_tree = prune_unwanted_nodes(raw_tree, OVERALL_DISCARD_XPATH)
+@@ -133,7 +136,7 @@ def compare_extraction(
+ 
+     # post-processing: remove unwanted sections
+     if use_readability:
+-        body, text = sanitize_tree(body, options)  # type: ignore[arg-type]
++        body, text = sanitize_tree(body, options, base_url)  # type: ignore[arg-type]
+ 
+     return body, text
+ 
+@@ -174,13 +177,14 @@ def justext_rescue(tree: HtmlElement, options: Extractor) -> tuple[_Element, str
+     return temppost_algo, trim(" ".join(temppost_algo.itertext()))
+ 
+ 
+-def sanitize_tree(tree: HtmlElement, options: Extractor) -> tuple[HtmlElement, str]:
+-    """Convert and sanitize the output from the generic algorithm (post-processing)"""
++def sanitize_tree(tree: HtmlElement, options: Extractor, url: str | None = None) -> tuple[HtmlElement, str]:
++    """Convert and sanitize the output from the generic algorithm (post-processing),
++    url being the document base URL (defaults to options.url)"""
+     # 1. clean
+     cleaned_tree = tree_cleaning(tree, options)
+     strip_tags(cleaned_tree, "span", *(() if options.links else ("a",)))
+     # 2. convert (pass url so relative links are absolutized on the fallback path)
+-    cleaned_tree = convert_tags(cleaned_tree, options, options.url)
++    cleaned_tree = convert_tags(cleaned_tree, options, url or options.url)
+     for elem in list(cleaned_tree.iter("graphic")):
+         image = handle_image(elem, options)
+         if image is None:
+diff --git a/trafilatura/htmlprocessing.py b/trafilatura/htmlprocessing.py
+index 24a35f5..fbd1417 100644
+--- a/trafilatura/htmlprocessing.py
++++ b/trafilatura/htmlprocessing.py
+@@ -4,7 +4,9 @@ Functions to process nodes in HTML code.
+ """
+ 
+ import logging
++from contextlib import suppress
+ from copy import deepcopy
++from urllib.parse import urljoin, urlsplit
+ 
+ from lxml.etree import Element, SubElement, XPath, _Element, strip_tags, tostring
+ from lxml.html import HtmlElement
+@@ -17,7 +19,7 @@ from .settings import (
+     Document,
+     Extractor,
+ )
+-from .utils import LINK_FARM_RATIO, image_src, safe_base_url, safe_relative_url, textfilter, trim
++from .utils import LINK_FARM_RATIO, image_src, textfilter, trim
+ from .xml import delete_element, meta_items, separates_inline
+ 
+ LOGGER = logging.getLogger(__name__)
+@@ -389,15 +391,34 @@ CONVERSIONS = {
+ }
+ 
+ 
++def document_base_url(tree: HtmlElement, url: str | None) -> str | None:
++    """Return the URL relative links resolve against, the HTML "document base URL":
++    the first <base href> parsed against the document URL, else the document URL.
++    Needs the raw tree, tree_cleaning() removes the <head> holding the <base> element."""
++    base = tree.find(".//base[@href]")
++    if base is None:
++        return url
++    try:
++        base_url = urljoin(url or "", base.get("href", "").strip())
++        scheme = urlsplit(base_url).scheme
++    except ValueError:
++        return url
++    # a base still relative after parsing is unusable, data: and javascript: never apply
++    return url if scheme in ("", "data", "javascript") else base_url
++
++
+ def convert_link(elem: HtmlElement, base_url: str | None) -> None:
+     "Replace link tags and href attributes, delete the rest."
+     elem.tag = "ref"
+     target = elem.get("href")  # defaults to None
+     elem.attrib.clear()
+     if target:
+-        # convert relative URLs
+-        if base_url:
+-            target = safe_relative_url(base_url, target) or target
++        # resolve relative URLs against the full base URL (path and query matter for
++        # "peer.html", "#frag" or "?q", "//host" takes its scheme), template placeholders
++        # such as {{url}} and malformed URLs are kept as they are
++        if base_url and not target.startswith("{"):
++            with suppress(ValueError):
++                target = urljoin(base_url, target)
+         elem.set("target", target)
+ 
+ 
+@@ -413,10 +434,9 @@ def convert_tags(tree: HtmlElement, options: Extractor, url: str | None = None)
+         # strip the rest
+         strip_tags(tree, "a")
+     else:
+-        # get base URL for converting relative URLs
+-        base_url = url and safe_base_url(url)
++        # url is the document base URL relative links are resolved against
+         for elem in tree.iter("a", "ref"):
+-            convert_link(elem, base_url)
++            convert_link(elem, url)
+ 
+     # Yoast FAQ blocks: question headers are bold but act as titles (#471)
+     for elem in tree.iter("strong"):

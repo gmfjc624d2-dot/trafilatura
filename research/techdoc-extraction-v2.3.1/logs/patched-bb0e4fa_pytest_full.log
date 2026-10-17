@@ -1,0 +1,157 @@
+$ python -m pytest -p no:cacheprovider -rfEs
+# git HEAD bb0e4fac70ff12b635213960c71e912bfe68e630, source paths modified: 0; Python 3.13.16; user root
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.7.0
+rootdir: /home/user/trafilatura
+configfile: pyproject.toml
+testpaths: tests/*test*.py
+plugins: cov-7.1.0
+collected 4394 items
+
+tests/baseline_tests.py ..........................                       [  0%]
+tests/cli_tests.py .........F.......                                     [  0%]
+tests/deduplication_tests.py ...........                                 [  1%]
+tests/downloads_tests.py .....FF......sss.ss.....                        [  1%]
+tests/eval_common_tests.py ............................                  [  2%]
+tests/eval_gate_tests.py .........                                       [  2%]
+tests/feeds_tests.py ....................                                [  3%]
+tests/filters_tests.py ..                                                [  3%]
+tests/json_metadata_tests.py ........................................... [  4%]
+..........                                                               [  4%]
+tests/metadata_tests.py ............................                     [  4%]
+tests/realworld_tests.py ............................................... [  6%]
+.......................................................................  [  7%]
+tests/repeated_output_tests.py ......................................... [  8%]
+........................................................................ [ 10%]
+........................................................................ [ 11%]
+........................................................................ [ 13%]
+........................................................................ [ 15%]
+.........................x..x........................................... [ 16%]
+........................................................................ [ 18%]
+..............................................x..............x..x....... [ 20%]
+..........................x.................x.................x......... [ 21%]
+........x.................x.................x.................x......... [ 23%]
+..........x...............x.x.................................x......... [ 24%]
+........x.................x.................x.................x......... [ 26%]
+........x.................x...................x...............x.x....... [ 28%]
+........................................................................ [ 29%]
+........................................................................ [ 31%]
+........................................................................ [ 33%]
+........................................................................ [ 34%]
+........................................................................ [ 36%]
+........................................................................ [ 38%]
+........................................................................ [ 39%]
+........................................................................ [ 41%]
+........................................................................ [ 42%]
+........................................................................ [ 44%]
+........................................................................ [ 46%]
+........................................................................ [ 47%]
+........................................................................ [ 49%]
+........................................................................ [ 51%]
+........................................................................ [ 52%]
+........................................................................ [ 54%]
+........................................................................ [ 56%]
+........................................................................ [ 57%]
+........................................................................ [ 59%]
+........................................................................ [ 61%]
+........................................................................ [ 62%]
+........................................................................ [ 64%]
+........................................................................ [ 65%]
+........................................................................ [ 67%]
+................................................x....................... [ 69%]
+........................................................................ [ 70%]
+........................................................................ [ 72%]
+........................................................................ [ 74%]
+........................................................................ [ 75%]
+........................................................................ [ 77%]
+..........................x............................................. [ 79%]
+........x.................x.................x.................x......... [ 80%]
+........................................................................ [ 82%]
+........................................................................ [ 83%]
+........................................................................ [ 85%]
+........................................................................ [ 87%]
+........................................................................ [ 88%]
+.........................................................xxx.xxx.        [ 90%]
+tests/sitemaps_tests.py ..........................                       [ 90%]
+tests/spider_tests.py .........                                          [ 91%]
+tests/unit_tests.py ...........s........................................ [ 92%]
+.............s.......................................................... [ 93%]
+........................................................................ [ 95%]
+........................................................................ [ 97%]
+........................................................................ [ 98%]
+..............................s........                                  [ 99%]
+tests/xml_tei_tests.py ..........                                        [100%]
+
+=================================== FAILURES ===================================
+________________________________ test_sysoutput ________________________________
+
+    def test_sysoutput():
+        """test command-line output with respect to CLI arguments"""
+        testargs = ["", "--csv", "-o", "/root/forbidden/"]
+        args = cli.parse_args(testargs[1:])
+        filepath, destdir = cli_utils.determine_output_path(args, args.output_dir, "")
+        assert len(filepath) >= 10
+        assert filepath.endswith(".csv")
+        assert destdir == "/root/forbidden/"
+        # doesn't work the same on Windows
+        if os.name != "nt":
+>           assert cli_utils.check_outputdir_status(args.output_dir) is False
+E           AssertionError: assert True is False
+E            +  where True = <function check_outputdir_status at 0x7f68421096c0>('/root/forbidden/')
+E            +    where <function check_outputdir_status at 0x7f68421096c0> = cli_utils.check_outputdir_status
+E            +    and   '/root/forbidden/' = Namespace(input_file=None, input_dir=None, URL=None, parallel=4, blacklist=None, list=False, output_dir='/root/forbidd...format='csv', csv=True, html=False, json=False, markdown=False, xml=False, xmltei=False, validate_tei=False, verbose=0).output_dir
+
+tests/cli_tests.py:232: AssertionError
+______________________________ test_is_live_page _______________________________
+
+    @pytest.mark.filterwarnings("ignore::urllib3.exceptions.InsecureRequestWarning")
+    def test_is_live_page():
+        """Test if pages are available on the network."""
+        # is_live general tests
+>       assert _urllib3_is_live_page("https://httpbun.com/status/301") is True
+E       AssertionError: assert False is True
+E        +  where False = _urllib3_is_live_page('https://httpbun.com/status/301')
+
+tests/downloads_tests.py:154: AssertionError
+__________________________________ test_fetch __________________________________
+
+    @pytest.mark.filterwarnings("ignore::urllib3.exceptions.InsecureRequestWarning")
+    # the empty-URL sanity check trips urllib3's scheme-less deprecation (v3 raises, downloads.py catches)
+    @pytest.mark.filterwarnings("ignore:URLs without a scheme:FutureWarning")
+    def test_fetch():
+        """Test URL fetching."""
+        # sanity check
+        assert _send_urllib_request("", True, DEFAULT_CONFIG) is None
+    
+        # fetch_url
+        assert fetch_url("#@1234") is None
+        assert fetch_url("https://httpbun.com/status/404") is None
+    
+        # no SSL, no decoding
+        url = "https://httpbun.com/status/200"
+        for no_ssl in (True, False):
+            response = _send_urllib_request(url, no_ssl, DEFAULT_CONFIG)
+>           assert b"200" in response.data
+                             ^^^^^^^^^^^^^
+E           AttributeError: 'NoneType' object has no attribute 'data'
+
+tests/downloads_tests.py:180: AttributeError
+------------------------------ Captured log call -------------------------------
+ERROR    trafilatura.downloads:downloads.py:251 download error:  No host specified.
+ERROR    trafilatura.downloads:downloads.py:251 download error: #@1234 No host specified.
+ERROR    trafilatura.downloads:downloads.py:249 download error: https://httpbun.com/status/404 _SafeHTTPSConnectionPool(host='httpbun.com', port=443): Max retries exceeded with url: /status/404 (Caused by NameResolutionError("_SafeHTTPSConnection(host='httpbun.com', port=443): Failed to resolve 'httpbun.com' ([Errno -2] Name or service not known)"))
+ERROR    trafilatura.downloads:downloads.py:249 download error: https://httpbun.com/status/200 _SafeHTTPSConnectionPool(host='httpbun.com', port=443): Max retries exceeded with url: /status/200 (Caused by NameResolutionError("_SafeHTTPSConnection(host='httpbun.com', port=443): Failed to resolve 'httpbun.com' ([Errno -2] Name or service not known)"))
+=========================== short test summary info ============================
+FAILED tests/cli_tests.py::test_sysoutput - AssertionError: assert True is False
+FAILED tests/downloads_tests.py::test_is_live_page - AssertionError: assert F...
+FAILED tests/downloads_tests.py::test_fetch - AttributeError: 'NoneType' obje...
+SKIPPED [1] tests/downloads_tests.py:401: pycurl not installed
+SKIPPED [1] tests/downloads_tests.py:436: pycurl not installed
+SKIPPED [1] tests/downloads_tests.py:463: pycurl not installed
+SKIPPED [1] tests/downloads_tests.py:495: pycurl not installed
+SKIPPED [1] tests/downloads_tests.py:520: pycurl not installed
+SKIPPED [1] tests/unit_tests.py:699: could not import 'yaml': No module named 'yaml'
+SKIPPED [1] tests/unit_tests.py:1101: py3langid not installed
+SKIPPED [1] tests/unit_tests.py:4189: py3langid not installed
+============ 3 failed, 4346 passed, 8 skipped, 37 xfailed in 33.88s ============
+exit=1

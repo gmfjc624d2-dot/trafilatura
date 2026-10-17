@@ -1,0 +1,25 @@
+$ python research/techdoc-extraction-v2.3.1/scripts/public_corpus_links.py . research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun --variant naive-ablation
+{
+  "variant": "naive-ablation",
+  "trafilatura": "2.3.1",
+  "trafilatura_file": "/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/trafilatura/__init__.py",
+  "git_head": "e2f85c965662c7df26b73290ef175b2c2a5fdca6",
+  "source_tree_dirty": false,
+  "corpus_repo_head": "bb0e4fac70ff12b635213960c71e912bfe68e630",
+  "totals": {
+    "pages": 95,
+    "with_base": 7,
+    "default": {
+      "targets": 565,
+      "mismatches": 3,
+      "pages_with_mismatch": 1
+    },
+    "fast": {
+      "targets": 563,
+      "mismatches": 3,
+      "pages_with_mismatch": 1
+    }
+  }
+}
+tests/cache/simplyscience.ch.erdoel.html: base=['http://www.simplyscience.ch/'] default 3/4 fast 3/4 e.g. ['http://www.simplyscience.ch/teens-liesnach-archiv/articles/teens-liesnach-archiv/articles/warum-wird-das-erdoel-knapp.html', 'http://www.simplyscience.ch/teens-liesnach-archiv/articles/ueber-uns.html']
+exit=1

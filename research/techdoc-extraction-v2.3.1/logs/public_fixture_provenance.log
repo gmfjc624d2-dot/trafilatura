@@ -1,0 +1,7 @@
+$ git fetch --unshallow origin   # done first: the session clone was shallow (53 commits)
+$ python research/techdoc-extraction-v2.3.1/scripts/public_provenance.py . research/techdoc-extraction-v2.3.1/results/public_fixture_provenance.json
+pages: 95, changed since baseline: none
+tests/cache/bmjv.de.konsum.html https://www.bmjv.de/DE/Verbraucherportal/KonsumImAlltag/TransparenzPreisanpassung/TransparenzPreisanpassung_node.html sha256=39206e210bd4851c21ad90438f3a5ef50290791de18acb8c67f7be3c2e158e23 first added 52ea29863c377016653ed6852377da8ba5ad158f 2019-04-08T17:17:16+02:00
+tests/cache/en.wikipedia.org.tsne.html https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding sha256=10cef2b5c04f5bab269304ca9c0cd82976ef207358d59337e984e591bcac9e76 first added 10e9eac1e0d516f8b99480e76746762f089094a1 2019-11-21T19:33:26+01:00
+tests/cache/simplyscience.ch.erdoel.html http://www.simplyscience.ch/teens-liesnach-archiv/articles/wie-entsteht-erdoel.html sha256=4033633a411177ebdcfc7d2a0724f9abb08c81bc8501bee1d6cbf1f547841aed first added 8b2713b6a536a065f02ad3e5f6cab3d8119a94a2 2019-04-10T17:53:36+02:00
+exit=0

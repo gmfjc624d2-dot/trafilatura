@@ -1,0 +1,4 @@
+$ ruff format --check .
+# git HEAD bb0e4fac70ff12b635213960c71e912bfe68e630, source paths modified: 0; Python 3.13.16; user root
+55 files already formatted
+exit=0

@@ -1,0 +1,50 @@
+$ python research/techdoc-extraction-v2.3.1/scripts/repro_links.py research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa
+{
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "trafilatura": "2.3.1",
+  "trafilatura_file": "/home/user/trafilatura/trafilatura/__init__.py",
+  "git_head": "bb0e4fac70ff12b635213960c71e912bfe68e630",
+  "source_tree_dirty": false,
+  "lxml": "6.1.3",
+  "libxml2": "2.14.6",
+  "courlan": "1.4.0"
+}
+
+case                             kind     expected                                                   convert_tags | extract default/fast/recall/precision
+fragment                         defect   https://example.org/docs/v1/api.html?view=full#method      PASS | PASS/PASS/PASS/PASS
+sibling                          defect   https://example.org/docs/v1/peer.html                      PASS | PASS/PASS/PASS/PASS
+parent                           defect   https://example.org/docs/overview.html                     PASS | PASS/PASS/PASS/PASS
+query-only                       defect   https://example.org/docs/v1/api.html?view=short            PASS | PASS/PASS/PASS/PASS
+protocol-relative-foreign        defect   https://other.example/guide                                PASS | PASS/PASS/PASS/PASS
+dot-sibling-dir                  defect   https://example.org/docs/v1/sub/page.html                  PASS | PASS/PASS/PASS/PASS
+sibling-with-fragment            defect   https://example.org/docs/v1/peer.html#frag                 PASS | PASS/PASS/PASS/PASS
+root-relative                    control  https://example.org/reference/index.html                   PASS | PASS/PASS/PASS/PASS
+protocol-relative-same-host      control  https://example.org/same                                   PASS | PASS/PASS/PASS/PASS
+absolute-https                   control  https://abs.example/x?y=1#z                                PASS | PASS/PASS/PASS/PASS
+absolute-http                    control  http://insecure.example/y                                  PASS | PASS/PASS/PASS/PASS
+mailto                           control  mailto:docs@example.org                                    PASS | PASS/PASS/PASS/PASS
+protocol-relative-http-doc       control  http://other.example/guide                                 PASS | PASS/PASS/PASS/PASS
+base-absolute-other-host         base     https://cdn.example.net/ref/peer.html                      FAIL | PASS/PASS/PASS/PASS
+                                         convert_tags got: https://example.org/docs/v1/peer.html
+base-host-root                   base     https://example.org/DE/page.html                           FAIL | PASS/PASS/PASS/PASS
+                                         convert_tags got: https://example.org/docs/v1/DE/page.html
+base-relative-path               base     https://example.org/docs/v2/peer.html                      FAIL | PASS/PASS/PASS/PASS
+                                         convert_tags got: https://example.org/docs/v1/peer.html
+base-first-wins                  base     https://example.org/first/peer.html                        FAIL | PASS/PASS/PASS/PASS
+                                         convert_tags got: https://example.org/docs/v1/peer.html
+base-target-only-skipped         base     https://example.org/docs/v3/peer.html                      FAIL | PASS/PASS/PASS/PASS
+                                         convert_tags got: https://example.org/docs/v1/peer.html
+base-javascript-ignored          base     https://example.org/docs/v1/peer.html                      PASS | PASS/PASS/PASS/PASS
+base-empty-href                  base     https://example.org/docs/v1/peer.html                      PASS | PASS/PASS/PASS/PASS
+base-fragment-link               base     https://cdn.example.net/ref/#method                        FAIL | PASS/PASS/PASS/PASS
+                                         convert_tags got: https://example.org/docs/v1/api.html?view=full#method
+base-root-relative-link          base     https://cdn.example.net/top.html                           FAIL | PASS/PASS/PASS/PASS
+                                         convert_tags got: https://example.org/top.html
+base-no-doc-url-absolute         base     https://cdn.example.net/ref/peer.html                      FAIL | PASS/PASS/PASS/PASS
+                                         convert_tags got: peer.html
+base-no-doc-url-relative         base     peer.html                                                  PASS | PASS/PASS/PASS/PASS
+
+failing cases: 8 of 24
+exit=1

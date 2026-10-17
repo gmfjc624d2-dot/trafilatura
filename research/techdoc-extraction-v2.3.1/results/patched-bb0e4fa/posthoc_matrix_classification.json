@@ -1,0 +1,48 @@
+{
+  "posthoc": true,
+  "results_dir": "research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa",
+  "classes": {
+    "f2_inline_code.html::inline-connect-marked": {
+      "explicit-include_formatting=False-on-markdown": 16
+    },
+    "f2_inline_code.html::inline-operator-marked": {
+      "explicit-include_formatting=False-on-markdown": 16
+    },
+    "f3_nested_list_negation.html::not-emphasis": {
+      "explicit-include_formatting=False-on-markdown": 16
+    },
+    "f5_reference_links.html::read-first": {
+      "link-markup-interleaving": 32
+    },
+    "f5_reference_links.html::sdk-team": {
+      "link-markup-interleaving": 32
+    },
+    "f6_malformed.html::code-block-indentation": {
+      "dropped-by-content-selection (html2txt has it: True, baseline has it: True)": 96
+    },
+    "f6_malformed.html::security-only": {
+      "dropped-by-content-selection (html2txt has it: True, baseline has it: True)": 96
+    },
+    "f6_malformed.html::link-changes": {
+      "dropped-by-content-selection (html2txt has it: True, baseline has it: True)": 48
+    },
+    "f8_combined_reference_page.html::inline-publish-marked": {
+      "explicit-include_formatting=False-on-markdown": 16
+    },
+    "f8_combined_reference_page.html::not-emphasis": {
+      "explicit-include_formatting=False-on-markdown": 16
+    }
+  },
+  "first_failing_config": {
+    "f2_inline_code.html::inline-connect-marked": "balanced L0 T0 F0 markdown",
+    "f2_inline_code.html::inline-operator-marked": "balanced L0 T0 F0 markdown",
+    "f3_nested_list_negation.html::not-emphasis": "balanced L0 T0 F0 markdown",
+    "f5_reference_links.html::read-first": "balanced L1 T0 F0 txt",
+    "f5_reference_links.html::sdk-team": "balanced L1 T0 F0 txt",
+    "f6_malformed.html::code-block-indentation": "balanced L0 T0 F0 txt",
+    "f6_malformed.html::security-only": "balanced L0 T0 F0 txt",
+    "f6_malformed.html::link-changes": "balanced L1 T0 F0 txt",
+    "f8_combined_reference_page.html::inline-publish-marked": "balanced L0 T0 F0 markdown",
+    "f8_combined_reference_page.html::not-emphasis": "balanced L0 T0 F0 markdown"
+  }
+}

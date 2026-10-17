@@ -1,0 +1,47 @@
+$ python -m pytest -p no:cacheprovider tests/unit_tests.py -v -k resolves_links_against_document_url or test_document_base_url or honors_base_href or readability_links_honor_base_href or absolutizes_links or test_links
+# git HEAD bb0e4fac70ff12b635213960c71e912bfe68e630, source paths modified: 0; Python 3.13.16; user root
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.7.0 -- /tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/venv/bin/python
+rootdir: /home/user/trafilatura
+configfile: pyproject.toml
+plugins: cov-7.1.0
+collecting ... collected 379 items / 344 deselected / 35 selected
+
+tests/unit_tests.py::test_sanitize_tree_absolutizes_links PASSED         [  2%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[#method-https://example.org/docs/v1/api.html?view=full#method] PASSED [  5%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[peer.html-https://example.org/docs/v1/peer.html] PASSED [  8%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[../overview.html-https://example.org/docs/overview.html] PASSED [ 11%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[?view=short-https://example.org/docs/v1/api.html?view=short] PASSED [ 14%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[./sub/page.html#frag-https://example.org/docs/v1/sub/page.html#frag] PASSED [ 17%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[//other.example/guide-https://other.example/guide] PASSED [ 20%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[//example.org/same-https://example.org/same] PASSED [ 22%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[/reference/index.html-https://example.org/reference/index.html] PASSED [ 25%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[https://abs.example/x?y=1#z-https://abs.example/x?y=1#z] PASSED [ 28%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[http://insecure.example/y-http://insecure.example/y] PASSED [ 31%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[mailto:docs@example.org-mailto:docs@example.org] PASSED [ 34%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[{{ item.url }}-{{ item.url }}] PASSED [ 37%]
+tests/unit_tests.py::test_convert_tags_resolves_links_against_document_url[http://[::1-http://[::1] PASSED [ 40%]
+tests/unit_tests.py::test_extract_resolves_links_against_document_url[True] PASSED [ 42%]
+tests/unit_tests.py::test_extract_resolves_links_against_document_url[False] PASSED [ 45%]
+tests/unit_tests.py::test_document_base_url[-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v1/api.html?view=full] PASSED [ 48%]
+tests/unit_tests.py::test_document_base_url[-None-None] PASSED           [ 51%]
+tests/unit_tests.py::test_document_base_url[<base href="https://cdn.example.net/ref/">-https://example.org/docs/v1/api.html?view=full-https://cdn.example.net/ref/] PASSED [ 54%]
+tests/unit_tests.py::test_document_base_url[<base href="/docs/v2/">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v2/] PASSED [ 57%]
+tests/unit_tests.py::test_document_base_url[<base href=" ../v2/ ">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v2/] PASSED [ 60%]
+tests/unit_tests.py::test_document_base_url[<base href="">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v1/api.html?view=full] PASSED [ 62%]
+tests/unit_tests.py::test_document_base_url[<base href="/first/"><base href="/second/">-https://example.org/docs/v1/api.html?view=full-https://example.org/first/] PASSED [ 65%]
+tests/unit_tests.py::test_document_base_url[<base target="_blank"><base href="/docs/v3/">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v3/] PASSED [ 68%]
+tests/unit_tests.py::test_document_base_url[<base href="javascript:void(0)">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v1/api.html?view=full] PASSED [ 71%]
+tests/unit_tests.py::test_document_base_url[<base href="data:text/html,x">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v1/api.html?view=full] PASSED [ 74%]
+tests/unit_tests.py::test_document_base_url[<base href="http://[::1">-https://example.org/docs/v1/api.html?view=full-https://example.org/docs/v1/api.html?view=full] PASSED [ 77%]
+tests/unit_tests.py::test_document_base_url[<base href="https://cdn.example.net/ref/">-None-https://cdn.example.net/ref/] PASSED [ 80%]
+tests/unit_tests.py::test_document_base_url[<base href="/docs/v2/">-None-None] PASSED [ 82%]
+tests/unit_tests.py::test_extract_honors_base_href[/docs/v2/-https://example.org/docs/v1/api.html?view=full-True] PASSED [ 85%]
+tests/unit_tests.py::test_extract_honors_base_href[/docs/v2/-https://example.org/docs/v1/api.html?view=full-False] PASSED [ 88%]
+tests/unit_tests.py::test_extract_honors_base_href[https://example.org/docs/v2/-None-True] PASSED [ 91%]
+tests/unit_tests.py::test_extract_honors_base_href[https://example.org/docs/v2/-None-False] PASSED [ 94%]
+tests/unit_tests.py::test_compare_extraction_readability_links_honor_base_href PASSED [ 97%]
+tests/unit_tests.py::test_links PASSED                                   [100%]
+
+====================== 35 passed, 344 deselected in 0.21s ======================
+exit=0

@@ -1,0 +1,24 @@
+$ python research/techdoc-extraction-v2.3.1/scripts/public_corpus_links.py . research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa
+{
+  "variant": "as-is",
+  "trafilatura": "2.3.1",
+  "trafilatura_file": "/home/user/trafilatura/trafilatura/__init__.py",
+  "git_head": "bb0e4fac70ff12b635213960c71e912bfe68e630",
+  "source_tree_dirty": false,
+  "corpus_repo_head": "bb0e4fac70ff12b635213960c71e912bfe68e630",
+  "totals": {
+    "pages": 95,
+    "with_base": 7,
+    "default": {
+      "targets": 565,
+      "mismatches": 0,
+      "pages_with_mismatch": 0
+    },
+    "fast": {
+      "targets": 563,
+      "mismatches": 0,
+      "pages_with_mismatch": 0
+    }
+  }
+}
+exit=0

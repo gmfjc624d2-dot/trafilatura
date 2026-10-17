@@ -1,0 +1,2071 @@
+{
+  "variant": "as-is",
+  "trafilatura": "2.3.1",
+  "trafilatura_file": "/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/trafilatura/__init__.py",
+  "git_head": "e2f85c965662c7df26b73290ef175b2c2a5fdca6",
+  "source_tree_dirty": false,
+  "corpus_repo_head": "bb0e4fac70ff12b635213960c71e912bfe68e630",
+  "totals": {
+    "pages": 95,
+    "with_base": 7,
+    "default": {
+      "targets": 565,
+      "mismatches": 53,
+      "pages_with_mismatch": 7
+    },
+    "fast": {
+      "targets": 563,
+      "mismatches": 47,
+      "pages_with_mismatch": 6
+    }
+  },
+  "pages": [
+    {
+      "file": "tests/cache/adac.de.kindersitze.html",
+      "url": "https://www.adac.de/rund-ums-fahrzeug/tests/kindersicherheit/kindersitztest-2018/",
+      "sha256": "6ad7957037e2e47f6d6e9f57127aefc7038cc2356cde79f9340e7446db525a31",
+      "bytes": 60770,
+      "git_blob": "384b804597d7ccbb552c44d86a62d3be958b7414",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.adac.de/rund-ums-fahrzeug/tests/kindersicherheit/kindersitztest-2018/",
+      "relative_hrefs": 166,
+      "default": {
+        "targets": 19,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 19,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/austria.info.radfahren.html",
+      "url": "https://www.austria.info/de/aktivitaten/radfahren/radfahren-in-der-weltstadt-salzburg",
+      "sha256": "d454b9d6e1c472da1ffc967994a25e641b4360069be05e96af4f5c9d1cc789a0",
+      "bytes": 204465,
+      "git_blob": "6daeedd8b8908a2ed7ebf575709f4c95b96a5925",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.austria.info/de/aktivitaten/radfahren/radfahren-in-der-weltstadt-salzburg",
+      "relative_hrefs": 26,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/basicthinking.de.tweets.html",
+      "url": "https://www.basicthinking.de/blog/2018/12/05/erfolgreiche-tweets-zutaten/",
+      "sha256": "70ed8734318b74f7c14a11b34ecbf956e3044ddf30796283f9c5a1f3e827abfa",
+      "bytes": 185157,
+      "git_blob": "004ff1910c2f6cb3b64f59432644e8411d6002cf",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.basicthinking.de/blog/2018/12/05/erfolgreiche-tweets-zutaten/",
+      "relative_hrefs": 5,
+      "default": {
+        "targets": 39,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 39,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/befifty.montauk.html",
+      "url": "https://www.befifty.de/home/2017/7/12/unter-uns-montauk",
+      "sha256": "2bdbd48629d993a51420555c995b6e3b9caee7214d427068c7670ff66a2bf2eb",
+      "bytes": 149138,
+      "git_blob": "a556328279d41c74aa7e8fe5010968748a4310c0",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [
+        ""
+      ],
+      "document_base_url": "https://www.befifty.de/home/2017/7/12/unter-uns-montauk",
+      "relative_hrefs": 46,
+      "default": {
+        "targets": 16,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 16,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/blog.wordpress.com.diverse.html",
+      "url": "https://en.blog.wordpress.com/2019/06/19/want-to-see-a-more-diverse-wordpress-contributor-community-so-do-we/",
+      "sha256": "c48a1f5739c70817ba81ff43f00e6bd3d5a6507f3f729724136f3715268d0899",
+      "bytes": 79340,
+      "git_blob": "c5ee47c57cf6c690a85f48ade1d90e001c31252a",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://en.blog.wordpress.com/2019/06/19/want-to-see-a-more-diverse-wordpress-contributor-community-so-do-we/",
+      "relative_hrefs": 30,
+      "default": {
+        "targets": 4,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 4,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/bmjv.de.konsum.html",
+      "url": "https://www.bmjv.de/DE/Verbraucherportal/KonsumImAlltag/TransparenzPreisanpassung/TransparenzPreisanpassung_node.html",
+      "sha256": "39206e210bd4851c21ad90438f3a5ef50290791de18acb8c67f7be3c2e158e23",
+      "bytes": 55888,
+      "git_blob": "5b03f6e211c2045485fdac01ce44235a370973b4",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [
+        "https://www.BMJV.de/"
+      ],
+      "document_base_url": "https://www.BMJV.de/",
+      "relative_hrefs": 123,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/brandenburg.de.homo-brandenburgensis.html",
+      "url": "https://www.politische-bildung-brandenburg.de/themen/land-und-leute/homo-brandenburgensis",
+      "sha256": "8b578932825f6420c2ca46eaf7054dd8de7df307f0459d5d692d57c3b7f076ba",
+      "bytes": 54041,
+      "git_blob": "71d57fc88901840067c746a24fb60e3bbea867eb",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.politische-bildung-brandenburg.de/themen/land-und-leute/homo-brandenburgensis",
+      "relative_hrefs": 78,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/brigitte.de.ikigai.html",
+      "url": "https://www.brigitte.de/liebe/persoenlichkeit/ikigai-macht-dich-sofort-gluecklicher--10972896.html",
+      "sha256": "52522b159285ff4098fbae66f90f1fc4ae8386a54d33d734241d16abb8617848",
+      "bytes": 200198,
+      "git_blob": "ebd220c3df498124a904081bf5c6e65c595bf513",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.brigitte.de/liebe/persoenlichkeit/ikigai-macht-dich-sofort-gluecklicher--10972896.html",
+      "relative_hrefs": 10,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/buchperlen.wordpress.com.html",
+      "url": "https://buchperlen.wordpress.com/2013/10/20/leandra-lou-der-etwas-andere-modeblog-jetzt-auch-zwischen-buchdeckeln/",
+      "sha256": "f5b8c48b9fb0b6e74e0a5b9dfc1e62546ad39a5de2227777dc1c36aef68fe484",
+      "bytes": 180594,
+      "git_blob": "c606b1138a7b753df47a3fdfb40dd269db726409",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://buchperlen.wordpress.com/2013/10/20/leandra-lou-der-etwas-andere-modeblog-jetzt-auch-zwischen-buchdeckeln/",
+      "relative_hrefs": 11,
+      "default": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/caktusgroup.com.django.html",
+      "url": "https://www.caktusgroup.com/blog/2015/06/08/testing-client-side-applications-django-post-mortem/",
+      "sha256": "7282377e87cc5701a4325e3dd697f02a5cea2e0952c0177fc19d86706321ef9c",
+      "bytes": 65862,
+      "git_blob": "4b44727bef131607469ece76add54a34a748b2bc",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.caktusgroup.com/blog/2015/06/08/testing-client-side-applications-django-post-mortem/",
+      "relative_hrefs": 51,
+      "default": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/cdu-fraktion-erfurt.de.waldorfschule.html",
+      "url": "http://www.cdu-fraktion-erfurt.de/inhalte/aktuelles/entwicklung-der-waldorfschule-ermoeglicht/index.html",
+      "sha256": "5cff642901a50c4050f91cbfd9cab0a679e6427b150c45fac4e5b4be039b4f79",
+      "bytes": 45299,
+      "git_blob": "2addd8ee945d430cede450bd5c5e82d71baf6e19",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://www.cdu-fraktion-erfurt.de/inhalte/aktuelles/entwicklung-der-waldorfschule-ermoeglicht/index.html",
+      "relative_hrefs": 3,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/chineselyrics4u.com.zhineng.html",
+      "url": "http://www.chineselyrics4u.com/2011/07/zhi-neng-xiang-nian-ni-jam-hsiao-jing.html",
+      "sha256": "f8b93903ff22c70db1c44f62ba9d915933352d21a8ea3ab2496867f3569fd8b4",
+      "bytes": 254583,
+      "git_blob": "383618f47f0d8d541ea51aba3691f7d41ee58e1d",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://www.chineselyrics4u.com/2011/07/zhi-neng-xiang-nian-ni-jam-hsiao-jing.html",
+      "relative_hrefs": 10,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/cnet.de.schutz.html",
+      "url": "https://www.cnet.de/88130484/so-koennen-internet-user-nach-dem-eugh-urteil-fuer-den-schutz-sensibler-daten-sorgen",
+      "sha256": "d0a41b7412b523c97355ea08561c8156533fcc3fa48d525465347ee14ed7db63",
+      "bytes": 86736,
+      "git_blob": "43936dbeadffe11372db009e9b58aa3dc2649591",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.cnet.de/88130484/so-koennen-internet-user-nach-dem-eugh-urteil-fuer-den-schutz-sensibler-daten-sorgen",
+      "relative_hrefs": 25,
+      "default": {
+        "targets": 4,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 4,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/computerbase.de.htc.html",
+      "url": "https://www.computerbase.de/2007-06/htc-touch-bald-bei-o2-als-xda-nova/",
+      "sha256": "970d7b8bd030952e261c7fecd22f75083d93113987a030210731d9985b97db63",
+      "bytes": 37017,
+      "git_blob": "8dd5897068c05927972bde3a1daba36f8d94a616",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.computerbase.de/2007-06/htc-touch-bald-bei-o2-als-xda-nova/",
+      "relative_hrefs": 90,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/correctiv.org.zusage.html",
+      "url": "https://correctiv.org/aktuelles/neue-rechte/2019/05/14/wir-haben-bereits-die-zusage",
+      "sha256": "be95401c717f745f87490159bcf0527ccb16cd9d2c5ce90496751277bccd3b4c",
+      "bytes": 409361,
+      "git_blob": "75bef766d498ecd87ca0df72ea096ce1930061ea",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://correctiv.org/aktuelles/neue-rechte/2019/05/14/wir-haben-bereits-die-zusage",
+      "relative_hrefs": 31,
+      "default": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/crazy-julia.de.tipps.html",
+      "url": "https://crazy-julia.de/beauty-tipps-die-jede-braut-kennen-sollte/",
+      "sha256": "5d4c88f4ea78788a52b0453ce977cb7e813ffa04e3715c334d576ef96aa8a1f7",
+      "bytes": 127114,
+      "git_blob": "fd36620cc22aa04ee94cd7cc45d14f4536d8871d",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://crazy-julia.de/beauty-tipps-die-jede-braut-kennen-sollte/",
+      "relative_hrefs": 3,
+      "default": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/creativecommons.at.faircoin.html",
+      "url": "https://www.creativecommons.at/faircoin-hackathon",
+      "sha256": "edf232add79289a1ffa327ef86f52731b0935919621b18eaf591670e4a6174e9",
+      "bytes": 28070,
+      "git_blob": "ce0aee848651f5415eeb38aa6fc90efbeddf4ed7",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.creativecommons.at/faircoin-hackathon",
+      "relative_hrefs": 43,
+      "default": {
+        "targets": 4,
+        "mismatches": 1,
+        "examples": [
+          "https://fair.coop/summercamps-faircoop-in-jura-switzerland-2017/#"
+        ]
+      },
+      "fast": {
+        "targets": 4,
+        "mismatches": 1,
+        "examples": [
+          "https://fair.coop/summercamps-faircoop-in-jura-switzerland-2017/#"
+        ]
+      }
+    },
+    {
+      "file": "tests/cache/creativecommons.org.html",
+      "url": "https://creativecommons.org/about/",
+      "sha256": "a9178757b64a17099051c9d97b6658281a5168c5233fc471e3696df8bcc4810c",
+      "bytes": 70262,
+      "git_blob": "9e090951dc08735e94b0c747232dec2311f59653",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://creativecommons.org/about/",
+      "relative_hrefs": 16,
+      "default": {
+        "targets": 7,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 7,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/de.creativecommons.org.endlich.html",
+      "url": "https://de.creativecommons.org/index.php/2014/03/20/endlich-wird-es-spannend-die-nc-einschraenkung-nach-deutschem-recht/",
+      "sha256": "a0c1aeaf4db3d8ede7facb9bb190db61c31633084c196aa09d8742e3f09dfca7",
+      "bytes": 38324,
+      "git_blob": "2426ce6cef176a2139a1c4f9dfdb966c29d5fadf",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://de.creativecommons.org/index.php/2014/03/20/endlich-wird-es-spannend-die-nc-einschraenkung-nach-deutschem-recht/",
+      "relative_hrefs": 2,
+      "default": {
+        "targets": 4,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 4,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/demokratiewebstatt.at.luft.html",
+      "url": "https://www.demokratiewebstatt.at/thema/thema-umwelt-und-klima/woher-kommt-die-dicke-luft",
+      "sha256": "fd046a775cab6e40372ec8d28c41c58cbe755caaef78d285f979f36863b4d0cc",
+      "bytes": 133861,
+      "git_blob": "f4e37a836921d1fb9d1320a56aa9cbdf5ad6d7a9",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [
+        "https://www.demokratiewebstatt.at/"
+      ],
+      "document_base_url": "https://www.demokratiewebstatt.at/",
+      "relative_hrefs": 1,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/denkanstoos.com.2012.html",
+      "url": "https://denkanstoos.wordpress.com/2012/04/11/denkanstoos-april-2012/",
+      "sha256": "2de78c3aa56912d0eb6e985fb0bca070903b90bfe6abcaebe9deab17049e65cb",
+      "bytes": 55944,
+      "git_blob": "5afc3fdc36ab9cf83135a7800e48f3df17222d82",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://denkanstoos.wordpress.com/2012/04/11/denkanstoos-april-2012/",
+      "relative_hrefs": 10,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/die-partei.net.luebeck.html",
+      "url": "https://die-partei.net/luebeck/2012/05/31/das-ministerium-fur-club-kultur-informiert/",
+      "sha256": "d203f5e21f8745cd69d70b9ecd5ae85030b73d841b77bc7d745da6bcedc41229",
+      "bytes": 11598,
+      "git_blob": "1d3dfb596e5d3e1cb5ef9c15fc5bf26c80dd6161",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://die-partei.net/luebeck/2012/05/31/das-ministerium-fur-club-kultur-informiert/",
+      "relative_hrefs": 3,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/ebrosia.de.zinfandel.html",
+      "url": "https://www.ebrosia.de/beringer-zinfandel-rose-stone-cellars-lieblich-suess",
+      "sha256": "3ab166d53414ad700b5b4080dcbcaf8cfb192f9f2bd89f4d91e5c118b39c3c41",
+      "bytes": 125224,
+      "git_blob": "1eb26ec710c5afb5ea6fcd2f9e6cb6da4a80e929",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.ebrosia.de/beringer-zinfandel-rose-stone-cellars-lieblich-suess",
+      "relative_hrefs": 29,
+      "default": {
+        "targets": 8,
+        "mismatches": 1,
+        "examples": [
+          "https://www.ebrosia.de#detail--product-properties"
+        ]
+      },
+      "fast": {
+        "targets": 8,
+        "mismatches": 1,
+        "examples": [
+          "https://www.ebrosia.de#detail--product-properties"
+        ]
+      }
+    },
+    {
+      "file": "tests/cache/en.wikipedia.org.tsne.html",
+      "url": "https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding",
+      "sha256": "10cef2b5c04f5bab269304ca9c0cd82976ef207358d59337e984e591bcac9e76",
+      "bytes": 108851,
+      "git_blob": "54cc7a237d05e5cc46d4c748e434e426d243f599",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding",
+      "relative_hrefs": 227,
+      "default": {
+        "targets": 95,
+        "mismatches": 42,
+        "examples": [
+          "https://en.wikipedia.org#mw-head",
+          "https://en.wikipedia.org#p-search",
+          "https://en.wikipedia.org#cite_note-MaatenHinton-1",
+          "https://en.wikipedia.org#cite_note-2",
+          "https://en.wikipedia.org#cite_note-3"
+        ]
+      },
+      "fast": {
+        "targets": 95,
+        "mismatches": 42,
+        "examples": [
+          "https://en.wikipedia.org#mw-head",
+          "https://en.wikipedia.org#p-search",
+          "https://en.wikipedia.org#cite_note-MaatenHinton-1",
+          "https://en.wikipedia.org#cite_note-2",
+          "https://en.wikipedia.org#cite_note-3"
+        ]
+      }
+    },
+    {
+      "file": "tests/cache/erp-news.info.interview.html",
+      "url": "https://erp-news.info/erp-interview-mit-um-digitale-assistenten-und-kuenstliche-intelligenz-ki/",
+      "sha256": "f3be11af0673cba19b0abb49f64ef4a3239de6dfb5890b0b0e1d965c4cc9b3bf",
+      "bytes": 126085,
+      "git_blob": "8bb0daf9aa057f076e0a1afc5482bbdbffbbaa0f",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://erp-news.info/erp-interview-mit-um-digitale-assistenten-und-kuenstliche-intelligenz-ki/",
+      "relative_hrefs": 4,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/fairkom.eu.about.html",
+      "url": "https://www.fairkom.eu/about",
+      "sha256": "f8315615e0e805c943ba2f76e394e8bde17fd4bc577df0907acdec88fe374090",
+      "bytes": 47287,
+      "git_blob": "4094bc11ad20146f82c191f66b654b8fc2155cca",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.fairkom.eu/about",
+      "relative_hrefs": 43,
+      "default": {
+        "targets": 8,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 8,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/faz.net.streaming.html",
+      "url": "https://www.faz.net/aktuell/wirtschaft/nutzerbasierte-abrechnung-musik-stars-fordern-neues-streaming-modell-16604622.html",
+      "sha256": "1925f9ca030307a4687656692459e0e0129ce96ff6f90a861f158d75bd127793",
+      "bytes": 892438,
+      "git_blob": "93633d5081f4a31e33bb22e08c5d036fbae7bbb7",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.faz.net/aktuell/wirtschaft/nutzerbasierte-abrechnung-musik-stars-fordern-neues-streaming-modell-16604622.html",
+      "relative_hrefs": 17,
+      "default": {
+        "targets": 4,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 4,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/franceculture.fr.idees.html",
+      "url": "https://www.franceculture.fr/emissions/le-journal-des-idees/le-journal-des-idees-emission-du-mardi-14-janvier-2020",
+      "sha256": "d16ad7306bd3b4f29df36b49c676144694800b20dab5a55ff1a54ee477c68de6",
+      "bytes": 127829,
+      "git_blob": "6beb097bdf85c25111229d96d590a71545cf77f6",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.franceculture.fr/emissions/le-journal-des-idees/le-journal-des-idees-emission-du-mardi-14-janvier-2020",
+      "relative_hrefs": 155,
+      "default": {
+        "targets": 8,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 8,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/franziska-elea.de.vuitton.html",
+      "url": "http://www.franziska-elea.de/2019/02/10/das-louis-vuitton-missgeschick/",
+      "sha256": "c7b1763c444eac104504c460068f5b70cfcb43718db95d10a9c4ee363976a764",
+      "bytes": 109964,
+      "git_blob": "048ea52b82952d6cf7f9449a6be6c621964c4cfa",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://www.franziska-elea.de/2019/02/10/das-louis-vuitton-missgeschick/",
+      "relative_hrefs": 20,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/futurezone.at.lyft.html",
+      "url": "https://futurezone.at/digital-life/uber-konkurrent-lyft-startet-mit-waymo-robotertaxis-in-usa/400487461",
+      "sha256": "f65f4995bf6e81cd80d74b036f3a1b5da011dd330cfb1c5e9eec103b96143353",
+      "bytes": 57189,
+      "git_blob": "dee768129c4b5cbc023ec0e304025d5bf86a1c0b",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [
+        "/"
+      ],
+      "document_base_url": "https://futurezone.at/",
+      "relative_hrefs": 38,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/github.blog.spiceland.html",
+      "url": "https://github.blog/2019-03-29-leader-spotlight-erin-spiceland/",
+      "sha256": "8cd71899784232a5fbde60ec3895dd014f550730df99926a1c68e551d03d1072",
+      "bytes": 53321,
+      "git_blob": "b1dd2e1f6a0067cbf8f85ba24c2e6b2595f9d736",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://github.blog/2019-03-29-leader-spotlight-erin-spiceland/",
+      "relative_hrefs": 8,
+      "default": {
+        "targets": 6,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 6,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/gregoryszorc.com.python3.html",
+      "url": "https://gregoryszorc.com/blog/2020/01/13/mercurial%27s-journey-to-and-reflections-on-python-3/",
+      "sha256": "750955e516e256de73967f2a59a74f67ef8b5f05c3be933b047dad4ad613d55b",
+      "bytes": 49442,
+      "git_blob": "58936032ba8f5c14ab2b553d83b2f4415341a952",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://gregoryszorc.com/blog/2020/01/13/mercurial%27s-journey-to-and-reflections-on-python-3/",
+      "relative_hrefs": 42,
+      "default": {
+        "targets": 39,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 39,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/gruen-digital.de.jahrestagung.html",
+      "url": "https://www.gruen-digital.de/2015/01/digitalpolitisches-jahrestagung-2015-der-heinrich-boell-stiftung-baden-wuerttemberg/",
+      "sha256": "0661450f080d3e826beb487782234e731612ec71c8c028e4230d10a20dd93dd3",
+      "bytes": 60593,
+      "git_blob": "3fc045c077c149d85e9ad3a46d2d67b99747a9ed",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.gruen-digital.de/2015/01/digitalpolitisches-jahrestagung-2015-der-heinrich-boell-stiftung-baden-wuerttemberg/",
+      "relative_hrefs": 2,
+      "default": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/heise.de.lithium.html",
+      "url": "https://www.heise.de/newsticker/meldung/Lithium-aus-dem-Schredder-4451133.html",
+      "sha256": "dc828330724ce2a48b2590fb43fe04dee0c02ef650ecd3855ee4ecec50c70beb",
+      "bytes": 132549,
+      "git_blob": "98dc44f9fcf4d818ceaa8b10c2cccef0594230a2",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.heise.de/newsticker/meldung/Lithium-aus-dem-Schredder-4451133.html",
+      "relative_hrefs": 134,
+      "default": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/hundeverein-kreisunna.de.html",
+      "url": "http://www.hundeverein-kreisunna.de/unserverein.html",
+      "sha256": "e7effb774fef30e56683a2fe8c6661d78f3edcd64fcf2d922fd2998ff3dc71c3",
+      "bytes": 6387,
+      "git_blob": "9c3324d9832a697fa29c2388301d74b11b994421",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://www.hundeverein-kreisunna.de/unserverein.html",
+      "relative_hrefs": 11,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/iloveponysmag.com.barbour.html",
+      "url": "http://iloveponysmag.com/2018/05/24/barbour-coastal/",
+      "sha256": "e3818c7953f742560654c3edf5cdc42f391b95c642bb1e3e9fe6c6afa0fd3db4",
+      "bytes": 38982,
+      "git_blob": "9eba19bedfb70cb58e7bf50fbe688d5f6e0eda33",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://iloveponysmag.com/2018/05/24/barbour-coastal/",
+      "relative_hrefs": 4,
+      "default": {
+        "targets": 15,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 15,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/incurvy.de.wellness.html",
+      "url": "https://www.incurvy.de/trends-grosse-groessen/wellness-gesichtsbehandlung-plaisir-daromes/",
+      "sha256": "081e4d93e496996650e054cfda7e355b02647cca36d86b1464e7588fd2410fdf",
+      "bytes": 62294,
+      "git_blob": "0493ec9ce0b26802ed71f3ae2c5e0b2ac04949d7",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.incurvy.de/trends-grosse-groessen/wellness-gesichtsbehandlung-plaisir-daromes/",
+      "relative_hrefs": 2,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/internet-law.de.pseudonymen.html",
+      "url": "http://www.internet-law.de/2011/07/verstost-der-ausschluss-von-pseudonymen-bei-google-gegen-deutsches-recht.html",
+      "sha256": "bc7a54f0fe75b81c43bcfaa58d15a9cddf356572391fa54be89a32c5d59513d4",
+      "bytes": 71399,
+      "git_blob": "a8223e082d2e8307ec82b2b5b104ffc0503c23c2",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://www.internet-law.de/2011/07/verstost-der-ausschluss-von-pseudonymen-bei-google-gegen-deutsches-recht.html",
+      "relative_hrefs": 36,
+      "default": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/jolie.de.adele.html",
+      "url": "https://www.jolie.de/stars/adele-10-kilo-abgenommen-sie-zeigt-sich-schlanker-denn-je-200226.html",
+      "sha256": "93060316a4a024e248a489bf287751d18e552b05cce0dc8ff88969372ea62a1d",
+      "bytes": 75852,
+      "git_blob": "0c69a98ba65d84516f3448c413700267effd83d6",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.jolie.de/stars/adele-10-kilo-abgenommen-sie-zeigt-sich-schlanker-denn-je-200226.html",
+      "relative_hrefs": 42,
+      "default": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/jovelstefan.de.gefallt.html",
+      "url": "http://www.jovelstefan.de/2011/09/11/gefallt-mir/",
+      "sha256": "448e30a4aae2ce259e795e74a4bd87eb6518b43dcb1a49cd3186efe782bfd1bb",
+      "bytes": 24227,
+      "git_blob": "547827db2519bbddb480551c57f7ed6306f2e1a8",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://www.jovelstefan.de/2011/09/11/gefallt-mir/",
+      "relative_hrefs": 3,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/knowtechie.com.rally.html",
+      "url": "https://knowtechie.com/rocket-pass-4-in-rocket-league-brings-with-it-a-new-rally-inspired-car/",
+      "sha256": "d72fb72c58a9950376a8c5113d8f4cb3ef79684617190e81de6d374f5983a43e",
+      "bytes": 137267,
+      "git_blob": "58494af337d6f5f96c51c91fe2c2f239b7b0d284",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://knowtechie.com/rocket-pass-4-in-rocket-league-brings-with-it-a-new-rally-inspired-car/",
+      "relative_hrefs": 13,
+      "default": {
+        "targets": 10,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 10,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/kulinariaathome.com.mandelplätzchen.html",
+      "url": "http://kulinariaathome.wordpress.com/2012/12/08/mandelplatzchen/",
+      "sha256": "06cb895a110009259178423b7d050f83bc5d84b0e2f887fc9c26f979520391f6",
+      "bytes": 46563,
+      "git_blob": "2de54d49db248f2c00c9a0486b459ef09d3c55eb",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://kulinariaathome.wordpress.com/2012/12/08/mandelplatzchen/",
+      "relative_hrefs": 9,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/lady50plus.de.sekre.html",
+      "url": "https://lady50plus.de/2019/06/19/sekre-mystery-bag/",
+      "sha256": "6c3eeb8bf8f71553ff545383945190ace7cf2478f9223e5b231f8078d5535500",
+      "bytes": 118867,
+      "git_blob": "b9b6bef1144bae78c7c3e6acbc62fbe6cd0fecd4",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://lady50plus.de/2019/06/19/sekre-mystery-bag/",
+      "relative_hrefs": 12,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/landwirt.com.sensortechnik.html",
+      "url": "https://www.landwirt.com/Precision-Farming-Moderne-Sensortechnik-im-Kuhstall,,4229,,Bericht.html",
+      "sha256": "ea4673e35ae5ee493f4ce040e66abbe01ce3cb542177b1ad41f02f45583e6749",
+      "bytes": 72431,
+      "git_blob": "0c9ba7e6db3948d0c92d89df17143aa5983fbcb8",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.landwirt.com/Precision-Farming-Moderne-Sensortechnik-im-Kuhstall,,4229,,Bericht.html",
+      "relative_hrefs": 209,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/laviedesidees.fr.evaluation.html",
+      "url": "https://laviedesidees.fr/L-evaluation-et-les-listes-de.html",
+      "sha256": "563aa32787c8c3ccf00bcef22559ac15bdd3557f675f3e9c60972f1735541818",
+      "bytes": 111140,
+      "git_blob": "1e9eab57ed71e57bdef9de8ba1a67fe8898d5942",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://laviedesidees.fr/L-evaluation-et-les-listes-de.html",
+      "relative_hrefs": 66,
+      "default": {
+        "targets": 7,
+        "mismatches": 6,
+        "examples": [
+          "https://laviedesidees.fr#annexe",
+          "https://laviedesidees.fr#nb4-1",
+          "https://laviedesidees.fr#nb4-2",
+          "https://laviedesidees.fr#nb4-3",
+          "https://laviedesidees.fr#nb4-4"
+        ]
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/lemire.me.json.html",
+      "url": "https://lemire.me/blog/2019/08/02/json-parsing-simdjson-vs-json-for-modern-c/",
+      "sha256": "e0a14254cc2a007767f4732e8539c5a1c936b98a25fa3446f049b5ec79e6d522",
+      "bytes": 69088,
+      "git_blob": "76cf5f0e517e1c41df5f17970ec5a2b75384e76b",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://lemire.me/blog/2019/08/02/json-parsing-simdjson-vs-json-for-modern-c/",
+      "relative_hrefs": 3,
+      "default": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/love-hina.ch.0409.html",
+      "url": "http://love-hina.ch/news/0409.html",
+      "sha256": "c546ed7f37b35067c9da2af77c05979c5b21c0ecd3cdf5ddad85c3cf23dee7cb",
+      "bytes": 19451,
+      "git_blob": "37146e0cf03006e028198608c592904cb27326fb",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://love-hina.ch/news/0409.html",
+      "relative_hrefs": 47,
+      "default": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/luxuriousmagazine.com.polo.html",
+      "url": "https://www.luxuriousmagazine.com/2019/06/royal-salute-polo-rome/",
+      "sha256": "307bc0b42fdf6bccd8cf98b26c2f309687edd27d412d42d5eda3edef564704d9",
+      "bytes": 184886,
+      "git_blob": "223f883a60e9dae35a334de9b17c800aff31902d",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.luxuriousmagazine.com/2019/06/royal-salute-polo-rome/",
+      "relative_hrefs": 13,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/luxuryhaven.co.hyatt.html",
+      "url": "https://www.luxuryhaven.co/2019/05/nam-nghi-phu-quoc-unbound-collection-by-hyatt-officially-opens.html",
+      "sha256": "9a4152770379fa849afa1fa196d8540fcdfe750234170d73cfc14f382bdb8edc",
+      "bytes": 201705,
+      "git_blob": "f2080038a0b6e434651ff5d4bab5e3f84958788c",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.luxuryhaven.co/2019/05/nam-nghi-phu-quoc-unbound-collection-by-hyatt-officially-opens.html",
+      "relative_hrefs": 46,
+      "default": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/majkaswelt.com.fashion.html",
+      "url": "https://majkaswelt.com/top-5-fashion-must-haves-2018-werbung/",
+      "sha256": "9b133a84376354f014f572037619ccd167b0de21b1cab0e218f15993b964c0cd",
+      "bytes": 32513,
+      "git_blob": "9a4d8133cac44f0ed97387bf708c29e2dace2ce3",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://majkaswelt.com/top-5-fashion-must-haves-2018-werbung/",
+      "relative_hrefs": 3,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/meedia.de.freenet.html",
+      "url": "https://meedia.de/2016/03/08/einstieg-ins-tv-geschaeft-wie-freenet-privatkunden-fuer-antennen-tv-in-hd-qualitaet-gewinnen-will/",
+      "sha256": "61cda4d860764226b5ea50252ac59f3de9f064ae59e50ffe24d6777f73cd95ae",
+      "bytes": 210006,
+      "git_blob": "f583394f3e1fcaa80450bb6e52124d33e69682ed",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://meedia.de/2016/03/08/einstieg-ins-tv-geschaeft-wie-freenet-privatkunden-fuer-antennen-tv-in-hd-qualitaet-gewinnen-will/",
+      "relative_hrefs": 5,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/mixed.de.vrodo.html",
+      "url": "https://mixed.de/vrodo-deals-vr-taugliches-notebook-fuer-83215-euro-99-cent-leihfilme-bei-amazon-psvr/",
+      "sha256": "e45db230ea296815f887fa9ddfe8666f39ce50224289d85e59a9225e0bcfd919",
+      "bytes": 130508,
+      "git_blob": "c300705892fa64ea8fa8668d64e57e2a3fe402f3",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://mixed.de/vrodo-deals-vr-taugliches-notebook-fuer-83215-euro-99-cent-leihfilme-bei-amazon-psvr/",
+      "relative_hrefs": 2,
+      "default": {
+        "targets": 12,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 12,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/modepilot.de.duschkopf.html",
+      "url": "https://www.modepilot.de/2019/05/21/geht-euch-auch-so-oder-auf-reisen-nie-ohne-meinen-duschkopf/",
+      "sha256": "c3d8e139cc8fc564eed2ddc56d32650cba2503dd7ec22868174b79d83977c57d",
+      "bytes": 733084,
+      "git_blob": "e47f4c910dc21806ff1bc96945b5a5c836f836aa",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.modepilot.de/2019/05/21/geht-euch-auch-so-oder-auf-reisen-nie-ohne-meinen-duschkopf/",
+      "relative_hrefs": 39,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/moritz-meyer.net.vreni.html",
+      "url": "https://moritz-meyer.net/blog/vreni-frost-instagram-abmahnung/",
+      "sha256": "1af78c075f9b4d30fb1310ac63617ba71f41bf75fadb7c133ebe5a7a47aa1db0",
+      "bytes": 123103,
+      "git_blob": "d79b7c0ff16608380b83ad07a624eefd183db0f9",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://moritz-meyer.net/blog/vreni-frost-instagram-abmahnung/",
+      "relative_hrefs": 44,
+      "default": {
+        "targets": 16,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 16,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/nationalgeographic.co.uk.goats.html",
+      "url": "https://www.nationalgeographic.co.uk/environment-and-conservation/2020/01/ravenous-wild-goats-ruled-island-over-century-now-its-being",
+      "sha256": "c7b39da662a96dc1d8bfa1f0f2a93b8986b038115d3f5008abefb0d86e142992",
+      "bytes": 68755,
+      "git_blob": "d5ef5d8ba05d88ca69edb0cda984c2803c2e8199",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.nationalgeographic.co.uk/environment-and-conservation/2020/01/ravenous-wild-goats-ruled-island-over-century-now-its-being",
+      "relative_hrefs": 21,
+      "default": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/nature.com.telescope.html",
+      "url": "https://www.nature.com/articles/d41586-019-02790-3",
+      "sha256": "6f5ee1affb33feb86682f7385ee2154f322dc5f1e44aa1cfc2283294eb45787f",
+      "bytes": 103881,
+      "git_blob": "dd0c1d71a5328d57b71b36a46a6c8e9fd846d97f",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.nature.com/articles/d41586-019-02790-3",
+      "relative_hrefs": 56,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/ndr.de.podcastcoronavirus140.html",
+      "url": "https://www.ndr.de/nachrichten/info/16-Coronavirus-Update-Wir-brauchen-Abkuerzungen-bei-der-Impfstoffzulassung,podcastcoronavirus140.html",
+      "sha256": "b7871ec5fc22bb4a620e720ebdeadf75747150e0d6970487c40b841df8171d41",
+      "bytes": 96692,
+      "git_blob": "fcf45d2084f00e4dfc1d55a4556521eec132be77",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.ndr.de/nachrichten/info/16-Coronavirus-Update-Wir-brauchen-Abkuerzungen-bei-der-Impfstoffzulassung,podcastcoronavirus140.html",
+      "relative_hrefs": 132,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/netzpolitik.org.abmahnungen.html",
+      "url": "https://netzpolitik.org/2016/die-cider-connection-abmahnungen-gegen-nutzer-von-creative-commons-bildern/",
+      "sha256": "886746c00d01689c705581e6f0554685aa7c8458cc850e4cf9332e98db25e2ef",
+      "bytes": 173429,
+      "git_blob": "1e3a719e33ab249eb35e1cfe8d0e656eeff17d54",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://netzpolitik.org/2016/die-cider-connection-abmahnungen-gegen-nutzer-von-creative-commons-bildern/",
+      "relative_hrefs": 76,
+      "default": {
+        "targets": 13,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 13,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/novalanalove.com.ear-candy.html",
+      "url": "https://novalanalove.com/ear-candy/",
+      "sha256": "f8be2bfa57a3882e1b7067b53d4d2bb401a9d768541693d4477268247fce869e",
+      "bytes": 46460,
+      "git_blob": "e32b2001a5660e0c6fe92840304ab09b9c2de9a6",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://novalanalove.com/ear-candy/",
+      "relative_hrefs": 2,
+      "default": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/otto.de.twoforfashion.html",
+      "url": "https://www.otto.de/twoforfashion/strohtasche/",
+      "sha256": "b0b9aac5dd82cda52d628bb8e2a55dde42291ce27c2579f65e335b6c001d28b0",
+      "bytes": 95318,
+      "git_blob": "79268360e49d87fe19f65047ad5f7641b6bef4ba",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.otto.de/twoforfashion/strohtasche/",
+      "relative_hrefs": 9,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/phys.org.tool.html",
+      "url": "https://phys.org/news/2019-10-flint-flake-tool-partially-birch.html",
+      "sha256": "40e923506f17756b39cc95e9435d1e5e5913dfc406aa8afab6bee2fbc6952c08",
+      "bytes": 105679,
+      "git_blob": "97a3b94439223a4385d812ecdfa715e99abbcf4a",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://phys.org/news/2019-10-flint-flake-tool-partially-birch.html",
+      "relative_hrefs": 13,
+      "default": {
+        "targets": 6,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 6,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/piratenpartei-mv.de.grundeinkommen.html",
+      "url": "https://piratenpartei-mv.de/blog/2013/09/12/grundeinkommen-ist-ein-menschenrecht/",
+      "sha256": "7649bbc11adcb4ec02e494fffe638e70c7ee38c7e55f915804cfbf58f2252a55",
+      "bytes": 51496,
+      "git_blob": "e5c168766ca4f98517ef00afecc85f9cb90c23a0",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://piratenpartei-mv.de/blog/2013/09/12/grundeinkommen-ist-ein-menschenrecht/",
+      "relative_hrefs": 4,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/plentylife.blogspot.pamela-reif.html",
+      "url": "https://plentylife.blogspot.com/2017/05/strong-beautiful-pamela-reif-rezension.html",
+      "sha256": "81e62bec41ec8ddfeaf024251e9fcf7a9b9fad56c0337199d04268e469c02127",
+      "bytes": 146109,
+      "git_blob": "5691c3c71bb3a2cc85360c2747555a5ac9b080bd",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://plentylife.blogspot.com/2017/05/strong-beautiful-pamela-reif-rezension.html",
+      "relative_hrefs": 11,
+      "default": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/pluralsight.com.python.html",
+      "url": "https://www.pluralsight.com/tech-blog/managing-python-environments/",
+      "sha256": "dd8ce296f04be6660da4c1ac750d2284c680b444ca1586d555112cc0e602a5e0",
+      "bytes": 42210,
+      "git_blob": "d19152f386620c27998beb3710df6fa2609ba197",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.pluralsight.com/tech-blog/managing-python-environments/",
+      "relative_hrefs": 6,
+      "default": {
+        "targets": 16,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 16,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/psl.eu.luniversite.html",
+      "url": "https://www.psl.eu/actualites/luniversite-psl-quand-les-grandes-ecoles-font-universite",
+      "sha256": "2c57f7ede3206e38aa144c7372d9bf6ffff6e76d7cc8824565c35914fd5498d6",
+      "bytes": 64023,
+      "git_blob": "4d404d73918e3a392c4da849a9f09556586d8096",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.psl.eu/actualites/luniversite-psl-quand-les-grandes-ecoles-font-universite",
+      "relative_hrefs": 154,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/reuters.com.parasite.html",
+      "url": "https://www.reuters.com/article/us-awards-sag/parasite-scores-upset-at-sag-awards-boosting-oscar-chances-idUSKBN1ZI0EH",
+      "sha256": "3793fbb6b724605f2b492ec766fe85eda541d1ae4c5a3ff75c2b59f3fd4e95cf",
+      "bytes": 382817,
+      "git_blob": "0d758ea33c8f884191002ac89b8046b7eb112888",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.reuters.com/article/us-awards-sag/parasite-scores-upset-at-sag-awards-boosting-oscar-chances-idUSKBN1ZI0EH",
+      "relative_hrefs": 5,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/rnz.de.witzel.html",
+      "url": "https://www.rnz.de/nachrichten_artikel,-zz-dpa-Schlaglichter-Frank-Witzel-erhaelt-Deutschen-Buchpreis-2015-_arid,133484.html",
+      "sha256": "b4bde9d631c4ab15a6054666cd0568dd9dc2798ef631dc14f003b64029a0e1e9",
+      "bytes": 92624,
+      "git_blob": "1d88c00ca328cc276236e0d2e65f28e0d379ca80",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.rnz.de/nachrichten_artikel,-zz-dpa-Schlaglichter-Frank-Witzel-erhaelt-Deutschen-Buchpreis-2015-_arid,133484.html",
+      "relative_hrefs": 389,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/rs-ingenieure.de.tragwerksplanung.html",
+      "url": "http://www.rs-ingenieure.de/de/hochbau/leistungen/tragwerksplanung",
+      "sha256": "7485dba939a89945d6799b8700c49a7f939dba593de7ca758db327dc41fdc593",
+      "bytes": 6003,
+      "git_blob": "82d4d6f38a0262c0d930dc647a2b7dd9ce58bb79",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [
+        "http://www.rs-ingenieure.de/"
+      ],
+      "document_base_url": "http://www.rs-ingenieure.de/",
+      "relative_hrefs": 27,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/salon.com.emissions.html",
+      "url": "https://www.salon.com/2020/01/10/despite-everything-u-s-emissions-dipped-in-2019_partner/",
+      "sha256": "41929d9f472c044e2d3af96498739c19e0c4eb51e3d36ad24fb543a1da0ee1c2",
+      "bytes": 74744,
+      "git_blob": "d715e82f439389271d2a238278efd7bf0b1bf426",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.salon.com/2020/01/10/despite-everything-u-s-emissions-dipped-in-2019_partner/",
+      "relative_hrefs": 33,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/sauvonsluniversite.com.spip.html",
+      "url": "http://www.sauvonsluniversite.fr/spip.php?article8532",
+      "sha256": "f554e474a6ee7df6e5309409d78aff900ce40f47a301dd7336f200f3a49def91",
+      "bytes": 22086,
+      "git_blob": "7d36c0e156a443e5edc3c8924e71d3660d475420",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://www.sauvonsluniversite.fr/spip.php?article8532",
+      "relative_hrefs": 33,
+      "default": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/schleifen.ucoz.de.briefe.html",
+      "url": "http://schleifen.ucoz.de/blog/briefe/2010-10-26-18",
+      "sha256": "8a96f5d4685237053b8bf34a8274f2b1755ad651767c4dcb3b3f390b158693ea",
+      "bytes": 60269,
+      "git_blob": "40c21168cc4f6365da0db99c1b5558004620ef4f",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://schleifen.ucoz.de/blog/briefe/2010-10-26-18",
+      "relative_hrefs": 23,
+      "default": {
+        "targets": 15,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 15,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/scmp.com.playbook.html",
+      "url": "https://www.scmp.com/comment/opinion/article/3046526/taiwanese-president-tsai-ing-wens-political-playbook-should-be",
+      "sha256": "2036f4b8f2ed0377bd7b3662fad69f4e7884ddf259658074e2d89f820a54feab",
+      "bytes": 374020,
+      "git_blob": "f03f17092c37dd0399cd4ae204a57c3b308909b7",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.scmp.com/comment/opinion/article/3046526/taiwanese-president-tsai-ing-wens-political-playbook-should-be",
+      "relative_hrefs": 8,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/shingon-reiki.de.schamanismus.html",
+      "url": "http://www.shingon-reiki.de/reiki-und-schamanismus/",
+      "sha256": "e06005515ee86f9ecef84b30bb773da43f6174fb6feec23e3cfe1310d4f6dd1f",
+      "bytes": 36699,
+      "git_blob": "ef25e45ebf54c79a7054a6d6daf30419f136e772",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://www.shingon-reiki.de/reiki-und-schamanismus/",
+      "relative_hrefs": 3,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/simplyscience.ch.erdoel.html",
+      "url": "http://www.simplyscience.ch/teens-liesnach-archiv/articles/wie-entsteht-erdoel.html",
+      "sha256": "4033633a411177ebdcfc7d2a0724f9abb08c81bc8501bee1d6cbf1f547841aed",
+      "bytes": 37378,
+      "git_blob": "407c5c4f31c14ca7d13126b3c385a97fc0edb554",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [
+        "http://www.simplyscience.ch/"
+      ],
+      "document_base_url": "http://www.simplyscience.ch/",
+      "relative_hrefs": 86,
+      "default": {
+        "targets": 4,
+        "mismatches": 1,
+        "examples": [
+          "http://www.simplyscience.ch"
+        ]
+      },
+      "fast": {
+        "targets": 4,
+        "mismatches": 1,
+        "examples": [
+          "http://www.simplyscience.ch"
+        ]
+      }
+    },
+    {
+      "file": "tests/cache/skateboardmsm.de.dormhagen.html",
+      "url": "https://skateboardmsm.de/news/the-captains-quest-2017-contest-auf-schwimmender-miniramp-am-19-august-in-dormagen.html",
+      "sha256": "aded22d1826a7cf36be99e44d2908ca1c2f75f13d5955895bebe9b898eae07c6",
+      "bytes": 63631,
+      "git_blob": "831f88ab081e37df5969490209da6ae463eddb5f",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://skateboardmsm.de/news/the-captains-quest-2017-contest-auf-schwimmender-miniramp-am-19-august-in-dormagen.html",
+      "relative_hrefs": 5,
+      "default": {
+        "targets": 4,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 4,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/sonntag-sachsen.de.emanuel.html",
+      "url": "https://www.sonntag-sachsen.de/emanuel-scobel-wird-thomanerchor-geschaeftsfuehrer",
+      "sha256": "86cd468a772e42cd19927af6cc6104aa7e04b52e926efbc003f803b088b60291",
+      "bytes": 33557,
+      "git_blob": "94b5b6ec92c1a2cfd1c1162ae686d561bfc3690a",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.sonntag-sachsen.de/emanuel-scobel-wird-thomanerchor-geschaeftsfuehrer",
+      "relative_hrefs": 42,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/soundofscience.fr.1927.html",
+      "url": "https://www.soundofscience.fr/1927",
+      "sha256": "ec4bc9b7898c06859dbf82f8d95d47278ea003d9b62e153834b3a482464ae823",
+      "bytes": 38876,
+      "git_blob": "7ed44e71511f52f58a1edd2c6b807572a910c671",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.soundofscience.fr/1927",
+      "relative_hrefs": 3,
+      "default": {
+        "targets": 7,
+        "mismatches": 1,
+        "examples": [
+          "https://www.soundofscience.fr#lettre"
+        ]
+      },
+      "fast": {
+        "targets": 7,
+        "mismatches": 1,
+        "examples": [
+          "https://www.soundofscience.fr#lettre"
+        ]
+      }
+    },
+    {
+      "file": "tests/cache/speicherguide.de.schwierige.html",
+      "url": "https://www.speicherguide.de/digitalisierung/faktor-mensch/schwierige-gespraeche-so-gehts-24376.aspx",
+      "sha256": "f2d7304b57735e4882c2d2f2d9b74a0905ba024d57723146dd88cd7294914dc2",
+      "bytes": 28504,
+      "git_blob": "289495ddf28b7b2713c41bba6c2784b5ea3891ca",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.speicherguide.de/digitalisierung/faktor-mensch/schwierige-gespraeche-so-gehts-24376.aspx",
+      "relative_hrefs": 12,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/spektrum.de.engelbart.html",
+      "url": "https://scilogs.spektrum.de/engelbart-galaxis/die-ablehnung-der-gendersprache/",
+      "sha256": "6cb81ee9667413ee539d1622803f6737f13e218bd3c05229f9d6b7f1dcffb239",
+      "bytes": 240660,
+      "git_blob": "a6849617e6285a9fa83bcb3146534e7bc105dc12",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://scilogs.spektrum.de/engelbart-galaxis/die-ablehnung-der-gendersprache/",
+      "relative_hrefs": 64,
+      "default": {
+        "targets": 18,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 18,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/spiegel.de.albtraum.html",
+      "url": "https://www.spiegel.de/spiegel/print/d-161500790.html",
+      "sha256": "e792d4986517beae022d815ca239c2787f7ef852e15b915e0ec8943316edf5fe",
+      "bytes": 183975,
+      "git_blob": "d235536e9f86b014c3a1372b3e3c03bbedc8c4dd",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.spiegel.de/spiegel/print/d-161500790.html",
+      "relative_hrefs": 159,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/spreeblick.com.habeck.html",
+      "url": "http://www.spreeblick.com/blog/2006/07/29/aus-aus-alles-vorbei-habeck-macht-die-stahnke/",
+      "sha256": "b3057fca454ba22eafadfe25c276c7180a4003ed393f778dc84b167ab8b15c43",
+      "bytes": 44899,
+      "git_blob": "a7f6196100c2df7590202991ced30ed0dd82274d",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://www.spreeblick.com/blog/2006/07/29/aus-aus-alles-vorbei-habeck-macht-die-stahnke/",
+      "relative_hrefs": 1,
+      "default": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/stackoverflow.com.rust.html",
+      "url": "https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/",
+      "sha256": "7fa60fe2fd371ece7413aa0dde9f5915a51dda463d10566a086181cd1a20cc2e",
+      "bytes": 92666,
+      "git_blob": "da05d92a93cef622c4c75b22cda7a82125bc09e0",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/",
+      "relative_hrefs": 12,
+      "default": {
+        "targets": 30,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 30,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/stuttgart.de.html",
+      "url": "https://www.stuttgart.de/item/show/132240/1",
+      "sha256": "d0c69d01bfa9803646784ca13c1487f8bdb3ea8e6ab9fe0b4a5ec6ab4a16a015",
+      "bytes": 55114,
+      "git_blob": "f9d3f60a8b1f29d9cde172021c3ba184a0f6354c",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.stuttgart.de/item/show/132240/1",
+      "relative_hrefs": 253,
+      "default": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 0,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/sueddeutsche.de.flixtrain.html",
+      "url": "https://www.sueddeutsche.de/wirtschaft/bahn-flixbus-flixtrain-deutschlandtakt-fernverkehr-1.4445845",
+      "sha256": "80ba1e450582d168cd1d21f3f70095ffaff3b4329c094f92b7466fe2d7953f66",
+      "bytes": 119874,
+      "git_blob": "7043a12c0d64f613700980f9e91c00e688cd67a1",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.sueddeutsche.de/wirtschaft/bahn-flixbus-flixtrain-deutschlandtakt-fernverkehr-1.4445845",
+      "relative_hrefs": 7,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/telemedicus.info.rezension.html",
+      "url": "https://www.telemedicus.info/article/2766-Rezension-Haerting-Internetrecht,-5.-Auflage-2014.html",
+      "sha256": "6aa17a8922a8db9718bd174fe563d1eb58882376dc880c0caa3697f3b6d952f0",
+      "bytes": 37233,
+      "git_blob": "0e55a5e7da5f3501d287a0639abc77c3570acbd7",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.telemedicus.info/article/2766-Rezension-Haerting-Internetrecht,-5.-Auflage-2014.html",
+      "relative_hrefs": 48,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/theguardian.com.academics.html",
+      "url": "https://www.theguardian.com/education/2020/jan/20/thousands-of-uk-academics-treated-as-second-class-citizens",
+      "sha256": "1dca15fb3f89065daae80345fcd62f8be884d511598af03d307b7ca0d2fad0db",
+      "bytes": 736573,
+      "git_blob": "49487bfa8e25be335331b9c32d7458090ad1f119",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.theguardian.com/education/2020/jan/20/thousands-of-uk-academics-treated-as-second-class-citizens",
+      "relative_hrefs": 3,
+      "default": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/theplanetarypress.com.forestlands.html",
+      "url": "https://www.theplanetarypress.com/2020/01/management-of-intact-forestlands-by-indigenous-peoples-key-to-protecting-climate/",
+      "sha256": "aeea1049b46e97977ab27e265369c8a72293459238309b1597cbe96b116d1f0b",
+      "bytes": 131013,
+      "git_blob": "0bdc010e0ae5ef097ed9678f5a4c47299d7df18c",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.theplanetarypress.com/2020/01/management-of-intact-forestlands-by-indigenous-peoples-key-to-protecting-climate/",
+      "relative_hrefs": 16,
+      "default": {
+        "targets": 11,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 11,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/theverge.com.ios13.html",
+      "url": "https://www.theverge.com/2019/7/3/20680681/ios-13-beta-3-facetime-attention-correction-eye-contact",
+      "sha256": "8c9021c0963dcfa268aaff8d524d8fb0da47b1cdaf5d8080ff58e4ea4d60e5b7",
+      "bytes": 142227,
+      "git_blob": "c347d4432d02e5e7efd0b5aaf2774cafbd97fbae",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.theverge.com/2019/7/3/20680681/ios-13-beta-3-facetime-attention-correction-eye-contact",
+      "relative_hrefs": 84,
+      "default": {
+        "targets": 6,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 6,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/threatpost.com.android.html",
+      "url": "https://threatpost.com/android-ransomware-spreads-via-sex-simulation-game-links-on-reddit-sms/146774/",
+      "sha256": "2a6af37471416874282c686adf08ccc8b144b66c6a64dfa7030cfd766d05f349",
+      "bytes": 80932,
+      "git_blob": "cf971869631ccf2a8fcf0ce4730e30cb39aa29fb",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://threatpost.com/android-ransomware-spreads-via-sex-simulation-game-links-on-reddit-sms/146774/",
+      "relative_hrefs": 16,
+      "default": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 3,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/toralin.de.schmierfett.html",
+      "url": "http://www.toralin.de/schmierfett-reparierend-verschlei-y-910.html",
+      "sha256": "19a3bb9d5bccff4c08a43df9873820e1d4e13583e64abc5080598fe4dcea1e76",
+      "bytes": 132048,
+      "git_blob": "2ebe1887d38390ac804b92e3461e578e15a763db",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://www.toralin.de/schmierfett-reparierend-verschlei-y-910.html",
+      "relative_hrefs": 20,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/vancouversun.com.microsoft.html",
+      "url": "https://vancouversun.com/technology/microsoft-moves-to-erase-its-carbon-footprint-from-the-atmosphere-in-climate-push/wcm/76e426d9-56de-40ad-9504-18d5101013d2",
+      "sha256": "9636a7117d7566d3abe9703cc67ba985074b70ee310b7152ba4bcb05a060ea8d",
+      "bytes": 193651,
+      "git_blob": "a114022ee780a6a81773152008a9e0a9bf0a0487",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://vancouversun.com/technology/microsoft-moves-to-erase-its-carbon-footprint-from-the-atmosphere-in-climate-push/wcm/76e426d9-56de-40ad-9504-18d5101013d2",
+      "relative_hrefs": 30,
+      "default": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 2,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/vice.com.amazon.html",
+      "url": "https://www.vice.com/en_uk/article/d3avvm/the-amazon-is-on-fire-and-the-smoke-can-be-seen-from-space",
+      "sha256": "2707b6764006ddadcde173a3cb3b06b3184213a1b6658b9979f6b4e4c4ca8408",
+      "bytes": 226914,
+      "git_blob": "f0d3f31935716a77bb938719f9e84964a800c748",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://www.vice.com/en_uk/article/d3avvm/the-amazon-is-on-fire-and-the-smoke-can-be-seen-from-space",
+      "relative_hrefs": 13,
+      "default": {
+        "targets": 16,
+        "mismatches": 1,
+        "examples": [
+          "https://www.globalfiredata.org/updates.html#"
+        ]
+      },
+      "fast": {
+        "targets": 16,
+        "mismatches": 1,
+        "examples": [
+          "https://www.globalfiredata.org/updates.html#"
+        ]
+      }
+    },
+    {
+      "file": "tests/cache/viehbacher.com.steuerrecht.html",
+      "url": "https://viehbacher.com/de/steuerrecht",
+      "sha256": "d143b94417309b882364ed96d94b9cf802752e35ff99c3989ed1328754756207",
+      "bytes": 40903,
+      "git_blob": "09430b22e3c74980def1a60b208cd97fcc61c668",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [
+        "https://viehbacher.com/de/steuerrecht"
+      ],
+      "document_base_url": "https://viehbacher.com/de/steuerrecht",
+      "relative_hrefs": 57,
+      "default": {
+        "targets": 7,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 7,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/wehranlage-horka.de.887.html",
+      "url": "http://www.wehranlage-horka.de/veranstaltung/887/",
+      "sha256": "d229c57b0cdbea18bfccee6d6ef76914ff77386676ebb65f011ecca1e10c318f",
+      "bytes": 11747,
+      "git_blob": "89047704d46e47ef7b5610fd0dde5f2f49e69ea7",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "http://www.wehranlage-horka.de/veranstaltung/887/",
+      "relative_hrefs": 1,
+      "default": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 1,
+        "mismatches": 0,
+        "examples": []
+      }
+    },
+    {
+      "file": "tests/cache/wikimediafoundation.org.turkey.html",
+      "url": "https://wikimediafoundation.org/news/2020/01/15/access-to-wikipedia-restored-in-turkey-after-more-than-two-and-a-half-years/",
+      "sha256": "61374d043abdbdfec508b488c28c083d4717324ab5a406f47d58568738edcad0",
+      "bytes": 43783,
+      "git_blob": "59a142053a00af1d4b7d99829a771ea44f1f3754",
+      "added_in_commit": "9f2d49b6e61a87c67e90bcf2c27752f28a149213 2026-07-01T20:51:49+02:00",
+      "base_hrefs": [],
+      "document_base_url": "https://wikimediafoundation.org/news/2020/01/15/access-to-wikipedia-restored-in-turkey-after-more-than-two-and-a-half-years/",
+      "relative_hrefs": 10,
+      "default": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      },
+      "fast": {
+        "targets": 5,
+        "mismatches": 0,
+        "examples": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+$ python research/techdoc-extraction-v2.3.1/scripts/posthoc_analysis.py matrix research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa research/techdoc-extraction-v2.3.1/fixtures   # POST-HOC
+f2_inline_code.html::inline-connect-marked                  16  explicit-include_formatting=False-on-markdown   e.g. balanced L0 T0 F0 markdown
+f2_inline_code.html::inline-operator-marked                 16  explicit-include_formatting=False-on-markdown   e.g. balanced L0 T0 F0 markdown
+f3_nested_list_negation.html::not-emphasis                  16  explicit-include_formatting=False-on-markdown   e.g. balanced L0 T0 F0 markdown
+f5_reference_links.html::read-first                         32  link-markup-interleaving   e.g. balanced L1 T0 F0 txt
+f5_reference_links.html::sdk-team                           32  link-markup-interleaving   e.g. balanced L1 T0 F0 txt
+f6_malformed.html::code-block-indentation                   96  dropped-by-content-selection (html2txt has it: True, baseline has it: True)   e.g. balanced L0 T0 F0 txt
+f6_malformed.html::security-only                            96  dropped-by-content-selection (html2txt has it: True, baseline has it: True)   e.g. balanced L0 T0 F0 txt
+f6_malformed.html::link-changes                             48  dropped-by-content-selection (html2txt has it: True, baseline has it: True)   e.g. balanced L1 T0 F0 txt
+f8_combined_reference_page.html::inline-publish-marked      16  explicit-include_formatting=False-on-markdown   e.g. balanced L0 T0 F0 markdown
+f8_combined_reference_page.html::not-emphasis               16  explicit-include_formatting=False-on-markdown   e.g. balanced L0 T0 F0 markdown
+classified FAIL verdicts: 384
+exit=0

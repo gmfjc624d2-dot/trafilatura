@@ -1,0 +1,165 @@
+$ python -m pytest -p no:cacheprovider docs/docs_tests.py -rfE   # venv: python 3.13 + [dev,docs], activated
+# git HEAD bb0e4fac70ff12b635213960c71e912bfe68e630; Python 3.13.16; sphinx 9.1.0
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.7.0
+rootdir: /home/user/trafilatura
+configfile: pyproject.toml
+plugins: cov-7.1.0
+collected 2 items
+
+docs/docs_tests.py F.                                                    [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_docs_build ________________________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-6/test_docs_build0')
+
+    def test_docs_build(tmp_path):
+        """The documentation compiles cleanly (warnings treated as errors)."""
+        result = subprocess.run(
+            ["sphinx-build", "-W", "-b", "html", str(DOCS), str(tmp_path)],
+            capture_output=True,
+            text=True,
+            timeout=300,
+        )
+        if result.returncode != 0:
+>           pytest.fail(
+                f"Sphinx build failed (exit {result.returncode})\n"
+                f"STDOUT:\n{result.stdout}\nSTDERR:\n{result.stderr}"
+            )
+E           Failed: Sphinx build failed (exit 1)
+E           STDOUT:
+E           Running Sphinx v9.1.0
+E           loading translations [en]... done
+E           matplotlib is not installed, social cards will not be generated
+E           loading intersphinx inventory 'python' from https://docs.python.org/3/objects.inv ...
+E           loading intersphinx inventory 'courlan' from https://courlan.readthedocs.io/en/latest/objects.inv ...
+E           loading intersphinx inventory 'htmldate' from https://htmldate.readthedocs.io/en/latest/objects.inv ...
+E           myst v5.1.0: MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions=set(), disable_syntax=[], all_links_external=False, links_external_new_tab=False, url_schemes=('http', 'https', 'mailto', 'ftp'), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=0, heading_slug_func=None, html_meta={}, footnote_sort=True, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes='tex2jax_process|mathjax_process|math|output_area', enable_checkboxes=False, strikethrough_single_tilde=False, colon_fence_exact_match=False, suppress_warnings=[], highlight_code_blocks=True)
+E           building [mo]: targets for 0 po files that are out of date
+E           writing output... 
+E           building [html]: targets for 34 source files that are out of date
+E           updating environment: [new config] 34 added, 0 changed, 0 removed
+E           reading sources... [  3%] background
+E           reading sources... [  6%] compendium
+E           reading sources... [  9%] corefunctions
+E           reading sources... [ 12%] corpus-data
+E           reading sources... [ 15%] crawls
+E           reading sources... [ 18%] deduplication
+E           reading sources... [ 21%] deprecations
+E           reading sources... [ 24%] downloads
+E           reading sources... [ 26%] evaluation
+E           reading sources... [ 29%] extraction-overview
+E           reading sources... [ 32%] faq
+E           reading sources... [ 35%] index
+E           reading sources... [ 38%] installation
+E           reading sources... [ 41%] quickstart
+E           reading sources... [ 44%] settings
+E           reading sources... [ 47%] sources
+E           reading sources... [ 50%] tests
+E           reading sources... [ 53%] troubleshooting
+E           reading sources... [ 56%] tutorial-chromadb
+E           reading sources... [ 59%] tutorial-corpus
+E           reading sources... [ 62%] tutorial-datasets
+E           reading sources... [ 65%] tutorial-dwds
+E           reading sources... [ 68%] tutorial-frequencies
+E           reading sources... [ 71%] tutorial-rag
+E           reading sources... [ 74%] tutorial-tei
+E           reading sources... [ 76%] tutorials
+E           reading sources... [ 79%] url-management
+E           reading sources... [ 82%] usage
+E           reading sources... [ 85%] usage-api
+E           reading sources... [ 88%] usage-cli
+E           reading sources... [ 91%] usage-gui
+E           reading sources... [ 94%] usage-python
+E           reading sources... [ 97%] usage-r
+E           reading sources... [100%] used-by
+E           
+E           looking for now-outdated files... none found
+E           pickling environment... done
+E           checking consistency... /home/user/trafilatura/docs/quickstart.rst: document is referenced in multiple toctrees: ['index', 'usage'], selecting: usage <- quickstart
+E           done
+E           preparing documents... done
+E           copying assets... 
+E           copying static files... 
+E           Writing evaluated template result to /tmp/pytest-of-root/pytest-6/test_docs_build0/_static/basic.css
+E           Writing evaluated template result to /tmp/pytest-of-root/pytest-6/test_docs_build0/_static/documentation_options.js
+E           Writing evaluated template result to /tmp/pytest-of-root/pytest-6/test_docs_build0/_static/language_data.js
+E           copying static files: done
+E           copying extra files... 
+E           copying extra files: done
+E           copying assets: done
+E           writing output... [  3%] background
+E           writing output... [  6%] compendium
+E           writing output... [  9%] corefunctions
+E           writing output... [ 12%] corpus-data
+E           writing output... [ 15%] crawls
+E           writing output... [ 18%] deduplication
+E           writing output... [ 21%] deprecations
+E           writing output... [ 24%] downloads
+E           writing output... [ 26%] evaluation
+E           writing output... [ 29%] extraction-overview
+E           writing output... [ 32%] faq
+E           writing output... [ 35%] index
+E           writing output... [ 38%] installation
+E           writing output... [ 41%] quickstart
+E           writing output... [ 44%] settings
+E           writing output... [ 47%] sources
+E           writing output... [ 50%] tests
+E           writing output... [ 53%] troubleshooting
+E           writing output... [ 56%] tutorial-chromadb
+E           writing output... [ 59%] tutorial-corpus
+E           writing output... [ 62%] tutorial-datasets
+E           writing output... [ 65%] tutorial-dwds
+E           writing output... [ 68%] tutorial-frequencies
+E           writing output... [ 71%] tutorial-rag
+E           writing output... [ 74%] tutorial-tei
+E           writing output... [ 76%] tutorials
+E           writing output... [ 79%] url-management
+E           writing output... [ 82%] usage
+E           writing output... [ 85%] usage-api
+E           writing output... [ 88%] usage-cli
+E           writing output... [ 91%] usage-gui
+E           writing output... [ 94%] usage-python
+E           writing output... [ 97%] usage-r
+E           writing output... [100%] used-by
+E           
+E           generating indices... genindex done
+E           highlighting module code... [  9%] trafilatura.baseline
+E           highlighting module code... [ 18%] trafilatura.core
+E           highlighting module code... [ 27%] trafilatura.downloads
+E           highlighting module code... [ 36%] trafilatura.external
+E           highlighting module code... [ 45%] trafilatura.feeds
+E           highlighting module code... [ 55%] trafilatura.main_extractor
+E           highlighting module code... [ 64%] trafilatura.metadata
+E           highlighting module code... [ 73%] trafilatura.sitemaps
+E           highlighting module code... [ 82%] trafilatura.spider
+E           highlighting module code... [ 91%] trafilatura.utils
+E           highlighting module code... [100%] trafilatura.xml
+E           
+E           writing additional pages... search done
+E           copying images... [ 17%] trafilatura-demo.gif
+E           copying images... [ 33%] software-ecosystem.png
+E           copying images... [ 50%] dwds-treffer-exportieren.jpg
+E           copying images... [ 67%] dwds-exportieren.jpg
+E           copying images... [ 83%] dwds-count-exportieren.jpg
+E           copying images... [100%] gui-screenshot.png
+E           
+E           dumping search index in English (code: en)... done
+E           dumping object inventory... done
+E           sphinx-sitemap: sitemap.xml was generated for URL https://trafilatura.readthedocs.io/ in /tmp/pytest-of-root/pytest-6/test_docs_build0/sitemap.xml
+E           build finished with problems, 3 warnings (with warnings treated as errors).
+E           
+E           STDERR:
+E           WARNING: failed to reach any of the inventories with the following issues:
+E           intersphinx inventory 'https://docs.python.org/3/objects.inv' not fetchable due to <class 'requests.exceptions.ProxyError'>: HTTPSConnectionPool(host='docs.python.org', port=443): Max retries exceeded with url: /3/objects.inv (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+E           WARNING: failed to reach any of the inventories with the following issues:
+E           intersphinx inventory 'https://htmldate.readthedocs.io/en/latest/objects.inv' not fetchable due to <class 'requests.exceptions.ProxyError'>: HTTPSConnectionPool(host='htmldate.readthedocs.io', port=443): Max retries exceeded with url: /en/latest/objects.inv (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+E           WARNING: failed to reach any of the inventories with the following issues:
+E           intersphinx inventory 'https://courlan.readthedocs.io/en/latest/objects.inv' not fetchable due to <class 'requests.exceptions.ProxyError'>: HTTPSConnectionPool(host='courlan.readthedocs.io', port=443): Max retries exceeded with url: /en/latest/objects.inv (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+docs/docs_tests.py:21: Failed
+=========================== short test summary info ============================
+FAILED docs/docs_tests.py::test_docs_build - Failed: Sphinx build failed (exi...
+========================= 1 failed, 1 passed in 16.04s =========================
+exit=1

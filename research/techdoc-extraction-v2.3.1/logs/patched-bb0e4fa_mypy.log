@@ -1,0 +1,4 @@
+$ mypy -p trafilatura
+# git HEAD bb0e4fac70ff12b635213960c71e912bfe68e630, source paths modified: 0; Python 3.13.16; user root
+Success: no issues found in 22 source files
+exit=0

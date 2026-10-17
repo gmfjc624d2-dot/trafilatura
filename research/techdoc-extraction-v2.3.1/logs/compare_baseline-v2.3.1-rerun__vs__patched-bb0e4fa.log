@@ -1,0 +1,113 @@
+$ python research/techdoc-extraction-v2.3.1/scripts/compare_runs.py research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa 
+== link_resolution.json (case: path verdict before -> after)
+  fragment                         convert_tags             FAIL -> PASS
+  fragment                         extract_default          FAIL -> PASS
+  fragment                         extract_fast             FAIL -> PASS
+  fragment                         extract_favor_recall     FAIL -> PASS
+  fragment                         extract_favor_precision  FAIL -> PASS
+  sibling                          convert_tags             FAIL -> PASS
+  sibling                          extract_default          FAIL -> PASS
+  sibling                          extract_fast             FAIL -> PASS
+  sibling                          extract_favor_recall     FAIL -> PASS
+  sibling                          extract_favor_precision  FAIL -> PASS
+  parent                           convert_tags             FAIL -> PASS
+  parent                           extract_default          FAIL -> PASS
+  parent                           extract_fast             FAIL -> PASS
+  parent                           extract_favor_recall     FAIL -> PASS
+  parent                           extract_favor_precision  FAIL -> PASS
+  query-only                       convert_tags             FAIL -> PASS
+  query-only                       extract_default          FAIL -> PASS
+  query-only                       extract_fast             FAIL -> PASS
+  query-only                       extract_favor_recall     FAIL -> PASS
+  query-only                       extract_favor_precision  FAIL -> PASS
+  protocol-relative-foreign        convert_tags             FAIL -> PASS
+  protocol-relative-foreign        extract_default          FAIL -> PASS
+  protocol-relative-foreign        extract_fast             FAIL -> PASS
+  protocol-relative-foreign        extract_favor_recall     FAIL -> PASS
+  protocol-relative-foreign        extract_favor_precision  FAIL -> PASS
+  dot-sibling-dir                  convert_tags             FAIL -> PASS
+  dot-sibling-dir                  extract_default          FAIL -> PASS
+  dot-sibling-dir                  extract_fast             FAIL -> PASS
+  dot-sibling-dir                  extract_favor_recall     FAIL -> PASS
+  dot-sibling-dir                  extract_favor_precision  FAIL -> PASS
+  sibling-with-fragment            convert_tags             FAIL -> PASS
+  sibling-with-fragment            extract_default          FAIL -> PASS
+  sibling-with-fragment            extract_fast             FAIL -> PASS
+  sibling-with-fragment            extract_favor_recall     FAIL -> PASS
+  sibling-with-fragment            extract_favor_precision  FAIL -> PASS
+  base-absolute-other-host         extract_default          FAIL -> PASS
+  base-absolute-other-host         extract_fast             FAIL -> PASS
+  base-absolute-other-host         extract_favor_recall     FAIL -> PASS
+  base-absolute-other-host         extract_favor_precision  FAIL -> PASS
+  base-host-root                   convert_tags             PASS -> FAIL
+  base-relative-path               extract_default          FAIL -> PASS
+  base-relative-path               extract_fast             FAIL -> PASS
+  base-relative-path               extract_favor_recall     FAIL -> PASS
+  base-relative-path               extract_favor_precision  FAIL -> PASS
+  base-first-wins                  extract_default          FAIL -> PASS
+  base-first-wins                  extract_fast             FAIL -> PASS
+  base-first-wins                  extract_favor_recall     FAIL -> PASS
+  base-first-wins                  extract_favor_precision  FAIL -> PASS
+  base-target-only-skipped         extract_default          FAIL -> PASS
+  base-target-only-skipped         extract_fast             FAIL -> PASS
+  base-target-only-skipped         extract_favor_recall     FAIL -> PASS
+  base-target-only-skipped         extract_favor_precision  FAIL -> PASS
+  base-javascript-ignored          convert_tags             FAIL -> PASS
+  base-javascript-ignored          extract_default          FAIL -> PASS
+  base-javascript-ignored          extract_fast             FAIL -> PASS
+  base-javascript-ignored          extract_favor_recall     FAIL -> PASS
+  base-javascript-ignored          extract_favor_precision  FAIL -> PASS
+  base-empty-href                  convert_tags             FAIL -> PASS
+  base-empty-href                  extract_default          FAIL -> PASS
+  base-empty-href                  extract_fast             FAIL -> PASS
+  base-empty-href                  extract_favor_recall     FAIL -> PASS
+  base-empty-href                  extract_favor_precision  FAIL -> PASS
+  base-fragment-link               extract_default          FAIL -> PASS
+  base-fragment-link               extract_fast             FAIL -> PASS
+  base-fragment-link               extract_favor_recall     FAIL -> PASS
+  base-fragment-link               extract_favor_precision  FAIL -> PASS
+  base-root-relative-link          extract_default          FAIL -> PASS
+  base-root-relative-link          extract_fast             FAIL -> PASS
+  base-root-relative-link          extract_favor_recall     FAIL -> PASS
+  base-root-relative-link          extract_favor_precision  FAIL -> PASS
+  base-no-doc-url-absolute         extract_default          FAIL -> PASS
+  base-no-doc-url-absolute         extract_fast             FAIL -> PASS
+  base-no-doc-url-absolute         extract_favor_recall     FAIL -> PASS
+  base-no-doc-url-absolute         extract_favor_precision  FAIL -> PASS
+  failing cases: 16 -> 8
+== public_corpus_links_as-is.json (strict mismatches / targets)
+  default: 53/565 on 7 pages -> 0/565 on 0 pages
+  fast: 47/563 on 6 pages -> 0/563 on 0 pages
+  tests/cache/creativecommons.at.faircoin.html default: 1/4 -> 0/4 []
+  tests/cache/creativecommons.at.faircoin.html fast: 1/4 -> 0/4 []
+  tests/cache/ebrosia.de.zinfandel.html default: 1/8 -> 0/8 []
+  tests/cache/ebrosia.de.zinfandel.html fast: 1/8 -> 0/8 []
+  tests/cache/en.wikipedia.org.tsne.html default: 42/95 -> 0/95 []
+  tests/cache/en.wikipedia.org.tsne.html fast: 42/95 -> 0/95 []
+  tests/cache/laviedesidees.fr.evaluation.html default: 6/7 -> 0/7 []
+  tests/cache/simplyscience.ch.erdoel.html default: 1/4 -> 0/4 []
+  tests/cache/simplyscience.ch.erdoel.html fast: 1/4 -> 0/4 []
+  tests/cache/soundofscience.fr.1927.html default: 1/7 -> 0/7 []
+  tests/cache/soundofscience.fr.1927.html fast: 1/7 -> 0/7 []
+  tests/cache/vice.com.amazon.html default: 1/16 -> 0/16 []
+  tests/cache/vice.com.amazon.html fast: 1/16 -> 0/16 []
+== matrix_summary.json losses: 960 -> 384
+  f5_reference_links.html::link-fragment                     FAIL  48 ->   0  PASS   0 ->  48
+  f5_reference_links.html::link-sibling                      FAIL  48 ->   0  PASS   0 ->  48
+  f5_reference_links.html::link-parent                       FAIL  48 ->   0  PASS   0 ->  48
+  f5_reference_links.html::link-query                        FAIL  48 ->   0  PASS   0 ->  48
+  f5_reference_links.html::link-protocol-relative            FAIL  48 ->   0  PASS   0 ->  48
+  f5_reference_links.html::link-in-list                      FAIL  48 ->   0  PASS   0 ->  48
+  f7_base_element.html::link-base-relative                   FAIL  48 ->   0  PASS   0 ->  48
+  f7_base_element.html::link-base-fragment                   FAIL  48 ->   0  PASS   0 ->  48
+  f7_base_element.html::link-base-subdir                     FAIL  48 ->   0  PASS   0 ->  48
+  f8_combined_reference_page.html::link-fragment             FAIL  48 ->   0  PASS   0 ->  48
+  f8_combined_reference_page.html::link-sibling              FAIL  48 ->   0  PASS   0 ->  48
+  f8_combined_reference_page.html::link-parent               FAIL  48 ->   0  PASS   0 ->  48
+  raw outputs changed: 144 of 768
+    f5_reference_links.html: 48
+    f7_base_element.html: 48
+    f8_combined_reference_page.html: 48
+
+worse: 1, differences: 99
+exit=1

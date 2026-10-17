@@ -1,0 +1,111 @@
+$ PYTHONPATH=baseline-wt python research/techdoc-extraction-v2.3.1/scripts/posthoc_analysis.py corpus . research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/posthoc_corpus_classification.json   # POST-HOC
+{
+  "posthoc": true,
+  "trafilatura_file": "/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt/trafilatura/__init__.py",
+  "source": "/tmp/claude-0/-home-user-trafilatura/eaa00622-2a24-5cc4-90d8-20002d3a1c38/scratchpad/baseline-wt",
+  "counts": {
+    "default": {
+      "equivalent-form": 3,
+      "different-resource": 50
+    },
+    "fast": {
+      "equivalent-form": 3,
+      "different-resource": 44
+    }
+  }
+}
+different-resource default ebrosia.de.zinfandel.html: https://www.ebrosia.de#detail--product-properties
+different-resource fast    ebrosia.de.zinfandel.html: https://www.ebrosia.de#detail--product-properties
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#mw-head
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#p-search
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-MaatenHinton-1
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-2
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-3
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-4
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-5
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-6
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-7
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-8
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-9
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-10
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-11
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-MaatenHinton-1
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-12
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-MaatenHinton_1-0
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-MaatenHinton_1-1
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-2
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-3
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-4
+different-resource default en.wikipedia.org.tsne.html: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2807447
+different-resource default en.wikipedia.org.tsne.html: http://doi.org/10.1118%2F1.3267037
+different-resource default en.wikipedia.org.tsne.html: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2807447
+different-resource default en.wikipedia.org.tsne.html: http://www.ncbi.nlm.nih.gov/pubmed/20175497
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-5
+different-resource default en.wikipedia.org.tsne.html: http://doi.org/10.1093%2Fbioinformatics%2Fbtp035
+different-resource default en.wikipedia.org.tsne.html: http://www.ncbi.nlm.nih.gov/pubmed/19153135
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-6
+different-resource default en.wikipedia.org.tsne.html: http://doi.org/10.1109%2FBHI.2016.7455968
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-7
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-8
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-9
+different-resource default en.wikipedia.org.tsne.html: http://arxiv.org/abs/1512.01655
+different-resource default en.wikipedia.org.tsne.html: http://doi.org/10.1109%2Ftvcg.2016.2570755
+different-resource default en.wikipedia.org.tsne.html: http://www.worldcat.org/issn/1077-2626
+different-resource default en.wikipedia.org.tsne.html: http://www.ncbi.nlm.nih.gov/pubmed/28113434
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-10
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-11
+different-resource default en.wikipedia.org.tsne.html: http://arxiv.org/abs/1706.02582
+different-resource default en.wikipedia.org.tsne.html: http://arxiv.org/archive/cs.LG
+different-resource default en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-12
+different-resource default en.wikipedia.org.tsne.html: http://doi.org/10.1007%2F978-3-319-68474-1_13
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#mw-head
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#p-search
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-MaatenHinton-1
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-2
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-3
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-4
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-5
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-6
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-7
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-8
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-9
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-10
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-11
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-MaatenHinton-1
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_note-12
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-MaatenHinton_1-0
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-MaatenHinton_1-1
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-2
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-3
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-4
+different-resource fast    en.wikipedia.org.tsne.html: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2807447
+different-resource fast    en.wikipedia.org.tsne.html: http://doi.org/10.1118%2F1.3267037
+different-resource fast    en.wikipedia.org.tsne.html: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2807447
+different-resource fast    en.wikipedia.org.tsne.html: http://www.ncbi.nlm.nih.gov/pubmed/20175497
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-5
+different-resource fast    en.wikipedia.org.tsne.html: http://doi.org/10.1093%2Fbioinformatics%2Fbtp035
+different-resource fast    en.wikipedia.org.tsne.html: http://www.ncbi.nlm.nih.gov/pubmed/19153135
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-6
+different-resource fast    en.wikipedia.org.tsne.html: http://doi.org/10.1109%2FBHI.2016.7455968
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-7
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-8
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-9
+different-resource fast    en.wikipedia.org.tsne.html: http://arxiv.org/abs/1512.01655
+different-resource fast    en.wikipedia.org.tsne.html: http://doi.org/10.1109%2Ftvcg.2016.2570755
+different-resource fast    en.wikipedia.org.tsne.html: http://www.worldcat.org/issn/1077-2626
+different-resource fast    en.wikipedia.org.tsne.html: http://www.ncbi.nlm.nih.gov/pubmed/28113434
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-10
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-11
+different-resource fast    en.wikipedia.org.tsne.html: http://arxiv.org/abs/1706.02582
+different-resource fast    en.wikipedia.org.tsne.html: http://arxiv.org/archive/cs.LG
+different-resource fast    en.wikipedia.org.tsne.html: https://en.wikipedia.org#cite_ref-12
+different-resource fast    en.wikipedia.org.tsne.html: http://doi.org/10.1007%2F978-3-319-68474-1_13
+different-resource default laviedesidees.fr.evaluation.html: https://laviedesidees.fr#annexe
+different-resource default laviedesidees.fr.evaluation.html: https://laviedesidees.fr#nb4-1
+different-resource default laviedesidees.fr.evaluation.html: https://laviedesidees.fr#nb4-2
+different-resource default laviedesidees.fr.evaluation.html: https://laviedesidees.fr#nb4-3
+different-resource default laviedesidees.fr.evaluation.html: https://laviedesidees.fr#nb4-4
+different-resource default laviedesidees.fr.evaluation.html: https://laviedesidees.fr#nb4-5
+different-resource default soundofscience.fr.1927.html: https://www.soundofscience.fr#lettre
+different-resource fast    soundofscience.fr.1927.html: https://www.soundofscience.fr#lettre
+exit=0
