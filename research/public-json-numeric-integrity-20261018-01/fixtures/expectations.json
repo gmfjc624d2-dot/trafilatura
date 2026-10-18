@@ -1,0 +1,1354 @@
+{
+  "schema": 1,
+  "request_id": "public-json-numeric-integrity-20261018-01",
+  "continues": "b4fa1424ead6fe23e93ed1ca6a698e401f2b403b",
+  "status": "PRE-REGISTERED: committed before the repaired comparator, the runner and the tests existed, and before the baseline ran on these cases. Not edited after results are seen; post-run notes go to REPORT.md.",
+  "baseline": {
+    "file": "scripts/compare_results_baseline_9a7933f.py",
+    "copied_from": "research/public-sphinx-evidence-integrity-20261018-01/scripts/compare_results.py",
+    "sha256": "9a7933f84a550e07ad862733cde7f1090eece844776836fb7ba4a8a99c6a50dc",
+    "git_blob": "89a247187b82181b8883fcfd65f497c8f36c7f1f"
+  },
+  "limits": {
+    "MAX_INPUT_BYTES": 4194304,
+    "MAX_DEPTH": 32,
+    "MAX_NUMBER_TOKEN_CHARS": 48,
+    "MAX_INTEGER_DIGITS": 40,
+    "MAX_COEFFICIENT_DIGITS": 40,
+    "MAX_EXPONENT_DIGITS": 4
+  },
+  "limits_basis": {
+    "measured": "results/measurement/retained_json.json (33 retained JSON files): at most 246236 bytes, depth 7, number tokens of at most 20 characters, 6 integer digits, 18 coefficient digits, no exponent",
+    "MAX_INPUT_BYTES": "4 MiB, 17 times the largest retained file; checked on the bytes before decoding",
+    "MAX_DEPTH": "32 nested containers, 4.5 times the deepest retained file (7)",
+    "MAX_INTEGER_DIGITS": "40 digits (sign not counted), far below the interpreter's 4300-digit int/str limit",
+    "MAX_COEFFICIENT_DIGITS": "40 digits before the exponent, '.' and sign not counted; leading zeros count",
+    "MAX_EXPONENT_DIGITS": "4 digits of exponent text, sign not counted, leading zeros counted: admits 1e400, 2e400, 1e-4000, 2e-4000 and 1e9999, rejects 1e10000 and 1e00001",
+    "MAX_NUMBER_TOKEN_CHARS": "48 = sign + 40 digits + '.' + 'e' + exponent sign + 4 digits; the first, cheapest check"
+  },
+  "policy": {
+    "P1_parsing": "integer tokens become int and fraction/exponent tokens become decimal.Decimal, both converted from the token text after the limits below are checked; JSON types are 'boolean', 'integer' and 'decimal' and are never equal to each other; duplicate object keys and the literals NaN, Infinity and -Infinity are invalid input; 1e400 is a finite number token, not a non-finite constant",
+    "P2_decimal_equality": "two decimals are equal when a == b (exact numeric value) and, if both are zero, a.is_signed() == b.is_signed(); so 1.0 == 1.00 == 1e0, 0.0 != -0.0, -0.0 == -0e0; no compare_total, no spelling equality, no normalize/quantize/unary plus, no float; the integer token -0 parses as int 0 (legacy policy) and equals 0",
+    "P3_structure": "unchanged complete recursive comparison: JSON type, object key sets and key order, array length and order, scalars; only the values at environment.python, environment.platform and environment.machine may differ and their keys must exist on both sides; compare() rejects native float, non-finite Decimal and other non-JSON values (UnsupportedValueError) and containers nested deeper than MAX_DEPTH (LimitExceededError)",
+    "P4_as_json": "json.dumps(value, ensure_ascii=False, allow_nan=False, default=<reject>) and then the exact parser: str subclasses become str as before; a float is compared by the text it emits (its repr), so precision already lost in the float is not recovered; nan/inf and native Decimal are rejected explicitly (UnsupportedValueError)",
+    "P5_diagnostics": "display data only, never compared: a decimal is shown with str() (finite, every digit, a valid JSON number); numbers and containers are never cut; a string longer than 160 characters is cut and labelled with its length and a sha256 prefix; text that cannot be encoded as UTF-8 is shown with \\u escapes; value tags name the JSON type; CLI exit 0 equal, 1 different, 2 invalid/unreadable/unsupported; limits and recursion are reported as invalid input, never as equality and never as a traceback",
+    "P6_limits": "LIMITS are enforced as follows: the byte ceiling on the bytes read (at most MAX_INPUT_BYTES + 1 are read) before UTF-8 decoding; the numeric limits in the parse_int/parse_float hooks on the token text before int() or Decimal() runs, the exponent text length before any conversion; tokens must be ASCII JSON number characters; the interpreter's global int/str digit limit is left unchanged",
+    "P7_scope": "the hooks run after the json scanner has matched the whole token (that scan is bounded only by the byte ceiling); no new lexical parser; no claim of safety for arbitrary input"
+  },
+  "environment_exceptions": [
+    [
+      "environment",
+      "python"
+    ],
+    [
+      "environment",
+      "platform"
+    ],
+    [
+      "environment",
+      "machine"
+    ]
+  ],
+  "outcomes": "equal: exit 0; different: exit 1; invalid: exit 2 without traceback; crash: a Python traceback",
+  "requirement_note": "requirement.stdout_contains is checked on the repaired comparator only (its display format); for the baseline only the outcome is graded against the requirement, and baseline_prediction.output_contains (stdout or stderr) records the predicted defect",
+  "cli_cases": [
+    {
+      "id": "K01",
+      "family": "collision",
+      "what": "overflow",
+      "committed": "fixtures/cases/K01_a.json",
+      "replay": "fixtures/cases/K01_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (decimal value): committed 1E+400 | replay 2E+400"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "K02",
+      "family": "collision",
+      "what": "underflow",
+      "committed": "fixtures/cases/K02_a.json",
+      "replay": "fixtures/cases/K02_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (decimal value): committed 1E-4000 | replay 2E-4000"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "K03",
+      "family": "collision",
+      "what": "underflow vs zero",
+      "committed": "fixtures/cases/K03_a.json",
+      "replay": "fixtures/cases/K03_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (decimal value): committed 1E-4000 | replay 0.0"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "K04",
+      "family": "collision",
+      "what": "negative underflow vs -0.0",
+      "committed": "fixtures/cases/K04_a.json",
+      "replay": "fixtures/cases/K04_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (decimal value): committed -1E-4000 | replay -0.0"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "K05",
+      "family": "collision",
+      "what": "finite rounding beyond 2**53",
+      "committed": "fixtures/cases/K05_a.json",
+      "replay": "fixtures/cases/K05_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (decimal value): committed 9007199254740993.0 | replay 9007199254740992.0"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "K06",
+      "family": "collision",
+      "what": "finite rounding at 17 digits",
+      "committed": "fixtures/cases/K06_a.json",
+      "replay": "fixtures/cases/K06_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (decimal value): committed 0.1 | replay 0.10000000000000001"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "K07",
+      "family": "collision",
+      "what": "two overflowing exponents",
+      "committed": "fixtures/cases/K07_a.json",
+      "replay": "fixtures/cases/K07_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (decimal value): committed 1E+400 | replay 1E+9999"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "K08",
+      "family": "collision",
+      "what": "40 digits, last digit differs",
+      "committed": "fixtures/cases/K08_a.json",
+      "replay": "fixtures/cases/K08_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (decimal value): committed 1.234567890123456789012345678901234567890 | replay 1.234567890123456789012345678901234567891"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "E01",
+      "family": "spelling",
+      "what": "trailing zero",
+      "committed": "fixtures/cases/E01_a.json",
+      "replay": "fixtures/cases/E01_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "E02",
+      "family": "spelling",
+      "what": "fraction vs exponent",
+      "committed": "fixtures/cases/E02_a.json",
+      "replay": "fixtures/cases/E02_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "E03",
+      "family": "spelling",
+      "what": "E+2 vs 100.0",
+      "committed": "fixtures/cases/E03_a.json",
+      "replay": "fixtures/cases/E03_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "E04",
+      "family": "spelling",
+      "what": "1e400 vs 10e399",
+      "committed": "fixtures/cases/E04_a.json",
+      "replay": "fixtures/cases/E04_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "E05",
+      "family": "spelling",
+      "what": "1e-4000 vs 0.1e-3999",
+      "committed": "fixtures/cases/E05_a.json",
+      "replay": "fixtures/cases/E05_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "E06",
+      "family": "spelling",
+      "what": "-0.0 vs -0e0",
+      "committed": "fixtures/cases/E06_a.json",
+      "replay": "fixtures/cases/E06_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "E07",
+      "family": "spelling",
+      "what": "0.0 vs 0e5",
+      "committed": "fixtures/cases/E07_a.json",
+      "replay": "fixtures/cases/E07_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "E08",
+      "family": "spelling",
+      "what": "integer -0 vs 0 (legacy policy)",
+      "committed": "fixtures/cases/E08_a.json",
+      "replay": "fixtures/cases/E08_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "E09",
+      "family": "spelling",
+      "what": "exponent with a leading zero",
+      "committed": "fixtures/cases/E09_a.json",
+      "replay": "fixtures/cases/E09_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "Z01",
+      "family": "signed zero",
+      "what": "0.0 vs -0.0",
+      "committed": "fixtures/cases/Z01_a.json",
+      "replay": "fixtures/cases/Z01_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (decimal value): committed 0.0 | replay -0.0"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "Z02",
+      "family": "signed zero",
+      "what": "0e-3 vs -0e0",
+      "committed": "fixtures/cases/Z02_a.json",
+      "replay": "fixtures/cases/Z02_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (decimal value): committed 0.000 | replay -0"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "T01",
+      "family": "category",
+      "what": "integer vs decimal",
+      "committed": "fixtures/cases/T01_a.json",
+      "replay": "fixtures/cases/T01_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (type): committed \"integer\" | replay \"decimal\""
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "T02",
+      "family": "category",
+      "what": "boolean vs integer",
+      "committed": "fixtures/cases/T02_a.json",
+      "replay": "fixtures/cases/T02_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (type): committed \"boolean\" | replay \"integer\""
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "T03",
+      "family": "category",
+      "what": "false vs 0",
+      "committed": "fixtures/cases/T03_a.json",
+      "replay": "fixtures/cases/T03_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (type): committed \"boolean\" | replay \"integer\""
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "T04",
+      "family": "category",
+      "what": "0 vs 0.0",
+      "committed": "fixtures/cases/T04_a.json",
+      "replay": "fixtures/cases/T04_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (type): committed \"integer\" | replay \"decimal\""
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "T05",
+      "family": "category",
+      "what": "-0 vs -0.0",
+      "committed": "fixtures/cases/T05_a.json",
+      "replay": "fixtures/cases/T05_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (type): committed \"integer\" | replay \"decimal\""
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "T06",
+      "family": "category",
+      "what": "null vs 0",
+      "committed": "fixtures/cases/T06_a.json",
+      "replay": "fixtures/cases/T06_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (type): committed \"null\" | replay \"integer\""
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "T07",
+      "family": "category",
+      "what": "string vs integer",
+      "committed": "fixtures/cases/T07_a.json",
+      "replay": "fixtures/cases/T07_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (type): committed \"string\" | replay \"integer\""
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I01",
+      "family": "invalid",
+      "what": "duplicate key",
+      "committed": "fixtures/cases/I01_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): duplicate object key(s) ['x']"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I02",
+      "family": "invalid",
+      "what": "NaN literal",
+      "committed": "fixtures/cases/I02_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): non-standard JSON constant NaN"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I03",
+      "family": "invalid",
+      "what": "Infinity literal",
+      "committed": "fixtures/cases/I03_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): non-standard JSON constant Infinity"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I04",
+      "family": "invalid",
+      "what": "-Infinity literal",
+      "committed": "fixtures/cases/I04_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): non-standard JSON constant -Infinity"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I05",
+      "family": "invalid",
+      "what": "missing value",
+      "committed": "fixtures/cases/I05_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): Expecting value"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I06",
+      "family": "invalid",
+      "what": "trailing data",
+      "committed": "fixtures/cases/I06_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): Extra data"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I07",
+      "family": "invalid",
+      "what": "invalid UTF-8 byte",
+      "committed": "fixtures/cases/I07_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): codec can't decode byte 0xff"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I08",
+      "family": "invalid",
+      "what": "leading zero",
+      "committed": "fixtures/cases/I08_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): Expecting ',' delimiter"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I09",
+      "family": "invalid",
+      "what": "UTF-8 BOM",
+      "committed": "fixtures/cases/I09_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): Unexpected UTF-8 BOM"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I10",
+      "family": "invalid",
+      "what": "missing file",
+      "committed": "fixtures/cases/I10_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): No such file or directory"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I11",
+      "family": "invalid",
+      "what": "empty file",
+      "committed": "fixtures/cases/I11_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): Expecting value"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "I12",
+      "family": "invalid",
+      "what": "fraction without digits",
+      "committed": "fixtures/cases/I12_a.json",
+      "replay": "fixtures/cases/OK.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed): Expecting ',' delimiter"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L01",
+      "family": "limit",
+      "what": "40-digit integer (admitted)",
+      "committed": "fixtures/cases/L01_a.json",
+      "replay": "fixtures/cases/L01_a.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L02",
+      "family": "limit",
+      "what": "41-digit integer",
+      "committed": "fixtures/cases/L02_a.json",
+      "replay": "fixtures/cases/L02_a.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed, limit): integer token has 41 digits; limit 40"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L03",
+      "family": "limit",
+      "what": "40 coefficient digits (admitted)",
+      "committed": "fixtures/cases/L03_a.json",
+      "replay": "fixtures/cases/L03_a.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L04",
+      "family": "limit",
+      "what": "41 coefficient digits",
+      "committed": "fixtures/cases/L04_a.json",
+      "replay": "fixtures/cases/L04_a.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed, limit): number token has 41 coefficient digits; limit 40"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L05",
+      "family": "limit",
+      "what": "1e9999 (admitted)",
+      "committed": "fixtures/cases/L05_a.json",
+      "replay": "fixtures/cases/L05_a.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L06",
+      "family": "limit",
+      "what": "1e-9999 (admitted)",
+      "committed": "fixtures/cases/L06_a.json",
+      "replay": "fixtures/cases/L06_a.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L07",
+      "family": "limit",
+      "what": "1e10000",
+      "committed": "fixtures/cases/L07_a.json",
+      "replay": "fixtures/cases/L07_a.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed, limit): exponent has 5 digits; limit 4"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L08",
+      "family": "limit",
+      "what": "1e-10000",
+      "committed": "fixtures/cases/L08_a.json",
+      "replay": "fixtures/cases/L08_a.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed, limit): exponent has 5 digits; limit 4"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L09",
+      "family": "limit",
+      "what": "exponent text 00001",
+      "committed": "fixtures/cases/L09_a.json",
+      "replay": "fixtures/cases/L09_a.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed, limit): exponent has 5 digits; limit 4"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L10",
+      "family": "limit",
+      "what": "49-character token",
+      "committed": "fixtures/cases/L10_a.json",
+      "replay": "fixtures/cases/L10_a.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed, limit): number token has 49 characters; limit 48"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L11",
+      "family": "limit",
+      "what": "depth 32 (admitted)",
+      "committed": "fixtures/cases/L11_a.json",
+      "replay": "fixtures/cases/L11_a.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "L12",
+      "family": "limit",
+      "what": "depth 33",
+      "committed": "fixtures/cases/L12_a.json",
+      "replay": "fixtures/cases/L12_a.json",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed, limit): nesting depth 33 exceeds limit 32"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "G01",
+      "family": "limit",
+      "what": "exactly MAX_INPUT_BYTES (generated)",
+      "committed": "generated:G01",
+      "replay": "generated:G01",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "G02",
+      "family": "limit",
+      "what": "MAX_INPUT_BYTES + 1 (generated)",
+      "committed": "generated:G02",
+      "replay": "generated:G02",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed, limit): input has more than 4194304 bytes"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "G03",
+      "family": "limit",
+      "what": "5000-digit integer (generated)",
+      "committed": "generated:G03",
+      "replay": "generated:G03",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed, limit): number token has 5000 characters; limit 48"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "invalid",
+        "output_contains": [
+          "Exceeds the limit (4300 digits)"
+        ]
+      }
+    },
+    {
+      "id": "G04",
+      "family": "limit",
+      "what": "100000 nested arrays (generated)",
+      "committed": "generated:G04",
+      "replay": "generated:G04",
+      "requirement": {
+        "outcome": "invalid",
+        "stdout_contains": [
+          "INVALID INPUT (committed, limit): nesting exceeds the interpreter recursion limit while decoding"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "crash",
+        "output_contains": [
+          "RecursionError"
+        ]
+      }
+    },
+    {
+      "id": "R01",
+      "family": "structure",
+      "what": "key order",
+      "committed": "fixtures/cases/R01_a.json",
+      "replay": "fixtures/cases/R01_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $ (key order): committed [\"a\", \"b\"] | replay [\"b\", \"a\"]"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "R02",
+      "family": "structure",
+      "what": "missing key",
+      "committed": "fixtures/cases/R02_a.json",
+      "replay": "fixtures/cases/R02_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $ (keys): committed [] | replay [\"b\"]"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "R03",
+      "family": "structure",
+      "what": "array order",
+      "committed": "fixtures/cases/R03_a.json",
+      "replay": "fixtures/cases/R03_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $[0] (integer value): committed 1 | replay 2",
+          "DIFFERS $[1] (integer value): committed 2 | replay 1"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "R04",
+      "family": "structure",
+      "what": "array length",
+      "committed": "fixtures/cases/R04_a.json",
+      "replay": "fixtures/cases/R04_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $ (length): committed 1 | replay 2"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "R05",
+      "family": "structure",
+      "what": "nested equal spelling",
+      "committed": "fixtures/cases/R05_a.json",
+      "replay": "fixtures/cases/R05_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "R06",
+      "family": "structure",
+      "what": "nested decimal differs",
+      "committed": "fixtures/cases/R06_a.json",
+      "replay": "fixtures/cases/R06_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.a.b[0].c (decimal value): committed 1.5 | replay 1.51"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "X01",
+      "family": "exception",
+      "what": "python/platform/machine differ",
+      "committed": "fixtures/cases/X01_a.json",
+      "replay": "fixtures/cases/X01_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": []
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "X02",
+      "family": "exception",
+      "what": "lxml differs",
+      "committed": "fixtures/cases/X02_a.json",
+      "replay": "fixtures/cases/X02_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.environment.lxml (string value): committed \"6.1.3\" | replay \"6.1.4\""
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "X03",
+      "family": "exception",
+      "what": "exempt key missing",
+      "committed": "fixtures/cases/X03_a.json",
+      "replay": "fixtures/cases/X03_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.environment (keys): committed [\"python\"] | replay []"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "X04",
+      "family": "exception",
+      "what": "a similar field elsewhere",
+      "committed": "fixtures/cases/X04_a.json",
+      "replay": "fixtures/cases/X04_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.other.python (string value): committed \"3.12.3\" | replay \"3.12.14\""
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "different",
+        "output_contains": []
+      }
+    },
+    {
+      "id": "X05",
+      "family": "exception",
+      "what": "exempt value with decimals",
+      "committed": "fixtures/cases/X05_a.json",
+      "replay": "fixtures/cases/X05_b.json",
+      "requirement": {
+        "outcome": "equal",
+        "stdout_contains": [
+          "exempt $.environment.python: committed {\"v\": 1E+400} | replay {\"v\": 2E+400}"
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "equal",
+        "output_contains": [
+          "exempt $.environment.python: committed {\"v\": Infinity} | replay {\"v\": Infinity}"
+        ]
+      }
+    },
+    {
+      "id": "D01",
+      "family": "diagnostics",
+      "what": "lone surrogate escapes",
+      "committed": "fixtures/cases/D01_a.json",
+      "replay": "fixtures/cases/D01_b.json",
+      "requirement": {
+        "outcome": "different",
+        "stdout_contains": [
+          "DIFFERS $.x (string value): committed \"\\ud800\" | replay \"\\udc00\""
+        ]
+      },
+      "baseline_prediction": {
+        "outcome": "crash",
+        "output_contains": [
+          "UnicodeEncodeError"
+        ]
+      }
+    }
+  ],
+  "api_cases": {
+    "A01": {
+      "what": "parse and compare K, E and Z texts under prec=1, Emax=1, Emin=-1 and every signal trapped",
+      "repaired": {
+        "verdicts": "as the CLI requirements",
+        "low_precision_equals_default": true,
+        "caller_context_unchanged": true
+      },
+      "baseline": {
+        "verdicts": "as the CLI baseline predictions",
+        "low_precision_equals_default": true,
+        "caller_context_unchanged": true
+      }
+    },
+    "A02": {
+      "what": "sys.get_int_max_str_digits() unchanged by importing and using the module",
+      "repaired": {
+        "unchanged": true
+      },
+      "baseline": {
+        "unchanged": true
+      }
+    },
+    "A03": {
+      "what": "as_json() of floats: 9007199254740993.0 vs 9007199254740992.0, and of 0.1",
+      "repaired": {
+        "collision_after_as_json": "equal",
+        "x_type": "decimal",
+        "x_text": "0.1",
+        "emitted_equals_binary_exact": false
+      },
+      "baseline": {
+        "collision_after_as_json": "equal",
+        "x_type": "float",
+        "x_text": "0.1",
+        "emitted_equals_binary_exact": true
+      }
+    },
+    "A04": {
+      "what": "as_json({'x': nan})",
+      "repaired": "error:UnsupportedValueError",
+      "baseline": "error:InvalidJSONError"
+    },
+    "A05": {
+      "what": "as_json({'x': inf})",
+      "repaired": "error:UnsupportedValueError",
+      "baseline": "error:InvalidJSONError"
+    },
+    "A06": {
+      "what": "as_json({'x': Decimal('1.5')}) (native Decimal)",
+      "repaired": "error:UnsupportedValueError",
+      "baseline": "error:TypeError"
+    },
+    "A07": {
+      "what": "as_json({'x': str subclass}) gives a plain str",
+      "repaired": "str",
+      "baseline": "str"
+    },
+    "A08": {
+      "what": "compare() of native floats",
+      "repaired": "error:UnsupportedValueError",
+      "baseline": "equal"
+    },
+    "A09": {
+      "what": "compare() of Decimal('NaN')",
+      "repaired": "error:UnsupportedValueError",
+      "baseline": "error:TypeError"
+    },
+    "A10": {
+      "what": "compare() of in-process lists nested 5000 deep",
+      "repaired": "error:LimitExceededError",
+      "baseline": "error:RecursionError"
+    },
+    "A11": {
+      "what": "compare() of in-process lists nested 33 deep",
+      "repaired": "error:LimitExceededError",
+      "baseline": "equal"
+    },
+    "A12": {
+      "what": "compare() of in-process lists nested 32 deep",
+      "repaired": "equal",
+      "baseline": "equal"
+    },
+    "A13": {
+      "what": "loads('-0') (legacy integer policy)",
+      "repaired": {
+        "type": "integer",
+        "text": "0"
+      },
+      "baseline": {
+        "type": "integer",
+        "text": "0"
+      }
+    },
+    "A14": {
+      "what": "loads('-0.0') keeps the sign",
+      "repaired": {
+        "type": "decimal",
+        "negative_sign": true
+      },
+      "baseline": {
+        "type": "float",
+        "negative_sign": true
+      }
+    },
+    "A15": {
+      "what": "compare(a, b) and compare(a, b, exceptions=()) when only environment.python differs",
+      "repaired": {
+        "default": [],
+        "no_exceptions": [
+          "$.environment.python"
+        ]
+      },
+      "baseline": {
+        "default": [],
+        "no_exceptions": [
+          "$.environment.python"
+        ]
+      }
+    },
+    "A16": {
+      "what": "loads() of an in-memory str of MAX_INPUT_BYTES + 1 UTF-8 bytes",
+      "repaired": "error:LimitExceededError",
+      "baseline": "ok"
+    }
+  },
+  "retained_self_comparison": "every file listed in results/measurement/retained_json.json, sha256-pinned there: loads() succeeds and compare(x, x) == [] for both comparators; the two largest also through the CLI (exit 0)",
+  "derived_mutations": [
+    {
+      "id": "S02a",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "mutation": {
+        "op": "set",
+        "path": [
+          "environment",
+          "python"
+        ],
+        "value": "3.12.14 (main) [Clang]"
+      },
+      "repaired": "equal",
+      "baseline": "equal",
+      "note": "text mutations replace the first occurrence"
+    },
+    {
+      "id": "S02b",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "mutation": {
+        "op": "set",
+        "path": [
+          "environment",
+          "lxml"
+        ],
+        "value": "6.1.4"
+      },
+      "repaired": "different",
+      "baseline": "different",
+      "note": "text mutations replace the first occurrence"
+    },
+    {
+      "id": "S02c",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "mutation": {
+        "op": "text",
+        "old": "\"context_bytes\": 989,",
+        "new": "\"context_bytes\": 989.0,"
+      },
+      "repaired": "different",
+      "baseline": "different",
+      "note": "text mutations replace the first occurrence"
+    },
+    {
+      "id": "S02d",
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json",
+      "mutation": {
+        "op": "text",
+        "old": "-0.48514337270399616",
+        "new": "-0.48514337270399617"
+      },
+      "repaired": "different",
+      "baseline": "equal",
+      "note": "text mutations replace the first occurrence"
+    },
+    {
+      "id": "S02e",
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json",
+      "mutation": {
+        "op": "text",
+        "old": "-0.48514337270399616",
+        "new": "-0.485143372703996160"
+      },
+      "repaired": "equal",
+      "baseline": "equal",
+      "note": "text mutations replace the first occurrence"
+    }
+  ],
+  "interpreter_observations": {
+    "O1": "pure-Python scanner (json.scanner.py_make_scanner) on '[\\u0661]': v3.12.3 predicted to match \\d and give [1] with default hooks and an InvalidJSONError with the repaired hooks; v3.12.14 predicted JSONDecodeError for both",
+    "O2": "Decimal('1e999999999999999999') under the default context (Emax=999999): predicted to construct, adjusted() == 999999999999999999, no signal",
+    "O3": "Decimal('1e9999999999999999999') (exponent beyond MAX_EMAX): predicted InvalidOperation under the default context and NaN when InvalidOperation is not trapped",
+    "O4": "json.loads of 100000 nested arrays: RecursionError (message recorded)"
+  }
+}

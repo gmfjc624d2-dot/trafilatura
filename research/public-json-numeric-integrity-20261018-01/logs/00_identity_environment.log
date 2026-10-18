@@ -1,0 +1,20 @@
+$ git -C <repo> rev-parse HEAD; git -C <repo> fetch origin claude/adoring-turing-3ekxhe; git -C <repo> rev-parse origin/claude/adoring-turing-3ekxhe
+b4fa1424ead6fe23e93ed1ca6a698e401f2b403b
+b4fa1424ead6fe23e93ed1ca6a698e401f2b403b
+exit=0
+$ git -C <repo> merge-base --is-ancestor b4fa142 HEAD && git -C <repo> merge-base --is-ancestor 7345bfe b4fa142; git -C <repo> log --format="%H %an <%ae>" -1 b4fa142
+ancestry ok
+b4fa1424ead6fe23e93ed1ca6a698e401f2b403b Claude <noreply@anthropic.com>
+exit=0
+$ git -C <repo> status --short -- . ":!research/public-json-numeric-integrity-20261018-01"   # empty = nothing else touched
+exit=0
+$ sha256sum <repo>/research/public-sphinx-evidence-integrity-20261018-01/scripts/compare_results.py scripts/compare_results_baseline_9a7933f.py; git -C <repo> ls-files -s research/public-sphinx-evidence-integrity-20261018-01/scripts/compare_results.py
+9a7933f84a550e07ad862733cde7f1090eece844776836fb7ba4a8a99c6a50dc  <repo>/research/public-sphinx-evidence-integrity-20261018-01/scripts/compare_results.py
+9a7933f84a550e07ad862733cde7f1090eece844776836fb7ba4a8a99c6a50dc  scripts/compare_results_baseline_9a7933f.py
+100644 89a247187b82181b8883fcfd65f497c8f36c7f1f 0	research/public-sphinx-evidence-integrity-20261018-01/scripts/compare_results.py
+exit=0
+$ /usr/bin/python3.12 -c <versions>   # system Python, standard library only; no venv, no installs
+3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+Linux-6.18.44-fc-v139-x86_64-with-glibc2.39 x86_64
+decimal 1.70 libmpdec 2.5.1
+exit=0

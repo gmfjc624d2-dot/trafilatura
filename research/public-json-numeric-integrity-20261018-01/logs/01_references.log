@@ -1,0 +1,87 @@
+# primary references, fetched 2026-10-18T02:29Z into <refs> (scratch, not committed; data only, never executed)
+$ curl -sS -o /dev/null -w '%{http_code}' https://docs.python.org/3.12/library/json.html
+curl: (56) CONNECT tunnel failed, response 403
+000
+exit=56
+$ curl -sS -o /dev/null -w '%{http_code}' https://docs.python.org/3.12/library/decimal.html
+curl: (56) CONNECT tunnel failed, response 403
+000
+exit=56
+$ curl -sS -o /dev/null -w '%{http_code}' https://docs.python.org/3.12/library/stdtypes.html
+curl: (56) CONNECT tunnel failed, response 403
+000
+exit=56
+$ git ls-remote https://github.com/python/cpython.git refs/tags/v3.12.14 refs/tags/v3.12.14^{} refs/tags/v3.12.3 refs/tags/v3.12.3^{}
+4b65faa0b452113bf130086fb1519be6d9cd9b06	refs/tags/v3.12.14
+2abcf904b8dac8c999d2b3aac76681abb333798a	refs/tags/v3.12.14^{}
+f6650f9ad73359051f3e558c2431a109bc016664	refs/tags/v3.12.3
+exit=0
+$ curl -sS -o <refs>/v3.12.14/Lib_json___init__.py https://raw.githubusercontent.com/python/cpython/v3.12.14/Lib/json/__init__.py
+exit=0 bytes=14020 sha256=d5d41e2c29049515d295d81a6d40b4890fbec8d8482cfb401630f8ef2f77e4d5 gitblob=ed2c74771ea87ddc9349099c37b17d3cda213040
+$ curl -sS -o <refs>/v3.12.14/Lib_json_decoder.py https://raw.githubusercontent.com/python/cpython/v3.12.14/Lib/json/decoder.py
+exit=0 bytes=12525 sha256=382cd02af6f7efede5a6d4abbcda1015e5c7a75794b0016022878f9cf32a24f6 gitblob=5e5effeac02551c7732b88c55a870216c526dc52
+$ curl -sS -o <refs>/v3.12.14/Lib_json_scanner.py https://raw.githubusercontent.com/python/cpython/v3.12.14/Lib/json/scanner.py
+exit=0 bytes=2434 sha256=572958017eae8842eeddd0e3d18d3c56cc0a197348224915e1d87ce937841764 gitblob=090897515fe2f3818767a6dcf7b2310dca2c850a
+$ curl -sS -o <refs>/v3.12.14/Lib_json_encoder.py https://raw.githubusercontent.com/python/cpython/v3.12.14/Lib/json/encoder.py
+exit=0 bytes=16075 sha256=52bfb1b66029cc70fa3bd7fe11df9f2e03922d413407a341b387a22c987f24f8 gitblob=3595ca7e8168cbd41b11e21356d543565e61e8e1
+$ curl -sS -o <refs>/v3.12.14/Modules__json.c https://raw.githubusercontent.com/python/cpython/v3.12.14/Modules/_json.c
+exit=0 bytes=57033 sha256=6a0eaa8a82a30d5e35b47bda64c0a9741924c0b925fa6a9445addb3a61a5b5b9 gitblob=c90de05b046b0040d18d381bcf19e71f09f43dad
+$ curl -sS -o <refs>/v3.12.14/Doc_library_json.rst https://raw.githubusercontent.com/python/cpython/v3.12.14/Doc/library/json.rst
+exit=0 bytes=29859 sha256=939f692d13cad1c22417edb8704664991f73dfa064f1eec5f59532de99fa93ef gitblob=7c4d9bb518ea16ad23dc7e6db9c3d73eef8f5bfa
+$ curl -sS -o <refs>/v3.12.14/Doc_library_decimal.rst https://raw.githubusercontent.com/python/cpython/v3.12.14/Doc/library/decimal.rst
+exit=0 bytes=81969 sha256=fe460be1001d858a45ff46fe435f5162ac88968be2eeb7995b4b4fc2461e605f gitblob=654451f7f277340b6dabf11f1f1cd65783f23dbb
+$ curl -sS -o <refs>/v3.12.14/Doc_library_stdtypes.rst https://raw.githubusercontent.com/python/cpython/v3.12.14/Doc/library/stdtypes.rst
+exit=0 bytes=215324 sha256=3c61e89ca96738cba12cd45632b2728e4fcb3637c340996f59f97fa4eb8614b0 gitblob=31b0f6f12544bc228bb5d855ebcb5867be507731
+$ curl -sS -o <refs>/v3.12.3/Lib_json___init__.py https://raw.githubusercontent.com/python/cpython/v3.12.3/Lib/json/__init__.py
+exit=0 bytes=14020 sha256=d5d41e2c29049515d295d81a6d40b4890fbec8d8482cfb401630f8ef2f77e4d5 gitblob=ed2c74771ea87ddc9349099c37b17d3cda213040
+$ curl -sS -o <refs>/v3.12.3/Lib_json_decoder.py https://raw.githubusercontent.com/python/cpython/v3.12.3/Lib/json/decoder.py
+exit=0 bytes=12473 sha256=9f02654649816145bc76f8c210a5fe3ba1de142d4d97a1c93105732e747c285b gitblob=c5d9ae2d0d5d040708f097fbf6450b86eef334dd
+$ curl -sS -o <refs>/v3.12.3/Lib_json_scanner.py https://raw.githubusercontent.com/python/cpython/v3.12.3/Lib/json/scanner.py
+exit=0 bytes=2425 sha256=8604d9d03786d0d509abb49e9f069337278ea988c244069ae8ca2c89acc2cb08 gitblob=7a61cfc2d24dceb3530988884f70f51f398d5855
+$ curl -sS -o <refs>/v3.12.3/Lib_json_encoder.py https://raw.githubusercontent.com/python/cpython/v3.12.3/Lib/json/encoder.py
+exit=0 bytes=16070 sha256=af7bd40a0d0d0a3e726a9b4b3a2a543019f6ab97a340d0162a9c29ca9da97869 gitblob=597849eca0524a33c3f495c6dd56baa94032a2d0
+$ curl -sS -o <refs>/v3.12.3/Modules__json.c https://raw.githubusercontent.com/python/cpython/v3.12.3/Modules/_json.c
+exit=0 bytes=57033 sha256=6a0eaa8a82a30d5e35b47bda64c0a9741924c0b925fa6a9445addb3a61a5b5b9 gitblob=c90de05b046b0040d18d381bcf19e71f09f43dad
+$ curl -sS -o <refs>/v3.12.3/Doc_library_json.rst https://raw.githubusercontent.com/python/cpython/v3.12.3/Doc/library/json.rst
+exit=0 bytes=28730 sha256=b154dd5e6e61514a209bb91d9bc51909574fc8f82e5f35173d78a560817a5610 gitblob=226d1c3dbfcf63ec5ec3332125908b0cb988d554
+$ curl -sS -o <refs>/v3.12.3/Doc_library_decimal.rst https://raw.githubusercontent.com/python/cpython/v3.12.3/Doc/library/decimal.rst
+exit=0 bytes=80057 sha256=71cff1e4b7dea011f0702cf80dfccc7b953cc86ed8ea3703170b9016b866914c gitblob=4d99c6d92739afa35094467f26c18c2b257c781c
+$ curl -sS -o <refs>/v3.12.3/Doc_library_stdtypes.rst https://raw.githubusercontent.com/python/cpython/v3.12.3/Doc/library/stdtypes.rst
+exit=0 bytes=215440 sha256=f7f23447eadbb7f52c5a4e47bf3ea138e54573ce2ce41743e4aacfa06827aac8 gitblob=249a1c58d04e72b350bda7e1572b54cfc37e867e
+$ for f in scanner decoder encoder __init__; do cmp /usr/lib/python3.12/json/$f.py <refs>/v3.12.3/Lib_json_$f.py; done   # local stdlib vs tag v3.12.3
+scanner.py identical
+decoder.py identical
+encoder.py identical
+__init__.py identical
+exit=0
+$ cmp <refs>/v3.12.3/Modules__json.c <refs>/v3.12.14/Modules__json.c
+identical
+exit=0
+$ diff <refs>/v3.12.3/Lib_json_scanner.py <refs>/v3.12.14/Lib_json_scanner.py
+12c12
+<     r'(-?(?:0|[1-9]\d*))(\.\d+)?([eE][-+]?\d+)?',
+---
+>     r'(-?(?:0|[1-9][0-9]*))(\.[0-9]+)?([eE][-+]?[0-9]+)?',
+exit=1 (1 = differs)
+$ diff <refs>/v3.12.3/Lib_json_decoder.py <refs>/v3.12.14/Lib_json_decoder.py
+52a53
+> HEXDIGITS = re.compile(r'[0-9A-Fa-f]{4}', FLAGS)
+59,61c60,62
+< def _decode_uXXXX(s, pos):
+<     esc = s[pos + 1:pos + 5]
+<     if len(esc) == 4 and esc[1] not in 'xX':
+---
+> def _decode_uXXXX(s, pos, _m=HEXDIGITS.match):
+>     esc = _m(s, pos + 1)
+>     if esc is not None:
+63c64
+<             return int(esc, 16)
+---
+>             return int(esc.group(), 16)
+exit=1 (1 = differs)
+$ /usr/bin/python3.12 -c <versions>
+3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+decimal 1.70 libmpdec 2.5.1 MAX_EMAX 999999999999999999
+C scanner in use: True
+int_max_str_digits 4300 recursionlimit 1000
+exit=0

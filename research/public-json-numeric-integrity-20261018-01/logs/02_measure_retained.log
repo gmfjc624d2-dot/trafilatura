@@ -1,0 +1,48 @@
+$ python3.12 scripts/measure_retained.py <repo> results/measurement/retained_json.json   # standard library only
+  13429 B depth  6 ints     2 dec    0 maxint  4 maxcoef  0 research/public-evidence-spans-20261018-01/fixtures/oracle.json
+  16365 B depth  6 ints   171 dec    0 maxint  4 maxcoef  0 research/public-evidence-spans-20261018-01/fixtures/oracle_resolved.json
+  16530 B depth  5 ints   204 dec    0 maxint  4 maxcoef  0 research/public-evidence-spans-20261018-01/fixtures/passages.json
+    535 B depth  3 ints     0 dec    0 maxint  0 maxcoef  0 research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/environment.json
+ 205539 B depth  5 ints  1083 dec  110 maxint  4 maxcoef 18 research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json
+   9654 B depth  3 ints    47 dec    0 maxint  5 maxcoef  0 research/public-evidence-spans-20261018-01/source/urllib.request.rst.excerpts.json
+  11324 B depth  5 ints    20 dec    0 maxint  4 maxcoef  0 research/public-sphinx-anchor-units-20261018-01/fixtures/expectations.json
+   4105 B depth  4 ints    43 dec    0 maxint  5 maxcoef  0 research/public-sphinx-anchor-units-20261018-01/fixtures/expectations_resolved.json
+   2339 B depth  3 ints    18 dec    0 maxint  4 maxcoef  0 research/public-sphinx-anchor-units-20261018-01/fixtures/regions.json
+  13290 B depth  6 ints    75 dec    0 maxint  4 maxcoef  0 research/public-sphinx-anchor-units-20261018-01/results/run1-linux-py3.12/probe_existing_apis.json
+ 110918 B depth  7 ints   396 dec    0 maxint  5 maxcoef  0 research/public-sphinx-anchor-units-20261018-01/results/run1-linux-py3.12/results.json
+   2532 B depth  4 ints    40 dec    0 maxint  3 maxcoef  0 research/public-sphinx-evidence-integrity-20261018-01/fixtures/byte_facts.json
+  25201 B depth  7 ints    56 dec    0 maxint  4 maxcoef  0 research/public-sphinx-evidence-integrity-20261018-01/fixtures/expectations.json
+   1223 B depth  3 ints     5 dec    0 maxint  3 maxcoef  0 research/public-sphinx-evidence-integrity-20261018-01/fixtures/files.json
+  58915 B depth  7 ints   176 dec    0 maxint  4 maxcoef  0 research/public-sphinx-evidence-integrity-20261018-01/results/baseline-linux-py3.12/baseline_reproduction.json
+ 246236 B depth  7 ints   590 dec    0 maxint  5 maxcoef  0 research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json
+  16600 B depth  6 ints     1 dec    0 maxint  1 maxcoef  0 research/techdoc-extraction-v2.3.1/fixtures/expectations.json
+  22843 B depth  5 ints     1 dec    0 maxint  2 maxcoef  0 research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/link_resolution.json
+ 170426 B depth  3 ints   358 dec    0 maxint  3 maxcoef  0 research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/matrix_summary.json
+  18029 B depth  3 ints     4 dec    0 maxint  2 maxcoef  0 research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/posthoc_corpus_classification.json
+   4585 B depth  3 ints    22 dec    0 maxint  2 maxcoef  0 research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/posthoc_matrix_classification.json
+  77319 B depth  5 ints   578 dec    0 maxint  6 maxcoef  0 research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/public_corpus_links_as-is.json
+  76561 B depth  5 ints   578 dec    0 maxint  6 maxcoef  0 research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/public_corpus_links_naive-ablation.json
+  22769 B depth  5 ints     1 dec    0 maxint  2 maxcoef  0 research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/link_resolution.json
+ 170426 B depth  3 ints   358 dec    0 maxint  3 maxcoef  0 research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/matrix_summary.json
+  77107 B depth  5 ints   578 dec    0 maxint  6 maxcoef  0 research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/public_corpus_links_as-is.json
+  76349 B depth  5 ints   578 dec    0 maxint  6 maxcoef  0 research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/public_corpus_links_naive-ablation.json
+  23569 B depth  5 ints     1 dec    0 maxint  1 maxcoef  0 research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/link_resolution.json
+  75047 B depth  3 ints   310 dec    0 maxint  3 maxcoef  0 research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/matrix_summary.json
+    205 B depth  3 ints     0 dec    0 maxint  0 maxcoef  0 research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/posthoc_corpus_classification.json
+   2101 B depth  3 ints    10 dec    0 maxint  2 maxcoef  0 research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/posthoc_matrix_classification.json
+  75822 B depth  5 ints   578 dec    0 maxint  6 maxcoef  0 research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/public_corpus_links_as-is.json
+  60069 B depth  3 ints    95 dec    0 maxint  6 maxcoef  0 research/techdoc-extraction-v2.3.1/results/public_fixture_provenance.json
+{
+  "bytes": 246236,
+  "depth": 7,
+  "longest_string_chars": 10262,
+  "max_token_chars": 20,
+  "max_integer_digits": 6,
+  "max_coefficient_digits": 18,
+  "max_exponent_digits": 0,
+  "fraction_or_exponent_tokens": 110,
+  "duplicate_keys": 0,
+  "files": 33,
+  "nonfinite_constants": []
+}
+exit=0
