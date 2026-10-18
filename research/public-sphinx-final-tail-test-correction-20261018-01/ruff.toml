@@ -1,0 +1,12 @@
+# research harness: the project rules, with the exemptions the earlier text-policy prefix used
+extend = "../../pyproject.toml"
+
+[lint.per-file-ignores]
+"*/*.py" = [
+    "T20",      # print is the report channel
+    "ANN",      # annotations
+    "INP001",   # standalone scripts, not a package
+    "PLC0415",  # imports of sibling helpers
+    "RUF001", "RUF003",  # multibyte fixture text on purpose (tests/* has the same exemption)
+]
+"*/test_*.py" = ["PT009", "PT027"]  # stdlib unittest on purpose: no pytest dependency

@@ -1,0 +1,6 @@
+# keep the copies, the patch, recorded outputs and logs byte-exact on every OS (they are hashed)
+baseline/** -text
+corrected/** -text
+patch/** -text
+results/** -text
+logs/** -text

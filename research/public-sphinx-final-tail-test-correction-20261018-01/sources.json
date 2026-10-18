@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "request_id": "public-sphinx-final-tail-test-correction-20261018-01",
+  "source_commit": "d8126f57ceb34a3d455a04881b606d2d86220fd7",
+  "baseline": {
+    "source": "research/public-sphinx-text-policy-20261018-01/scripts/test_text_policy.py",
+    "introduced_and_last_changed_in": "c38a2a22310eac751d398e3abd02dc507dc39fe3",
+    "git_blob_at_source_commit": "3b11bc2096ad655b8e48ecca2e9f767e251fc59c",
+    "sha256": "deaf6ffa2cc51fa08986a1c191644407bec757f0523b14bab0880cab1ad17100",
+    "copy": "baseline/test_text_policy.py",
+    "copied_by": "git show d8126f57ceb34a3d455a04881b606d2d86220fd7:research/public-sphinx-text-policy-20261018-01/scripts/test_text_policy.py",
+    "historical_result": "research/public-sphinx-text-policy-20261018-01/logs/21_unittest_run1.log: 11 run, 10 ok, 1 FAIL (test_oracle_equals_the_rule_and_tells_every_mutant_apart_on_c2), exit 1"
+  },
+  "corrected": {
+    "copy": "corrected/test_text_policy.py",
+    "sha256": "fc722920fce92e08c0619b67a69857480b0eea1ab11e702fc6bbc225c0721fca",
+    "patch": "patch/test_text_policy.diff",
+    "patch_sha256": "597f314b79819096bdbd66ec710721e51d840bf73cf51f7393bbd6ddc8350ee0",
+    "change": "in test_oracle_equals_the_rule_and_tells_every_mutant_apart_on_c2 only: assertIn('MARK-TAIL-TAIL', M3 mutant) replaced by assertEqual(final native tail, LF) and assertEqual(M3 mutant, oracle + LF), per parser side"
+  },
+  "pinned_sources": {
+    "research/public-sphinx-text-policy-20261018-01/scripts/test_text_policy.py": "deaf6ffa2cc51fa08986a1c191644407bec757f0523b14bab0880cab1ad17100",
+    "research/public-sphinx-text-policy-20261018-01/scripts/text_policy.py": "21effa19a3f48e6863b79331660fb6cbb2d3e56f024265fe1254c2600699855b",
+    "research/public-sphinx-text-policy-20261018-01/scripts/replay.py": "92f45b504e5de7423ac639a9fab55890b064d0245d1031a1ab3d018ec2dc1df1",
+    "research/public-sphinx-text-policy-20261018-01/fixtures/expectations.json": "897e95d8e49547af0a9c5e2704384fb7b4338a9f2f3fe3fd20945b9d264d9bff",
+    "research/public-sphinx-parser-corroboration-20261018-01/scripts/corroborate.py": "4b5e79140f6d883b3972b8451fef40e093520500d880c3a2cc870010303d4b1d",
+    "research/public-sphinx-parser-corroboration-20261018-01/fixtures/expectations.json": "18612008dff8f644ad19e83b460c658bc705df868b13fa9e5c989bf1728bf1d8",
+    "research/public-sphinx-evidence-integrity-20261018-01/scripts/anchor_unit.py": "9c01351705ca8fe475df3925550d015cf69d4cbda324d042e32f0c909ec404e9",
+    "research/public-json-numeric-integrity-20261018-01/scripts/compare_results.py": "29267d535e66f03dca617b48650c83a601ba22e9d4383e50ca2af8c990596e19",
+    "research/public-sphinx-parser-corroboration-20261018-01/wheels/html5lib-1.1-py2.py3-none-any.whl": "0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d",
+    "research/public-sphinx-parser-corroboration-20261018-01/wheels/six-1.17.0-py2.py3-none-any.whl": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+    "research/public-sphinx-parser-corroboration-20261018-01/wheels/webencodings-0.5.1-py2.py3-none-any.whl": "a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78",
+    "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n1_late_diagnostic.html": "38558fead0b79840841642eeff9ac9e221d8a8767b0c6d230a18201d5eb2ad6f",
+    "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n5_clean_control.html": "932ea06e032d5db1962cf65fdb1a0f3d520cdf531f73a6233b5fffcf3b47effb",
+    "research/public-sphinx-anchor-units-20261018-01/fixtures/f4_duplicates.html": "6d1da7f63c5b4e62ae51f4ac16a14fe16a12d02fcde13a944c32bb3071493ec3",
+    "research/public-sphinx-parser-corroboration-20261018-01/fixtures/c1_reparent_dd.html": "b276f44bd1c449805e372ce01ceff025f8c52c993d2a407e0c1b5ac683a9b865",
+    "research/public-sphinx-parser-corroboration-20261018-01/fixtures/c2_text_tail.html": "fd9885d450867b016291aaa134dba3f86704e3bea513777694ade228b379fa22",
+    "research/public-sphinx-text-policy-20261018-01/fixtures/w1_long_clean.html": "8eb1ba90084dcba5bf4b52f0f6433d7b2fd2b2f8ff1dc6886abd2a531f1ce11a"
+  },
+  "roles": {
+    "text_policy.py, replay.py": "imported by the test from their verified bytes (replay's main() is never called)",
+    "corroborate.py, anchor_unit.py": "loaded by text_policy.py with its own sha256 pins",
+    "both expectations.json": "read by replay.py at import (pins, witness) and by the test (case files and anchors)",
+    "fixtures": "the six the 11 tests parse (N1, N5, C17, C1, C2, W1)",
+    "wheels": "html5lib, six, webencodings through zipimport (PYTHONPATH); lxml is the platform install",
+    "compare_results.py": "not used by the tests; the pinned json-numeric comparator for comparing a macOS execution record with results/"
+  }
+}

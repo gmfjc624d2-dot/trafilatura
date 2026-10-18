@@ -1,0 +1,22 @@
+# recovery check before any work for public-sphinx-final-tail-test-correction-20261018-01 (local clone, branch fetch only)
+$ git rev-parse --abbrev-ref HEAD; git rev-parse HEAD
+claude/adoring-turing-3ekxhe
+d8126f57ceb34a3d455a04881b606d2d86220fd7
+$ git fetch origin claude/adoring-turing-3ekxhe; git rev-parse origin/claude/adoring-turing-3ekxhe
+d8126f57ceb34a3d455a04881b606d2d86220fd7
+$ git merge-base --is-ancestor d8126f57ceb34a3d455a04881b606d2d86220fd7 HEAD && echo ancestor
+ancestor
+$ git rev-list --count d8126f57ceb34a3d455a04881b606d2d86220fd7..origin/claude/adoring-turing-3ekxhe; git rev-list --count origin/claude/adoring-turing-3ekxhe..HEAD
+0
+0
+$ git status --short --untracked-files=all | wc -l
+0
+$ git rev-parse HEAD:research/public-sphinx-text-policy-20261018-01/scripts/test_text_policy.py; git log --format=%H --diff-filter=A -- research/public-sphinx-text-policy-20261018-01/scripts/test_text_policy.py; sha256sum research/public-sphinx-text-policy-20261018-01/scripts/test_text_policy.py
+3b11bc2096ad655b8e48ecca2e9f767e251fc59c
+c38a2a22310eac751d398e3abd02dc507dc39fe3
+deaf6ffa2cc51fa08986a1c191644407bec757f0523b14bab0880cab1ad17100  research/public-sphinx-text-policy-20261018-01/scripts/test_text_policy.py
+$ git log --format=%H -1 -- research/public-sphinx-text-policy-20261018-01/scripts/test_text_policy.py
+c38a2a22310eac751d398e3abd02dc507dc39fe3
+$ (cd research/public-sphinx-text-policy-20261018-01 && sha256sum -c --quiet SHA256SUMS && echo SHA256SUMS ok)
+SHA256SUMS ok
+exit=0

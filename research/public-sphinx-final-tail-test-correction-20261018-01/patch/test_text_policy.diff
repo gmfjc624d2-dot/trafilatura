@@ -1,0 +1,12 @@
+--- baseline/test_text_policy.py
++++ corrected/test_text_policy.py
+@@ -49,7 +49,8 @@
+             for marker in ("MARK-COMMENT-DATA", "MARK-PI-DATA", "MARK-TAIL-TAIL"):
+                 self.assertNotIn(marker, oracle)
+             self.assertIn("MARK-COMMENT-DATA", tp.mutant_text(unit, "M1"))
+-            self.assertIn("MARK-TAIL-TAIL", tp.mutant_text(unit, "M3"))
++            self.assertEqual(unit[-1].native.tail, "\n", side)
++            self.assertEqual(tp.mutant_text(unit, "M3"), oracle + "\n", side)
+             for m in tp.MUTATIONS:
+                 self.assertNotEqual(tp.mutant_text(unit, m), oracle, (side, m))
+ 
