@@ -1,0 +1,292 @@
+{
+  "schema": 1,
+  "request_id": "public-sphinx-evidence-integrity-20261018-01",
+  "continues": "7345bfea30ce378dfd91d5121a10dd2db2fb8f1d; research/public-sphinx-anchor-units-20261018-01 is read, never written",
+  "status": "PRE-REGISTERED: committed before the repaired helper, the recursive comparator, the runner and the tests existed, and before the baseline was run on the new fixtures. Not edited after results are seen; post-run notes go to REPORT.md, labelled as such.",
+  "scope": "Evidence integrity of the research helper only: parser diagnostics, the removed byte-span claim, distinct identities, and replay comparison. A structurally complete unit is not a claim that the passage answers any question.",
+  "old_inputs": {
+    "root": "../public-sphinx-anchor-units-20261018-01",
+    "sha256": {
+      "fixtures/expectations.json": "3da9f360591b7a525655fd4b1d7b9856f0aa021afe88828496162da7276a6714",
+      "fixtures/f1_functions.html": "509ba4109594637c3874b8c27b9c84ab4135978a5a60ec2a770a6a043ed946eb",
+      "fixtures/f2_signatures.html": "c8469e9c1ecd1fa4aa138404d14f21f22bc46b5858145413d7480ca9c11e9aeb",
+      "fixtures/f3_classes.html": "c4572b9176cd5eb4eb175198239c8f612420d07b78c1355a2768b9efdacfc6b0",
+      "fixtures/f4_duplicates.html": "6d1da7f63c5b4e62ae51f4ac16a14fe16a12d02fcde13a944c32bb3071493ec3",
+      "fixtures/f5_unicode.html": "4d6c0bc15616668f409bbc4de26a1633848865325d54b269741471731e6beeea",
+      "fixtures/f6_malformed.html": "488703a5f72c349eb7fea20d5e830bc559d8de6f491d5f78ff812d18321ec841",
+      "source/numpy-2.5/numpy.where.html": "ee9fb008cbdfa6371e548559f477f5a672d2563627b9efe5213b184bd1f80f48",
+      "results/run1-linux-py3.12/results.json": "a509c98cce5be37a40b88a3b2d9ca78ede00d675449889f2568697b3785bcead",
+      "scripts/anchor_unit.py": "03b0f28f3e127bb43a14abbd3a9e696316205ef6faf9cd7a44f7d33bb7000a22",
+      "scripts/compare_results.py": "22af5ffacd5bc4a542fb9389fde10158552c1a0ca75e6354f9b38162b260f583"
+    }
+  },
+  "baseline_copies": {
+    "scripts/anchor_unit_baseline_7345bfe.py": "scripts/anchor_unit.py",
+    "scripts/compare_results_baseline_7345bfe.py": "scripts/compare_results.py"
+  },
+  "defects": {
+    "D1": "build_candidate() keeps only diagnostics whose line lies between the unit's first and last ELEMENT START lines; a diagnostic later inside a dd (or anywhere else on the page) is dropped from the decision and the unit can still be OK_STRUCTURAL_UNIT",
+    "D2": "raw_byte_span is derived from data.count()/data.find() of the serialization: a unique literal match can lie in a comment (or anywhere) rather than at the selected live node, so it is no node-to-source alignment",
+    "D2b": "the pre-registered rule and the tests say the UTF-8 serialization is searched; the implementation encodes it with docinfo.encoding, so for a windows-1252 page the claimed span holds windows-1252 bytes that are not the UTF-8 serialization whose sha256/bytes are reported",
+    "D3": "compare_results.py says it ignores only the platform fields but compares a digest that omits case id, anchor, source identity, parser encoding, diagnostic column/level/message, candidate kind and payload texts, context text and check details, never compares the environment (library versions included), conflates true with 1 and 1 with 1.0, and crashes on a different result count"
+  },
+  "repaired_rules": {
+    "R1_parser_diagnostics": "any entry in the document's parser error log, at any line, adds the reason PARSER_DIAGNOSTICS_PRESENT (so every representation is REVIEW); the candidate is still built and kept whole; parser.diagnostics keeps every entry with line, column, level, type and message; no line filter, no end range from start lines, no page exempted. PARSER_RECOVERY_IN_UNIT and candidate.diagnostics_in_unit_lines are removed.",
+    "R2_no_source_alignment": "the helper produces no byte span, offset or literal occurrence count: raw_byte_span and raw_occurrences_of_serialization are removed; no output key name contains span, offset, occurrence, byte_start, byte_end or in_unit",
+    "R3_identities": {
+      "file": "source.sha256 and source.bytes: the retained file bytes exactly as received",
+      "dom_serialization": "candidate.dom_sha256 and candidate.dom_bytes: the UTF-8 encoding of the unit's unicode DOM serialization, whatever the document encoding",
+      "text_content": "candidate.text_sha256 and candidate.text_bytes: the UTF-8 encoding of the unit's text_content()",
+      "document_encoding": "parser.encoding: the encoding lxml/libxml2 report for decoding the file bytes (docinfo.encoding); reported, used for no identity"
+    },
+    "R4_budget_scope": "context_bytes counts the research context built from context_template only; each contexts entry carries the scope string below; fits=true is not an admission decision for any real caller",
+    "R5_comparison": "compare_results.py compares two JSON documents recursively and completely: same JSON type at every path (bool, int and float distinct), same object keys in the same order, same array length and order, same scalar values; duplicate object keys or non-standard constants (NaN, Infinity) make the input invalid (exit 2). Only the values at the exact paths in environment_exceptions may differ (the keys must exist on both sides). Exit 0 when nothing else differs, 1 otherwise."
+  },
+  "budget_bytes": 2048,
+  "budget_scope": "research context only: the context_template lines (query, source identity, origin, unit and representation labels) and the payload; a real caller's question, instructions, system prompt and message wrappers are not counted, so fits=true is no admission decision for any caller",
+  "context_template": [
+    "query: anchor_id={anchor}",
+    "source: {path} sha256={file_sha256} bytes={file_bytes}",
+    "origin: {origin}",
+    "unit: {kind} signatures={signatures} descriptions={descriptions} start_lines={first_line}-{last_line} (parser-reported element start lines; not byte offsets)",
+    "representation: {representation} sha256={payload_sha256} bytes={payload_bytes}",
+    "-----BEGIN UNIT-----",
+    "{payload}",
+    "-----END UNIT-----"
+  ],
+  "context_template_note": "unchanged from the previous increment, so the 27 old contexts must stay byte-identical",
+  "environment_exceptions": [["environment", "python"], ["environment", "platform"], ["environment", "machine"]],
+  "forbidden_output_key_pattern": "span|offset|occurrence|byte_start|byte_end|in_unit",
+  "requirement_names": {
+    "reasons": "reasons equal the list given, in order",
+    "status": "status per representation equals the dict given",
+    "unit": "candidate kept, with these signatures, descriptions and signature_ids",
+    "must_include": "each marker occurs in both payloads (whole candidate kept)",
+    "must_exclude": "no marker occurs in either payload",
+    "payloads": "dom_serialization and text_content equal the strings given",
+    "diagnostics": "parser.diagnostics has exactly these entries, in order (fields given must match; others are free)",
+    "diagnostics_complete": "parser.diagnostics equals the error log of an independent lxml.html.HTMLParser() parse of the same bytes, every field",
+    "no_alignment_claim": "no key anywhere in the output matches forbidden_output_key_pattern",
+    "identities": "source.sha256/bytes are those of the file bytes; dom_* and text_* are sha256/length of the UTF-8 payloads",
+    "identities_distinct": "file, dom_serialization and text_content sha256 values are pairwise different",
+    "encoding_codec": "codecs.lookup(parser.encoding).name equals the codec given",
+    "budget_scope": "every contexts entry has scope equal to budget_scope",
+    "context_withheld": "every contexts entry with a non-OK status has context null"
+  },
+  "new_cases": [
+    {
+      "id": "N1",
+      "file": "fixtures/n1_late_diagnostic.html",
+      "anchor": "pkg.late",
+      "origin": "public synthetic input 1 supplied with the request, written exactly",
+      "exercises": ["D1"],
+      "baseline_prediction": {
+        "reasons": [],
+        "status": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"},
+        "first_line": 1,
+        "last_line": 1,
+        "diagnostics_in_unit_lines": [],
+        "diagnostic_lines": [3],
+        "raw_byte_span": null
+      },
+      "requirements": {
+        "reasons": ["PARSER_DIAGNOSTICS_PRESENT"],
+        "status": {"dom_serialization": "REVIEW", "text_content": "REVIEW"},
+        "unit": {"signatures": 1, "descriptions": 1, "signature_ids": ["pkg.late"]},
+        "must_include": ["late()", "First line of description.", "Second line of description.", "Third line of description."],
+        "diagnostics": [{"line": 3, "type": "ERR_TAG_NAME_MISMATCH", "message": "Unexpected end tag : span"}],
+        "diagnostics_complete": true,
+        "no_alignment_claim": true,
+        "identities": true,
+        "budget_scope": true,
+        "context_withheld": true
+      },
+      "baseline_fails": ["reasons", "status", "no_alignment_claim", "budget_scope"]
+    },
+    {
+      "id": "N2",
+      "file": "fixtures/n2_comment_match.html",
+      "anchor": "pkg.target",
+      "origin": "public synthetic input 2 supplied with the request, written exactly",
+      "exercises": ["D2"],
+      "baseline_prediction": {
+        "reasons": [],
+        "status": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"},
+        "dom_serialization": "<dt class=\"sig sig-object py\" id=\"pkg.target\">target()</dt><dd><p>A</p></dd>",
+        "raw_occurrences_of_serialization": 1,
+        "raw_byte_span_region": "N2.comment_copy"
+      },
+      "requirements": {
+        "reasons": [],
+        "status": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"},
+        "unit": {"signatures": 1, "descriptions": 1, "signature_ids": ["pkg.target"]},
+        "payloads": {
+          "dom_serialization": "<dt class=\"sig sig-object py\" id=\"pkg.target\">target()</dt><dd><p>A</p></dd>",
+          "text_content": "target()A"
+        },
+        "diagnostics": [],
+        "diagnostics_complete": true,
+        "no_alignment_claim": true,
+        "identities": true,
+        "identities_distinct": true,
+        "budget_scope": true,
+        "context_withheld": true
+      },
+      "baseline_fails": ["no_alignment_claim", "budget_scope"]
+    },
+    {
+      "id": "N3",
+      "file": "fixtures/n3_windows1252.html",
+      "anchor": "pkg.legacy",
+      "origin": "original synthetic page of this increment, windows-1252 bytes",
+      "exercises": ["D2b"],
+      "baseline_prediction": {
+        "reasons": [],
+        "status": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"},
+        "encoding_codec": "cp1252",
+        "raw_occurrences_of_serialization": 1,
+        "raw_byte_span_region": "N3.live_unit",
+        "span_bytes_equal_utf8_serialization": false,
+        "span_length_minus_dom_bytes": -7
+      },
+      "requirements": {
+        "reasons": [],
+        "status": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"},
+        "unit": {"signatures": 1, "descriptions": 1, "signature_ids": ["pkg.legacy"]},
+        "must_include": ["Café costs 5 €, “quoted”. MARK-LEGACY-DESC"],
+        "must_exclude": ["MARK-LEGACY-TAIL"],
+        "encoding_codec": "cp1252",
+        "diagnostics": [],
+        "diagnostics_complete": true,
+        "no_alignment_claim": true,
+        "identities": true,
+        "identities_distinct": true,
+        "budget_scope": true,
+        "context_withheld": true
+      },
+      "baseline_fails": ["no_alignment_claim", "budget_scope"]
+    },
+    {
+      "id": "N4",
+      "file": "fixtures/n4_outside_diagnostic.html",
+      "anchor": "pkg.inside",
+      "origin": "original synthetic page of this increment",
+      "exercises": ["D1"],
+      "baseline_prediction": {
+        "reasons": [],
+        "status": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"},
+        "first_line": 9,
+        "last_line": 10,
+        "diagnostics_in_unit_lines": [],
+        "diagnostic_lines": [12],
+        "raw_byte_span_region": "N4.live_unit"
+      },
+      "requirements": {
+        "reasons": ["PARSER_DIAGNOSTICS_PRESENT"],
+        "status": {"dom_serialization": "REVIEW", "text_content": "REVIEW"},
+        "unit": {"signatures": 1, "descriptions": 1, "signature_ids": ["pkg.inside"]},
+        "must_include": ["MARK-INSIDE-DESC"],
+        "must_exclude": ["MARK-OUTSIDE-FOOTER"],
+        "diagnostics": [{"line": 12, "type": "ERR_TAG_NAME_MISMATCH", "message": "Unexpected end tag : span"}],
+        "diagnostics_complete": true,
+        "no_alignment_claim": true,
+        "identities": true,
+        "budget_scope": true,
+        "context_withheld": true
+      },
+      "baseline_fails": ["reasons", "status", "no_alignment_claim", "budget_scope"]
+    },
+    {
+      "id": "N5",
+      "file": "fixtures/n5_clean_control.html",
+      "anchor": "pkg.clean",
+      "origin": "original synthetic page of this increment (control: N4 without the stray end tag)",
+      "exercises": ["control"],
+      "baseline_prediction": {
+        "reasons": [],
+        "status": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"},
+        "diagnostic_lines": [],
+        "raw_byte_span_region": "N5.live_unit"
+      },
+      "requirements": {
+        "reasons": [],
+        "status": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"},
+        "unit": {"signatures": 1, "descriptions": 1, "signature_ids": ["pkg.clean"]},
+        "must_include": ["MARK-CLEAN-DESC"],
+        "must_exclude": ["MARK-CLEAN-FOOTER"],
+        "diagnostics": [],
+        "diagnostics_complete": true,
+        "no_alignment_claim": true,
+        "identities": true,
+        "budget_scope": true,
+        "context_withheld": true
+      },
+      "baseline_fails": ["no_alignment_claim", "budget_scope"]
+    }
+  ],
+  "old_cases": {
+    "cases": "the 27 cases of ../public-sphinx-anchor-units-20261018-01/fixtures/expectations.json, read with their own path strings and origins so that contexts are comparable",
+    "baseline_copy_prediction": "for every old case the baseline copy's select_unit() output equals the committed results.json entry without its 'case' and 'checks' keys (strict recursive comparison, no exception)",
+    "repaired_prediction": "for every old case the repaired output equals T(committed entry); T is defined by transform",
+    "transform": [
+      "drop the runner keys 'case' and 'checks'",
+      "reasons: remove PARSER_RECOVERY_IN_UNIT, then append PARSER_DIAGNOSTICS_PRESENT if parser.diagnostics is non-empty",
+      "candidate (when not null): delete raw_byte_span, raw_occurrences_of_serialization and diagnostics_in_unit_lines, keeping the order of the other keys",
+      "every contexts entry: append the key scope with the value budget_scope",
+      "nothing else changes: context text, sizes, sha256, fits, statuses, diagnostics, payloads, matches and key order stay identical"
+    ],
+    "predicted_reasons_changed": {
+      "C17": ["DUPLICATE_ID", "PARSER_DIAGNOSTICS_PRESENT"],
+      "C21": ["UNEXPECTED_NESTED_OBJECT", "PARSER_DIAGNOSTICS_PRESENT"],
+      "C22": ["UNEXPECTED_NESTED_OBJECT", "PARSER_DIAGNOSTICS_PRESENT"],
+      "C23": ["PARSER_DIAGNOSTICS_PRESENT"]
+    },
+    "predicted_statuses": "unchanged for all 27",
+    "regrade_of_old_expectations": "the old structural, unit, must_include/must_exclude and budget expectations are re-evaluated on the repaired outputs without editing them; raw_region/dom_byte_identical are not applicable (R2 removed spans) and are reported as such",
+    "predicted_regrade_failures": [
+      {"case": "C01", "check": "dom_serialization: budget fits", "why": "retained failure of the previous increment: 2054 bytes > 2048"},
+      {"case": "C12", "check": "dom_serialization: budget fits", "why": "retained failure of the previous increment: 2187 bytes > 2048"},
+      {"case": "C23", "check": "reasons include ['PARSER_RECOVERY_IN_UNIT']", "why": "rule change R1: the reason is superseded by PARSER_DIAGNOSTICS_PRESENT; the old expectation is kept unedited"}
+    ],
+    "predicted_regrade_additional_reasons": {"C17": ["PARSER_DIAGNOSTICS_PRESENT"], "C21": ["PARSER_DIAGNOSTICS_PRESENT"], "C22": ["PARSER_DIAGNOSTICS_PRESENT"], "C23": ["PARSER_DIAGNOSTICS_PRESENT"]}
+  },
+  "mutation_controls": {
+    "base_document": "../public-sphinx-anchor-units-20261018-01/results/run1-linux-py3.12/results.json (committed, sha256 pinned); each mutation is applied to a copy and compared with the committed file by both comparators",
+    "classification": "allowed: exit 0 for a permitted difference; detected: exit 1 with a completed report; missed: exit 0 although a non-permitted difference exists; crash: non-zero exit with a Python traceback; rejected: exit 2, invalid input; false_alarm: exit 1 for a permitted difference",
+    "ops": "set path value | delete path | add path key value | swap path i j | pop path (last element) | bool_to_int path | to_float path | append_text path text | reverse path | reorder_keys path (reverse key order) | text_replace old new (on the serialized text, exactly one occurrence)",
+    "mutations": [
+      {"id": "M00", "what": "no mutation (identity)", "ops": [], "repaired": "allowed", "repaired_paths": [], "baseline": "allowed"},
+      {"id": "M01", "what": "environment.python differs", "ops": [{"op": "set", "path": ["environment", "python"], "value": "3.12.14 (main) [Clang 17.0.0]"}], "repaired": "allowed", "repaired_paths": [], "baseline": "allowed"},
+      {"id": "M02", "what": "environment.platform differs", "ops": [{"op": "set", "path": ["environment", "platform"], "value": "macOS-26.0-arm64-arm-64bit"}], "repaired": "allowed", "repaired_paths": [], "baseline": "allowed"},
+      {"id": "M03", "what": "environment.machine differs", "ops": [{"op": "set", "path": ["environment", "machine"], "value": "arm64"}], "repaired": "allowed", "repaired_paths": [], "baseline": "allowed"},
+      {"id": "M04", "what": "lxml version differs", "ops": [{"op": "set", "path": ["environment", "lxml"], "value": "6.1.4"}], "repaired": "detected", "repaired_paths": ["$.environment.lxml"], "baseline": "missed"},
+      {"id": "M05", "what": "libxml2 runtime version differs", "ops": [{"op": "set", "path": ["environment", "libxml2_runtime"], "value": "2.14.7"}], "repaired": "detected", "repaired_paths": ["$.environment.libxml2_runtime"], "baseline": "missed"},
+      {"id": "M06", "what": "an exempted key is missing", "ops": [{"op": "delete", "path": ["environment", "python"]}], "repaired": "detected", "repaired_paths": ["$.environment"], "baseline": "missed"},
+      {"id": "M07", "what": "case id changed", "ops": [{"op": "set", "path": ["results", 0, "case"], "value": "C99"}], "repaired": "detected", "repaired_paths": ["$.results[0].case"], "baseline": "missed"},
+      {"id": "M08", "what": "anchor changed", "ops": [{"op": "set", "path": ["results", 0, "anchor"], "value": "pkg.other"}], "repaired": "detected", "repaired_paths": ["$.results[0].anchor"], "baseline": "missed"},
+      {"id": "M09", "what": "source file sha256 changed", "ops": [{"op": "set", "path": ["results", 0, "source", "sha256"], "value": "0000000000000000000000000000000000000000000000000000000000000000"}], "repaired": "detected", "repaired_paths": ["$.results[0].source.sha256"], "baseline": "missed"},
+      {"id": "M10", "what": "source path changed", "ops": [{"op": "set", "path": ["results", 0, "source", "path"], "value": "fixtures/other.html"}], "repaired": "detected", "repaired_paths": ["$.results[0].source.path"], "baseline": "missed"},
+      {"id": "M11", "what": "document encoding changed", "ops": [{"op": "set", "path": ["results", 0, "parser", "encoding"], "value": "windows-1252"}], "repaired": "detected", "repaired_paths": ["$.results[0].parser.encoding"], "baseline": "missed"},
+      {"id": "M12", "what": "diagnostic message changed (C21)", "ops": [{"op": "set", "path": ["results", 20, "parser", "diagnostics", 2, "message"], "value": "Unexpected end tag : div"}], "repaired": "detected", "repaired_paths": ["$.results[20].parser.diagnostics[2].message"], "baseline": "missed"},
+      {"id": "M13", "what": "diagnostic column changed (C21)", "ops": [{"op": "set", "path": ["results", 20, "parser", "diagnostics", 0, "column"], "value": 93}], "repaired": "detected", "repaired_paths": ["$.results[20].parser.diagnostics[0].column"], "baseline": "missed"},
+      {"id": "M14", "what": "two diagnostics with the same line and type swapped (C21)", "ops": [{"op": "swap", "path": ["results", 20, "parser", "diagnostics"], "i": 0, "j": 1}], "repaired": "detected", "repaired_paths": ["$.results[20].parser.diagnostics[0].column", "$.results[20].parser.diagnostics[0].message", "$.results[20].parser.diagnostics[1].column", "$.results[20].parser.diagnostics[1].message"], "baseline": "missed"},
+      {"id": "M15", "what": "one diagnostic removed (C21)", "ops": [{"op": "pop", "path": ["results", 20, "parser", "diagnostics"]}], "repaired": "detected", "repaired_paths": ["$.results[20].parser.diagnostics"], "baseline": "detected"},
+      {"id": "M16", "what": "results C19 and C20 swapped (equal baseline digests)", "ops": [{"op": "swap", "path": ["results"], "i": 18, "j": 19}], "repaired": "detected", "repaired_paths": ["$.results[18].anchor", "$.results[18].case", "$.results[19].anchor", "$.results[19].case"], "baseline": "missed"},
+      {"id": "M17", "what": "results C01 and C02 swapped", "ops": [{"op": "swap", "path": ["results"], "i": 0, "j": 1}], "repaired": "detected", "repaired_paths": null, "baseline": "detected"},
+      {"id": "M18", "what": "last result removed", "ops": [{"op": "pop", "path": ["results"]}], "repaired": "detected", "repaired_paths": ["$.results"], "baseline": "crash"},
+      {"id": "M19", "what": "key added to a result", "ops": [{"op": "add", "path": ["results", 0], "key": "extra", "value": 1}], "repaired": "detected", "repaired_paths": ["$.results[0]"], "baseline": "missed"},
+      {"id": "M20", "what": "candidate key removed", "ops": [{"op": "delete", "path": ["results", 0, "candidate", "kind"]}], "repaired": "detected", "repaired_paths": ["$.results[0].candidate"], "baseline": "missed"},
+      {"id": "M21", "what": "true written as 1", "ops": [{"op": "bool_to_int", "path": ["results", 0, "contexts", "text_content", "fits"]}], "repaired": "detected", "repaired_paths": ["$.results[0].contexts.text_content.fits"], "baseline": "missed"},
+      {"id": "M22", "what": "integer written as float", "ops": [{"op": "to_float", "path": ["results", 0, "contexts", "text_content", "context_bytes"]}], "repaired": "detected", "repaired_paths": ["$.results[0].contexts.text_content.context_bytes"], "baseline": "missed"},
+      {"id": "M23", "what": "context text changed, its sha256 field not", "ops": [{"op": "append_text", "path": ["results", 0, "contexts", "text_content", "context"], "text": "x"}], "repaired": "detected", "repaired_paths": ["$.results[0].contexts.text_content.context"], "baseline": "missed"},
+      {"id": "M24", "what": "text payload changed, its sha256 field not", "ops": [{"op": "append_text", "path": ["results", 0, "candidate", "text_content"], "text": "x"}], "repaired": "detected", "repaired_paths": ["$.results[0].candidate.text_content"], "baseline": "missed"},
+      {"id": "M25", "what": "check detail changed", "ops": [{"op": "set", "path": ["results", 0, "checks", 0, "detail"], "value": ["X"]}], "repaired": "detected", "repaired_paths": ["$.results[0].checks[0].detail"], "baseline": "missed"},
+      {"id": "M26", "what": "diagnostic level changed (C17)", "ops": [{"op": "set", "path": ["results", 16, "parser", "diagnostics", 0, "level"], "value": "WARNING"}], "repaired": "detected", "repaired_paths": ["$.results[16].parser.diagnostics[0].level"], "baseline": "missed"},
+      {"id": "M27", "what": "top-level key added", "ops": [{"op": "add", "path": [], "key": "extra", "value": 1}], "repaired": "detected", "repaired_paths": ["$"], "baseline": "missed"},
+      {"id": "M28", "what": "key order of a result reversed", "ops": [{"op": "reorder_keys", "path": ["results", 0]}], "repaired": "detected", "repaired_paths": ["$.results[0]"], "baseline": "missed"},
+      {"id": "M29", "what": "environment.python and reason order both changed (C21)", "ops": [{"op": "set", "path": ["environment", "python"], "value": "3.12.14"}, {"op": "reverse", "path": ["results", 20, "reasons"]}], "repaired": "detected", "repaired_paths": ["$.results[20].reasons[0]", "$.results[20].reasons[1]"], "baseline": "detected"},
+      {"id": "M30", "what": "status changed", "ops": [{"op": "set", "path": ["results", 0, "status", "text_content"], "value": "REVIEW"}], "repaired": "detected", "repaired_paths": ["$.results[0].status.text_content"], "baseline": "detected"},
+      {"id": "M31", "what": "duplicate object key in the JSON text (json.loads keeps the last)", "ops": [{"op": "text_replace", "old": "\"case\": \"C01\"", "new": "\"case\": \"C99\", \"case\": \"C01\""}], "repaired": "rejected", "repaired_paths": null, "baseline": "missed"}
+    ]
+  }
+}

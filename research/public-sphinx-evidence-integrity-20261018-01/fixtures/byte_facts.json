@@ -1,0 +1,99 @@
+{
+  "note": "literal byte facts for stating predictions; not node-to-source alignments",
+  "cases": {
+    "N1": {
+      "file": "fixtures/n1_late_diagnostic.html",
+      "bytes": 259,
+      "lines": 5,
+      "final_newline": false,
+      "anchor_id_attribute_byte_count": 1,
+      "token_lines": {
+        "<dt ": 1,
+        "<dd>": 1,
+        "</span>": 3,
+        "Third line": 4,
+        "</dd>": 5
+      }
+    },
+    "N2": {
+      "file": "fixtures/n2_comment_match.html",
+      "bytes": 268,
+      "lines": 1,
+      "final_newline": false,
+      "anchor_id_attribute_byte_count": 2,
+      "comment": {
+        "byte_start": 62,
+        "byte_end": 145
+      },
+      "predicted_serialization_offsets": [
+        66
+      ],
+      "predicted_serialization_inside_comment": [
+        true
+      ],
+      "dt_offsets_inside_comment": [
+        66
+      ],
+      "dt_offsets_outside_comment": [
+        169
+      ]
+    },
+    "N3": {
+      "file": "fixtures/n3_windows1252.html",
+      "bytes": 310,
+      "lines": 14,
+      "final_newline": true,
+      "anchor_id_attribute_byte_count": 1,
+      "live_unit_cp1252_bytes": 118,
+      "live_unit_utf8_bytes": 125,
+      "declares": "<meta charset=\"windows-1252\">"
+    },
+    "N4": {
+      "file": "fixtures/n4_outside_diagnostic.html",
+      "bytes": 322,
+      "lines": 14,
+      "final_newline": true,
+      "anchor_id_attribute_byte_count": 1,
+      "token_lines": {
+        "<dt ": 9,
+        "<dd>": 10,
+        "</span>": 12
+      }
+    },
+    "N5": {
+      "file": "fixtures/n5_clean_control.html",
+      "bytes": 287,
+      "lines": 14,
+      "final_newline": true,
+      "anchor_id_attribute_byte_count": 1,
+      "has_stray_span": false
+    }
+  },
+  "regions": {
+    "N2.comment_copy": {
+      "byte_start": 66,
+      "byte_end": 142,
+      "sha256": "29752d1cb9923edad882c8052530520e55223a8fdcbb086a520d3943a906a132"
+    },
+    "N2.live_unit": {
+      "byte_start": 169,
+      "byte_end": 249,
+      "sha256": "920e4a01e434ba507af3ea8ff145f23ff6efbc34e780fe869ee34ac149ebefef"
+    },
+    "N3.live_unit": {
+      "byte_start": 126,
+      "byte_end": 244,
+      "sha256": "3e95eb7c58d7c5d29cbf0f5c740f03eb5e3c1841ce6c44d5d1b3e5694a9a0c18"
+    },
+    "N4.live_unit": {
+      "byte_start": 120,
+      "byte_end": 231,
+      "sha256": "e49b19e28d318e320251635ddacb515dc0b078beb7c040161f4894e5e0c18189"
+    },
+    "N5.live_unit": {
+      "byte_start": 118,
+      "byte_end": 226,
+      "sha256": "c692fddb3fca7e145c085b336cffce782811081497e74a7ccbb3fca999899a6f"
+    }
+  }
+}

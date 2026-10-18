@@ -1,0 +1,35 @@
+{
+  "note": "identities of the retained fixture bytes, written by scripts/build_fixtures.py before any repaired code existed",
+  "files": {
+    "fixtures/n1_late_diagnostic.html": {
+      "bytes": 259,
+      "sha256": "38558fead0b79840841642eeff9ac9e221d8a8767b0c6d230a18201d5eb2ad6f",
+      "encoding_written": "utf-8",
+      "final_newline": false
+    },
+    "fixtures/n2_comment_match.html": {
+      "bytes": 268,
+      "sha256": "c66aba780ab092f242d54cf841b962d9e7775a2b1a79c6356b5c2d1238c2b90b",
+      "encoding_written": "utf-8",
+      "final_newline": false
+    },
+    "fixtures/n3_windows1252.html": {
+      "bytes": 310,
+      "sha256": "b48a3c21878829b809fb5ce0c5acb96e91bb5449d23bd62622547babf4aadd65",
+      "encoding_written": "cp1252",
+      "final_newline": true
+    },
+    "fixtures/n4_outside_diagnostic.html": {
+      "bytes": 322,
+      "sha256": "5cbb0a04914bff2da15ee8142353545144a444b74d8294f6cdabb8e87ac8e760",
+      "encoding_written": "utf-8",
+      "final_newline": true
+    },
+    "fixtures/n5_clean_control.html": {
+      "bytes": 287,
+      "sha256": "932ea06e032d5db1962cf65fdb1a0f3d520cdf531f73a6233b5fffcf3b47effb",
+      "encoding_written": "utf-8",
+      "final_newline": true
+    }
+  }
+}
