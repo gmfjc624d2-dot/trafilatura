@@ -1,0 +1,23 @@
+$ python3.12 scripts/build_fixtures.py check
+check: identical
+exit=0
+$ python3.12 scripts/check_oracle.py
+D1-timeout-scope             SUFFICIENT_PER_ORACLE  D02+D04=431B, D18=570B
+D2-proxyhandler-empty-dict   SUFFICIENT_PER_ORACLE  D09+D11=184B
+D3-http-proxy-cgi            SUFFICIENT_PER_ORACLE  D09+D10+D13=742B, D09+D10+D08=1092B
+D4-no-proxy-format           SUFFICIENT_PER_ORACLE  D12=289B
+D5-check-hostname-meaning    REVIEW_EXTERNAL        (no required set)
+D6-fork-macos                SUFFICIENT_PER_ORACLE  D01=298B
+S1-check-hostname-default    SUFFICIENT_PER_ORACLE  S02=168B
+S2-cache-not-shared          SUFFICIENT_PER_ORACLE  S05=127B
+S3-retries-repeated          SUFFICIENT_PER_ORACLE  S06=110B, S07=110B
+S4-timeout-not-reads         SUFFICIENT_PER_ORACLE  S08+S09=211B
+S5-cjk-timeout               SUFFICIENT_PER_ORACLE  S11=149B
+S6-retry-on-timeout-german   SUFFICIENT_PER_ORACLE  S10=156B
+S7-nfd-resume                SUFFICIENT_PER_ORACLE  S12=116B
+S8-quota-readonly-budget     ABSTAIN_BUDGET         S13+S14=2107B
+S9-pool-sizing-oversize      ABSTAIN_BUDGET         S15=2159B
+S10-password-emoji           SUFFICIENT_PER_ORACLE  S16=139B
+S11-socks5-absent            ABSTAIN_NO_EVIDENCE    (no required set)
+cases: 17, problems: 0
+exit=0

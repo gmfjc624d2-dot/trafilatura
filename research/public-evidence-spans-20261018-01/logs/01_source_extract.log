@@ -1,0 +1,13 @@
+$ GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 --filter=blob:none --sparse --branch 3.12 https://github.com/python/cpython <checkout>   # run 2026-10-18, exit 0
+$ git -C <checkout> sparse-checkout set --no-cone /Doc/library/urllib.request.rst /Doc/license.rst /LICENSE /Doc/copyright.rst
+$ git -C <checkout> log -1 --format='%H %cI %s'
+58ed60b7415e218ce3d608302e39b5e55bfb0e88 2026-10-01T19:49:16+00:00 [3.12] gh-158399: Remove unused GitHub files from backport branch (#158579)
+$ git -C <checkout> rev-parse HEAD:Doc/library/urllib.request.rst HEAD:LICENSE
+09a8c0edc5ef7b58f5547d2f4584f13d451f90da
+f26bcf4d2de6eb136e31006ca3ab447d5e488adf
+$ sha256sum Doc/library/urllib.request.rst LICENSE
+55e3d9c4988694d529b6856af5ce7b691233821b7f1bf563d4d3dd265b3b7d5f  Doc/library/urllib.request.rst
+3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf  LICENSE
+$ python3.12 scripts/build_fixtures.py extract <checkout>
+extracted 23 excerpts from Doc/library/urllib.request.rst at 58ed60b7415e218ce3d608302e39b5e55bfb0e88
+exit=0

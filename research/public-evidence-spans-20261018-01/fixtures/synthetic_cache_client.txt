@@ -1,0 +1,31 @@
+Example cache client – configuration notes for version 2 (“stable”).
+
+The check_hostname option enables TLS hostname verification; it is enabled by default and must not be disabled in production.
+
+Before rotating certificates, operators check hostname records in the internal DNS zone.
+
+The response cache is shared between threads of one process.
+
+The response cache is not shared between processes; each worker keeps its own copy.
+
+Retries apply only to idempotent requests (GET, HEAD and OPTIONS).
+
+Retries apply only to idempotent requests (GET, HEAD and OPTIONS).
+
+The timeout applies to the connection attempt.
+
+It does not apply to reading the response body, which can block indefinitely.
+
+Zeitüberschreitung: Die Verbindung wird nach 30 Sekunden abgebrochen, außer wenn retry_on_timeout gesetzt ist.
+
+タイムアウトは接続試行にのみ適用されます。読み取りには適用されません。
+
+Le résumé de configuration est stocké dans cache.toml (forme NFD).
+
+Quota table per tenant: tenant-α1 → 11 MiB; tenant-β1 → 18 MiB; tenant-γ1 → 25 MiB; tenant-δ1 → 32 MiB; tenant-ε1 → 39 MiB; tenant-ζ1 → 46 MiB; tenant-η1 → 13 MiB; tenant-θ1 → 20 MiB; tenant-ι1 → 27 MiB; tenant-κ1 → 34 MiB; tenant-λ1 → 41 MiB; tenant-μ1 → 48 MiB; tenant-ν1 → 15 MiB; tenant-ξ1 → 22 MiB; tenant-ο1 → 29 MiB; tenant-π1 → 36 MiB; tenant-ρ1 → 43 MiB; tenant-σ1 → 10 MiB; tenant-τ1 → 17 MiB; tenant-υ1 → 24 MiB; tenant-φ1 → 31 MiB; tenant-χ1 → 38 MiB; tenant-ψ1 → 45 MiB; tenant-ω1 → 12 MiB; tenant-α2 → 12 MiB; tenant-β2 → 19 MiB; tenant-γ2 → 26 MiB; tenant-δ2 → 33 MiB; tenant-ε2 → 40 MiB; tenant-ζ2 → 47 MiB; tenant-η2 → 14 MiB; tenant-θ2 → 21 MiB; tenant-ι2 → 28 MiB; tenant-κ2 → 35 MiB; tenant-λ2 → 42 MiB; tenant-μ2 → 49 MiB; tenant-ν2 → 16 MiB; tenant-ξ2 → 23 MiB; tenant-ο2 → 30 MiB; tenant-π2 → 37 MiB; tenant-ρ2 → 44 MiB; tenant-σ2 → 11 MiB; tenant-τ2 → 18 MiB; tenant-υ2 → 25 MiB; tenant-φ2 → 32 MiB; tenant-χ2 → 39 MiB; tenant-ψ2 → 46 MiB; tenant-ω2 → 13 MiB; tenant-α3 → 13 MiB; tenant-β3 → 20 MiB; tenant-γ3 → 27 MiB; tenant-δ3 → 34 MiB; tenant-ε3 → 41 MiB; tenant-ζ3 → 48 MiB; tenant-η3 → 15 MiB; tenant-θ3 → 22 MiB; tenant-ι3 → 29 MiB; tenant-κ3 → 36 MiB; tenant-λ3 → 43 MiB; tenant-μ3 → 10 MiB; tenant-ν3 → 17 MiB; tenant-ξ3 → 24 MiB; tenant-ο3 → 31 MiB; tenant-π3 → 38 MiB; tenant-ρ3 → 45 MiB; tenant-σ3 → 12 MiB; tenant-τ3 → 19 MiB; tenant-υ3 → 26 MiB; tenant-φ3 → 33 MiB; tenant-χ3 → 40 MiB; tenant-ψ3 → 47 MiB; tenant-ω3 → 14 MiB; tenant-α4 → 14 MiB; tenant-β4 → 21 MiB; tenant-γ4 → 28 MiB; tenant-δ4 → 35 MiB; tenant-ε4 → 42 MiB; tenant-ζ4 → 49 MiB; tenant-η4 → 16 MiB; tenant-θ4 → 23 MiB; tenant-ι4 → 30 MiB; tenant-κ4 → 37 MiB; tenant-λ4 → 44 MiB; tenant-μ4 → 11 MiB.
+
+The limits above are suspended for tenants in read-only mode.
+
+Pool sizing: 接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。接続プールの大きさはワーカー数の二倍を推奨します。
+
+🔒 Security note: the client never logs the proxy password; it is redacted as ••••.

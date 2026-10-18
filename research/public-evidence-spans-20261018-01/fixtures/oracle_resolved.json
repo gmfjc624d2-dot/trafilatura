@@ -1,0 +1,577 @@
+{
+  "budget_bytes": 2048,
+  "budget_bytes_note": "labels and separators included",
+  "cases": [
+    {
+      "case": "D1-timeout-scope",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "D02",
+            "D04"
+          ],
+          "context_bytes_with_labels": 431,
+          "fits_budget": true
+        },
+        {
+          "passages": [
+            "D18"
+          ],
+          "context_bytes_with_labels": 570,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "D02": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 263,
+          "byte_end": 372,
+          "bytes": 109,
+          "chars": 109,
+          "sha256": "5c9557925efc05458995aa464c319209cd5f5f6c3ad89cb9a8f4671ca7a9829b"
+        },
+        "D04": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 477,
+          "byte_end": 721,
+          "bytes": 244,
+          "chars": 244,
+          "sha256": "8b6e45c21f08d943f6540de8b8a09430e0eaa7957014136ab11e1a816348f128"
+        },
+        "D17": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 2998,
+          "byte_end": 3044,
+          "bytes": 46,
+          "chars": 46,
+          "sha256": "29a3eef0ae49b28ca3f8a32b4cf1f3131787e4a56ac66c8972fa63f3ddd8fcc1"
+        },
+        "D18": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 3046,
+          "byte_end": 3575,
+          "bytes": 529,
+          "chars": 529,
+          "sha256": "6d4dc13cd1f57db3808446c510a59bbb84cab0af94c91263bc1ed3da6968e85a"
+        },
+        "D19": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 3577,
+          "byte_end": 3606,
+          "bytes": 29,
+          "chars": 29,
+          "sha256": "cd19e68e0168cc186fdab2301aeca300f3d8978f1bbd2be0f8cdb35917bd6b8a"
+        },
+        "D20": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 3608,
+          "byte_end": 3648,
+          "bytes": 40,
+          "chars": 40,
+          "sha256": "324524236b42bbe2ceb440f90736e4cf1e5cd77dc4d5f3bfe312bbdd8822405e"
+        }
+      }
+    },
+    {
+      "case": "D2-proxyhandler-empty-dict",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "D09",
+            "D11"
+          ],
+          "context_bytes_with_labels": 184,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "D09": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 1792,
+          "byte_end": 1839,
+          "bytes": 47,
+          "chars": 47,
+          "sha256": "f8d057320f056356c945e8dbcd976b58bfd003ae3e248b5e165c20fc961998c5"
+        },
+        "D11": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 2307,
+          "byte_end": 2362,
+          "bytes": 55,
+          "chars": 55,
+          "sha256": "80bb23a7e3a4db46a4efebcb7a6dcfb97080c12ebb7226127e9d3eabb8eeb872"
+        },
+        "D21": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 3650,
+          "byte_end": 3702,
+          "bytes": 52,
+          "chars": 52,
+          "sha256": "96e0d34ab78b653733d0361123736639f1bff164d41c5f3a5a0eefe3c503e04c"
+        },
+        "D22": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 3704,
+          "byte_end": 3733,
+          "bytes": 29,
+          "chars": 29,
+          "sha256": "e3d3ea64fdb5b4365c9a97f52076e992d4e1263a3ad278773139826db363bc30"
+        },
+        "D23": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 3735,
+          "byte_end": 4027,
+          "bytes": 292,
+          "chars": 292,
+          "sha256": "4612a128176b5a7c6b7e659132c9c487d53fd0fcf36c0658fa4d7c908c4f9df7"
+        }
+      }
+    },
+    {
+      "case": "D3-http-proxy-cgi",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "D09",
+            "D10",
+            "D13"
+          ],
+          "context_bytes_with_labels": 742,
+          "fits_budget": true
+        },
+        {
+          "passages": [
+            "D09",
+            "D10",
+            "D08"
+          ],
+          "context_bytes_with_labels": 1092,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "D08": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 1332,
+          "byte_end": 1790,
+          "bytes": 458,
+          "chars": 458,
+          "sha256": "7ba84e5c501440101b81c5c520cd28d8c2a0c4de233537fb377d905f4a1a4eec"
+        },
+        "D09": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 1792,
+          "byte_end": 1839,
+          "bytes": 47,
+          "chars": 47,
+          "sha256": "f8d057320f056356c945e8dbcd976b58bfd003ae3e248b5e165c20fc961998c5"
+        },
+        "D10": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 1841,
+          "byte_end": 2305,
+          "bytes": 464,
+          "chars": 464,
+          "sha256": "cef2cc321089fc1d50ff1a8e6d1d584d339de2fd19cd638e831619aae25a76e1"
+        },
+        "D13": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 2614,
+          "byte_end": 2722,
+          "bytes": 108,
+          "chars": 108,
+          "sha256": "8be4790f16add9348b157d93c5f3672b9d2a76472972c167947ddf57d29aa9f3"
+        }
+      }
+    },
+    {
+      "case": "D4-no-proxy-format",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "D12"
+          ],
+          "context_bytes_with_labels": 289,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "D01": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 0,
+          "byte_end": 261,
+          "bytes": 261,
+          "chars": 261,
+          "sha256": "5714181dc77cb728ca57d9cb3c335fb67f0a34ca41a12aff283fdecba4423689"
+        },
+        "D10": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 1841,
+          "byte_end": 2305,
+          "bytes": 464,
+          "chars": 464,
+          "sha256": "cef2cc321089fc1d50ff1a8e6d1d584d339de2fd19cd638e831619aae25a76e1"
+        },
+        "D12": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 2364,
+          "byte_end": 2612,
+          "bytes": 248,
+          "chars": 248,
+          "sha256": "ce86d8bde8aa70564986ec13efd2bbe07d9e22b3a2cc3d41e500a78c1f14ca77"
+        }
+      }
+    },
+    {
+      "case": "D5-check-hostname-meaning",
+      "expected_decision": "REVIEW_EXTERNAL",
+      "required_sets": [],
+      "spans": {
+        "D14": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 2724,
+          "byte_end": 2806,
+          "bytes": 82,
+          "chars": 82,
+          "sha256": "496b1a059b7965b5969b0c42dff1cfeaaf5a4644f181c1a5d601e915f410b0b1"
+        },
+        "D15": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 2808,
+          "byte_end": 2932,
+          "bytes": 124,
+          "chars": 124,
+          "sha256": "db226347d77f5ecea959cfad848e3738e49f47baa97f36ae86dd4c536c1db745"
+        },
+        "D16": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 2934,
+          "byte_end": 2996,
+          "bytes": 62,
+          "chars": 62,
+          "sha256": "82a70da26cc2046ccb489814101c1ae8aafef374171d5f0367b93294cd02f943"
+        }
+      }
+    },
+    {
+      "case": "D6-fork-macos",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "D01"
+          ],
+          "context_bytes_with_labels": 298,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "D01": {
+          "fixture": "fixtures/urllib_request_3.12_excerpts.txt",
+          "byte_start": 0,
+          "byte_end": 261,
+          "bytes": 261,
+          "chars": 261,
+          "sha256": "5714181dc77cb728ca57d9cb3c335fb67f0a34ca41a12aff283fdecba4423689"
+        }
+      }
+    },
+    {
+      "case": "S1-check-hostname-default",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "S02"
+          ],
+          "context_bytes_with_labels": 168,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "S02": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 76,
+          "byte_end": 201,
+          "bytes": 125,
+          "chars": 125,
+          "sha256": "96148a4f632d14b6dae90b14a40be6ab7836e60362677cd313cdbb64a491b21e"
+        },
+        "S03": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 203,
+          "byte_end": 291,
+          "bytes": 88,
+          "chars": 88,
+          "sha256": "b67f10dd379748fee998ed078b06c25777830b93a7c33cd967ea6babde0a83b8"
+        }
+      }
+    },
+    {
+      "case": "S2-cache-not-shared",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "S05"
+          ],
+          "context_bytes_with_labels": 127,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "S04": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 293,
+          "byte_end": 353,
+          "bytes": 60,
+          "chars": 60,
+          "sha256": "98f1251d1d83223ccb8385fd54ba9a087af54d51da9a1830de1051bf1cf9b7e1"
+        },
+        "S05": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 355,
+          "byte_end": 438,
+          "bytes": 83,
+          "chars": 83,
+          "sha256": "596c4a2612bd79369abc586ebce65abfa57a54714f6d941ae4ae307d96c9213f"
+        }
+      }
+    },
+    {
+      "case": "S3-retries-repeated",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "S06"
+          ],
+          "context_bytes_with_labels": 110,
+          "fits_budget": true
+        },
+        {
+          "passages": [
+            "S07"
+          ],
+          "context_bytes_with_labels": 110,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "S06": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 440,
+          "byte_end": 506,
+          "bytes": 66,
+          "chars": 66,
+          "sha256": "b0a6553feca52531830ef2c571788033410238725c6398b32115361dc975705c"
+        },
+        "S07": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 508,
+          "byte_end": 574,
+          "bytes": 66,
+          "chars": 66,
+          "sha256": "b0a6553feca52531830ef2c571788033410238725c6398b32115361dc975705c"
+        }
+      }
+    },
+    {
+      "case": "S4-timeout-not-reads",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "S08",
+            "S09"
+          ],
+          "context_bytes_with_labels": 211,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "S08": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 576,
+          "byte_end": 622,
+          "bytes": 46,
+          "chars": 46,
+          "sha256": "c13e33e780e5a60afbac75923e69c1123c84c5f7db84710ee450d74d93816d6f"
+        },
+        "S09": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 624,
+          "byte_end": 701,
+          "bytes": 77,
+          "chars": 77,
+          "sha256": "3f7e938b860c2fdd859c177b43f06a51bc2dd366e8bd61af16baaddd6b8d7e2f"
+        },
+        "S10": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 703,
+          "byte_end": 815,
+          "bytes": 112,
+          "chars": 110,
+          "sha256": "0f2760f8627134fc3d4fc43464c7ec46277453e1710e702fdd01f07c040f15a2"
+        }
+      }
+    },
+    {
+      "case": "S5-cjk-timeout",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "S11"
+          ],
+          "context_bytes_with_labels": 149,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "S11": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 817,
+          "byte_end": 922,
+          "bytes": 105,
+          "chars": 35,
+          "sha256": "a8c2f00daf4242e474f657f01190fce58cb97d713ffa9e566696de86a80e011f"
+        }
+      }
+    },
+    {
+      "case": "S6-retry-on-timeout-german",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "S10"
+          ],
+          "context_bytes_with_labels": 156,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "S10": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 703,
+          "byte_end": 815,
+          "bytes": 112,
+          "chars": 110,
+          "sha256": "0f2760f8627134fc3d4fc43464c7ec46277453e1710e702fdd01f07c040f15a2"
+        }
+      }
+    },
+    {
+      "case": "S7-nfd-resume",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "S12"
+          ],
+          "context_bytes_with_labels": 116,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "S12": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 924,
+          "byte_end": 996,
+          "bytes": 72,
+          "chars": 69,
+          "sha256": "10881007ca9d97a921933b1982774489be3f39ea1910786e1eabf2424bbaeeb2"
+        }
+      }
+    },
+    {
+      "case": "S8-quota-readonly-budget",
+      "expected_decision": "ABSTAIN_BUDGET",
+      "required_sets": [
+        {
+          "passages": [
+            "S13",
+            "S14"
+          ],
+          "context_bytes_with_labels": 2107,
+          "fits_budget": false
+        }
+      ],
+      "spans": {
+        "S13": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 998,
+          "byte_end": 2953,
+          "bytes": 1955,
+          "chars": 1703,
+          "sha256": "804b157f2fc7b12afa99fa648e73099653f077705ee7e85848bf8622b597bae2"
+        },
+        "S14": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 2955,
+          "byte_end": 3016,
+          "bytes": 61,
+          "chars": 61,
+          "sha256": "aed205e82f598201b308081969546150c661f6bfe71c806c26b76f4fa673e693"
+        }
+      }
+    },
+    {
+      "case": "S9-pool-sizing-oversize",
+      "expected_decision": "ABSTAIN_BUDGET",
+      "required_sets": [
+        {
+          "passages": [
+            "S15"
+          ],
+          "context_bytes_with_labels": 2159,
+          "fits_budget": false
+        }
+      ],
+      "spans": {
+        "S15": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 3018,
+          "byte_end": 5131,
+          "bytes": 2113,
+          "chars": 713,
+          "sha256": "5a5895e908cfc788168bfcedcf182b5a59ab1992e74402dbf2cef154d2c8b2fa"
+        }
+      }
+    },
+    {
+      "case": "S10-password-emoji",
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "required_sets": [
+        {
+          "passages": [
+            "S16"
+          ],
+          "context_bytes_with_labels": 139,
+          "fits_budget": true
+        }
+      ],
+      "spans": {
+        "S16": {
+          "fixture": "fixtures/synthetic_cache_client.txt",
+          "byte_start": 5133,
+          "byte_end": 5226,
+          "bytes": 93,
+          "chars": 82,
+          "sha256": "f88ba34b1c9077b643695673f1b772024ad8cdfe21eb65779ab1348d016b190c"
+        }
+      }
+    },
+    {
+      "case": "S11-socks5-absent",
+      "expected_decision": "ABSTAIN_NO_EVIDENCE",
+      "required_sets": [],
+      "spans": {}
+    }
+  ]
+}

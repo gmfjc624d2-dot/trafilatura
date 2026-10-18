@@ -1,0 +1,11 @@
+# research harness: the project's rules, with the exemptions pyproject.toml grants tests/*
+extend = "../../pyproject.toml"
+
+[lint.per-file-ignores]
+"scripts/*" = [
+    "T20",      # print is the report channel
+    "ANN",      # annotations
+    "INP001",   # standalone scripts, not a package
+    "PLC0415",  # scripts import their sibling helpers
+    "RUF001", "RUF003",  # multibyte fixture text on purpose (tests/* has the same exemption)
+]

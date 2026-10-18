@@ -1,0 +1,253 @@
+{
+  "schema": 1,
+  "request_id": "public-evidence-spans-benchmark-20261018-01",
+  "status": "PRE-REGISTERED: hand-authored and committed before any comparison run. Cases, required sets, gates and rules are not edited after results are seen; post-run analyses are labelled as such in the report.",
+  "scope_of_oracle": "Hand-authored by reading these passages only. It encodes the author's judgement of which whole passages are needed to answer each question from these fixtures. It does not, and is not claimed to, discover semantic dependencies automatically, and it says nothing about arbitrary other documents.",
+  "budget_bytes": 2048,
+  "assembly": {
+    "block": "\"[{n}] {fixture} {byte_start}-{byte_end} sha256:{first 12 hex of sha256}\\n\" + passage + \"\\n\\n\"; n counts blocks from 1; every label and separator byte counts against the budget (scripts/spans.py)",
+    "whole_passages_only": "a passage is included whole or not at all; nothing is truncated",
+    "plain": "take the method's ranked passages in order; drop a passage whose sha256 equals one already included (recorded as a suppressed duplicate with its own offsets); skip a passage whose block does not fit the remaining budget (recorded as omitted_for_budget) and continue with the next one",
+    "oracle_dependencies": "upper bound for a worker that holds this hand-authored dependency map: take the first required set (in oracle order) that shares at least one passage with the method's ranked passages; place the whole set first (document order); if it does not fit, ABSTAIN_BUDGET (never a partial set); otherwise fill the remaining budget as in plain. If no required set shares a passage with the ranking, the outcome is the plain one."
+  },
+  "methods": {
+    "literal": "whole passages that contain every query term as an exact, case-sensitive substring (Python `in` on the passage str), in document order; no ranking, no normalisation",
+    "fts5_unicode61": "SQLite FTS5 table per fixture, tokenize='unicode61' (defaults: remove_diacritics 1, separators per Unicode categories, '_' is a separator); query = every term double-quoted (inner quotes doubled) and joined by spaces, i.e. an implicit AND of phrases; ORDER BY bm25(table), rowid",
+    "fts5_unicode61_underscore": "same, tokenize=\"unicode61 tokenchars '_'\" so that '_' is part of tokens"
+  },
+  "outcome_levels": {
+    "retrieved": "the method returned at least one passage; and separately, whether some required set is entirely among the returned passages",
+    "budget_fitting": "the assembled context is at most budget_bytes, counting labels and separators (holds by construction; asserted)",
+    "oracle_complete": "the assembled context contains every passage of at least one required set, whole",
+    "semantically_reviewed": "a human has read the assembled context against the question; false for every result of this benchmark (no human review was performed)"
+  },
+  "decisions": {
+    "SUFFICIENT_PER_ORACLE": "answerable and some required set fits the budget; still not semantically reviewed",
+    "ABSTAIN_BUDGET": "answerable but no required set fits the budget with its labels: never truncate and call it sufficient",
+    "REVIEW_EXTERNAL": "the answer depends on text outside these fixtures",
+    "ABSTAIN_NO_EVIDENCE": "the fixtures do not answer the question"
+  },
+  "cases": [
+    {
+      "id": "D1-timeout-scope",
+      "fixture": "docs",
+      "question": "What does the urlopen() timeout bound, and does it work for every URL scheme?",
+      "query_terms": ["timeout"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["D02", "D04"], "roles": {"D02": "subject: urlopen signature carrying the timeout parameter", "D04": "statement (blocking operations such as the connection attempt) and scope condition (only HTTP, HTTPS and FTP)"}},
+        {"passages": ["D18"], "roles": {"D18": "same statement and scope for OpenerDirector.open(), which urlopen() calls"}}
+      ],
+      "distractors": {"D17": "OpenerDirector.open signature: the word, not the answer", "D20": "CacheFTPHandler.setTimeout(): another object, connection timeout only", "D19": "its signature"},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "near-repeated paragraphs D04 and D18"
+    },
+    {
+      "id": "D2-proxyhandler-empty-dict",
+      "fixture": "docs",
+      "question": "How do you disable proxy autodetection with ProxyHandler?",
+      "query_terms": ["empty dictionary"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["D09", "D11"], "roles": {"D09": "subject: ProxyHandler(proxies=None), the only parameter the dictionary can be", "D11": "statement: pass an empty dictionary; the sentence itself names no class"}}
+      ],
+      "distractors": {"D23": "URLopener (deprecated legacy class): its proxies dictionary, not ProxyHandler's", "D21": "URLopener signature", "D22": "URLopener deprecation"},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "required condition (the subject) lies in another passage"
+    },
+    {
+      "id": "D3-http-proxy-cgi",
+      "fixture": "docs",
+      "question": "Does ProxyHandler() with default arguments use the HTTP_PROXY environment variable?",
+      "query_terms": ["HTTP_PROXY"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["D09", "D10", "D13"], "roles": {"D09": "subject", "D10": "default: proxies read from <protocol>_proxy environment variables", "D13": "exception: HTTP_PROXY ignored when REQUEST_METHOD is set"}},
+        {"passages": ["D09", "D10", "D08"], "roles": {"D09": "subject", "D10": "default", "D08": "the same exception, explained in the getproxies() note"}}
+      ],
+      "distractors": {},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "the default behaviour and the subject lie in passages without the query term"
+    },
+    {
+      "id": "D4-no-proxy-format",
+      "fixture": "docs",
+      "question": "What format does the no_proxy environment variable take?",
+      "query_terms": ["no_proxy"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["D12"], "roles": {"D12": "statement: comma-separated hostname suffixes, optional :port; negation 'shouldn't be reached via proxy'"}}
+      ],
+      "distractors": {"D10": "contains the unrelated words 'no proxy' ('If no proxy environment variables are set')", "D01": "macOS fork warning: sets no_proxy to * but does not give the format"},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "identifier with underscore"
+    },
+    {
+      "id": "D5-check-hostname-meaning",
+      "fixture": "docs",
+      "question": "What does HTTPSHandler's check_hostname argument do?",
+      "query_terms": ["check_hostname"],
+      "answerable": false,
+      "external_dependency": "D15 defers the meaning to http.client.HTTPSConnection, whose documentation is not in the fixture",
+      "required_sets": [],
+      "distractors": {"D14": "signature only", "D15": "defers the meaning elsewhere", "D16": "version history only"},
+      "expected_decision": "REVIEW_EXTERNAL",
+      "note": "negative control: every method finds the word; none of it is the answer"
+    },
+    {
+      "id": "D6-fork-macos",
+      "fixture": "docs",
+      "question": "Is it safe to use urllib.request in a program that calls os.fork() on macOS, and what is the workaround?",
+      "query_terms": ["fork"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["D01"], "roles": {"D01": "negation ('unsafe') and the workaround (no_proxy=*)"}}
+      ],
+      "distractors": {},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "positive control"
+    },
+    {
+      "id": "S1-check-hostname-default",
+      "fixture": "synthetic",
+      "question": "Is check_hostname enabled by default, and may it be disabled in production?",
+      "query_terms": ["check_hostname"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["S02"], "roles": {"S02": "statement and negation ('must not be disabled')"}}
+      ],
+      "distractors": {"S03": "contains 'check hostname' as two adjacent words with another meaning"},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "identifier collision control"
+    },
+    {
+      "id": "S2-cache-not-shared",
+      "fixture": "synthetic",
+      "question": "Is the response cache shared between worker processes?",
+      "query_terms": ["cache", "shared"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["S05"], "roles": {"S05": "negation: not shared between processes"}}
+      ],
+      "distractors": {"S04": "shared between threads: the positive statement about another scope"},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "negation next to a positive distractor"
+    },
+    {
+      "id": "S3-retries-repeated",
+      "fixture": "synthetic",
+      "question": "Which requests are retried?",
+      "query_terms": ["Retries"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["S06"], "roles": {"S06": "statement"}},
+        {"passages": ["S07"], "roles": {"S07": "exact repeat of S06 at other offsets"}}
+      ],
+      "distractors": {},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "repeated paragraph: both occurrences have their own offsets and the same sha256"
+    },
+    {
+      "id": "S4-timeout-not-reads",
+      "fixture": "synthetic",
+      "question": "Does the timeout also bound reading the response body?",
+      "query_terms": ["timeout"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["S08", "S09"], "roles": {"S08": "statement: applies to the connection attempt", "S09": "negated condition in the next passage, without the query term: does not apply to reading"}}
+      ],
+      "distractors": {"S10": "German passage containing the identifier retry_on_timeout"},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "required negation lies in another passage"
+    },
+    {
+      "id": "S5-cjk-timeout",
+      "fixture": "synthetic",
+      "question": "タイムアウトは読み取りにも適用されますか。",
+      "query_terms": ["タイムアウト"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["S11"], "roles": {"S11": "statement and negation in Japanese (3-byte characters, no spaces)"}}
+      ],
+      "distractors": {},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "multibyte, no word separators"
+    },
+    {
+      "id": "S6-retry-on-timeout-german",
+      "fixture": "synthetic",
+      "question": "When is the connection not aborted after 30 seconds?",
+      "query_terms": ["retry_on_timeout"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["S10"], "roles": {"S10": "condition (außer wenn retry_on_timeout gesetzt ist)"}}
+      ],
+      "distractors": {},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "underscore identifier inside multibyte text"
+    },
+    {
+      "id": "S7-nfd-resume",
+      "fixture": "synthetic",
+      "question": "Where is the configuration résumé stored?",
+      "query_terms": ["résumé"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["S12"], "roles": {"S12": "statement; the passage is in NFD (e + U+0301), the query term in NFC"}}
+      ],
+      "distractors": {},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "Unicode normalisation control"
+    },
+    {
+      "id": "S8-quota-readonly-budget",
+      "fixture": "synthetic",
+      "question": "Do the per-tenant quotas apply to tenants in read-only mode?",
+      "query_terms": ["quota"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["S13", "S14"], "roles": {"S13": "the quota table (fits the budget alone)", "S14": "condition in another passage without the query term: suspended in read-only mode"}}
+      ],
+      "distractors": {},
+      "expected_decision": "ABSTAIN_BUDGET",
+      "note": "the required set exceeds 2048 bytes with labels, although S13 alone fits"
+    },
+    {
+      "id": "S9-pool-sizing-oversize",
+      "fixture": "synthetic",
+      "question": "What connection pool size is recommended?",
+      "query_terms": ["Pool sizing"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["S15"], "roles": {"S15": "statement in one passage of 2113 bytes but 713 characters"}}
+      ],
+      "distractors": {},
+      "expected_decision": "ABSTAIN_BUDGET",
+      "note": "fits a 2048-character budget, not a 2048-byte budget"
+    },
+    {
+      "id": "S10-password-emoji",
+      "fixture": "synthetic",
+      "question": "Does the client log the proxy password?",
+      "query_terms": ["password"],
+      "answerable": true,
+      "required_sets": [
+        {"passages": ["S16"], "roles": {"S16": "negation ('never logs'), 4-byte emoji and 3-byte bullets"}}
+      ],
+      "distractors": {},
+      "expected_decision": "SUFFICIENT_PER_ORACLE",
+      "note": "positive control with 4-byte characters"
+    },
+    {
+      "id": "S11-socks5-absent",
+      "fixture": "synthetic",
+      "question": "Does the client support SOCKS5 proxies?",
+      "query_terms": ["SOCKS5"],
+      "answerable": false,
+      "required_sets": [],
+      "distractors": {},
+      "expected_decision": "ABSTAIN_NO_EVIDENCE",
+      "note": "negative control: nothing in the fixture answers it"
+    }
+  ]
+}

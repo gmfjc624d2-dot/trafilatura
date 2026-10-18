@@ -1,0 +1,195 @@
+{
+  "repository": "https://github.com/python/cpython",
+  "commit": "58ed60b7415e218ce3d608302e39b5e55bfb0e88",
+  "path": "Doc/library/urllib.request.rst",
+  "git_blob": "09a8c0edc5ef7b58f5547d2f4584f13d451f90da",
+  "file_sha256": "55e3d9c4988694d529b6856af5ce7b691233821b7f1bf563d4d3dd265b3b7d5f",
+  "file_bytes": 63203,
+  "rendered_page": "https://docs.python.org/3.12/library/urllib.request.html",
+  "excerpts": [
+    {
+      "id": "D01",
+      "line_start": 26,
+      "line_end": 30,
+      "kind": "warning",
+      "raw": "   On macOS it is unsafe to use this module in programs using\n   :func:`os.fork` because the :func:`getproxies` implementation for\n   macOS uses a higher-level system API. Set the environment variable\n   ``no_proxy`` to ``*`` to avoid this problem\n   (e.g. ``os.environ[\"no_proxy\"] = \"*\"``).\n",
+      "raw_sha256": "b42e0c3790a91594b5213b120614cc75eca120e578fab4f3cb4bc0135c78a84d"
+    },
+    {
+      "id": "D02",
+      "line_start": 37,
+      "line_end": 37,
+      "kind": "function",
+      "raw": ".. function:: urlopen(url, data=None[, timeout], *, cafile=None, capath=None, cadefault=False, context=None)\n",
+      "raw_sha256": "9671a7dd5cd34a53090a42eff36147e60fe0023f7b27239993ca797c690d8262"
+    },
+    {
+      "id": "D03",
+      "line_start": 39,
+      "line_end": 40,
+      "kind": "para",
+      "raw": "   Open *url*, which can be either a string containing a valid, properly\n   encoded URL, or a :class:`Request` object.\n",
+      "raw_sha256": "a970622d55811e9c43913b3f39439b167dfae5c0e9fd389854fdd08309989813"
+    },
+    {
+      "id": "D04",
+      "line_start": 49,
+      "line_end": 52,
+      "kind": "para",
+      "raw": "   The optional *timeout* parameter specifies a timeout in seconds for\n   blocking operations like the connection attempt (if not specified,\n   the global default timeout setting will be used).  This actually\n   only works for HTTP, HTTPS and FTP connections.\n",
+      "raw_sha256": "20ebe573f4e602371dc6a467fbe11aae41a14f508436b5da25ce66574ad6f082"
+    },
+    {
+      "id": "D05",
+      "line_start": 54,
+      "line_end": 56,
+      "kind": "para",
+      "raw": "   If *context* is specified, it must be a :class:`ssl.SSLContext` instance\n   describing the various SSL options. See :class:`~http.client.HTTPSConnection`\n   for more details.\n",
+      "raw_sha256": "0bb3979198e2ae431b71a958741856085aa7241e28815a2181ee5ebe64f024dc"
+    },
+    {
+      "id": "D06",
+      "line_start": 186,
+      "line_end": 186,
+      "kind": "function",
+      "raw": ".. function:: getproxies()\n",
+      "raw_sha256": "4167a62529a454af235bd43b72443944aa446d7dcc751800307003ccf714b43e"
+    },
+    {
+      "id": "D07",
+      "line_start": 188,
+      "line_end": 194,
+      "kind": "para",
+      "raw": "   This helper function returns a dictionary of scheme to proxy server URL\n   mappings. It scans the environment for variables named ``<scheme>_proxy``,\n   in a case insensitive approach, for all operating systems first, and when it\n   cannot find it, looks for proxy information from System\n   Configuration for macOS and Windows Systems Registry for Windows.\n   If both lowercase and uppercase environment variables exist (and disagree),\n   lowercase is preferred.\n",
+      "raw_sha256": "d7f267872ece689c25eba1311757e422de020b1df12dbe41ca58ab985dff427f"
+    },
+    {
+      "id": "D08",
+      "line_start": 198,
+      "line_end": 204,
+      "kind": "note",
+      "raw": "      If the environment variable ``REQUEST_METHOD`` is set, which usually\n      indicates your script is running in a CGI environment, the environment\n      variable ``HTTP_PROXY`` (uppercase ``_PROXY``) will be ignored. This is\n      because that variable can be injected by a client using the \"Proxy:\" HTTP\n      header. If you need to use an HTTP proxy in a CGI environment, either use\n      ``ProxyHandler`` explicitly, or make sure the variable name is in\n      lowercase (or at least the ``_proxy`` suffix).\n",
+      "raw_sha256": "5c38df0d09ebd5a857e77fc3093cdab822772d284a94615b068dc6eaf86c4338"
+    },
+    {
+      "id": "D09",
+      "line_start": 319,
+      "line_end": 319,
+      "kind": "class",
+      "raw": ".. class:: ProxyHandler(proxies=None)\n",
+      "raw_sha256": "ff868fc90d52fecb1b67f9294d003d486617704353689fa2702f70d78118b3a9"
+    },
+    {
+      "id": "D10",
+      "line_start": 321,
+      "line_end": 327,
+      "kind": "para",
+      "raw": "   Cause requests to go through a proxy. If *proxies* is given, it must be a\n   dictionary mapping protocol names to URLs of proxies. The default is to read\n   the list of proxies from the environment variables\n   ``<protocol>_proxy``.  If no proxy environment variables are set, then\n   in a Windows environment proxy settings are obtained from the registry's\n   Internet Settings section, and in a macOS environment proxy information\n   is retrieved from the System Configuration Framework.\n",
+      "raw_sha256": "7603cc0ac64d2908845fe5bd922d99bec7e7e5139318542b35619ebd10528b93"
+    },
+    {
+      "id": "D11",
+      "line_start": 329,
+      "line_end": 329,
+      "kind": "para",
+      "raw": "   To disable autodetected proxy pass an empty dictionary.\n",
+      "raw_sha256": "02d0ce7bbe973a56e229373307b4ae49ccd7986f29be0df45b75f267d2b89bfe"
+    },
+    {
+      "id": "D12",
+      "line_start": 331,
+      "line_end": 334,
+      "kind": "para",
+      "raw": "   The :envvar:`no_proxy` environment variable can be used to specify hosts\n   which shouldn't be reached via proxy; if set, it should be a comma-separated\n   list of hostname suffixes, optionally with ``:port`` appended, for example\n   ``cern.ch,ncsa.uiuc.edu,some.host:8080``.\n",
+      "raw_sha256": "850db1b388fc9acf7f9d8acc4e183c42e7eba95c80283599a64bf7c2e53fb4c9"
+    },
+    {
+      "id": "D13",
+      "line_start": 338,
+      "line_end": 339,
+      "kind": "note",
+      "raw": "      ``HTTP_PROXY`` will be ignored if a variable ``REQUEST_METHOD`` is set;\n      see the documentation on :func:`~urllib.request.getproxies`.\n",
+      "raw_sha256": "5b58c104c12c356fb5da8318019e7ce03b9387e21b863589f94232143c3fd784"
+    },
+    {
+      "id": "D14",
+      "line_start": 443,
+      "line_end": 443,
+      "kind": "class",
+      "raw": ".. class:: HTTPSHandler(debuglevel=0, context=None, check_hostname=None)\n",
+      "raw_sha256": "bace021c057cf09ce4f0cae5cc34a4ecca4e042caed57cd89e913e4230618f90"
+    },
+    {
+      "id": "D15",
+      "line_start": 445,
+      "line_end": 446,
+      "kind": "para",
+      "raw": "   A class to handle opening of HTTPS URLs.  *context* and *check_hostname*\n   have the same meaning as in :class:`http.client.HTTPSConnection`.\n",
+      "raw_sha256": "37cbe48b8d11737d56d1e3d1fb6e6f8cf1d08698fe46bce5f1438bbee57edce1"
+    },
+    {
+      "id": "D16",
+      "line_start": 448,
+      "line_end": 449,
+      "kind": "versionchanged",
+      "raw": "   .. versionchanged:: 3.2\n      *context* and *check_hostname* were added.\n",
+      "raw_sha256": "81d414e8af22d946f2d90e5783092e034c414ad8d9e1a8771e7c666804ce3fa6"
+    },
+    {
+      "id": "D17",
+      "line_start": 670,
+      "line_end": 670,
+      "kind": "method",
+      "raw": ".. method:: OpenerDirector.open(url, data=None[, timeout])\n",
+      "raw_sha256": "239afbc775e14b783f82e1ca1af15964cd63891ad03e95456907c6f8a19009de"
+    },
+    {
+      "id": "D18",
+      "line_start": 672,
+      "line_end": 679,
+      "kind": "para",
+      "raw": "   Open the given *url* (which can be a request object or a string), optionally\n   passing the given *data*. Arguments, return values and exceptions raised are\n   the same as those of :func:`urlopen` (which simply calls the :meth:`open`\n   method on the currently installed global :class:`OpenerDirector`).  The\n   optional *timeout* parameter specifies a timeout in seconds for blocking\n   operations like the connection attempt (if not specified, the global default\n   timeout setting will be used). The timeout feature actually works only for\n   HTTP, HTTPS and FTP connections.\n",
+      "raw_sha256": "1f12211c7b8c66534154652d49ad90b78a44ac198f0b978fd544d2f8004f54d8"
+    },
+    {
+      "id": "D19",
+      "line_start": 1163,
+      "line_end": 1163,
+      "kind": "method",
+      "raw": ".. method:: CacheFTPHandler.setTimeout(t)\n",
+      "raw_sha256": "ef282a146343bc204663f97262833ab3bc986a596398f32c3ab5ee9962abacb4"
+    },
+    {
+      "id": "D20",
+      "line_start": 1165,
+      "line_end": 1165,
+      "kind": "para",
+      "raw": "   Set timeout of connections to *t* seconds.\n",
+      "raw_sha256": "3ed62cf079c0d43caa5c9c081547c282f3f750a69f0fcde4cebcc1094b72f14b"
+    },
+    {
+      "id": "D21",
+      "line_start": 1453,
+      "line_end": 1453,
+      "kind": "class",
+      "raw": ".. class:: URLopener(proxies=None, **x509)\n",
+      "raw_sha256": "cf6a0262156974b130331938b49fe904b6630f0b8d06f0bb06c46a4a645257fb"
+    },
+    {
+      "id": "D22",
+      "line_start": 1455,
+      "line_end": 1455,
+      "kind": "deprecated",
+      "raw": "   .. deprecated:: 3.3\n",
+      "raw_sha256": "3e013a265b030f3d41c6dcce23d29bd1b58cafa7319a3d7eda083c27cb5b6cdb"
+    },
+    {
+      "id": "D23",
+      "line_start": 1467,
+      "line_end": 1470,
+      "kind": "para",
+      "raw": "   The optional *proxies* parameter should be a dictionary mapping scheme names to\n   proxy URLs, where an empty dictionary turns proxies off completely.  Its default\n   value is ``None``, in which case environmental proxy settings will be used if\n   present, as discussed in the definition of :func:`urlopen`, above.\n",
+      "raw_sha256": "3d8bd53dda2d448c6abaf08b6d6ff8203b96c518f76550a3d509363926e0fc7c"
+    }
+  ]
+}

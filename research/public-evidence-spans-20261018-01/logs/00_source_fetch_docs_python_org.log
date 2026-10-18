@@ -1,0 +1,4 @@
+$ curl -sS -o /dev/null -w 'http=%{http_code}\n' --max-time 60 https://docs.python.org/3.12/library/urllib.request.html   # 2026-10-18T00:33:29Z
+curl: (56) CONNECT tunnel failed, response 403
+http=000
+exit=56

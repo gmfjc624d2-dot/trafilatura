@@ -1,0 +1,45 @@
+Warning: On macOS it is unsafe to use this module in programs using os.fork() because the getproxies() implementation for macOS uses a higher-level system API. Set the environment variable no_proxy to * to avoid this problem (e.g. os.environ["no_proxy"] = "*").
+
+urllib.request.urlopen(url, data=None[, timeout], *, cafile=None, capath=None, cadefault=False, context=None)
+
+Open url, which can be either a string containing a valid, properly encoded URL, or a Request object.
+
+The optional timeout parameter specifies a timeout in seconds for blocking operations like the connection attempt (if not specified, the global default timeout setting will be used). This actually only works for HTTP, HTTPS and FTP connections.
+
+If context is specified, it must be a ssl.SSLContext instance describing the various SSL options. See HTTPSConnection for more details.
+
+urllib.request.getproxies()
+
+This helper function returns a dictionary of scheme to proxy server URL mappings. It scans the environment for variables named <scheme>_proxy, in a case insensitive approach, for all operating systems first, and when it cannot find it, looks for proxy information from System Configuration for macOS and Windows Systems Registry for Windows. If both lowercase and uppercase environment variables exist (and disagree), lowercase is preferred.
+
+Note: If the environment variable REQUEST_METHOD is set, which usually indicates your script is running in a CGI environment, the environment variable HTTP_PROXY (uppercase _PROXY) will be ignored. This is because that variable can be injected by a client using the "Proxy:" HTTP header. If you need to use an HTTP proxy in a CGI environment, either use ProxyHandler explicitly, or make sure the variable name is in lowercase (or at least the _proxy suffix).
+
+class urllib.request.ProxyHandler(proxies=None)
+
+Cause requests to go through a proxy. If proxies is given, it must be a dictionary mapping protocol names to URLs of proxies. The default is to read the list of proxies from the environment variables <protocol>_proxy. If no proxy environment variables are set, then in a Windows environment proxy settings are obtained from the registry's Internet Settings section, and in a macOS environment proxy information is retrieved from the System Configuration Framework.
+
+To disable autodetected proxy pass an empty dictionary.
+
+The no_proxy environment variable can be used to specify hosts which shouldn't be reached via proxy; if set, it should be a comma-separated list of hostname suffixes, optionally with :port appended, for example cern.ch,ncsa.uiuc.edu,some.host:8080.
+
+Note: HTTP_PROXY will be ignored if a variable REQUEST_METHOD is set; see the documentation on getproxies().
+
+class urllib.request.HTTPSHandler(debuglevel=0, context=None, check_hostname=None)
+
+A class to handle opening of HTTPS URLs. context and check_hostname have the same meaning as in http.client.HTTPSConnection.
+
+Changed in version 3.2: context and check_hostname were added.
+
+OpenerDirector.open(url, data=None[, timeout])
+
+Open the given url (which can be a request object or a string), optionally passing the given data. Arguments, return values and exceptions raised are the same as those of urlopen() (which simply calls the open() method on the currently installed global OpenerDirector). The optional timeout parameter specifies a timeout in seconds for blocking operations like the connection attempt (if not specified, the global default timeout setting will be used). The timeout feature actually works only for HTTP, HTTPS and FTP connections.
+
+CacheFTPHandler.setTimeout(t)
+
+Set timeout of connections to t seconds.
+
+class urllib.request.URLopener(proxies=None, **x509)
+
+Deprecated since version 3.3.
+
+The optional proxies parameter should be a dictionary mapping scheme names to proxy URLs, where an empty dictionary turns proxies off completely. Its default value is None, in which case environmental proxy settings will be used if present, as discussed in the definition of urlopen(), above.

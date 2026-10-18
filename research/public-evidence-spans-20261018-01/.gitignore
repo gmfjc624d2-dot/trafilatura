@@ -1,0 +1,4 @@
+# the repository ignores *.log and results/ (evaluation scratch); here they are the evidence
+!*.log
+!results/
+.ruff_cache/
