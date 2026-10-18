@@ -1,0 +1,36 @@
+# first run of the focused tests
+$ unshare -rn python3.12 -m unittest discover -s scripts -v
+test_boolean_integer_decimal_stay_apart (test_compare_results.CategoriesAndEquality.test_boolean_integer_decimal_stay_apart) ... ok
+test_equivalent_spellings_are_equal (test_compare_results.CategoriesAndEquality.test_equivalent_spellings_are_equal) ... ok
+test_low_precision_caller_context_is_neither_used_nor_changed (test_compare_results.CategoriesAndEquality.test_low_precision_caller_context_is_neither_used_nor_changed) ... ok
+test_no_rounding_or_spelling_operations_in_the_source (test_compare_results.CategoriesAndEquality.test_no_rounding_or_spelling_operations_in_the_source) ... ok
+test_signed_zeros (test_compare_results.CategoriesAndEquality.test_signed_zeros) ... ok
+test_baseline_still_collides (test_compare_results.Collisions.test_baseline_still_collides)
+negative control: the 9a7933f parser turns each pair into one float ... ok
+test_finite_large_exponents_are_not_constants (test_compare_results.Collisions.test_finite_large_exponents_are_not_constants) ... ok
+test_the_three_families_differ (test_compare_results.Collisions.test_the_three_families_differ) ... ok
+test_cli_exit_codes_and_lines (test_compare_results.Diagnostics.test_cli_exit_codes_and_lines) ... ok
+test_long_strings_are_cut_with_identity (test_compare_results.Diagnostics.test_long_strings_are_cut_with_identity) ... ok
+test_numbers_are_shown_whole_as_valid_json (test_compare_results.Diagnostics.test_numbers_are_shown_whole_as_valid_json) ... ok
+test_duplicates_constants_and_malformed_text (test_compare_results.InvalidInput.test_duplicates_constants_and_malformed_text) ... ok
+test_non_ascii_digits_are_rejected_by_the_hooks (test_compare_results.InvalidInput.test_non_ascii_digits_are_rejected_by_the_hooks) ... ok
+test_boundaries (test_compare_results.Limits.test_boundaries) ... ok
+test_byte_ceiling_before_decoding (test_compare_results.Limits.test_byte_ceiling_before_decoding) ... ok
+test_controlled_nesting_errors (test_compare_results.Limits.test_controlled_nesting_errors) ... ok
+test_interpreter_integer_protection_is_untouched (test_compare_results.Limits.test_interpreter_integer_protection_is_untouched) ... ok
+test_limits_are_the_preregistered_ones (test_compare_results.Limits.test_limits_are_the_preregistered_ones) ... ok
+test_limits_hold_before_int_or_decimal_conversion (test_compare_results.Limits.test_limits_hold_before_int_or_decimal_conversion) ... ok
+test_main_returns_codes_without_raising (test_compare_results.MainInProcess.test_main_returns_codes_without_raising) ... ok
+test_as_json_compares_emitted_text_only (test_compare_results.NativeObjects.test_as_json_compares_emitted_text_only) ... ok
+test_as_json_keeps_str_subclass_handling (test_compare_results.NativeObjects.test_as_json_keeps_str_subclass_handling) ... ok
+test_as_json_rejects_nonfinite_and_native_decimal (test_compare_results.NativeObjects.test_as_json_rejects_nonfinite_and_native_decimal) ... ok
+test_compare_rejects_native_float_and_nonfinite_decimal (test_compare_results.NativeObjects.test_compare_rejects_native_float_and_nonfinite_decimal) ... ok
+test_self_comparison_and_derived_mutations (test_compare_results.RetainedResults.test_self_comparison_and_derived_mutations) ... ok
+test_exactly_three_exempt_values (test_compare_results.Structure.test_exactly_three_exempt_values) ... ok
+test_keys_order_arrays_and_nesting (test_compare_results.Structure.test_keys_order_arrays_and_nesting) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.643s
+
+OK
+exit=0

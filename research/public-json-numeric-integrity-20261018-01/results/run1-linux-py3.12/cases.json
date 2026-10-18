@@ -1,0 +1,2714 @@
+{
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "decimal": "1.70",
+    "libmpdec": "2.5.1",
+    "int_max_str_digits": 4300
+  },
+  "comparator": {
+    "label": "repaired",
+    "file": "compare_results.py",
+    "sha256": "29267d535e66f03dca617b48650c83a601ba22e9d4383e50ca2af8c990596e19"
+  },
+  "summary": {
+    "checks": 188,
+    "pass": 186,
+    "fail": 2,
+    "fail, predicted (kept)": 0,
+    "findings (result differs from prediction)": 2,
+    "cli outcomes": {
+      "different": 26,
+      "equal": 18,
+      "invalid": 22
+    }
+  },
+  "cli_cases": [
+    {
+      "id": "K01",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (decimal value): committed 1E+400 | replay 2E+400",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "K02",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (decimal value): committed 1E-4000 | replay 2E-4000",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "K03",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (decimal value): committed 1E-4000 | replay 0.0",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "K04",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (decimal value): committed -1E-4000 | replay -0.0",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "K05",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (decimal value): committed 9007199254740993.0 | replay 9007199254740992.0",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "K06",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (decimal value): committed 0.1 | replay 0.10000000000000001",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "K07",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (decimal value): committed 1E+400 | replay 1E+9999",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "K08",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (decimal value): committed 1.234567890123456789012345678901234567890 | replay 1.234567890123456789012345678901234567891",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "E01",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "E09",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "Z01",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (decimal value): committed 0.0 | replay -0.0",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "Z02",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (decimal value): committed 0.000 | replay -0",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "T01",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"integer\" | replay \"decimal\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"boolean\" | replay \"integer\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"boolean\" | replay \"integer\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"integer\" | replay \"decimal\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"integer\" | replay \"decimal\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"null\" | replay \"integer\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"string\" | replay \"integer\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "I01",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): duplicate object key(s) ['x']"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "I02",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): non-standard JSON constant NaN"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "I03",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): non-standard JSON constant Infinity"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "I04",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): non-standard JSON constant -Infinity"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "I05",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): Expecting value: line 1 column 6 (char 5)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "I06",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): Extra data: line 1 column 9 (char 8)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "I07",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): 'utf-8' codec can't decode byte 0xff in position 6: invalid start byte"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "FAIL",
+          "predicted": "PASS",
+          "detail": [
+            "INVALID INPUT (committed): codec can't decode byte 0xff"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I08",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): Expecting ',' delimiter: line 1 column 7 (char 6)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "I09",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "I10",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): [Errno 2] No such file or directory: '<root>/fixtures/cases/I10_a.json'"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "FAIL",
+          "predicted": "PASS",
+          "detail": [
+            "INVALID INPUT (committed): No such file or directory"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I11",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): Expecting value: line 1 column 1 (char 0)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "I12",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed): Expecting ',' delimiter: line 1 column 7 (char 6)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L01",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L02",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed, limit): integer token has 41 digits; limit 40"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L03",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L04",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed, limit): number token has 41 coefficient digits; limit 40"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L05",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L06",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L07",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed, limit): exponent has 5 digits; limit 4"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L08",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed, limit): exponent has 5 digits; limit 4"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L09",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed, limit): exponent has 5 digits; limit 4"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L10",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed, limit): number token has 49 characters; limit 48"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L11",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "L12",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed, limit): nesting depth 33 exceeds limit 32"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "G01",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "G02",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed, limit): input has more than 4194304 bytes"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "G03",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed, limit): number token has 5000 characters; limit 48"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "G04",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT (committed, limit): nesting exceeds the interpreter recursion limit while decoding"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "R01",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $ (key order): committed [\"a\", \"b\"] | replay [\"b\", \"a\"]",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $ (keys): committed [] | replay [\"b\"]",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $[0] (integer value): committed 1 | replay 2",
+        "DIFFERS $[1] (integer value): committed 2 | replay 1",
+        "differences outside the 3 exempt paths: 2"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $ (length): committed 1 | replay 2",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "R06",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.a.b[0].c (decimal value): committed 1.5 | replay 1.51",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "X01",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"3.12.3\" | replay \"3.12.14\"",
+        "exempt $.environment.platform: committed \"Linux-x86_64\" | replay \"macOS-arm64\"",
+        "exempt $.environment.machine: committed \"x86_64\" | replay \"arm64\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "X02",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"3.12.3\" | replay \"3.12.3\"",
+        "exempt $.environment.platform: committed \"Linux-x86_64\" | replay \"Linux-x86_64\"",
+        "exempt $.environment.machine: committed \"x86_64\" | replay \"x86_64\"",
+        "DIFFERS $.environment.lxml (string value): committed \"6.1.3\" | replay \"6.1.4\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "X03",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"3.12.3\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"Linux-x86_64\" | replay \"Linux-x86_64\"",
+        "exempt $.environment.machine: committed \"x86_64\" | replay \"x86_64\"",
+        "DIFFERS $.environment (keys): committed [\"python\"] | replay []",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "X04",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"3.12.3\" | replay \"3.12.3\"",
+        "exempt $.environment.platform: committed \"Linux-x86_64\" | replay \"Linux-x86_64\"",
+        "exempt $.environment.machine: committed \"x86_64\" | replay \"x86_64\"",
+        "DIFFERS $.other.python (string value): committed \"3.12.3\" | replay \"3.12.14\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "X05",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed {\"v\": 1E+400} | replay {\"v\": 2E+400}",
+        "exempt $.environment.platform: committed \"p\" | replay \"p\"",
+        "exempt $.environment.machine: committed \"m\" | replay \"m\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "D01",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (string value): committed \"\\ud800\" | replay \"\\udc00\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    }
+  ],
+  "api_cases": [
+    {
+      "id": "A01",
+      "observed": {
+        "verdicts": {
+          "K01": "different",
+          "K02": "different",
+          "K03": "different",
+          "K04": "different",
+          "K05": "different",
+          "K06": "different",
+          "K07": "different",
+          "K08": "different",
+          "E01": "equal",
+          "E02": "equal",
+          "E03": "equal",
+          "E04": "equal",
+          "E05": "equal",
+          "E06": "equal",
+          "E07": "equal",
+          "E08": "equal",
+          "E09": "equal",
+          "Z01": "different",
+          "Z02": "different"
+        },
+        "low_precision_equals_default": true,
+        "caller_context_unchanged": true
+      },
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "verdicts": {
+              "K01": "different",
+              "K02": "different",
+              "K03": "different",
+              "K04": "different",
+              "K05": "different",
+              "K06": "different",
+              "K07": "different",
+              "K08": "different",
+              "E01": "equal",
+              "E02": "equal",
+              "E03": "equal",
+              "E04": "equal",
+              "E05": "equal",
+              "E06": "equal",
+              "E07": "equal",
+              "E08": "equal",
+              "E09": "equal",
+              "Z01": "different",
+              "Z02": "different"
+            },
+            "low_precision_equals_default": true,
+            "caller_context_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "observed": {
+        "unchanged": true
+      },
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "A03",
+      "observed": {
+        "collision_after_as_json": "equal",
+        "x_type": "decimal",
+        "x_text": "0.1",
+        "emitted_equals_binary_exact": false
+      },
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "collision_after_as_json": "equal",
+            "x_type": "decimal",
+            "x_text": "0.1",
+            "emitted_equals_binary_exact": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "observed": "error:UnsupportedValueError",
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:UnsupportedValueError"
+        }
+      ]
+    },
+    {
+      "id": "A05",
+      "observed": "error:UnsupportedValueError",
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:UnsupportedValueError"
+        }
+      ]
+    },
+    {
+      "id": "A06",
+      "observed": "error:UnsupportedValueError",
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:UnsupportedValueError"
+        }
+      ]
+    },
+    {
+      "id": "A07",
+      "observed": "str",
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "str"
+        }
+      ]
+    },
+    {
+      "id": "A08",
+      "observed": "error:UnsupportedValueError",
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:UnsupportedValueError"
+        }
+      ]
+    },
+    {
+      "id": "A09",
+      "observed": "error:UnsupportedValueError",
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:UnsupportedValueError"
+        }
+      ]
+    },
+    {
+      "id": "A10",
+      "observed": "error:LimitExceededError",
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:LimitExceededError"
+        }
+      ]
+    },
+    {
+      "id": "A11",
+      "observed": "error:LimitExceededError",
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:LimitExceededError"
+        }
+      ]
+    },
+    {
+      "id": "A12",
+      "observed": "equal",
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "A13",
+      "observed": {
+        "type": "integer",
+        "text": "0"
+      },
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "type": "integer",
+            "text": "0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "A14",
+      "observed": {
+        "type": "decimal",
+        "negative_sign": true
+      },
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "type": "decimal",
+            "negative_sign": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "A15",
+      "observed": {
+        "default": [],
+        "no_exceptions": [
+          "$.environment.python"
+        ]
+      },
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "default": [],
+            "no_exceptions": [
+              "$.environment.python"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A16",
+      "observed": "error:LimitExceededError",
+      "checks": [
+        {
+          "check": "repaired expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:LimitExceededError"
+        }
+      ]
+    }
+  ],
+  "retained": [
+    {
+      "file": "research/public-evidence-spans-20261018-01/fixtures/oracle.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 2
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/fixtures/oracle_resolved.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 171
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/fixtures/passages.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 204
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/environment.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {}
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "decimal": 110,
+          "integer": 1083
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/source/urllib.request.rst.excerpts.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 47
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-anchor-units-20261018-01/fixtures/expectations.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 20
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-anchor-units-20261018-01/fixtures/expectations_resolved.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 43
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-anchor-units-20261018-01/fixtures/regions.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 18
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-anchor-units-20261018-01/results/run1-linux-py3.12/probe_existing_apis.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 75
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-anchor-units-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 396
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/byte_facts.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 40
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/expectations.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 56
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/files.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 5
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/baseline-linux-py3.12/baseline_reproduction.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 176
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 590
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/fixtures/expectations.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 1
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/link_resolution.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 1
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/matrix_summary.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 358
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/posthoc_corpus_classification.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 4
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/posthoc_matrix_classification.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 22
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/public_corpus_links_as-is.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 578
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/public_corpus_links_naive-ablation.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 578
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/link_resolution.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 1
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/matrix_summary.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 358
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/public_corpus_links_as-is.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 578
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/public_corpus_links_naive-ablation.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 578
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/link_resolution.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 1
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/matrix_summary.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 310
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/posthoc_corpus_classification.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {}
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/posthoc_matrix_classification.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 10
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/public_corpus_links_as-is.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 578
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/public_fixture_provenance.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 95
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "cli": "equal",
+      "checks": [
+        {
+          "check": "CLI self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": 0
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json",
+      "cli": "equal",
+      "checks": [
+        {
+          "check": "CLI self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": 0
+        }
+      ]
+    },
+    {
+      "id": "S02a",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": "equal",
+      "differs": [],
+      "checks": [
+        {
+          "check": "repaired outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "S02b",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": "different",
+      "differs": [
+        "DIFFERS $.environment.lxml (string value): committed \"6.1.3\" | replay \"6.1.4\""
+      ],
+      "checks": [
+        {
+          "check": "repaired outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "S02c",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": "different",
+      "differs": [
+        "DIFFERS $.old_cases[0].output.contexts.text_content.context_bytes (type): committed \"integer\" | replay \"decimal\""
+      ],
+      "checks": [
+        {
+          "check": "repaired outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "S02d",
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": "different",
+      "differs": [
+        "DIFFERS $[80].retrieved.ranked_passages[0].bm25 (decimal value): committed -0.48514337270399616 | replay -0.48514337270399617"
+      ],
+      "checks": [
+        {
+          "check": "repaired outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "S02e",
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": "equal",
+      "differs": [],
+      "checks": [
+        {
+          "check": "repaired outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    }
+  ]
+}

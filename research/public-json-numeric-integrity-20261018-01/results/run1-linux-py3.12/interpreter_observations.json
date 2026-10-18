@@ -1,0 +1,63 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "O1": {
+    "observed": {
+      "default hooks": "error:JSONDecodeError",
+      "module hooks": "error:JSONDecodeError"
+    },
+    "predicted": {
+      "default hooks": "[1]",
+      "module hooks": "error:InvalidJSONError"
+    }
+  },
+  "O2": {
+    "observed": {
+      "adjusted": 999999999999999999,
+      "context_Emax": 999999
+    },
+    "predicted": {
+      "adjusted": 999999999999999999,
+      "context_Emax": 999999
+    }
+  },
+  "O3": {
+    "observed": {
+      "default context": "error:InvalidOperation",
+      "InvalidOperation not trapped": "NaN"
+    },
+    "predicted": {
+      "default context": "error:InvalidOperation",
+      "InvalidOperation not trapped": "NaN"
+    }
+  },
+  "O4": {
+    "observed": "RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string",
+    "predicted": "RecursionError"
+  },
+  "checks": [
+    {
+      "check": "O1",
+      "result": "FAIL",
+      "predicted": "PASS",
+      "detail": null
+    },
+    {
+      "check": "O2",
+      "result": "PASS",
+      "predicted": "PASS",
+      "detail": null
+    },
+    {
+      "check": "O3",
+      "result": "PASS",
+      "predicted": "PASS",
+      "detail": null
+    },
+    {
+      "check": "O4",
+      "result": "PASS",
+      "predicted": "PASS",
+      "detail": null
+    }
+  ]
+}

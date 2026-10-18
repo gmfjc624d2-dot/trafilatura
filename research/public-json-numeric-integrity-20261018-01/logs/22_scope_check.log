@@ -1,0 +1,25 @@
+$ git -C <repo> diff --stat b4fa142 -- . ':!research/public-json-numeric-integrity-20261018-01'; git -C <repo> status --short -- . ':!research/public-json-numeric-integrity-20261018-01'   # empty = nothing outside the new directory changed
+exit=0
+$ (cd ../public-sphinx-evidence-integrity-20261018-01 && sha256sum -c --quiet SHA256SUMS)   # earlier increment
+all 35 OK
+exit=0
+$ (cd ../public-sphinx-anchor-units-20261018-01 && sha256sum -c --quiet SHA256SUMS)   # earlier increment
+all 37 OK
+exit=0
+$ (cd ../public-evidence-spans-20261018-01 && sha256sum -c --quiet SHA256SUMS)   # earlier increment
+all 31 OK
+exit=0
+$ sha256sum -c --quiet PREREGISTERED.sha256   # pre-registration (5c3e94f) unchanged
+all 114 OK
+exit=0
+$ git -C <repo> diff --stat f667484 -- research/public-json-numeric-integrity-20261018-01/scripts/run_cases.py research/public-json-numeric-integrity-20261018-01/results/baseline-linux-py3.12 research/public-json-numeric-integrity-20261018-01/logs/10_run_cases_baseline.log research/public-json-numeric-integrity-20261018-01/logs/11_posthoc_unicode_digits.log   # empty = runner and baseline evidence unchanged since before the repair
+exit=0
+$ <scratch>/venv/bin/ruff --version; ruff check --no-cache .; ruff format --no-cache --check .   # this directory only
+ruff 0.16.10
+All checks passed!
+7 files already formatted
+exit=0
+$ python3.12 -c <comparator sha256 recorded in each run> 
+baseline-linux-py3.12 compare_results_baseline_9a7933f.py 9a7933f84a550e07ad862733cde7f1090eece844776836fb7ba4a8a99c6a50dc True
+run1-linux-py3.12 compare_results.py 29267d535e66f03dca617b48650c83a601ba22e9d4383e50ca2af8c990596e19 True
+exit=0
