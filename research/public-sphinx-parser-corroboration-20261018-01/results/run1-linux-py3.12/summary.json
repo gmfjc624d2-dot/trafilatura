@@ -1,0 +1,1960 @@
+{
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "lxml": "6.1.3",
+    "libxml2_runtime": "2.14.6",
+    "libxml2_compiled": "2.14.6",
+    "html5lib": "1.1",
+    "six": "1.17.0",
+    "webencodings": "0.5.1",
+    "elementtree": "xml.etree.ElementTree"
+  },
+  "request_id": "public-sphinx-parser-corroboration-20261018-01",
+  "totals": {
+    "PASS": 275,
+    "FAIL": 2,
+    "RECORDED": 12
+  },
+  "cases": [
+    {
+      "id": "N1",
+      "anchor": "pkg.late",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n1_late_diagnostic.html",
+      "disposition": "REVIEW",
+      "findings": [
+        "LXML_DIAGNOSTICS_PRESENT",
+        "HTML5LIB_ERRORS_PRESENT"
+      ],
+      "agreements": [
+        "encoding",
+        "membership",
+        "boundaries",
+        "topology",
+        "links",
+        "text"
+      ],
+      "checks": [
+        {
+          "check": "helper reasons",
+          "result": "PASS",
+          "observed": [
+            "PARSER_DIAGNOSTICS_PRESENT"
+          ],
+          "predicted": [
+            "PARSER_DIAGNOSTICS_PRESENT"
+          ]
+        },
+        {
+          "check": "helper status",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "lxml encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "lxml diagnostics (line, code[, data])",
+          "result": "PASS",
+          "observed": [
+            [
+              3,
+              "ERR_TAG_NAME_MISMATCH"
+            ]
+          ],
+          "predicted": [
+            [
+              3,
+              "ERR_TAG_NAME_MISMATCH"
+            ]
+          ]
+        },
+        {
+          "check": "lxml exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "lxml signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml unit text (exact)",
+          "result": "PASS",
+          "observed": "late()First line of description.\nSecond line of description.\n\nThird line of description.\n",
+          "predicted": "late()First line of description.\nSecond line of description.\n\nThird line of description.\n"
+        },
+        {
+          "check": "lxml links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 lxml: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "html5lib encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "html5lib encoding certainty",
+          "result": "PASS",
+          "observed": "certain",
+          "predicted": "certain"
+        },
+        {
+          "check": "html5lib errors (line, code[, data])",
+          "result": "PASS",
+          "observed": [
+            [
+              3,
+              "unexpected-end-tag",
+              {
+                "name": "span"
+              }
+            ]
+          ],
+          "predicted": [
+            [
+              3,
+              "unexpected-end-tag",
+              {
+                "name": "span"
+              }
+            ]
+          ]
+        },
+        {
+          "check": "html5lib exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "html5lib signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib unit text (exact)",
+          "result": "PASS",
+          "observed": "late()First line of description.\nSecond line of description.\n\nThird line of description.\n",
+          "predicted": "late()First line of description.\nSecond line of description.\n\nThird line of description.\n"
+        },
+        {
+          "check": "html5lib links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 html5lib: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "agree membership",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree boundaries",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree topology",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree links",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree text",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "disposition",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property consistency lxml_parse_diagnostics_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_reasons_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_membership_equals_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency lxml_text_rule_equals_helper_text_content",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency html5lib_text_rule_equals_itertext",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property R7 diagnostics or ambiguity keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 a helper REVIEW is never upgraded",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "N2",
+      "anchor": "pkg.target",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n2_comment_match.html",
+      "disposition": "STRUCTURE_CORROBORATED",
+      "findings": [],
+      "agreements": [
+        "encoding",
+        "membership",
+        "boundaries",
+        "topology",
+        "links",
+        "text"
+      ],
+      "checks": [
+        {
+          "check": "helper reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "helper status",
+          "result": "PASS",
+          "observed": "OK_STRUCTURAL_UNIT",
+          "predicted": "OK_STRUCTURAL_UNIT"
+        },
+        {
+          "check": "lxml encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "lxml diagnostics (line, code[, data])",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "lxml exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "lxml signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml unit text (exact)",
+          "result": "PASS",
+          "observed": "target()A",
+          "predicted": "target()A"
+        },
+        {
+          "check": "lxml links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 lxml: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "html5lib encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "html5lib encoding certainty",
+          "result": "PASS",
+          "observed": "certain",
+          "predicted": "certain"
+        },
+        {
+          "check": "html5lib errors (line, code[, data])",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "html5lib exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "html5lib signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib unit text (exact)",
+          "result": "PASS",
+          "observed": "target()A",
+          "predicted": "target()A"
+        },
+        {
+          "check": "html5lib links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 html5lib: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "agree membership",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree boundaries",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree topology",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree links",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree text",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "disposition",
+          "result": "PASS",
+          "observed": "STRUCTURE_CORROBORATED",
+          "predicted": "STRUCTURE_CORROBORATED"
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property consistency lxml_parse_diagnostics_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_reasons_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_membership_equals_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency lxml_text_rule_equals_helper_text_content",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency html5lib_text_rule_equals_itertext",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property R7 diagnostics or ambiguity keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 a helper REVIEW is never upgraded",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "N3",
+      "anchor": "pkg.legacy",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n3_windows1252.html",
+      "disposition": "STRUCTURE_CORROBORATED",
+      "findings": [],
+      "agreements": [
+        "encoding",
+        "membership",
+        "boundaries",
+        "topology",
+        "links",
+        "text"
+      ],
+      "checks": [
+        {
+          "check": "helper reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "helper status",
+          "result": "PASS",
+          "observed": "OK_STRUCTURAL_UNIT",
+          "predicted": "OK_STRUCTURAL_UNIT"
+        },
+        {
+          "check": "lxml encoding",
+          "result": "PASS",
+          "observed": "windows-1252",
+          "predicted": "windows-1252"
+        },
+        {
+          "check": "lxml diagnostics (line, code[, data])",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "lxml exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "lxml signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml unit text (exact)",
+          "result": "PASS",
+          "observed": "legacy()\nCafé costs 5 €, “quoted”. MARK-LEGACY-DESC",
+          "predicted": "legacy()\nCafé costs 5 €, “quoted”. MARK-LEGACY-DESC"
+        },
+        {
+          "check": "lxml links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 lxml: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "html5lib encoding",
+          "result": "PASS",
+          "observed": "windows-1252",
+          "predicted": "windows-1252"
+        },
+        {
+          "check": "html5lib encoding certainty",
+          "result": "PASS",
+          "observed": "certain",
+          "predicted": "certain"
+        },
+        {
+          "check": "html5lib errors (line, code[, data])",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "html5lib exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "html5lib signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib unit text (exact)",
+          "result": "PASS",
+          "observed": "legacy()\nCafé costs 5 €, “quoted”. MARK-LEGACY-DESC",
+          "predicted": "legacy()\nCafé costs 5 €, “quoted”. MARK-LEGACY-DESC"
+        },
+        {
+          "check": "html5lib links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 html5lib: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "agree membership",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree boundaries",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree topology",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree links",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree text",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "disposition",
+          "result": "PASS",
+          "observed": "STRUCTURE_CORROBORATED",
+          "predicted": "STRUCTURE_CORROBORATED"
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property consistency lxml_parse_diagnostics_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_reasons_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_membership_equals_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency lxml_text_rule_equals_helper_text_content",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency html5lib_text_rule_equals_itertext",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property R7 diagnostics or ambiguity keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 a helper REVIEW is never upgraded",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "N4",
+      "anchor": "pkg.inside",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n4_outside_diagnostic.html",
+      "disposition": "REVIEW",
+      "findings": [
+        "LXML_DIAGNOSTICS_PRESENT",
+        "HTML5LIB_ERRORS_PRESENT"
+      ],
+      "agreements": [
+        "encoding",
+        "membership",
+        "boundaries",
+        "topology",
+        "links",
+        "text"
+      ],
+      "checks": [
+        {
+          "check": "helper reasons",
+          "result": "PASS",
+          "observed": [
+            "PARSER_DIAGNOSTICS_PRESENT"
+          ],
+          "predicted": [
+            "PARSER_DIAGNOSTICS_PRESENT"
+          ]
+        },
+        {
+          "check": "helper status",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "lxml encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "lxml diagnostics (line, code[, data])",
+          "result": "PASS",
+          "observed": [
+            [
+              12,
+              "ERR_TAG_NAME_MISMATCH"
+            ]
+          ],
+          "predicted": [
+            [
+              12,
+              "ERR_TAG_NAME_MISMATCH"
+            ]
+          ]
+        },
+        {
+          "check": "lxml exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "lxml signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml unit text (exact)",
+          "result": "PASS",
+          "observed": "inside()\nClean description. MARK-INSIDE-DESC",
+          "predicted": "inside()\nClean description. MARK-INSIDE-DESC"
+        },
+        {
+          "check": "lxml links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 lxml: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "html5lib encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "html5lib encoding certainty",
+          "result": "PASS",
+          "observed": "certain",
+          "predicted": "certain"
+        },
+        {
+          "check": "html5lib errors (line, code[, data])",
+          "result": "PASS",
+          "observed": [
+            [
+              12,
+              "unexpected-end-tag",
+              {
+                "name": "span"
+              }
+            ]
+          ],
+          "predicted": [
+            [
+              12,
+              "unexpected-end-tag",
+              {
+                "name": "span"
+              }
+            ]
+          ]
+        },
+        {
+          "check": "html5lib exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "html5lib signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib unit text (exact)",
+          "result": "PASS",
+          "observed": "inside()\nClean description. MARK-INSIDE-DESC",
+          "predicted": "inside()\nClean description. MARK-INSIDE-DESC"
+        },
+        {
+          "check": "html5lib links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 html5lib: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "agree membership",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree boundaries",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree topology",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree links",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree text",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "disposition",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property consistency lxml_parse_diagnostics_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_reasons_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_membership_equals_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency lxml_text_rule_equals_helper_text_content",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency html5lib_text_rule_equals_itertext",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property R7 diagnostics or ambiguity keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 a helper REVIEW is never upgraded",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "N5",
+      "anchor": "pkg.clean",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n5_clean_control.html",
+      "disposition": "STRUCTURE_CORROBORATED",
+      "findings": [],
+      "agreements": [
+        "encoding",
+        "membership",
+        "boundaries",
+        "topology",
+        "links",
+        "text"
+      ],
+      "checks": [
+        {
+          "check": "helper reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "helper status",
+          "result": "PASS",
+          "observed": "OK_STRUCTURAL_UNIT",
+          "predicted": "OK_STRUCTURAL_UNIT"
+        },
+        {
+          "check": "lxml encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "lxml diagnostics (line, code[, data])",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "lxml exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "lxml signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml unit text (exact)",
+          "result": "PASS",
+          "observed": "clean()\nClean description. MARK-CLEAN-DESC",
+          "predicted": "clean()\nClean description. MARK-CLEAN-DESC"
+        },
+        {
+          "check": "lxml links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 lxml: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "html5lib encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "html5lib encoding certainty",
+          "result": "PASS",
+          "observed": "certain",
+          "predicted": "certain"
+        },
+        {
+          "check": "html5lib errors (line, code[, data])",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "html5lib exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "html5lib signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib unit text (exact)",
+          "result": "PASS",
+          "observed": "clean()\nClean description. MARK-CLEAN-DESC",
+          "predicted": "clean()\nClean description. MARK-CLEAN-DESC"
+        },
+        {
+          "check": "html5lib links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 html5lib: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "agree membership",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree boundaries",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree topology",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree links",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree text",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "disposition",
+          "result": "PASS",
+          "observed": "STRUCTURE_CORROBORATED",
+          "predicted": "STRUCTURE_CORROBORATED"
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property consistency lxml_parse_diagnostics_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_reasons_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_membership_equals_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency lxml_text_rule_equals_helper_text_content",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency html5lib_text_rule_equals_itertext",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property R7 diagnostics or ambiguity keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 a helper REVIEW is never upgraded",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "C17",
+      "anchor": "pkg.dup",
+      "file": "research/public-sphinx-anchor-units-20261018-01/fixtures/f4_duplicates.html",
+      "disposition": "REVIEW",
+      "findings": [
+        "LXML_DIAGNOSTICS_PRESENT",
+        "ID_NOT_UNIQUE",
+        "STRUCTURAL_REASONS_PRESENT",
+        "ID_NOT_UNIQUE",
+        "STRUCTURAL_REASONS_PRESENT"
+      ],
+      "agreements": [
+        "encoding"
+      ],
+      "checks": [
+        {
+          "check": "helper reasons",
+          "result": "PASS",
+          "observed": [
+            "DUPLICATE_ID",
+            "PARSER_DIAGNOSTICS_PRESENT"
+          ],
+          "predicted": [
+            "DUPLICATE_ID",
+            "PARSER_DIAGNOSTICS_PRESENT"
+          ]
+        },
+        {
+          "check": "helper status",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "lxml encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "lxml diagnostics (line, code[, data])",
+          "result": "PASS",
+          "observed": [
+            [
+              19,
+              "DTD_ID_REDEFINED"
+            ]
+          ],
+          "predicted": [
+            [
+              19,
+              "DTD_ID_REDEFINED"
+            ]
+          ]
+        },
+        {
+          "check": "lxml exact matches",
+          "result": "PASS",
+          "observed": 2,
+          "predicted": 2
+        },
+        {
+          "check": "lxml rule reasons",
+          "result": "PASS",
+          "observed": [
+            "DUPLICATE_ID"
+          ],
+          "predicted": [
+            "DUPLICATE_ID"
+          ]
+        },
+        {
+          "check": "lxml signatures",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "lxml descriptions",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "lxml unit text (exact)",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "lxml links",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "property R3 lxml: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "html5lib encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "html5lib encoding certainty",
+          "result": "PASS",
+          "observed": "certain",
+          "predicted": "certain"
+        },
+        {
+          "check": "html5lib errors (line, code[, data])",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "html5lib exact matches",
+          "result": "PASS",
+          "observed": 2,
+          "predicted": 2
+        },
+        {
+          "check": "html5lib rule reasons",
+          "result": "PASS",
+          "observed": [
+            "DUPLICATE_ID"
+          ],
+          "predicted": [
+            "DUPLICATE_ID"
+          ]
+        },
+        {
+          "check": "html5lib signatures",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "html5lib descriptions",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "html5lib unit text (exact)",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "html5lib links",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "property R3 html5lib: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "disposition",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property consistency lxml_parse_diagnostics_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_reasons_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_membership_equals_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency lxml_text_rule_equals_helper_text_content",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property consistency html5lib_text_rule_equals_itertext",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R7 diagnostics or ambiguity keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 a helper REVIEW is never upgraded",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "anchor": "pkg.reparent",
+      "file": "research/public-sphinx-parser-corroboration-20261018-01/fixtures/c1_reparent_dd.html",
+      "disposition": "REVIEW",
+      "findings": [
+        "HTML5LIB_ERRORS_PRESENT",
+        "MEMBERSHIP_DIFFERS",
+        "BOUNDARIES_DIFFERS",
+        "TOPOLOGY_DIFFERS"
+      ],
+      "agreements": [
+        "encoding",
+        "links",
+        "text"
+      ],
+      "checks": [
+        {
+          "check": "helper reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "helper status",
+          "result": "PASS",
+          "observed": "OK_STRUCTURAL_UNIT",
+          "predicted": "OK_STRUCTURAL_UNIT"
+        },
+        {
+          "check": "lxml encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "lxml diagnostics (line, code[, data])",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "lxml exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "lxml signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml unit text (exact)",
+          "result": "PASS",
+          "observed": "reparent()\nMARK-FIRST-DESC\nMARK-SECOND-DESC",
+          "predicted": "reparent()\nMARK-FIRST-DESC\nMARK-SECOND-DESC"
+        },
+        {
+          "check": "lxml links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 lxml: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "html5lib encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "html5lib encoding certainty",
+          "result": "PASS",
+          "observed": "certain",
+          "predicted": "certain"
+        },
+        {
+          "check": "html5lib errors (line, code[, data])",
+          "result": "FAIL",
+          "observed": [
+            [
+              11,
+              "end-tag-too-early",
+              {
+                "name": "dd"
+              }
+            ],
+            [
+              11,
+              "end-tag-too-early",
+              {
+                "name": "div"
+              }
+            ]
+          ],
+          "predicted": [
+            [
+              11,
+              "end-tag-too-early",
+              {
+                "name": "dd"
+              }
+            ],
+            [
+              11,
+              "unexpected-end-tag",
+              {
+                "name": "div"
+              }
+            ]
+          ]
+        },
+        {
+          "check": "html5lib exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "html5lib signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib descriptions",
+          "result": "PASS",
+          "observed": 2,
+          "predicted": 2
+        },
+        {
+          "check": "html5lib unit text (exact)",
+          "result": "PASS",
+          "observed": "reparent()\nMARK-FIRST-DESC\nMARK-SECOND-DESC",
+          "predicted": "reparent()\nMARK-FIRST-DESC\nMARK-SECOND-DESC"
+        },
+        {
+          "check": "html5lib links",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "property R3 html5lib: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "agree membership",
+          "result": "PASS",
+          "observed": false,
+          "predicted": false
+        },
+        {
+          "check": "agree boundaries",
+          "result": "PASS",
+          "observed": false,
+          "predicted": false
+        },
+        {
+          "check": "agree topology",
+          "result": "PASS",
+          "observed": false,
+          "predicted": false
+        },
+        {
+          "check": "agree links",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree text",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "disposition",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property consistency lxml_parse_diagnostics_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_reasons_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_membership_equals_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency lxml_text_rule_equals_helper_text_content",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency html5lib_text_rule_equals_itertext",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property R7 diagnostics or ambiguity keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 a helper REVIEW is never upgraded",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "anchor": "pkg.tail",
+      "file": "research/public-sphinx-parser-corroboration-20261018-01/fixtures/c2_text_tail.html",
+      "disposition": "REVIEW",
+      "findings": [
+        "HTML5LIB_ERRORS_PRESENT",
+        "CONSISTENCY_CHECK_FAILED"
+      ],
+      "agreements": [
+        "encoding",
+        "membership",
+        "boundaries",
+        "topology",
+        "links",
+        "text"
+      ],
+      "checks": [
+        {
+          "check": "helper reasons",
+          "result": "RECORDED",
+          "observed": []
+        },
+        {
+          "check": "helper status",
+          "result": "RECORDED",
+          "observed": "OK_STRUCTURAL_UNIT"
+        },
+        {
+          "check": "lxml encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "lxml diagnostics (line, code[, data])",
+          "result": "RECORDED",
+          "observed": []
+        },
+        {
+          "check": "lxml exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "lxml signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "lxml unit text (exact)",
+          "result": "PASS",
+          "observed": "tail()¶\nAlpha Beta Gamma Delta Epsilon, see pkg.other.",
+          "predicted": "tail()¶\nAlpha Beta Gamma Delta Epsilon, see pkg.other."
+        },
+        {
+          "check": "lxml links",
+          "result": "PASS",
+          "observed": [
+            {
+              "href": "#pkg.tail",
+              "text": "¶"
+            },
+            {
+              "href": "#pkg.other",
+              "text": "pkg.other"
+            }
+          ],
+          "predicted": [
+            {
+              "href": "#pkg.tail",
+              "text": "¶"
+            },
+            {
+              "href": "#pkg.other",
+              "text": "pkg.other"
+            }
+          ]
+        },
+        {
+          "check": "property lxml text lacks MARK-COMMENT-DATA",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property lxml text lacks MARK-PI-DATA",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property lxml text lacks MARK-TAIL-TAIL",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R3 lxml: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "html5lib encoding",
+          "result": "PASS",
+          "observed": "utf-8",
+          "predicted": "utf-8"
+        },
+        {
+          "check": "html5lib encoding certainty",
+          "result": "PASS",
+          "observed": "certain",
+          "predicted": "certain"
+        },
+        {
+          "check": "html5lib errors (line, code[, data])",
+          "result": "PASS",
+          "observed": [
+            [
+              10,
+              "expected-tag-name-but-got-question-mark",
+              {}
+            ]
+          ],
+          "predicted": [
+            [
+              10,
+              "expected-tag-name-but-got-question-mark",
+              {}
+            ]
+          ]
+        },
+        {
+          "check": "html5lib exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib rule reasons",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "html5lib signatures",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib descriptions",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "html5lib unit text (exact)",
+          "result": "PASS",
+          "observed": "tail()¶\nAlpha Beta Gamma Delta Epsilon, see pkg.other.",
+          "predicted": "tail()¶\nAlpha Beta Gamma Delta Epsilon, see pkg.other."
+        },
+        {
+          "check": "html5lib links",
+          "result": "PASS",
+          "observed": [
+            {
+              "href": "#pkg.tail",
+              "text": "¶"
+            },
+            {
+              "href": "#pkg.other",
+              "text": "pkg.other"
+            }
+          ],
+          "predicted": [
+            {
+              "href": "#pkg.tail",
+              "text": "¶"
+            },
+            {
+              "href": "#pkg.other",
+              "text": "pkg.other"
+            }
+          ]
+        },
+        {
+          "check": "property html5lib text lacks MARK-COMMENT-DATA",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property html5lib text lacks MARK-PI-DATA",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property html5lib text lacks MARK-TAIL-TAIL",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R3 html5lib: more than one match gives no unit",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "agree membership",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree boundaries",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree topology",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "agree links",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "agree text",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "disposition",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property consistency lxml_parse_diagnostics_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_reasons_equal_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency mirror_membership_equals_helper",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency lxml_text_rule_equals_helper_text_content",
+          "result": "PASS",
+          "observed": true
+        },
+        {
+          "check": "property consistency html5lib_text_rule_equals_itertext",
+          "result": "FAIL",
+          "observed": false
+        },
+        {
+          "check": "property R7 diagnostics or ambiguity keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 a helper REVIEW is never upgraded",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        }
+      ]
+    }
+  ]
+}

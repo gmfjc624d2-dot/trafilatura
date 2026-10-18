@@ -1,0 +1,26 @@
+# first run of the corroboration replay; PYTHONPATH=<site> holds only the three retained wheels
+$ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=<site> unshare -rn <venv>/bin/python -W default scripts/replay.py results/run1-linux-py3.12
+N1 pkg.late: REVIEW findings=['LXML_DIAGNOSTICS_PRESENT', 'HTML5LIB_ERRORS_PRESENT']
+N2 pkg.target: STRUCTURE_CORROBORATED findings=[]
+N3 pkg.legacy: STRUCTURE_CORROBORATED findings=[]
+N4 pkg.inside: REVIEW findings=['LXML_DIAGNOSTICS_PRESENT', 'HTML5LIB_ERRORS_PRESENT']
+N5 pkg.clean: STRUCTURE_CORROBORATED findings=[]
+C17 pkg.dup: REVIEW findings=['LXML_DIAGNOSTICS_PRESENT', 'ID_NOT_UNIQUE', 'STRUCTURAL_REASONS_PRESENT', 'ID_NOT_UNIQUE', 'STRUCTURAL_REASONS_PRESENT']
+   RECORDED lxml signatures: observed null
+   RECORDED lxml descriptions: observed null
+   RECORDED lxml unit text (exact): observed null
+   RECORDED lxml links: observed null
+   RECORDED html5lib signatures: observed null
+   RECORDED html5lib descriptions: observed null
+   RECORDED html5lib unit text (exact): observed null
+   RECORDED html5lib links: observed null
+C1 pkg.reparent: REVIEW findings=['HTML5LIB_ERRORS_PRESENT', 'MEMBERSHIP_DIFFERS', 'BOUNDARIES_DIFFERS', 'TOPOLOGY_DIFFERS']
+   FAIL html5lib errors (line, code[, data]): observed [[11, "end-tag-too-early", {"name": "dd"}], [11, "end-tag-too-early", {"name": "div"}]] predicted [[11, "end-tag-too-early", {"name": "dd"}], [11, "unexpected-end-tag", {"name": "div"}]]
+C2 pkg.tail: REVIEW findings=['HTML5LIB_ERRORS_PRESENT', 'CONSISTENCY_CHECK_FAILED']
+   RECORDED helper reasons: observed []
+   RECORDED helper status: observed "OK_STRUCTURAL_UNIT"
+   RECORDED lxml diagnostics (line, code[, data]): observed []
+   RECORDED agree topology: observed true
+   FAIL property consistency html5lib_text_rule_equals_itertext: observed false
+{"PASS": 275, "FAIL": 2, "RECORDED": 12}
+exit=1

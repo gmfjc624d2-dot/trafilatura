@@ -1,0 +1,402 @@
+{
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "lxml": "6.1.3",
+    "libxml2_runtime": "2.14.6",
+    "libxml2_compiled": "2.14.6",
+    "html5lib": "1.1",
+    "six": "1.17.0",
+    "webencodings": "0.5.1",
+    "elementtree": "xml.etree.ElementTree"
+  },
+  "request_id": "public-sphinx-parser-corroboration-20261018-01",
+  "anchor": "pkg.tail",
+  "source": {
+    "locator": "research/public-sphinx-parser-corroboration-20261018-01/fixtures/c2_text_tail.html",
+    "bytes": 473,
+    "sha256": "fd9885d450867b016291aaa134dba3f86704e3bea513777694ade228b379fa22",
+    "parsed_by_both": "the complete original bytes"
+  },
+  "decoding_policy": "original bytes to both parsers; each chooses its encoding; compared by codecs.lookup(name).name; disagreement is REVIEW; nothing rewritten",
+  "parsers": {
+    "lxml": {
+      "options": "lxml.html.document_fromstring(data, parser=lxml.html.HTMLParser()) with its defaults, as anchor_unit.select_unit()",
+      "selected_encoding": "utf-8",
+      "diagnostics": []
+    },
+    "html5lib": {
+      "options": {
+        "tree": "getTreeBuilder('etree')",
+        "strict": false,
+        "namespaceHTMLElements": true,
+        "debug": false
+      },
+      "parse_kwargs": {
+        "override_encoding": null,
+        "transport_encoding": null,
+        "useChardet": false,
+        "scripting": false
+      },
+      "returned_root": "{http://www.w3.org/1999/xhtml}html",
+      "selected_encoding": "utf-8",
+      "encoding_certainty": "certain",
+      "errors": [
+        {
+          "line": 10,
+          "col": 65,
+          "code": "expected-tag-name-but-got-question-mark",
+          "data": {}
+        }
+      ]
+    }
+  },
+  "name_mapping": {
+    "html5lib": "'{http://www.w3.org/1999/xhtml}<local>' -> '<local>'; other namespaces kept whole",
+    "lxml": "tags used as they are"
+  },
+  "existing_helper": {
+    "file": "research/public-sphinx-evidence-integrity-20261018-01/scripts/anchor_unit.py",
+    "sha256": "9c01351705ca8fe475df3925550d015cf69d4cbda324d042e32f0c909ec404e9",
+    "reasons": [],
+    "status": {
+      "dom_serialization": "OK_STRUCTURAL_UNIT",
+      "text_content": "OK_STRUCTURAL_UNIT"
+    },
+    "candidate": {
+      "signature_ids": [
+        "pkg.tail"
+      ],
+      "signatures": 1,
+      "descriptions": 1,
+      "first_line": 9,
+      "last_line": 10,
+      "text_sha256": "8e44de47abb273bbe17013d0110975fbb99326511bc2c615ffa0814093a8314f",
+      "text_bytes": 55
+    }
+  },
+  "trees": {
+    "lxml": {
+      "exact_matches": [
+        {
+          "document_order": 6,
+          "element": {
+            "kind": "element",
+            "name": "dt",
+            "id": "pkg.tail",
+            "class": "sig sig-object py"
+          },
+          "parent": {
+            "kind": "element",
+            "name": "dl",
+            "class": "py function"
+          },
+          "sourceline": 9
+        }
+      ],
+      "match_count": 1,
+      "near_matches": [],
+      "rule_reasons": [],
+      "unit": {
+        "membership": {
+          "signature_ids": [
+            "pkg.tail"
+          ],
+          "signatures": 1,
+          "descriptions": 1,
+          "anchor_position": 1,
+          "nested_object_ids": []
+        },
+        "boundaries": {
+          "dl": {
+            "kind": "element",
+            "name": "dl",
+            "class": "py function"
+          },
+          "dl_parent": {
+            "kind": "element",
+            "name": "body"
+          },
+          "dl_children": [
+            [
+              "element",
+              "dt"
+            ],
+            [
+              "element",
+              "dd"
+            ]
+          ],
+          "unit_element_indexes": [
+            0,
+            1
+          ],
+          "previous_element": null,
+          "next_element": null,
+          "enclosing_object_id": null
+        },
+        "topology": [
+          [
+            0,
+            "element",
+            "dt",
+            {
+              "id": "pkg.tail",
+              "class": "sig sig-object py"
+            }
+          ],
+          [
+            1,
+            "element",
+            "a",
+            {
+              "class": "headerlink",
+              "href": "#pkg.tail"
+            }
+          ],
+          [
+            0,
+            "element",
+            "dd",
+            {}
+          ],
+          [
+            1,
+            "element",
+            "p",
+            {}
+          ],
+          [
+            2,
+            "comment",
+            null,
+            {}
+          ],
+          [
+            2,
+            "element",
+            "em",
+            {}
+          ],
+          [
+            2,
+            "comment",
+            null,
+            {}
+          ],
+          [
+            2,
+            "element",
+            "a",
+            {
+              "class": "reference internal",
+              "href": "#pkg.other"
+            }
+          ],
+          [
+            3,
+            "element",
+            "code",
+            {}
+          ]
+        ],
+        "links": [
+          {
+            "href": "#pkg.tail",
+            "text": "¶"
+          },
+          {
+            "href": "#pkg.other",
+            "text": "pkg.other"
+          }
+        ],
+        "text": "tail()¶\nAlpha Beta Gamma Delta Epsilon, see pkg.other.",
+        "text_utf8_bytes": 55,
+        "text_sha256": "8e44de47abb273bbe17013d0110975fbb99326511bc2c615ffa0814093a8314f"
+      }
+    },
+    "html5lib": {
+      "exact_matches": [
+        {
+          "document_order": 6,
+          "element": {
+            "kind": "element",
+            "name": "dt",
+            "id": "pkg.tail",
+            "class": "sig sig-object py"
+          },
+          "parent": {
+            "kind": "element",
+            "name": "dl",
+            "class": "py function"
+          }
+        }
+      ],
+      "match_count": 1,
+      "near_matches": [],
+      "rule_reasons": [],
+      "unit": {
+        "membership": {
+          "signature_ids": [
+            "pkg.tail"
+          ],
+          "signatures": 1,
+          "descriptions": 1,
+          "anchor_position": 1,
+          "nested_object_ids": []
+        },
+        "boundaries": {
+          "dl": {
+            "kind": "element",
+            "name": "dl",
+            "class": "py function"
+          },
+          "dl_parent": {
+            "kind": "element",
+            "name": "body"
+          },
+          "dl_children": [
+            [
+              "element",
+              "dt"
+            ],
+            [
+              "element",
+              "dd"
+            ]
+          ],
+          "unit_element_indexes": [
+            0,
+            1
+          ],
+          "previous_element": null,
+          "next_element": null,
+          "enclosing_object_id": null
+        },
+        "topology": [
+          [
+            0,
+            "element",
+            "dt",
+            {
+              "id": "pkg.tail",
+              "class": "sig sig-object py"
+            }
+          ],
+          [
+            1,
+            "element",
+            "a",
+            {
+              "class": "headerlink",
+              "href": "#pkg.tail"
+            }
+          ],
+          [
+            0,
+            "element",
+            "dd",
+            {}
+          ],
+          [
+            1,
+            "element",
+            "p",
+            {}
+          ],
+          [
+            2,
+            "comment",
+            null,
+            {}
+          ],
+          [
+            2,
+            "element",
+            "em",
+            {}
+          ],
+          [
+            2,
+            "comment",
+            null,
+            {}
+          ],
+          [
+            2,
+            "element",
+            "a",
+            {
+              "class": "reference internal",
+              "href": "#pkg.other"
+            }
+          ],
+          [
+            3,
+            "element",
+            "code",
+            {}
+          ]
+        ],
+        "links": [
+          {
+            "href": "#pkg.tail",
+            "text": "¶"
+          },
+          {
+            "href": "#pkg.other",
+            "text": "pkg.other"
+          }
+        ],
+        "text": "tail()¶\nAlpha Beta Gamma Delta Epsilon, see pkg.other.",
+        "text_utf8_bytes": 55,
+        "text_sha256": "8e44de47abb273bbe17013d0110975fbb99326511bc2c615ffa0814093a8314f"
+      }
+    }
+  },
+  "checks": {
+    "lxml_parse_diagnostics_equal_helper": true,
+    "mirror_reasons_equal_helper": true,
+    "mirror_membership_equals_helper": true,
+    "lxml_text_rule_equals_helper_text_content": true,
+    "html5lib_text_rule_equals_itertext": false
+  },
+  "comparison": {
+    "findings": [
+      {
+        "finding": "HTML5LIB_ERRORS_PRESENT",
+        "count": 1
+      },
+      {
+        "finding": "CONSISTENCY_CHECK_FAILED",
+        "checks": [
+          "html5lib_text_rule_equals_itertext"
+        ]
+      }
+    ],
+    "agreements": [
+      "encoding",
+      "membership",
+      "boundaries",
+      "topology",
+      "links",
+      "text"
+    ]
+  },
+  "triage": {
+    "disposition": "REVIEW",
+    "because": [
+      "HTML5LIB_ERRORS_PRESENT",
+      "CONSISTENCY_CHECK_FAILED"
+    ],
+    "not_claimed": [
+      "admission or any consumer permission",
+      "that the unit is semantically complete or answers any question",
+      "that two parsers establish source truth",
+      "that the unit's byte count fits any caller's final prompt",
+      "source byte positions (no serialization search, no lexical id counts)",
+      "equality after any text normalisation"
+    ]
+  }
+}

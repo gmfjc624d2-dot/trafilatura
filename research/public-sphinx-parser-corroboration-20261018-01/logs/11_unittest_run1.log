@@ -1,0 +1,41 @@
+# first run of the focused tests (written before any replay output existed)
+$ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=<site> unshare -rn <venv>/bin/python -W default -m unittest discover -s scripts -v
+test_any_diagnostic_keeps_review_and_the_helper_is_unchanged (test_corroborate.Policy.test_any_diagnostic_keeps_review_and_the_helper_is_unchanged) ... ok
+test_complete_bytes_and_no_implied_claims (test_corroborate.Policy.test_complete_bytes_and_no_implied_claims) ... ok
+test_mirror_rule_agrees_with_the_helper_on_lxml (test_corroborate.Policy.test_mirror_rule_agrees_with_the_helper_on_lxml) ... ok
+test_retained_wheels_and_pinned_helper_are_in_use (test_corroborate.Policy.test_retained_wheels_and_pinned_helper_are_in_use) ... ok
+test_comment_lookalike_is_not_a_match (test_corroborate.Structure.test_comment_lookalike_is_not_a_match) ... ok
+test_duplicate_live_ids_are_never_resolved (test_corroborate.Structure.test_duplicate_live_ids_are_never_resolved) ... ok
+test_encoding_disagreement_is_review (test_corroborate.Structure.test_encoding_disagreement_is_review) ... ok
+test_namespace_mapping_is_explicit (test_corroborate.Structure.test_namespace_mapping_is_explicit) ... ok
+test_reparenting_disagreement_is_review_even_with_equal_text (test_corroborate.Structure.test_reparenting_disagreement_is_review_even_with_equal_text) ... ok
+test_strict_mode_would_stop_at_the_first_error (test_corroborate.Structure.test_strict_mode_would_stop_at_the_first_error)
+negative control: strict=True raises on N1, so the experiment uses strict=False and keeps every error ... ok
+test_comment_and_pi_data_excluded_tails_kept_final_tail_dropped (test_corroborate.TextRule.test_comment_and_pi_data_excluded_tails_kept_final_tail_dropped) ... FAIL
+test_independent_expected_texts (test_corroborate.TextRule.test_independent_expected_texts) ... ok
+test_rule_on_a_hand_built_elementtree (test_corroborate.TextRule.test_rule_on_a_hand_built_elementtree) ... FAIL
+
+======================================================================
+FAIL: test_comment_and_pi_data_excluded_tails_kept_final_tail_dropped (test_corroborate.TextRule.test_comment_and_pi_data_excluded_tails_kept_final_tail_dropped)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/research/public-sphinx-parser-corroboration-20261018-01/scripts/test_corroborate.py", line 79, in test_comment_and_pi_data_excluded_tails_kept_final_tail_dropped
+    self.assertIs(rep("C2")["checks"]["html5lib_text_rule_equals_itertext"], True)
+AssertionError: False is not True
+
+======================================================================
+FAIL: test_rule_on_a_hand_built_elementtree (test_corroborate.TextRule.test_rule_on_a_hand_built_elementtree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/research/public-sphinx-parser-corroboration-20261018-01/scripts/test_corroborate.py", line 91, in test_rule_on_a_hand_built_elementtree
+    self.assertEqual("".join(p.itertext()), "abcd")
+AssertionError: 'ahiddenbcd' != 'abcd'
+- ahiddenbcd
++ abcd
+
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.020s
+
+FAILED (failures=2)
+exit=1

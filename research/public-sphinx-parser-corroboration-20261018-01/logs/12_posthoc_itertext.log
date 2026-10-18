@@ -1,0 +1,7 @@
+# POST-HOC (not pre-registered), after logs/10 and logs/11 showed html5lib_text_rule_equals_itertext = false on C2:
+# ElementTree itertext() with the C accelerator versus the pure-Python implementation, standard library only
+$ unshare -rn python3.12 -I -c <one Element with text x, a Comment HIDDEN, tail y; then the same with _elementtree blocked>
+3.12.3 accelerated Element type: xml.etree.ElementTree <class 'xml.etree.ElementTree.Element'>
+C accelerator itertext: ['x', 'HIDDEN', 'y']
+pure-Python itertext:   ['x', 'y']
+exit=0
