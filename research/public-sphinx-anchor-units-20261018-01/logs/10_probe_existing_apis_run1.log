@@ -1,0 +1,18 @@
+$ cd research/public-sphinx-anchor-units-20261018-01 && <venv3.12>/bin/python scripts/probe_existing_apis.py results/run1-linux-py3.12/probe_existing_apis.json   # first run, 2026-10-18T01:13:56Z
+H1 confirmed {'id_attributes_in_any_extract_xml': [], 'case_anchors_found_as_text_in_extract_xml': ['numpy-where', 'numpy.nonzero', 'numpy.where', 'pkg.BigClient', 'pkg.Client', 'pkg.Client.open', 'pkg.badbytes', 'pkg.dup', 'pkg.empty_doc', 'pkg.fetch', 'pkg.naïve', 'pkg.no_dd', 'pkg.span', 'pkg.store'], 'confirmed': True}
+H2 confirmed {'elements_with_id': 2, 'get_element_by_id_returned_line': 13, 'lines_of_all_matches': [13, 19], 'confirmed': True}
+H3 confirmed {'default_tostring_has_stray_text': True, 'with_tail_false_has_stray_text': False, 'confirmed': True}
+trafilatura.load_html parser: HTML_PARSER = HTMLParser(collect_ids=False, default_doctype=False, encoding="utf-8", remove_comments=True, remove_pis=True)
+fixtures/f1_functions.html: 0 parser diagnostics; extract() xml 1821 bytes
+fixtures/f2_signatures.html: 0 parser diagnostics; extract() xml 816 bytes
+fixtures/f3_classes.html: 0 parser diagnostics; extract() xml 3721 bytes
+fixtures/f4_duplicates.html: 1 parser diagnostics; extract() xml 655 bytes
+    line 19 col 37 DTD_ID_REDEFINED: ID pkg.dup already defined
+fixtures/f5_unicode.html: 0 parser diagnostics; extract() xml 517 bytes
+fixtures/f6_malformed.html: 4 parser diagnostics; extract() xml 866 bytes
+    line 15 col 92 ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: b and i
+    line 15 col 95 ERR_TAG_NAME_MISMATCH: Unexpected end tag : i
+    line 19 col 11 ERR_TAG_NAME_MISMATCH: Unexpected end tag : span
+    line 23 col 6 ERR_INVALID_ENCODING: Invalid bytes in character encoding
+source/numpy-2.5/numpy.where.html: 0 parser diagnostics; extract() xml 3217 bytes
+exit=0

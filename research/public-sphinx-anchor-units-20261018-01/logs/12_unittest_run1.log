@@ -1,0 +1,26 @@
+$ cd research/public-sphinx-anchor-units-20261018-01 && <venv3.12>/bin/python -m unittest discover -s scripts -v   # first test run, 2026-10-18T01:15:08Z
+test_context_counts_query_source_labels_and_payload (test_anchor_unit.Budget.test_context_counts_query_source_labels_and_payload) ... ok
+test_multibyte_budget_is_counted_in_bytes (test_anchor_unit.Budget.test_multibyte_budget_is_counted_in_bytes) ... ok
+test_over_budget_unit_stays_whole_and_is_review (test_anchor_unit.Budget.test_over_budget_unit_stays_whole_and_is_review) ... ok
+test_context_template_is_the_preregistered_one (test_anchor_unit.Contract.test_context_template_is_the_preregistered_one) ... ok
+test_nothing_is_semantically_reviewed (test_anchor_unit.Contract.test_nothing_is_semantically_reviewed) ... ok
+test_selection_is_deterministic (test_anchor_unit.Contract.test_selection_is_deterministic) ... ok
+test_payloads_are_rebuilt_from_whole_elements_without_normalisation (test_anchor_unit.Evidence.test_payloads_are_rebuilt_from_whole_elements_without_normalisation) ... ok
+test_raw_span_is_claimed_only_for_exact_unique_bytes (test_anchor_unit.Evidence.test_raw_span_is_claimed_only_for_exact_unique_bytes) ... ok
+test_tail_after_the_last_element_is_excluded (test_anchor_unit.Evidence.test_tail_after_the_last_element_is_excluded)
+negative control (H3): lxml's default tostring() would carry the stray text after the dd ... ok
+test_trafilatura_structured_output_has_no_ids (test_anchor_unit.ExistingApis.test_trafilatura_structured_output_has_no_ids)
+H1: trafilatura.extract() XML keeps no id attributes ... ok
+test_anchor_is_data_not_xpath (test_anchor_unit.Review.test_anchor_is_data_not_xpath) ... ok
+test_duplicate_id_is_never_resolved (test_anchor_unit.Review.test_duplicate_id_is_never_resolved)
+negative control (H2): get_element_by_id picks one of the two silently ... ok
+test_generic_ancestor_rule_is_not_applied (test_anchor_unit.Review.test_generic_ancestor_rule_is_not_applied)
+an id inside the dd (a div) or on the section is review, not the enclosing unit ... ok
+test_normalised_spellings_are_reported_not_selected (test_anchor_unit.Review.test_normalised_spellings_are_reported_not_selected) ... ok
+test_parser_diagnostics_are_kept (test_anchor_unit.Review.test_parser_diagnostics_are_kept) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.142s
+
+OK
+exit=0

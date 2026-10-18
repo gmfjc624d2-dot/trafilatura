@@ -1,0 +1,419 @@
+{
+  "trafilatura": {
+    "version": "2.3.1",
+    "file": "/home/user/trafilatura/trafilatura/__init__.py"
+  },
+  "trafilatura_load_html_parser": "<lxml.html.HTMLParser object at 0x7fbf42f55ff0>",
+  "trafilatura_load_html_parser_source": "HTML_PARSER = HTMLParser(collect_ids=False, default_doctype=False, encoding=\"utf-8\", remove_comments=True, remove_pis=True)",
+  "H1": {
+    "claim": "trafilatura.extract() structured output carries none of the anchor ids, so it cannot serve explicit anchor selection",
+    "id_attributes_in_any_extract_xml": [],
+    "case_anchors_found_as_text_in_extract_xml": [
+      "numpy-where",
+      "numpy.nonzero",
+      "numpy.where",
+      "pkg.BigClient",
+      "pkg.Client",
+      "pkg.Client.open",
+      "pkg.badbytes",
+      "pkg.dup",
+      "pkg.empty_doc",
+      "pkg.fetch",
+      "pkg.naïve",
+      "pkg.no_dd",
+      "pkg.span",
+      "pkg.store"
+    ],
+    "confirmed": true
+  },
+  "H2": {
+    "claim": "lxml.html get_element_by_id() returns one element for a duplicated id without signalling the duplicate",
+    "elements_with_id": 2,
+    "get_element_by_id_returned_line": 13,
+    "lines_of_all_matches": [
+      13,
+      19
+    ],
+    "confirmed": true
+  },
+  "H3": {
+    "claim": "lxml.html.tostring() with its default with_tail=True includes text that follows the element (stray dl text after a dd)",
+    "default_tostring_has_stray_text": true,
+    "with_tail_false_has_stray_text": false,
+    "confirmed": true
+  },
+  "files": {
+    "fixtures/f1_functions.html": {
+      "diagnostics": [],
+      "trafilatura_extract_xml_bytes": 1821,
+      "trafilatura_extract_xml_id_attributes": [],
+      "cases": {
+        "C01": {
+          "anchor": "pkg.fetch",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {
+            "MARK-FETCH-DESC": true,
+            "MARK-FETCH-NOTE": true,
+            "MARK-FETCH-WARNING": true,
+            "MARK-FETCH-PARAM": true,
+            "MARK-FETCH-CODE": true,
+            "MARK-FETCH-VERSION": true,
+            "    if timeout": true
+          },
+          "must_exclude_in_extract_xml": {
+            "MARK-STORE": true,
+            "MARK-GLOSSARY": true,
+            "MARK-PAGE": true
+          }
+        },
+        "C02": {
+          "anchor": "pkg.store",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {
+            "MARK-STORE-DESC": true
+          },
+          "must_exclude_in_extract_xml": {
+            "MARK-STORE-STRAY": true,
+            "MARK-FETCH": true
+          }
+        },
+        "C03": {
+          "anchor": "term-proxy",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        },
+        "C04": {
+          "anchor": "fetch-label",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        },
+        "C05": {
+          "anchor": "module-pkg",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        },
+        "C06": {
+          "anchor": "pkg.absent",
+          "lxml_elements_with_id": 0,
+          "load_html_elements_with_id": 0,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        }
+      }
+    },
+    "fixtures/f2_signatures.html": {
+      "diagnostics": [],
+      "trafilatura_extract_xml_bytes": 816,
+      "trafilatura_extract_xml_id_attributes": [],
+      "cases": {
+        "C07": {
+          "anchor": "pkg.span",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {
+            "MARK-SPAN-SHARED": true,
+            "start": true,
+            "step=1": true
+          },
+          "must_exclude_in_extract_xml": {
+            "MARK-GET": false,
+            "MARK-TWIN": false
+          }
+        },
+        "C08": {
+          "anchor": "pkg.fetch_one",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {
+            "MARK-GET-SHARED": false,
+            "fetch_one": false
+          },
+          "must_exclude_in_extract_xml": {
+            "MARK-SPAN": true,
+            "MARK-TWIN": false
+          }
+        },
+        "C09": {
+          "anchor": "pkg.empty_doc",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        },
+        "C10": {
+          "anchor": "pkg.no_dd",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        },
+        "C11": {
+          "anchor": "pkg.twin_b",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        }
+      }
+    },
+    "fixtures/f3_classes.html": {
+      "diagnostics": [],
+      "trafilatura_extract_xml_bytes": 3721,
+      "trafilatura_extract_xml_id_attributes": [],
+      "cases": {
+        "C12": {
+          "anchor": "pkg.Client",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {
+            "MARK-CLIENT-DESC": true,
+            "MARK-OPEN-DESC": true,
+            "MARK-OPEN-NOTE": true,
+            "MARK-TIMEOUT-DESC": true,
+            "MARK-CLIENT-TAIL": true
+          },
+          "must_exclude_in_extract_xml": {
+            "MARK-BIG": true,
+            "MARK-HELPER": false,
+            "MARK-PAGE": true
+          }
+        },
+        "C13": {
+          "anchor": "pkg.Client.open",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {
+            "MARK-OPEN-DESC": true,
+            "MARK-OPEN-NOTE": true
+          },
+          "must_exclude_in_extract_xml": {
+            "MARK-CLIENT-DESC": true,
+            "MARK-TIMEOUT-DESC": true,
+            "MARK-CLIENT-TAIL": true
+          }
+        },
+        "C14": {
+          "anchor": "pkg.BigClient",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {
+            "MARK-BIG-01": true,
+            "MARK-BIG-22": true
+          },
+          "must_exclude_in_extract_xml": {
+            "MARK-CLIENT-DESC": true,
+            "MARK-HELPER": false
+          }
+        },
+        "C15": {
+          "anchor": "pkg.helper",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        },
+        "C16": {
+          "anchor": "pkg.helper.inner",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        }
+      }
+    },
+    "fixtures/f4_duplicates.html": {
+      "diagnostics": [
+        {
+          "line": 19,
+          "column": 37,
+          "type": "DTD_ID_REDEFINED",
+          "message": "ID pkg.dup already defined"
+        }
+      ],
+      "trafilatura_extract_xml_bytes": 655,
+      "trafilatura_extract_xml_id_attributes": [],
+      "cases": {
+        "C17": {
+          "anchor": "pkg.dup",
+          "lxml_elements_with_id": 2,
+          "load_html_elements_with_id": 2,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        }
+      }
+    },
+    "fixtures/f5_unicode.html": {
+      "diagnostics": [],
+      "trafilatura_extract_xml_bytes": 517,
+      "trafilatura_extract_xml_id_attributes": [],
+      "cases": {
+        "C18": {
+          "anchor": "pkg.naïve",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {
+            "MARK-UNICODE-DESC": true,
+            "接続は再試行されません。": true,
+            "🔒": true,
+            "café": false
+          },
+          "must_exclude_in_extract_xml": {
+            "MARK-PAGE": true
+          }
+        },
+        "C19": {
+          "anchor": "pkg.naïve",
+          "lxml_elements_with_id": 0,
+          "load_html_elements_with_id": 0,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        },
+        "C20": {
+          "anchor": "pkg.na%C3%AFve",
+          "lxml_elements_with_id": 0,
+          "load_html_elements_with_id": 0,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        }
+      }
+    },
+    "fixtures/f6_malformed.html": {
+      "diagnostics": [
+        {
+          "line": 15,
+          "column": 92,
+          "type": "ERR_TAG_NAME_MISMATCH",
+          "message": "Opening and ending tag mismatch: b and i"
+        },
+        {
+          "line": 15,
+          "column": 95,
+          "type": "ERR_TAG_NAME_MISMATCH",
+          "message": "Unexpected end tag : i"
+        },
+        {
+          "line": 19,
+          "column": 11,
+          "type": "ERR_TAG_NAME_MISMATCH",
+          "message": "Unexpected end tag : span"
+        },
+        {
+          "line": 23,
+          "column": 6,
+          "type": "ERR_INVALID_ENCODING",
+          "message": "Invalid bytes in character encoding"
+        }
+      ],
+      "trafilatura_extract_xml_bytes": 866,
+      "trafilatura_extract_xml_id_attributes": [],
+      "cases": {
+        "C21": {
+          "anchor": "pkg.broken",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        },
+        "C22": {
+          "anchor": "pkg.after",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        },
+        "C23": {
+          "anchor": "pkg.badbytes",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        }
+      }
+    },
+    "source/numpy-2.5/numpy.where.html": {
+      "diagnostics": [],
+      "trafilatura_extract_xml_bytes": 3217,
+      "trafilatura_extract_xml_id_attributes": [],
+      "cases": {
+        "P01": {
+          "anchor": "numpy.where",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {
+            "When only": true,
+            "np.asarray(condition).nonzero()": true,
+            "Parameters": true,
+            "Returns": true,
+            "See also": false,
+            "Notes": true,
+            "Examples": true,
+            "array([ 0,  1,  2,  3,  4, 50, 60, 70, 80, 90])": false,
+            "Go Back": false,
+            "loadTryExamplesConfig": false
+          },
+          "must_exclude_in_extract_xml": {
+            "numpy.indices": false,
+            "Link to this heading": false,
+            "Copyright 2008-2026": false
+          }
+        },
+        "P02": {
+          "anchor": "numpy.nonzero",
+          "lxml_elements_with_id": 0,
+          "load_html_elements_with_id": 0,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        },
+        "P03": {
+          "anchor": "8ca37ba8-cc5f-4462-bfd1-6b08f701b406",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": false,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        },
+        "P04": {
+          "anchor": "numpy-where",
+          "lxml_elements_with_id": 1,
+          "load_html_elements_with_id": 1,
+          "anchor_in_extract_xml": true,
+          "must_include_in_extract_xml": {},
+          "must_exclude_in_extract_xml": {}
+        }
+      }
+    }
+  }
+}
