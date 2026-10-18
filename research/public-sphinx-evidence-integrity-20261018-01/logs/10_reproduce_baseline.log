@@ -1,0 +1,155 @@
+# first run of the 7345bfe copies on the new fixtures; no repaired code exists yet
+$ unshare -rn <venv3.12>/bin/python scripts/reproduce_baseline.py results/baseline-linux-py3.12
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "lxml": "6.1.3",
+  "libxml2_runtime": "2.14.6",
+  "libxml2_compiled": "2.14.6",
+  "parser": "lxml.html.HTMLParser() defaults (recover=True, comments and PIs kept)"
+}
+N1 baseline: reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'} diagnostics=[(3, 'ERR_TAG_NAME_MISMATCH')]
+   encoding=utf-8 span=None
+   PASS (predicted PASS) baseline prediction reasons: {"observed": [], "predicted": []}
+   PASS (predicted PASS) baseline prediction status: {"observed": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}, "predicted": {"dom_serialization": "OK_STRUCTURAL_UNIT
+   PASS (predicted PASS) baseline prediction first_line: {"observed": 1, "predicted": 1}
+   PASS (predicted PASS) baseline prediction last_line: {"observed": 1, "predicted": 1}
+   PASS (predicted PASS) baseline prediction diagnostics_in_unit_lines: {"observed": [], "predicted": []}
+   PASS (predicted PASS) baseline prediction diagnostic_lines: {"observed": [3], "predicted": [3]}
+   PASS (predicted PASS) baseline prediction raw_byte_span: {"observed": null, "predicted": null}
+   FAIL (predicted FAIL) baseline: requirement reasons: []
+   FAIL (predicted FAIL) baseline: requirement status: {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}
+   PASS (predicted PASS) baseline: requirement unit: {"signatures": 1, "descriptions": 1, "signature_ids": ["pkg.late"]}
+   PASS (predicted PASS) baseline: requirement must_include: []
+   PASS (predicted PASS) baseline: requirement diagnostics: [{"line": 3, "column": 5, "level": "ERROR", "type": "ERR_TAG_NAME_MISMATCH", "message": "Unexpected end tag : span"}]
+   PASS (predicted PASS) baseline: requirement diagnostics_complete: {"independent_parse": 1}
+   FAIL (predicted FAIL) baseline: requirement no_alignment_claim: ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span"]
+   PASS (predicted PASS) baseline: requirement identities: []
+   FAIL (predicted FAIL) baseline: requirement budget_scope: {"dom_serialization": null, "text_content": null}
+   PASS (predicted PASS) baseline: requirement context_withheld: []
+N2 baseline: reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'} diagnostics=[]
+   encoding=utf-8 span={'byte_start': 66, 'byte_end': 142}
+   PASS (predicted PASS) baseline prediction reasons: {"observed": [], "predicted": []}
+   PASS (predicted PASS) baseline prediction status: {"observed": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}, "predicted": {"dom_serialization": "OK_STRUCTURAL_UNIT
+   PASS (predicted PASS) baseline prediction dom_serialization: {"observed": "<dt class=\"sig sig-object py\" id=\"pkg.target\">target()</dt><dd><p>A</p></dd>", "predicted": "<dt class=\"sig sig-object py\" id=\"pk
+   PASS (predicted PASS) baseline prediction raw_occurrences_of_serialization: {"observed": 1, "predicted": 1}
+   PASS (predicted PASS) baseline prediction raw_byte_span_region: {"observed": {"byte_start": 66, "byte_end": 142}, "predicted": {"byte_start": 66, "byte_end": 142}}
+   PASS (predicted PASS) baseline: requirement reasons: []
+   PASS (predicted PASS) baseline: requirement status: {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}
+   PASS (predicted PASS) baseline: requirement unit: {"signatures": 1, "descriptions": 1, "signature_ids": ["pkg.target"]}
+   PASS (predicted PASS) baseline: requirement payloads: {"dom_serialization": "<dt class=\"sig sig-object py\" id=\"pkg.target\">target()</dt><dd><p>A</p></dd>", "text_content": "target()A"}
+   PASS (predicted PASS) baseline: requirement diagnostics: []
+   PASS (predicted PASS) baseline: requirement diagnostics_complete: {"independent_parse": 0}
+   FAIL (predicted FAIL) baseline: requirement no_alignment_claim: ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte
+   PASS (predicted PASS) baseline: requirement identities: []
+   PASS (predicted PASS) baseline: requirement identities_distinct: ["c66aba780ab092f242d54cf841b962d9e7775a2b1a79c6356b5c2d1238c2b90b", "29752d1cb9923edad882c8052530520e55223a8fdcbb086a520d3943a906a132", "1e50ff341d0d
+   FAIL (predicted FAIL) baseline: requirement budget_scope: {"dom_serialization": null, "text_content": null}
+   PASS (predicted PASS) baseline: requirement context_withheld: []
+N3 baseline: reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'} diagnostics=[]
+   encoding=windows-1252 span={'byte_start': 126, 'byte_end': 244}
+   PASS (predicted PASS) baseline prediction reasons: {"observed": [], "predicted": []}
+   PASS (predicted PASS) baseline prediction status: {"observed": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}, "predicted": {"dom_serialization": "OK_STRUCTURAL_UNIT
+   PASS (predicted PASS) baseline prediction encoding_codec: {"observed": "cp1252", "predicted": "cp1252"}
+   PASS (predicted PASS) baseline prediction raw_occurrences_of_serialization: {"observed": 1, "predicted": 1}
+   PASS (predicted PASS) baseline prediction raw_byte_span_region: {"observed": {"byte_start": 126, "byte_end": 244}, "predicted": {"byte_start": 126, "byte_end": 244}}
+   PASS (predicted PASS) baseline prediction span_bytes_equal_utf8_serialization: {"observed": false, "predicted": false}
+   PASS (predicted PASS) baseline prediction span_length_minus_dom_bytes: {"observed": -7, "predicted": -7}
+   PASS (predicted PASS) baseline: requirement reasons: []
+   PASS (predicted PASS) baseline: requirement status: {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}
+   PASS (predicted PASS) baseline: requirement unit: {"signatures": 1, "descriptions": 1, "signature_ids": ["pkg.legacy"]}
+   PASS (predicted PASS) baseline: requirement must_include: []
+   PASS (predicted PASS) baseline: requirement must_exclude: []
+   PASS (predicted PASS) baseline: requirement encoding_codec: {"parser.encoding": "windows-1252", "codec": "cp1252"}
+   PASS (predicted PASS) baseline: requirement diagnostics: []
+   PASS (predicted PASS) baseline: requirement diagnostics_complete: {"independent_parse": 0}
+   FAIL (predicted FAIL) baseline: requirement no_alignment_claim: ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte
+   PASS (predicted PASS) baseline: requirement identities: []
+   PASS (predicted PASS) baseline: requirement identities_distinct: ["b48a3c21878829b809fb5ce0c5acb96e91bb5449d23bd62622547babf4aadd65", "fb695d1a6da8a46ac8dce753a294a0d0ed60b3fe20accfc200b5b7be6c9d5c93", "284479d45c16
+   FAIL (predicted FAIL) baseline: requirement budget_scope: {"dom_serialization": null, "text_content": null}
+   PASS (predicted PASS) baseline: requirement context_withheld: []
+N4 baseline: reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'} diagnostics=[(12, 'ERR_TAG_NAME_MISMATCH')]
+   encoding=utf-8 span={'byte_start': 120, 'byte_end': 231}
+   PASS (predicted PASS) baseline prediction reasons: {"observed": [], "predicted": []}
+   PASS (predicted PASS) baseline prediction status: {"observed": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}, "predicted": {"dom_serialization": "OK_STRUCTURAL_UNIT
+   PASS (predicted PASS) baseline prediction first_line: {"observed": 9, "predicted": 9}
+   PASS (predicted PASS) baseline prediction last_line: {"observed": 10, "predicted": 10}
+   PASS (predicted PASS) baseline prediction diagnostics_in_unit_lines: {"observed": [], "predicted": []}
+   PASS (predicted PASS) baseline prediction diagnostic_lines: {"observed": [12], "predicted": [12]}
+   PASS (predicted PASS) baseline prediction raw_byte_span_region: {"observed": {"byte_start": 120, "byte_end": 231}, "predicted": {"byte_start": 120, "byte_end": 231}}
+   FAIL (predicted FAIL) baseline: requirement reasons: []
+   FAIL (predicted FAIL) baseline: requirement status: {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}
+   PASS (predicted PASS) baseline: requirement unit: {"signatures": 1, "descriptions": 1, "signature_ids": ["pkg.inside"]}
+   PASS (predicted PASS) baseline: requirement must_include: []
+   PASS (predicted PASS) baseline: requirement must_exclude: []
+   PASS (predicted PASS) baseline: requirement diagnostics: [{"line": 12, "column": 41, "level": "ERROR", "type": "ERR_TAG_NAME_MISMATCH", "message": "Unexpected end tag : span"}]
+   PASS (predicted PASS) baseline: requirement diagnostics_complete: {"independent_parse": 1}
+   FAIL (predicted FAIL) baseline: requirement no_alignment_claim: ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte
+   PASS (predicted PASS) baseline: requirement identities: []
+   FAIL (predicted FAIL) baseline: requirement budget_scope: {"dom_serialization": null, "text_content": null}
+   PASS (predicted PASS) baseline: requirement context_withheld: []
+N5 baseline: reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'} diagnostics=[]
+   encoding=utf-8 span={'byte_start': 118, 'byte_end': 226}
+   PASS (predicted PASS) baseline prediction reasons: {"observed": [], "predicted": []}
+   PASS (predicted PASS) baseline prediction status: {"observed": {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}, "predicted": {"dom_serialization": "OK_STRUCTURAL_UNIT
+   PASS (predicted PASS) baseline prediction diagnostic_lines: {"observed": [], "predicted": []}
+   PASS (predicted PASS) baseline prediction raw_byte_span_region: {"observed": {"byte_start": 118, "byte_end": 226}, "predicted": {"byte_start": 118, "byte_end": 226}}
+   PASS (predicted PASS) baseline: requirement reasons: []
+   PASS (predicted PASS) baseline: requirement status: {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}
+   PASS (predicted PASS) baseline: requirement unit: {"signatures": 1, "descriptions": 1, "signature_ids": ["pkg.clean"]}
+   PASS (predicted PASS) baseline: requirement must_include: []
+   PASS (predicted PASS) baseline: requirement must_exclude: []
+   PASS (predicted PASS) baseline: requirement diagnostics: []
+   PASS (predicted PASS) baseline: requirement diagnostics_complete: {"independent_parse": 0}
+   FAIL (predicted FAIL) baseline: requirement no_alignment_claim: ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte
+   PASS (predicted PASS) baseline: requirement identities: []
+   FAIL (predicted FAIL) baseline: requirement budget_scope: {"dom_serialization": null, "text_content": null}
+   PASS (predicted PASS) baseline: requirement context_withheld: []
+old cases: 27/27 baseline outputs equal the committed entries
+M00 no mutation (identity): exit 0 -> allowed (baseline comparator: allowed) 
+M01 environment.python differs: exit 0 -> allowed (baseline comparator: allowed) 
+M02 environment.platform differs: exit 0 -> allowed (baseline comparator: allowed) 
+M03 environment.machine differs: exit 0 -> allowed (baseline comparator: allowed) 
+M04 lxml version differs: exit 0 -> missed (baseline comparator: missed) 
+M05 libxml2 runtime version differs: exit 0 -> missed (baseline comparator: missed) 
+M06 an exempted key is missing: exit 0 -> missed (baseline comparator: missed) 
+M07 case id changed: exit 0 -> missed (baseline comparator: missed) 
+M08 anchor changed: exit 0 -> missed (baseline comparator: missed) 
+M09 source file sha256 changed: exit 0 -> missed (baseline comparator: missed) 
+M10 source path changed: exit 0 -> missed (baseline comparator: missed) 
+M11 document encoding changed: exit 0 -> missed (baseline comparator: missed) 
+M12 diagnostic message changed (C21): exit 0 -> missed (baseline comparator: missed) 
+M13 diagnostic column changed (C21): exit 0 -> missed (baseline comparator: missed) 
+M14 two diagnostics with the same line and type swapped (C21): exit 0 -> missed (baseline comparator: missed) 
+M15 one diagnostic removed (C21): exit 1 -> detected (baseline comparator: detected) 
+M16 results C19 and C20 swapped (equal baseline digests): exit 0 -> missed (baseline comparator: missed) 
+M17 results C01 and C02 swapped: exit 1 -> detected (baseline comparator: detected) 
+M18 last result removed: exit 1 -> crash (baseline comparator: crash) ValueError: zip() argument 2 is shorter than argument 1
+M19 key added to a result: exit 0 -> missed (baseline comparator: missed) 
+M20 candidate key removed: exit 0 -> missed (baseline comparator: missed) 
+M21 true written as 1: exit 0 -> missed (baseline comparator: missed) 
+M22 integer written as float: exit 0 -> missed (baseline comparator: missed) 
+M23 context text changed, its sha256 field not: exit 0 -> missed (baseline comparator: missed) 
+M24 text payload changed, its sha256 field not: exit 0 -> missed (baseline comparator: missed) 
+M25 check detail changed: exit 0 -> missed (baseline comparator: missed) 
+M26 diagnostic level changed (C17): exit 0 -> missed (baseline comparator: missed) 
+M27 top-level key added: exit 0 -> missed (baseline comparator: missed) 
+M28 key order of a result reversed: exit 0 -> missed (baseline comparator: missed) 
+M29 environment.python and reason order both changed (C21): exit 1 -> detected (baseline comparator: detected) 
+M30 status changed: exit 1 -> detected (baseline comparator: detected) 
+M31 duplicate object key in the JSON text (json.loads keeps the last): exit 0 -> missed (baseline comparator: missed) 
+{
+  "checks": 145,
+  "pass": 131,
+  "fail": 14,
+  "fail_predicted (baseline failures, kept)": 14,
+  "findings (result differs from prediction)": 0,
+  "invalid mutations": [],
+  "baseline comparator outcomes": {
+    "allowed": 4,
+    "crash": 1,
+    "detected": 4,
+    "missed": 23
+  }
+}
+exit=0

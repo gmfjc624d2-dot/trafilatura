@@ -1,0 +1,1889 @@
+{
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "lxml": "6.1.3",
+    "libxml2_runtime": "2.14.6",
+    "libxml2_compiled": "2.14.6",
+    "parser": "lxml.html.HTMLParser() defaults (recover=True, comments and PIs kept)"
+  },
+  "summary": {
+    "checks": 145,
+    "pass": 131,
+    "fail": 14,
+    "fail_predicted (baseline failures, kept)": 14,
+    "findings (result differs from prediction)": 0,
+    "invalid mutations": [],
+    "baseline comparator outcomes": {
+      "allowed": 4,
+      "crash": 1,
+      "detected": 4,
+      "missed": 23
+    }
+  },
+  "new_cases": [
+    {
+      "case": "N1",
+      "helper": "baseline",
+      "output": {
+        "anchor": "pkg.late",
+        "source": {
+          "path": "fixtures/n1_late_diagnostic.html",
+          "origin": "public synthetic input 1 supplied with the request, written exactly",
+          "sha256": "38558fead0b79840841642eeff9ac9e221d8a8767b0c6d230a18201d5eb2ad6f",
+          "bytes": 259
+        },
+        "parser": {
+          "lxml": "6.1.3",
+          "libxml2_runtime": "2.14.6",
+          "libxml2_compiled": "2.14.6",
+          "parser": "lxml.html.HTMLParser() defaults (recover=True, comments and PIs kept)",
+          "encoding": "utf-8",
+          "diagnostics": [
+            {
+              "line": 3,
+              "column": 5,
+              "level": "ERROR",
+              "type": "ERR_TAG_NAME_MISMATCH",
+              "message": "Unexpected end tag : span"
+            }
+          ]
+        },
+        "matches": [
+          {
+            "tag": "dt",
+            "sourceline": 1,
+            "class": "sig sig-object py"
+          }
+        ],
+        "near_matches": [],
+        "reasons": [],
+        "candidate": {
+          "kind": "sphinx-object py function",
+          "signatures": 1,
+          "descriptions": 1,
+          "signature_ids": [
+            "pkg.late"
+          ],
+          "anchor_position": 1,
+          "first_line": 1,
+          "last_line": 1,
+          "nested_object_ids": [],
+          "diagnostics_in_unit_lines": [],
+          "enclosing_object_id": null,
+          "dom_serialization": "<dt class=\"sig sig-object py\" id=\"pkg.late\">late()</dt><dd>First line of description.\nSecond line of description.\n\nThird line of description.\n</dd>",
+          "dom_sha256": "631a54ba5c22e9782e19f8d61ff8b5d730998bc9a571f06749eae2b6b50c82d6",
+          "dom_bytes": 147,
+          "text_content": "late()First line of description.\nSecond line of description.\n\nThird line of description.\n",
+          "text_sha256": "c61ad446d757eb9ad260d206a10bec191015cbea3eef0fa0a704601260d51344",
+          "text_bytes": 89,
+          "raw_occurrences_of_serialization": 0,
+          "raw_byte_span": null
+        },
+        "contexts": {
+          "dom_serialization": {
+            "budget_bytes": 2048,
+            "context_bytes": 661,
+            "fits": true,
+            "context_sha256": "468e7061f9bfce1c2b8665f230d3f60a1404899592f229549d8b9993c1e9f330",
+            "context": "query: anchor_id=pkg.late\nsource: fixtures/n1_late_diagnostic.html sha256=38558fead0b79840841642eeff9ac9e221d8a8767b0c6d230a18201d5eb2ad6f bytes=259\norigin: public synthetic input 1 supplied with the request, written exactly\nunit: sphinx-object py function signatures=1 descriptions=1 start_lines=1-1 (parser-reported element start lines; not byte offsets)\nrepresentation: dom_serialization sha256=631a54ba5c22e9782e19f8d61ff8b5d730998bc9a571f06749eae2b6b50c82d6 bytes=147\n-----BEGIN UNIT-----\n<dt class=\"sig sig-object py\" id=\"pkg.late\">late()</dt><dd>First line of description.\nSecond line of description.\n\nThird line of description.\n</dd>\n-----END UNIT-----\n"
+          },
+          "text_content": {
+            "budget_bytes": 2048,
+            "context_bytes": 597,
+            "fits": true,
+            "context_sha256": "3ff7a93050ec26e886f5b98733e45ab8d2981baf6bfc130c53af96354492ca66",
+            "context": "query: anchor_id=pkg.late\nsource: fixtures/n1_late_diagnostic.html sha256=38558fead0b79840841642eeff9ac9e221d8a8767b0c6d230a18201d5eb2ad6f bytes=259\norigin: public synthetic input 1 supplied with the request, written exactly\nunit: sphinx-object py function signatures=1 descriptions=1 start_lines=1-1 (parser-reported element start lines; not byte offsets)\nrepresentation: text_content sha256=c61ad446d757eb9ad260d206a10bec191015cbea3eef0fa0a704601260d51344 bytes=89\n-----BEGIN UNIT-----\nlate()First line of description.\nSecond line of description.\n\nThird line of description.\n\n-----END UNIT-----\n"
+          }
+        },
+        "status": {
+          "dom_serialization": "OK_STRUCTURAL_UNIT",
+          "text_content": "OK_STRUCTURAL_UNIT"
+        },
+        "semantically_reviewed": false
+      },
+      "checks": [
+        {
+          "check": "baseline prediction reasons",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": [],
+            "predicted": []
+          }
+        },
+        {
+          "check": "baseline prediction status",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": {
+              "dom_serialization": "OK_STRUCTURAL_UNIT",
+              "text_content": "OK_STRUCTURAL_UNIT"
+            },
+            "predicted": {
+              "dom_serialization": "OK_STRUCTURAL_UNIT",
+              "text_content": "OK_STRUCTURAL_UNIT"
+            }
+          }
+        },
+        {
+          "check": "baseline prediction first_line",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": 1,
+            "predicted": 1
+          }
+        },
+        {
+          "check": "baseline prediction last_line",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": 1,
+            "predicted": 1
+          }
+        },
+        {
+          "check": "baseline prediction diagnostics_in_unit_lines",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": [],
+            "predicted": []
+          }
+        },
+        {
+          "check": "baseline prediction diagnostic_lines",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": [
+              3
+            ],
+            "predicted": [
+              3
+            ]
+          }
+        },
+        {
+          "check": "baseline prediction raw_byte_span",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": null,
+            "predicted": null
+          }
+        },
+        {
+          "check": "baseline: requirement reasons",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement status",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": {
+            "dom_serialization": "OK_STRUCTURAL_UNIT",
+            "text_content": "OK_STRUCTURAL_UNIT"
+          }
+        },
+        {
+          "check": "baseline: requirement unit",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "signatures": 1,
+            "descriptions": 1,
+            "signature_ids": [
+              "pkg.late"
+            ]
+          }
+        },
+        {
+          "check": "baseline: requirement must_include",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": [
+            {
+              "line": 3,
+              "column": 5,
+              "level": "ERROR",
+              "type": "ERR_TAG_NAME_MISMATCH",
+              "message": "Unexpected end tag : span"
+            }
+          ]
+        },
+        {
+          "check": "baseline: requirement diagnostics_complete",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "independent_parse": 1
+          }
+        },
+        {
+          "check": "baseline: requirement no_alignment_claim",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": [
+            "$.candidate.diagnostics_in_unit_lines",
+            "$.candidate.raw_occurrences_of_serialization",
+            "$.candidate.raw_byte_span"
+          ]
+        },
+        {
+          "check": "baseline: requirement identities",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement budget_scope",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": {
+            "dom_serialization": null,
+            "text_content": null
+          }
+        },
+        {
+          "check": "baseline: requirement context_withheld",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "case": "N2",
+      "helper": "baseline",
+      "output": {
+        "anchor": "pkg.target",
+        "source": {
+          "path": "fixtures/n2_comment_match.html",
+          "origin": "public synthetic input 2 supplied with the request, written exactly",
+          "sha256": "c66aba780ab092f242d54cf841b962d9e7775a2b1a79c6356b5c2d1238c2b90b",
+          "bytes": 268
+        },
+        "parser": {
+          "lxml": "6.1.3",
+          "libxml2_runtime": "2.14.6",
+          "libxml2_compiled": "2.14.6",
+          "parser": "lxml.html.HTMLParser() defaults (recover=True, comments and PIs kept)",
+          "encoding": "utf-8",
+          "diagnostics": []
+        },
+        "matches": [
+          {
+            "tag": "dt",
+            "sourceline": 1,
+            "class": "sig sig-object py"
+          }
+        ],
+        "near_matches": [],
+        "reasons": [],
+        "candidate": {
+          "kind": "sphinx-object py function",
+          "signatures": 1,
+          "descriptions": 1,
+          "signature_ids": [
+            "pkg.target"
+          ],
+          "anchor_position": 1,
+          "first_line": 1,
+          "last_line": 1,
+          "nested_object_ids": [],
+          "diagnostics_in_unit_lines": [],
+          "enclosing_object_id": null,
+          "dom_serialization": "<dt class=\"sig sig-object py\" id=\"pkg.target\">target()</dt><dd><p>A</p></dd>",
+          "dom_sha256": "29752d1cb9923edad882c8052530520e55223a8fdcbb086a520d3943a906a132",
+          "dom_bytes": 76,
+          "text_content": "target()A",
+          "text_sha256": "1e50ff341d0db1c5f1561f7bb3bdf4a0372575c09629d74b1b6fc39b37b6e45f",
+          "text_bytes": 9,
+          "raw_occurrences_of_serialization": 1,
+          "raw_byte_span": {
+            "byte_start": 66,
+            "byte_end": 142
+          }
+        },
+        "contexts": {
+          "dom_serialization": {
+            "budget_bytes": 2048,
+            "context_bytes": 589,
+            "fits": true,
+            "context_sha256": "5847c7f1f7e009f721a831e6d70f7a7ff88b1047a956fa2738ee838e9d2bf228",
+            "context": "query: anchor_id=pkg.target\nsource: fixtures/n2_comment_match.html sha256=c66aba780ab092f242d54cf841b962d9e7775a2b1a79c6356b5c2d1238c2b90b bytes=268\norigin: public synthetic input 2 supplied with the request, written exactly\nunit: sphinx-object py function signatures=1 descriptions=1 start_lines=1-1 (parser-reported element start lines; not byte offsets)\nrepresentation: dom_serialization sha256=29752d1cb9923edad882c8052530520e55223a8fdcbb086a520d3943a906a132 bytes=76\n-----BEGIN UNIT-----\n<dt class=\"sig sig-object py\" id=\"pkg.target\">target()</dt><dd><p>A</p></dd>\n-----END UNIT-----\n"
+          },
+          "text_content": {
+            "budget_bytes": 2048,
+            "context_bytes": 516,
+            "fits": true,
+            "context_sha256": "838603a2894bc10abbf162baf363481309aa25595e13bb5379b5448c4e22c01c",
+            "context": "query: anchor_id=pkg.target\nsource: fixtures/n2_comment_match.html sha256=c66aba780ab092f242d54cf841b962d9e7775a2b1a79c6356b5c2d1238c2b90b bytes=268\norigin: public synthetic input 2 supplied with the request, written exactly\nunit: sphinx-object py function signatures=1 descriptions=1 start_lines=1-1 (parser-reported element start lines; not byte offsets)\nrepresentation: text_content sha256=1e50ff341d0db1c5f1561f7bb3bdf4a0372575c09629d74b1b6fc39b37b6e45f bytes=9\n-----BEGIN UNIT-----\ntarget()A\n-----END UNIT-----\n"
+          }
+        },
+        "status": {
+          "dom_serialization": "OK_STRUCTURAL_UNIT",
+          "text_content": "OK_STRUCTURAL_UNIT"
+        },
+        "semantically_reviewed": false
+      },
+      "checks": [
+        {
+          "check": "baseline prediction reasons",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": [],
+            "predicted": []
+          }
+        },
+        {
+          "check": "baseline prediction status",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": {
+              "dom_serialization": "OK_STRUCTURAL_UNIT",
+              "text_content": "OK_STRUCTURAL_UNIT"
+            },
+            "predicted": {
+              "dom_serialization": "OK_STRUCTURAL_UNIT",
+              "text_content": "OK_STRUCTURAL_UNIT"
+            }
+          }
+        },
+        {
+          "check": "baseline prediction dom_serialization",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": "<dt class=\"sig sig-object py\" id=\"pkg.target\">target()</dt><dd><p>A</p></dd>",
+            "predicted": "<dt class=\"sig sig-object py\" id=\"pkg.target\">target()</dt><dd><p>A</p></dd>"
+          }
+        },
+        {
+          "check": "baseline prediction raw_occurrences_of_serialization",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": 1,
+            "predicted": 1
+          }
+        },
+        {
+          "check": "baseline prediction raw_byte_span_region",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": {
+              "byte_start": 66,
+              "byte_end": 142
+            },
+            "predicted": {
+              "byte_start": 66,
+              "byte_end": 142
+            }
+          }
+        },
+        {
+          "check": "baseline: requirement reasons",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement status",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "dom_serialization": "OK_STRUCTURAL_UNIT",
+            "text_content": "OK_STRUCTURAL_UNIT"
+          }
+        },
+        {
+          "check": "baseline: requirement unit",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "signatures": 1,
+            "descriptions": 1,
+            "signature_ids": [
+              "pkg.target"
+            ]
+          }
+        },
+        {
+          "check": "baseline: requirement payloads",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "dom_serialization": "<dt class=\"sig sig-object py\" id=\"pkg.target\">target()</dt><dd><p>A</p></dd>",
+            "text_content": "target()A"
+          }
+        },
+        {
+          "check": "baseline: requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement diagnostics_complete",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "independent_parse": 0
+          }
+        },
+        {
+          "check": "baseline: requirement no_alignment_claim",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": [
+            "$.candidate.diagnostics_in_unit_lines",
+            "$.candidate.raw_occurrences_of_serialization",
+            "$.candidate.raw_byte_span",
+            "$.candidate.raw_byte_span.byte_start",
+            "$.candidate.raw_byte_span.byte_end"
+          ]
+        },
+        {
+          "check": "baseline: requirement identities",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement identities_distinct",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": [
+            "c66aba780ab092f242d54cf841b962d9e7775a2b1a79c6356b5c2d1238c2b90b",
+            "29752d1cb9923edad882c8052530520e55223a8fdcbb086a520d3943a906a132",
+            "1e50ff341d0db1c5f1561f7bb3bdf4a0372575c09629d74b1b6fc39b37b6e45f"
+          ]
+        },
+        {
+          "check": "baseline: requirement budget_scope",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": {
+            "dom_serialization": null,
+            "text_content": null
+          }
+        },
+        {
+          "check": "baseline: requirement context_withheld",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "case": "N3",
+      "helper": "baseline",
+      "output": {
+        "anchor": "pkg.legacy",
+        "source": {
+          "path": "fixtures/n3_windows1252.html",
+          "origin": "original synthetic page of this increment, windows-1252 bytes",
+          "sha256": "b48a3c21878829b809fb5ce0c5acb96e91bb5449d23bd62622547babf4aadd65",
+          "bytes": 310
+        },
+        "parser": {
+          "lxml": "6.1.3",
+          "libxml2_runtime": "2.14.6",
+          "libxml2_compiled": "2.14.6",
+          "parser": "lxml.html.HTMLParser() defaults (recover=True, comments and PIs kept)",
+          "encoding": "windows-1252",
+          "diagnostics": []
+        },
+        "matches": [
+          {
+            "tag": "dt",
+            "sourceline": 9,
+            "class": "sig sig-object py"
+          }
+        ],
+        "near_matches": [],
+        "reasons": [],
+        "candidate": {
+          "kind": "sphinx-object py function",
+          "signatures": 1,
+          "descriptions": 1,
+          "signature_ids": [
+            "pkg.legacy"
+          ],
+          "anchor_position": 1,
+          "first_line": 9,
+          "last_line": 10,
+          "nested_object_ids": [],
+          "diagnostics_in_unit_lines": [],
+          "enclosing_object_id": null,
+          "dom_serialization": "<dt class=\"sig sig-object py\" id=\"pkg.legacy\">legacy()</dt>\n<dd><p>Café costs 5 €, “quoted”. MARK-LEGACY-DESC</p></dd>",
+          "dom_sha256": "fb695d1a6da8a46ac8dce753a294a0d0ed60b3fe20accfc200b5b7be6c9d5c93",
+          "dom_bytes": 125,
+          "text_content": "legacy()\nCafé costs 5 €, “quoted”. MARK-LEGACY-DESC",
+          "text_sha256": "284479d45c16f93f656d37dba1301b454f12aa289150c7836b13b7560650113c",
+          "text_bytes": 58,
+          "raw_occurrences_of_serialization": 1,
+          "raw_byte_span": {
+            "byte_start": 126,
+            "byte_end": 244
+          }
+        },
+        "contexts": {
+          "dom_serialization": {
+            "budget_bytes": 2048,
+            "context_bytes": 632,
+            "fits": true,
+            "context_sha256": "4948c3d490c79e945ed7f38628d93adfce0060d02d213a96a4152f2dad9ad163",
+            "context": "query: anchor_id=pkg.legacy\nsource: fixtures/n3_windows1252.html sha256=b48a3c21878829b809fb5ce0c5acb96e91bb5449d23bd62622547babf4aadd65 bytes=310\norigin: original synthetic page of this increment, windows-1252 bytes\nunit: sphinx-object py function signatures=1 descriptions=1 start_lines=9-10 (parser-reported element start lines; not byte offsets)\nrepresentation: dom_serialization sha256=fb695d1a6da8a46ac8dce753a294a0d0ed60b3fe20accfc200b5b7be6c9d5c93 bytes=125\n-----BEGIN UNIT-----\n<dt class=\"sig sig-object py\" id=\"pkg.legacy\">legacy()</dt>\n<dd><p>Café costs 5 €, “quoted”. MARK-LEGACY-DESC</p></dd>\n-----END UNIT-----\n"
+          },
+          "text_content": {
+            "budget_bytes": 2048,
+            "context_bytes": 559,
+            "fits": true,
+            "context_sha256": "dc8e6a4944f4013e259830b8bc8c34502a27d07824420605196dfe05c82ae6d6",
+            "context": "query: anchor_id=pkg.legacy\nsource: fixtures/n3_windows1252.html sha256=b48a3c21878829b809fb5ce0c5acb96e91bb5449d23bd62622547babf4aadd65 bytes=310\norigin: original synthetic page of this increment, windows-1252 bytes\nunit: sphinx-object py function signatures=1 descriptions=1 start_lines=9-10 (parser-reported element start lines; not byte offsets)\nrepresentation: text_content sha256=284479d45c16f93f656d37dba1301b454f12aa289150c7836b13b7560650113c bytes=58\n-----BEGIN UNIT-----\nlegacy()\nCafé costs 5 €, “quoted”. MARK-LEGACY-DESC\n-----END UNIT-----\n"
+          }
+        },
+        "status": {
+          "dom_serialization": "OK_STRUCTURAL_UNIT",
+          "text_content": "OK_STRUCTURAL_UNIT"
+        },
+        "semantically_reviewed": false
+      },
+      "checks": [
+        {
+          "check": "baseline prediction reasons",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": [],
+            "predicted": []
+          }
+        },
+        {
+          "check": "baseline prediction status",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": {
+              "dom_serialization": "OK_STRUCTURAL_UNIT",
+              "text_content": "OK_STRUCTURAL_UNIT"
+            },
+            "predicted": {
+              "dom_serialization": "OK_STRUCTURAL_UNIT",
+              "text_content": "OK_STRUCTURAL_UNIT"
+            }
+          }
+        },
+        {
+          "check": "baseline prediction encoding_codec",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": "cp1252",
+            "predicted": "cp1252"
+          }
+        },
+        {
+          "check": "baseline prediction raw_occurrences_of_serialization",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": 1,
+            "predicted": 1
+          }
+        },
+        {
+          "check": "baseline prediction raw_byte_span_region",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": {
+              "byte_start": 126,
+              "byte_end": 244
+            },
+            "predicted": {
+              "byte_start": 126,
+              "byte_end": 244
+            }
+          }
+        },
+        {
+          "check": "baseline prediction span_bytes_equal_utf8_serialization",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": false,
+            "predicted": false
+          }
+        },
+        {
+          "check": "baseline prediction span_length_minus_dom_bytes",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": -7,
+            "predicted": -7
+          }
+        },
+        {
+          "check": "baseline: requirement reasons",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement status",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "dom_serialization": "OK_STRUCTURAL_UNIT",
+            "text_content": "OK_STRUCTURAL_UNIT"
+          }
+        },
+        {
+          "check": "baseline: requirement unit",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "signatures": 1,
+            "descriptions": 1,
+            "signature_ids": [
+              "pkg.legacy"
+            ]
+          }
+        },
+        {
+          "check": "baseline: requirement must_include",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement must_exclude",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement encoding_codec",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "parser.encoding": "windows-1252",
+            "codec": "cp1252"
+          }
+        },
+        {
+          "check": "baseline: requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement diagnostics_complete",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "independent_parse": 0
+          }
+        },
+        {
+          "check": "baseline: requirement no_alignment_claim",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": [
+            "$.candidate.diagnostics_in_unit_lines",
+            "$.candidate.raw_occurrences_of_serialization",
+            "$.candidate.raw_byte_span",
+            "$.candidate.raw_byte_span.byte_start",
+            "$.candidate.raw_byte_span.byte_end"
+          ]
+        },
+        {
+          "check": "baseline: requirement identities",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement identities_distinct",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": [
+            "b48a3c21878829b809fb5ce0c5acb96e91bb5449d23bd62622547babf4aadd65",
+            "fb695d1a6da8a46ac8dce753a294a0d0ed60b3fe20accfc200b5b7be6c9d5c93",
+            "284479d45c16f93f656d37dba1301b454f12aa289150c7836b13b7560650113c"
+          ]
+        },
+        {
+          "check": "baseline: requirement budget_scope",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": {
+            "dom_serialization": null,
+            "text_content": null
+          }
+        },
+        {
+          "check": "baseline: requirement context_withheld",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "case": "N4",
+      "helper": "baseline",
+      "output": {
+        "anchor": "pkg.inside",
+        "source": {
+          "path": "fixtures/n4_outside_diagnostic.html",
+          "origin": "original synthetic page of this increment",
+          "sha256": "5cbb0a04914bff2da15ee8142353545144a444b74d8294f6cdabb8e87ac8e760",
+          "bytes": 322
+        },
+        "parser": {
+          "lxml": "6.1.3",
+          "libxml2_runtime": "2.14.6",
+          "libxml2_compiled": "2.14.6",
+          "parser": "lxml.html.HTMLParser() defaults (recover=True, comments and PIs kept)",
+          "encoding": "utf-8",
+          "diagnostics": [
+            {
+              "line": 12,
+              "column": 41,
+              "level": "ERROR",
+              "type": "ERR_TAG_NAME_MISMATCH",
+              "message": "Unexpected end tag : span"
+            }
+          ]
+        },
+        "matches": [
+          {
+            "tag": "dt",
+            "sourceline": 9,
+            "class": "sig sig-object py"
+          }
+        ],
+        "near_matches": [],
+        "reasons": [],
+        "candidate": {
+          "kind": "sphinx-object py function",
+          "signatures": 1,
+          "descriptions": 1,
+          "signature_ids": [
+            "pkg.inside"
+          ],
+          "anchor_position": 1,
+          "first_line": 9,
+          "last_line": 10,
+          "nested_object_ids": [],
+          "diagnostics_in_unit_lines": [],
+          "enclosing_object_id": null,
+          "dom_serialization": "<dt class=\"sig sig-object py\" id=\"pkg.inside\">inside()</dt>\n<dd><p>Clean description. MARK-INSIDE-DESC</p></dd>",
+          "dom_sha256": "e49b19e28d318e320251635ddacb515dc0b078beb7c040161f4894e5e0c18189",
+          "dom_bytes": 111,
+          "text_content": "inside()\nClean description. MARK-INSIDE-DESC",
+          "text_sha256": "3d6508b67ddc384c33b4b86cae9d79d70a631ea7c2fd587fa3568fda8d6fa0ab",
+          "text_bytes": 44,
+          "raw_occurrences_of_serialization": 1,
+          "raw_byte_span": {
+            "byte_start": 120,
+            "byte_end": 231
+          }
+        },
+        "contexts": {
+          "dom_serialization": {
+            "budget_bytes": 2048,
+            "context_bytes": 605,
+            "fits": true,
+            "context_sha256": "1b4f565e9712930c9b96b233eb3ec0016a9ddf4fd1d15d47c2219909fe219045",
+            "context": "query: anchor_id=pkg.inside\nsource: fixtures/n4_outside_diagnostic.html sha256=5cbb0a04914bff2da15ee8142353545144a444b74d8294f6cdabb8e87ac8e760 bytes=322\norigin: original synthetic page of this increment\nunit: sphinx-object py function signatures=1 descriptions=1 start_lines=9-10 (parser-reported element start lines; not byte offsets)\nrepresentation: dom_serialization sha256=e49b19e28d318e320251635ddacb515dc0b078beb7c040161f4894e5e0c18189 bytes=111\n-----BEGIN UNIT-----\n<dt class=\"sig sig-object py\" id=\"pkg.inside\">inside()</dt>\n<dd><p>Clean description. MARK-INSIDE-DESC</p></dd>\n-----END UNIT-----\n"
+          },
+          "text_content": {
+            "budget_bytes": 2048,
+            "context_bytes": 532,
+            "fits": true,
+            "context_sha256": "ec05daa2812d60ed8700fd35d2615d2b8254fda4eb77cd5cf8b30c068767308e",
+            "context": "query: anchor_id=pkg.inside\nsource: fixtures/n4_outside_diagnostic.html sha256=5cbb0a04914bff2da15ee8142353545144a444b74d8294f6cdabb8e87ac8e760 bytes=322\norigin: original synthetic page of this increment\nunit: sphinx-object py function signatures=1 descriptions=1 start_lines=9-10 (parser-reported element start lines; not byte offsets)\nrepresentation: text_content sha256=3d6508b67ddc384c33b4b86cae9d79d70a631ea7c2fd587fa3568fda8d6fa0ab bytes=44\n-----BEGIN UNIT-----\ninside()\nClean description. MARK-INSIDE-DESC\n-----END UNIT-----\n"
+          }
+        },
+        "status": {
+          "dom_serialization": "OK_STRUCTURAL_UNIT",
+          "text_content": "OK_STRUCTURAL_UNIT"
+        },
+        "semantically_reviewed": false
+      },
+      "checks": [
+        {
+          "check": "baseline prediction reasons",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": [],
+            "predicted": []
+          }
+        },
+        {
+          "check": "baseline prediction status",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": {
+              "dom_serialization": "OK_STRUCTURAL_UNIT",
+              "text_content": "OK_STRUCTURAL_UNIT"
+            },
+            "predicted": {
+              "dom_serialization": "OK_STRUCTURAL_UNIT",
+              "text_content": "OK_STRUCTURAL_UNIT"
+            }
+          }
+        },
+        {
+          "check": "baseline prediction first_line",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": 9,
+            "predicted": 9
+          }
+        },
+        {
+          "check": "baseline prediction last_line",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": 10,
+            "predicted": 10
+          }
+        },
+        {
+          "check": "baseline prediction diagnostics_in_unit_lines",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": [],
+            "predicted": []
+          }
+        },
+        {
+          "check": "baseline prediction diagnostic_lines",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": [
+              12
+            ],
+            "predicted": [
+              12
+            ]
+          }
+        },
+        {
+          "check": "baseline prediction raw_byte_span_region",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": {
+              "byte_start": 120,
+              "byte_end": 231
+            },
+            "predicted": {
+              "byte_start": 120,
+              "byte_end": 231
+            }
+          }
+        },
+        {
+          "check": "baseline: requirement reasons",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement status",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": {
+            "dom_serialization": "OK_STRUCTURAL_UNIT",
+            "text_content": "OK_STRUCTURAL_UNIT"
+          }
+        },
+        {
+          "check": "baseline: requirement unit",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "signatures": 1,
+            "descriptions": 1,
+            "signature_ids": [
+              "pkg.inside"
+            ]
+          }
+        },
+        {
+          "check": "baseline: requirement must_include",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement must_exclude",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": [
+            {
+              "line": 12,
+              "column": 41,
+              "level": "ERROR",
+              "type": "ERR_TAG_NAME_MISMATCH",
+              "message": "Unexpected end tag : span"
+            }
+          ]
+        },
+        {
+          "check": "baseline: requirement diagnostics_complete",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "independent_parse": 1
+          }
+        },
+        {
+          "check": "baseline: requirement no_alignment_claim",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": [
+            "$.candidate.diagnostics_in_unit_lines",
+            "$.candidate.raw_occurrences_of_serialization",
+            "$.candidate.raw_byte_span",
+            "$.candidate.raw_byte_span.byte_start",
+            "$.candidate.raw_byte_span.byte_end"
+          ]
+        },
+        {
+          "check": "baseline: requirement identities",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement budget_scope",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": {
+            "dom_serialization": null,
+            "text_content": null
+          }
+        },
+        {
+          "check": "baseline: requirement context_withheld",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "case": "N5",
+      "helper": "baseline",
+      "output": {
+        "anchor": "pkg.clean",
+        "source": {
+          "path": "fixtures/n5_clean_control.html",
+          "origin": "original synthetic page of this increment (control: N4 without the stray end tag)",
+          "sha256": "932ea06e032d5db1962cf65fdb1a0f3d520cdf531f73a6233b5fffcf3b47effb",
+          "bytes": 287
+        },
+        "parser": {
+          "lxml": "6.1.3",
+          "libxml2_runtime": "2.14.6",
+          "libxml2_compiled": "2.14.6",
+          "parser": "lxml.html.HTMLParser() defaults (recover=True, comments and PIs kept)",
+          "encoding": "utf-8",
+          "diagnostics": []
+        },
+        "matches": [
+          {
+            "tag": "dt",
+            "sourceline": 9,
+            "class": "sig sig-object py"
+          }
+        ],
+        "near_matches": [],
+        "reasons": [],
+        "candidate": {
+          "kind": "sphinx-object py function",
+          "signatures": 1,
+          "descriptions": 1,
+          "signature_ids": [
+            "pkg.clean"
+          ],
+          "anchor_position": 1,
+          "first_line": 9,
+          "last_line": 10,
+          "nested_object_ids": [],
+          "diagnostics_in_unit_lines": [],
+          "enclosing_object_id": null,
+          "dom_serialization": "<dt class=\"sig sig-object py\" id=\"pkg.clean\">clean()</dt>\n<dd><p>Clean description. MARK-CLEAN-DESC</p></dd>",
+          "dom_sha256": "c692fddb3fca7e145c085b336cffce782811081497e74a7ccbb3fca999899a6f",
+          "dom_bytes": 108,
+          "text_content": "clean()\nClean description. MARK-CLEAN-DESC",
+          "text_sha256": "ade86fdbb43ad53ae5daec8f92d96b0a7d5787b279f019b2446a63fafc12352a",
+          "text_bytes": 42,
+          "raw_occurrences_of_serialization": 1,
+          "raw_byte_span": {
+            "byte_start": 118,
+            "byte_end": 226
+          }
+        },
+        "contexts": {
+          "dom_serialization": {
+            "budget_bytes": 2048,
+            "context_bytes": 636,
+            "fits": true,
+            "context_sha256": "8a6191875fa73d82c89aa2d8472ea4869304775818e8f771ab541a0433a59806",
+            "context": "query: anchor_id=pkg.clean\nsource: fixtures/n5_clean_control.html sha256=932ea06e032d5db1962cf65fdb1a0f3d520cdf531f73a6233b5fffcf3b47effb bytes=287\norigin: original synthetic page of this increment (control: N4 without the stray end tag)\nunit: sphinx-object py function signatures=1 descriptions=1 start_lines=9-10 (parser-reported element start lines; not byte offsets)\nrepresentation: dom_serialization sha256=c692fddb3fca7e145c085b336cffce782811081497e74a7ccbb3fca999899a6f bytes=108\n-----BEGIN UNIT-----\n<dt class=\"sig sig-object py\" id=\"pkg.clean\">clean()</dt>\n<dd><p>Clean description. MARK-CLEAN-DESC</p></dd>\n-----END UNIT-----\n"
+          },
+          "text_content": {
+            "budget_bytes": 2048,
+            "context_bytes": 564,
+            "fits": true,
+            "context_sha256": "5c4cb94b87fd7f18d820635120d51b12a186f29b155ff49d051f80f556c8011f",
+            "context": "query: anchor_id=pkg.clean\nsource: fixtures/n5_clean_control.html sha256=932ea06e032d5db1962cf65fdb1a0f3d520cdf531f73a6233b5fffcf3b47effb bytes=287\norigin: original synthetic page of this increment (control: N4 without the stray end tag)\nunit: sphinx-object py function signatures=1 descriptions=1 start_lines=9-10 (parser-reported element start lines; not byte offsets)\nrepresentation: text_content sha256=ade86fdbb43ad53ae5daec8f92d96b0a7d5787b279f019b2446a63fafc12352a bytes=42\n-----BEGIN UNIT-----\nclean()\nClean description. MARK-CLEAN-DESC\n-----END UNIT-----\n"
+          }
+        },
+        "status": {
+          "dom_serialization": "OK_STRUCTURAL_UNIT",
+          "text_content": "OK_STRUCTURAL_UNIT"
+        },
+        "semantically_reviewed": false
+      },
+      "checks": [
+        {
+          "check": "baseline prediction reasons",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": [],
+            "predicted": []
+          }
+        },
+        {
+          "check": "baseline prediction status",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": {
+              "dom_serialization": "OK_STRUCTURAL_UNIT",
+              "text_content": "OK_STRUCTURAL_UNIT"
+            },
+            "predicted": {
+              "dom_serialization": "OK_STRUCTURAL_UNIT",
+              "text_content": "OK_STRUCTURAL_UNIT"
+            }
+          }
+        },
+        {
+          "check": "baseline prediction diagnostic_lines",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": [],
+            "predicted": []
+          }
+        },
+        {
+          "check": "baseline prediction raw_byte_span_region",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "observed": {
+              "byte_start": 118,
+              "byte_end": 226
+            },
+            "predicted": {
+              "byte_start": 118,
+              "byte_end": 226
+            }
+          }
+        },
+        {
+          "check": "baseline: requirement reasons",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement status",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "dom_serialization": "OK_STRUCTURAL_UNIT",
+            "text_content": "OK_STRUCTURAL_UNIT"
+          }
+        },
+        {
+          "check": "baseline: requirement unit",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "signatures": 1,
+            "descriptions": 1,
+            "signature_ids": [
+              "pkg.clean"
+            ]
+          }
+        },
+        {
+          "check": "baseline: requirement must_include",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement must_exclude",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement diagnostics",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement diagnostics_complete",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "independent_parse": 0
+          }
+        },
+        {
+          "check": "baseline: requirement no_alignment_claim",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": [
+            "$.candidate.diagnostics_in_unit_lines",
+            "$.candidate.raw_occurrences_of_serialization",
+            "$.candidate.raw_byte_span",
+            "$.candidate.raw_byte_span.byte_start",
+            "$.candidate.raw_byte_span.byte_end"
+          ]
+        },
+        {
+          "check": "baseline: requirement identities",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "baseline: requirement budget_scope",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": {
+            "dom_serialization": null,
+            "text_content": null
+          }
+        },
+        {
+          "check": "baseline: requirement context_withheld",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        }
+      ]
+    }
+  ],
+  "old_cases": [
+    {
+      "case": "C01",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C02",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C03",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C04",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C05",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C06",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C07",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C08",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C09",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C10",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C11",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C12",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C13",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C14",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C15",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C16",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C17",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C18",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C19",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C20",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C21",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C22",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "C23",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "P01",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "P02",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "P03",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    },
+    {
+      "case": "P04",
+      "check": {
+        "check": "baseline copy output equals the committed entry",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": null
+      }
+    }
+  ],
+  "baseline_comparator_mutations": [
+    {
+      "id": "M00",
+      "what": "no mutation (identity)",
+      "changes_text": false,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: allowed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "allowed"
+      }
+    },
+    {
+      "id": "M01",
+      "what": "environment.python differs",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: allowed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "allowed"
+      }
+    },
+    {
+      "id": "M02",
+      "what": "environment.platform differs",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: allowed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "allowed"
+      }
+    },
+    {
+      "id": "M03",
+      "what": "environment.machine differs",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: allowed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "allowed"
+      }
+    },
+    {
+      "id": "M04",
+      "what": "lxml version differs",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M05",
+      "what": "libxml2 runtime version differs",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M06",
+      "what": "an exempted key is missing",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M07",
+      "what": "case id changed",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M08",
+      "what": "anchor changed",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M09",
+      "what": "source file sha256 changed",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M10",
+      "what": "source path changed",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M11",
+      "what": "document encoding changed",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M12",
+      "what": "diagnostic message changed (C21)",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M13",
+      "what": "diagnostic column changed (C21)",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M14",
+      "what": "two diagnostics with the same line and type swapped (C21)",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M15",
+      "what": "one diagnostic removed (C21)",
+      "changes_text": true,
+      "baseline_exit": 1,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: detected",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "detected"
+      }
+    },
+    {
+      "id": "M16",
+      "what": "results C19 and C20 swapped (equal baseline digests)",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M17",
+      "what": "results C01 and C02 swapped",
+      "changes_text": true,
+      "baseline_exit": 1,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: detected",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "detected"
+      }
+    },
+    {
+      "id": "M18",
+      "what": "last result removed",
+      "changes_text": true,
+      "baseline_exit": 1,
+      "baseline_last_stderr_line": "ValueError: zip() argument 2 is shorter than argument 1",
+      "check": {
+        "check": "baseline comparator: crash",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "crash"
+      }
+    },
+    {
+      "id": "M19",
+      "what": "key added to a result",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M20",
+      "what": "candidate key removed",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M21",
+      "what": "true written as 1",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M22",
+      "what": "integer written as float",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M23",
+      "what": "context text changed, its sha256 field not",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M24",
+      "what": "text payload changed, its sha256 field not",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M25",
+      "what": "check detail changed",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M26",
+      "what": "diagnostic level changed (C17)",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M27",
+      "what": "top-level key added",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M28",
+      "what": "key order of a result reversed",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    },
+    {
+      "id": "M29",
+      "what": "environment.python and reason order both changed (C21)",
+      "changes_text": true,
+      "baseline_exit": 1,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: detected",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "detected"
+      }
+    },
+    {
+      "id": "M30",
+      "what": "status changed",
+      "changes_text": true,
+      "baseline_exit": 1,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: detected",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "detected"
+      }
+    },
+    {
+      "id": "M31",
+      "what": "duplicate object key in the JSON text (json.loads keeps the last)",
+      "changes_text": true,
+      "baseline_exit": 0,
+      "baseline_last_stderr_line": null,
+      "check": {
+        "check": "baseline comparator: missed",
+        "result": "PASS",
+        "predicted": "PASS",
+        "detail": "missed"
+      }
+    }
+  ]
+}
