@@ -1,0 +1,87 @@
+# fresh-clone check, 2026-10-18T02:44:40Z, Linux only; clone and replay directories are kept, nothing is deleted
+# clone: /home/user/verify/json-numeric-2ec0051-20261018T024440Z-25c94ab8
+# replay outputs (outside the clone): /home/user/verify/json-numeric-2ec0051-20261018T024440Z-25c94ab8-replay
+$ git clone --branch claude/adoring-turing-3ekxhe https://github.com/gmfjc624d2-dot/trafilatura.git <clone>
+exit=0
+$ git -C <clone> rev-parse HEAD; for c in b4fa142 5c3e94f f667484; do git -C <clone> merge-base --is-ancestor $c HEAD; done
+2ec0051fd19df81605a57402ebfb506fd1ed5568
+b4fa1424ead6fe23e93ed1ca6a698e401f2b403b is an ancestor
+5c3e94f30cd954a57b1a0fbb31102b36d61f6c47 is an ancestor
+f667484067666298c6f1e510cc80dab49397cbfc is an ancestor
+exit=0
+$ git -C <clone> diff --stat b4fa142 HEAD -- . ':!research/public-json-numeric-integrity-20261018-01'   # empty = nothing outside the new directory changed
+exit=0
+$ git -C <clone> diff --stat f667484 HEAD -- research/public-json-numeric-integrity-20261018-01/scripts/run_cases.py research/public-json-numeric-integrity-20261018-01/results/baseline-linux-py3.12   # empty = runner and baseline evidence unchanged by the repair
+exit=0
+$ (cd <clone>/research/public-json-numeric-integrity-20261018-01 && sha256sum -c --quiet SHA256SUMS && sha256sum -c --quiet PREREGISTERED.sha256)
+all 129 + 114 OK
+exit=0
+$ (cd <clone>/research/public-sphinx-evidence-integrity-20261018-01 && sha256sum -c --quiet SHA256SUMS)   # earlier increment preserved
+all 35 OK
+exit=0
+$ (cd <clone>/research/public-sphinx-anchor-units-20261018-01 && sha256sum -c --quiet SHA256SUMS)   # earlier increment preserved
+all 37 OK
+exit=0
+$ (cd <clone>/research/public-evidence-spans-20261018-01 && sha256sum -c --quiet SHA256SUMS)   # earlier increment preserved
+all 31 OK
+exit=0
+# below: inside unshare -rn (no network), PYTHONDONTWRITEBYTECODE=1, from <clone>/research/public-json-numeric-integrity-20261018-01, standard library only
+$ unshare -rn python3.12 scripts/build_fixtures.py check
+check: identical
+exit=0
+$ unshare -rn python3.12 scripts/run_cases.py repaired <replay>/run | tail -14   # 1 expected: I07, I10, O1 kept
+  "pass": 186,
+  "fail": 2,
+  "fail, predicted (kept)": 0,
+  "findings (result differs from prediction)": 2,
+  "cli outcomes": {
+    "different": 26,
+    "equal": 18,
+    "invalid": 22
+  }
+}
+FINDING requirement diagnostics ["INVALID INPUT (committed): codec can't decode byte 0xff"]
+FINDING requirement diagnostics ["INVALID INPUT (committed): No such file or directory"]
+FINDING O1 null
+interpreter observations: 4 checks, findings 1
+exit=1
+$ unshare -rn python3.12 scripts/compare_results.py results/run1-linux-py3.12/cases.json <replay>/run/cases.json
+exempt $.environment.python: committed "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]" | replay "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+exempt $.environment.platform: committed "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39" | replay "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39"
+exempt $.environment.machine: committed "x86_64" | replay "x86_64"
+differences outside the 3 exempt paths: 0
+exit=0
+$ cmp results/run1-linux-py3.12/interpreter_observations.json <replay>/run/interpreter_observations.json   # same interpreter here
+identical
+exit=0
+$ unshare -rn python3.12 scripts/run_cases.py baseline <replay>/baseline | tail -14   # 1 expected: O1 kept
+  "checks": 275,
+  "pass": 245,
+  "fail": 30,
+  "fail, predicted (kept)": 30,
+  "findings (result differs from prediction)": 0,
+  "cli outcomes": {
+    "crash": 2,
+    "different": 17,
+    "equal": 34,
+    "invalid": 13
+  }
+}
+FINDING O1 null
+interpreter observations: 4 checks, findings 1
+exit=1
+$ unshare -rn python3.12 scripts/compare_results.py results/baseline-linux-py3.12/cases.json <replay>/baseline/cases.json
+exempt $.environment.python: committed "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]" | replay "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+exempt $.environment.platform: committed "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39" | replay "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39"
+exempt $.environment.machine: committed "x86_64" | replay "x86_64"
+differences outside the 3 exempt paths: 0
+exit=0
+$ unshare -rn python3.12 -m unittest discover -s scripts 2>&1 | tail -3
+Ran 27 tests in 1.051s
+
+OK
+exit=0
+$ git -C <clone> status --short --ignored; ls -d <clone> <replay>   # empty status: nothing written into the source; both kept
+<clone>
+<replay>
+exit=0
