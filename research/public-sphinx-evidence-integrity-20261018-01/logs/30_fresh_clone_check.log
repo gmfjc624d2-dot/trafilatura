@@ -1,0 +1,101 @@
+# fresh-clone check, 2026-10-18T01:52:08Z, Linux only; clone and replay directories are kept, nothing is deleted
+# clone: /home/user/verify/evidence-integrity-3767a08-20261018T015208Z-662ccc45
+# replay outputs: /home/user/verify/evidence-integrity-3767a08-20261018T015208Z-662ccc45-replay
+$ git clone --branch claude/adoring-turing-3ekxhe https://github.com/gmfjc624d2-dot/trafilatura.git <clone>
+exit=0
+$ git -C <clone> rev-parse HEAD
+3767a0894bb8cf2a8b93b9f52c502465562a025f
+$ (cd <clone>/research/public-sphinx-evidence-integrity-20261018-01 && sha256sum -c --quiet SHA256SUMS && sha256sum -c --quiet PREREGISTERED.sha256)
+all 34 + 17 OK
+exit=0
+$ git -C <clone> diff --stat 7345bfe HEAD -- . ':!research/public-sphinx-evidence-integrity-20261018-01'   # empty = nothing outside the new directory changed
+exit=0
+$ git -C <clone> diff --stat d386b49 HEAD -- research/public-sphinx-evidence-integrity-20261018-01/fixtures research/public-sphinx-evidence-integrity-20261018-01/scripts/build_fixtures.py research/public-sphinx-evidence-integrity-20261018-01/scripts/check_fixtures.py research/public-sphinx-evidence-integrity-20261018-01/scripts/*_baseline_7345bfe.py   # empty = pre-registration unchanged
+exit=0
+$ git -C <clone> diff --stat 9004016 HEAD -- research/public-sphinx-evidence-integrity-20261018-01/scripts/grading.py research/public-sphinx-evidence-integrity-20261018-01/scripts/reproduce_baseline.py research/public-sphinx-evidence-integrity-20261018-01/results/baseline-linux-py3.12   # empty = grading unchanged since before the repair
+exit=0
+$ (cd <clone>/research/public-sphinx-anchor-units-20261018-01 && sha256sum -c --quiet SHA256SUMS)   # earlier increment
+all 37 OK
+exit=0
+$ (cd <clone>/research/public-evidence-spans-20261018-01 && sha256sum -c --quiet SHA256SUMS)   # earlier increment
+all 31 OK
+exit=0
+$ (cd <clone>/research/techdoc-extraction-v2.3.1 && grep -v .ruff_cache/ ARTIFACTS.sha256 | sha256sum -c --quiet)   # earlier increment; its .ruff_cache lines list untracked files (disclosed before)
+all 89 tracked entries OK
+exit=0
+# below: inside unshare -rn (no network), from <clone>/research/public-sphinx-evidence-integrity-20261018-01
+$ unshare -rn <venv3.12>/bin/python scripts/build_fixtures.py check
+check: identical
+exit=0
+$ unshare -rn <venv3.12>/bin/python scripts/check_fixtures.py | tail -1; git status --short .   # rewrites byte_facts.json; empty status = identical
+new cases: 5, mutations: 32, problems: 0
+exit=0
+$ unshare -rn <venv3.12>/bin/python scripts/reproduce_baseline.py <replay>/baseline | tail -14
+{
+  "checks": 145,
+  "pass": 131,
+  "fail": 14,
+  "fail_predicted (baseline failures, kept)": 14,
+  "findings (result differs from prediction)": 0,
+  "invalid mutations": [],
+  "baseline comparator outcomes": {
+    "allowed": 4,
+    "crash": 1,
+    "detected": 4,
+    "missed": 23
+  }
+}
+exit=0
+$ unshare -rn <venv3.12>/bin/python scripts/compare_results.py results/baseline-linux-py3.12/baseline_reproduction.json <replay>/baseline/baseline_reproduction.json
+exempt $.environment.python: committed "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]" | replay "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+exempt $.environment.platform: committed "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39" | replay "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39"
+exempt $.environment.machine: committed "x86_64" | replay "x86_64"
+differences outside the 3 exempt paths: 0
+exit=0
+$ unshare -rn <venv3.12>/bin/python scripts/run_experiment.py <replay>/run | tail -27
+M31 duplicate object key in the JSON text (json.loads keeps the last): repaired rejected, baseline missed
+{
+  "checks": 386,
+  "pass": 369,
+  "fail": 17,
+  "fail, predicted (kept)": 17,
+  "findings (result differs from prediction)": 0,
+  "not applicable (old raw_region checks after R2)": 7,
+  "invalid mutations": []
+}
+  FAIL (predicted, kept): baseline: requirement reasons -> []
+  FAIL (predicted, kept): baseline: requirement status -> {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}
+  FAIL (predicted, kept): baseline: requirement no_alignment_claim -> ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span"]
+  FAIL (predicted, kept): baseline: requirement budget_scope -> {"dom_serialization": null, "text_content": null}
+  FAIL (predicted, kept): baseline: requirement no_alignment_claim -> ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte_start", "$.candidate.raw_byte_span.byte_end"]
+  FAIL (predicted, kept): baseline: requirement budget_scope -> {"dom_serialization": null, "text_content": null}
+  FAIL (predicted, kept): baseline: requirement no_alignment_claim -> ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte_start", "$.candidate.raw_byte_span.byte_end"]
+  FAIL (predicted, kept): baseline: requirement budget_scope -> {"dom_serialization": null, "text_content": null}
+  FAIL (predicted, kept): baseline: requirement reasons -> []
+  FAIL (predicted, kept): baseline: requirement status -> {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}
+  FAIL (predicted, kept): baseline: requirement no_alignment_claim -> ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte_start", "$.candidate.raw_byte_span.byte_end"]
+  FAIL (predicted, kept): baseline: requirement budget_scope -> {"dom_serialization": null, "text_content": null}
+  FAIL (predicted, kept): baseline: requirement no_alignment_claim -> ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte_start", "$.candidate.raw_byte_span.byte_end"]
+  FAIL (predicted, kept): baseline: requirement budget_scope -> {"dom_serialization": null, "text_content": null}
+  FAIL (predicted, kept): dom_serialization: budget fits -> {"observed": "over", "context_bytes": 2054}
+  FAIL (predicted, kept): dom_serialization: budget fits -> {"observed": "over", "context_bytes": 2187}
+  FAIL (predicted, kept): reasons include ['PARSER_RECOVERY_IN_UNIT'] -> ["PARSER_DIAGNOSTICS_PRESENT"]
+exit=0
+$ unshare -rn <venv3.12>/bin/python scripts/compare_results.py results/run1-linux-py3.12/results.json <replay>/run/results.json
+exempt $.environment.python: committed "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]" | replay "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+exempt $.environment.platform: committed "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39" | replay "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39"
+exempt $.environment.machine: committed "x86_64" | replay "x86_64"
+differences outside the 3 exempt paths: 0
+exit=0
+$ cmp results/run1-linux-py3.12/summary.md <replay>/run/summary.md
+identical
+exit=0
+$ unshare -rn <venv3.12>/bin/python -m unittest discover -s scripts 2>&1 | tail -3
+Ran 20 tests in 2.086s
+
+OK
+exit=0
+$ git -C <clone> status --short; ls -d <clone> <replay>   # clean clone (ignored __pycache__ only); both kept
+<clone>
+<replay>
+exit=0
