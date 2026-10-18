@@ -1,0 +1,25 @@
+# first run of the repaired helper and comparator
+$ unshare -rn <venv3.12>/bin/python scripts/run_experiment.py results/run1-linux-py3.12
+Traceback (most recent call last):
+  File "<repo>/research/public-sphinx-evidence-integrity-20261018-01/scripts/run_experiment.py", line 222, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "<repo>/research/public-sphinx-evidence-integrity-20261018-01/scripts/run_experiment.py", line 177, in main
+    "old_cases": old_rows(),
+                 ^^^^^^^^^^
+  File "<repo>/research/public-sphinx-evidence-integrity-20261018-01/scripts/run_experiment.py", line 61, in old_rows
+    d_base = [[cmp.render(p), w] for p, w, _, _ in cmp.compare(base, committed, exceptions=())]
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/research/public-sphinx-evidence-integrity-20261018-01/scripts/compare_results.py", line 81, in compare
+    diffs += compare(a[key], b[key], exceptions, (*path, key))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/research/public-sphinx-evidence-integrity-20261018-01/scripts/compare_results.py", line 86, in compare
+    diffs += compare(x, y, exceptions, (*path, i))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/research/public-sphinx-evidence-integrity-20261018-01/scripts/compare_results.py", line 70, in compare
+    ta, tb = json_type(a), json_type(b)
+             ^^^^^^^^^^^^
+  File "<repo>/research/public-sphinx-evidence-integrity-20261018-01/scripts/compare_results.py", line 51, in json_type
+    raise TypeError(type(value))
+TypeError: <class 'lxml.etree._ElementUnicodeResult'>
+exit=1

@@ -1,0 +1,107 @@
+# second attempt, after attempt 1 crashed (logs/20_run_experiment_attempt1_crash.log): in-memory outputs are now compared as JSON (compare_results.as_json)
+$ unshare -rn <venv3.12>/bin/python scripts/run_experiment.py results/run1-linux-py3.12
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "lxml": "6.1.3",
+  "libxml2_runtime": "2.14.6",
+  "libxml2_compiled": "2.14.6",
+  "parser": "lxml.html.HTMLParser() defaults (recover=True, comments and PIs kept)"
+}
+N1 baseline reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'}
+N1 repaired reasons=['PARSER_DIAGNOSTICS_PRESENT'] status={'dom_serialization': 'REVIEW', 'text_content': 'REVIEW'}
+N2 baseline reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'}
+N2 repaired reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'}
+N3 baseline reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'}
+N3 repaired reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'}
+N4 baseline reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'}
+N4 repaired reasons=['PARSER_DIAGNOSTICS_PRESENT'] status={'dom_serialization': 'REVIEW', 'text_content': 'REVIEW'}
+N5 baseline reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'}
+N5 repaired reasons=[] status={'dom_serialization': 'OK_STRUCTURAL_UNIT', 'text_content': 'OK_STRUCTURAL_UNIT'}
+C01 repaired reasons=[] failed=['dom_serialization: budget fits']
+C02 repaired reasons=['STRAY_CONTENT_IN_OBJECT_DL'] failed=[]
+C03 repaired reasons=['NOT_SPHINX_OBJECT'] failed=[]
+C04 repaired reasons=['NOT_A_SIGNATURE'] failed=[]
+C05 repaired reasons=['NOT_A_SIGNATURE'] failed=[]
+C06 repaired reasons=['MISSING_ID'] failed=[]
+C07 repaired reasons=[] failed=[]
+C08 repaired reasons=[] failed=[]
+C09 repaired reasons=['EMPTY_DESCRIPTION'] failed=[]
+C10 repaired reasons=['NO_DESCRIPTION'] failed=[]
+C11 repaired reasons=['MULTIPLE_GROUPS_IN_OBJECT_DL'] failed=[]
+C12 repaired reasons=[] failed=['dom_serialization: budget fits']
+C13 repaired reasons=[] failed=[]
+C14 repaired reasons=[] failed=[]
+C15 repaired reasons=['UNEXPECTED_NESTED_OBJECT'] failed=[]
+C16 repaired reasons=['UNEXPECTED_NESTED_OBJECT'] failed=[]
+C17 repaired reasons=['DUPLICATE_ID', 'PARSER_DIAGNOSTICS_PRESENT'] failed=[]
+C18 repaired reasons=[] failed=[]
+C19 repaired reasons=['ID_NORMALIZATION_MISMATCH'] failed=[]
+C20 repaired reasons=['ID_NORMALIZATION_MISMATCH'] failed=[]
+C21 repaired reasons=['UNEXPECTED_NESTED_OBJECT', 'PARSER_DIAGNOSTICS_PRESENT'] failed=[]
+C22 repaired reasons=['UNEXPECTED_NESTED_OBJECT', 'PARSER_DIAGNOSTICS_PRESENT'] failed=[]
+C23 repaired reasons=['PARSER_DIAGNOSTICS_PRESENT'] failed=["reasons include ['PARSER_RECOVERY_IN_UNIT']"]
+P01 repaired reasons=[] failed=[]
+P02 repaired reasons=['MISSING_ID'] failed=[]
+P03 repaired reasons=['NOT_A_SIGNATURE'] failed=[]
+P04 repaired reasons=['NOT_A_SIGNATURE'] failed=[]
+M00 no mutation (identity): repaired allowed, baseline allowed
+M01 environment.python differs: repaired allowed, baseline allowed
+M02 environment.platform differs: repaired allowed, baseline allowed
+M03 environment.machine differs: repaired allowed, baseline allowed
+M04 lxml version differs: repaired detected, baseline missed
+M05 libxml2 runtime version differs: repaired detected, baseline missed
+M06 an exempted key is missing: repaired detected, baseline missed
+M07 case id changed: repaired detected, baseline missed
+M08 anchor changed: repaired detected, baseline missed
+M09 source file sha256 changed: repaired detected, baseline missed
+M10 source path changed: repaired detected, baseline missed
+M11 document encoding changed: repaired detected, baseline missed
+M12 diagnostic message changed (C21): repaired detected, baseline missed
+M13 diagnostic column changed (C21): repaired detected, baseline missed
+M14 two diagnostics with the same line and type swapped (C21): repaired detected, baseline missed
+M15 one diagnostic removed (C21): repaired detected, baseline detected
+M16 results C19 and C20 swapped (equal baseline digests): repaired detected, baseline missed
+M17 results C01 and C02 swapped: repaired detected, baseline detected
+M18 last result removed: repaired detected, baseline crash
+M19 key added to a result: repaired detected, baseline missed
+M20 candidate key removed: repaired detected, baseline missed
+M21 true written as 1: repaired detected, baseline missed
+M22 integer written as float: repaired detected, baseline missed
+M23 context text changed, its sha256 field not: repaired detected, baseline missed
+M24 text payload changed, its sha256 field not: repaired detected, baseline missed
+M25 check detail changed: repaired detected, baseline missed
+M26 diagnostic level changed (C17): repaired detected, baseline missed
+M27 top-level key added: repaired detected, baseline missed
+M28 key order of a result reversed: repaired detected, baseline missed
+M29 environment.python and reason order both changed (C21): repaired detected, baseline detected
+M30 status changed: repaired detected, baseline detected
+M31 duplicate object key in the JSON text (json.loads keeps the last): repaired rejected, baseline missed
+{
+  "checks": 386,
+  "pass": 369,
+  "fail": 17,
+  "fail, predicted (kept)": 17,
+  "findings (result differs from prediction)": 0,
+  "not applicable (old raw_region checks after R2)": 7,
+  "invalid mutations": []
+}
+  FAIL (predicted, kept): baseline: requirement reasons -> []
+  FAIL (predicted, kept): baseline: requirement status -> {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}
+  FAIL (predicted, kept): baseline: requirement no_alignment_claim -> ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span"]
+  FAIL (predicted, kept): baseline: requirement budget_scope -> {"dom_serialization": null, "text_content": null}
+  FAIL (predicted, kept): baseline: requirement no_alignment_claim -> ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte_start", "$.candidate.raw_byte_span.byte_end"]
+  FAIL (predicted, kept): baseline: requirement budget_scope -> {"dom_serialization": null, "text_content": null}
+  FAIL (predicted, kept): baseline: requirement no_alignment_claim -> ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte_start", "$.candidate.raw_byte_span.byte_end"]
+  FAIL (predicted, kept): baseline: requirement budget_scope -> {"dom_serialization": null, "text_content": null}
+  FAIL (predicted, kept): baseline: requirement reasons -> []
+  FAIL (predicted, kept): baseline: requirement status -> {"dom_serialization": "OK_STRUCTURAL_UNIT", "text_content": "OK_STRUCTURAL_UNIT"}
+  FAIL (predicted, kept): baseline: requirement no_alignment_claim -> ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte_start", "$.candidate.raw_byte_span.byte_end"]
+  FAIL (predicted, kept): baseline: requirement budget_scope -> {"dom_serialization": null, "text_content": null}
+  FAIL (predicted, kept): baseline: requirement no_alignment_claim -> ["$.candidate.diagnostics_in_unit_lines", "$.candidate.raw_occurrences_of_serialization", "$.candidate.raw_byte_span", "$.candidate.raw_byte_span.byte_start", "$.candidate.raw_byte_span.byte_end"]
+  FAIL (predicted, kept): baseline: requirement budget_scope -> {"dom_serialization": null, "text_content": null}
+  FAIL (predicted, kept): dom_serialization: budget fits -> {"observed": "over", "context_bytes": 2054}
+  FAIL (predicted, kept): dom_serialization: budget fits -> {"observed": "over", "context_bytes": 2187}
+  FAIL (predicted, kept): reasons include ['PARSER_RECOVERY_IN_UNIT'] -> ["PARSER_DIAGNOSTICS_PRESENT"]
+exit=0

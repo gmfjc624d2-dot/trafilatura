@@ -1,0 +1,32 @@
+# first run of the focused tests
+$ unshare -rn <venv3.12>/bin/python -m unittest discover -s scripts -v
+test_old_contexts_stay_byte_identical (test_evidence_integrity.Budget.test_old_contexts_stay_byte_identical) ... ok
+test_template_budget_and_scope_as_preregistered (test_evidence_integrity.Budget.test_template_budget_and_scope_as_preregistered) ... ok
+test_both_command_lines_classify_as_preregistered (test_evidence_integrity.Comparator.test_both_command_lines_classify_as_preregistered)
+the repaired CLI meets each control; the baseline CLI (negative control) misses what was predicted ... ok
+test_cli_exit_codes (test_evidence_integrity.Comparator.test_cli_exit_codes) ... ok
+test_difference_paths_as_preregistered (test_evidence_integrity.Comparator.test_difference_paths_as_preregistered) ... ok
+test_exceptions_are_exactly_three_environment_values (test_evidence_integrity.Comparator.test_exceptions_are_exactly_three_environment_values) ... ok
+test_invalid_inputs_are_rejected (test_evidence_integrity.Comparator.test_invalid_inputs_are_rejected) ... ok
+test_json_types_are_distinct (test_evidence_integrity.Comparator.test_json_types_are_distinct) ... ok
+test_comment_copy_is_not_the_live_node (test_evidence_integrity.NoSourceAlignment.test_comment_copy_is_not_the_live_node) ... ok
+test_identities_are_distinct_and_recomputable (test_evidence_integrity.NoSourceAlignment.test_identities_are_distinct_and_recomputable) ... ok
+test_no_span_offset_or_count_in_any_output (test_evidence_integrity.NoSourceAlignment.test_no_span_offset_or_count_in_any_output) ... ok
+test_windows_1252_document (test_evidence_integrity.NoSourceAlignment.test_windows_1252_document) ... ok
+test_baseline_copy_reproduces_the_committed_entries (test_evidence_integrity.OldCases.test_baseline_copy_reproduces_the_committed_entries) ... ok
+test_in_memory_output_is_not_json_typed (test_evidence_integrity.OldCases.test_in_memory_output_is_not_json_typed)
+found by the first run: near_matches come from xpath() as lxml str subclasses; the strict comparator refuses them ... ok
+test_repaired_output_is_the_preregistered_transform (test_evidence_integrity.OldCases.test_repaired_output_is_the_preregistered_transform) ... ok
+test_any_diagnostic_on_the_page_requires_review (test_evidence_integrity.ParserDiagnostics.test_any_diagnostic_on_the_page_requires_review) ... ok
+test_baseline_still_accepts_it (test_evidence_integrity.ParserDiagnostics.test_baseline_still_accepts_it)
+negative control (D1): the start-line filter drops the line 3 diagnostic ... ok
+test_late_diagnostic_inside_the_dd_requires_review (test_evidence_integrity.ParserDiagnostics.test_late_diagnostic_inside_the_dd_requires_review) ... ok
+test_reason_also_without_candidate_and_old_reason_gone (test_evidence_integrity.ParserDiagnostics.test_reason_also_without_candidate_and_old_reason_gone) ... ok
+test_start_lines_are_no_end_range (test_evidence_integrity.ParserDiagnostics.test_start_lines_are_no_end_range)
+the dd's text runs to line 5 of the file while every unit element starts on line 1 ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.178s
+
+OK
+exit=0
