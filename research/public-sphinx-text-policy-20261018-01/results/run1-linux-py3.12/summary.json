@@ -1,0 +1,2314 @@
+{
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "lxml": "6.1.3",
+    "libxml2_runtime": "2.14.6",
+    "libxml2_compiled": "2.14.6",
+    "html5lib": "1.1",
+    "six": "1.17.0",
+    "webencodings": "0.5.1",
+    "elementtree": "xml.etree.ElementTree"
+  },
+  "request_id": "public-sphinx-text-policy-20261018-01",
+  "implementation": {
+    "research/public-sphinx-text-policy-20261018-01/scripts/text_policy.py": "21effa19a3f48e6863b79331660fb6cbb2d3e56f024265fe1254c2600699855b",
+    "research/public-sphinx-text-policy-20261018-01/scripts/replay.py": "92f45b504e5de7423ac639a9fab55890b064d0245d1031a1ab3d018ec2dc1df1",
+    "research/public-sphinx-parser-corroboration-20261018-01/scripts/corroborate.py": "4b5e79140f6d883b3972b8451fef40e093520500d880c3a2cc870010303d4b1d",
+    "research/public-sphinx-evidence-integrity-20261018-01/scripts/anchor_unit.py": "9c01351705ca8fe475df3925550d015cf69d4cbda324d042e32f0c909ec404e9",
+    "research/public-json-numeric-integrity-20261018-01/scripts/compare_results.py": "29267d535e66f03dca617b48650c83a601ba22e9d4383e50ca2af8c990596e19"
+  },
+  "dependencies": {
+    "html5lib": {
+      "version": "1.1",
+      "wheel": "research/public-sphinx-parser-corroboration-20261018-01/wheels/html5lib-1.1-py2.py3-none-any.whl",
+      "zipimported_from_wheel": true,
+      "wheel_sha256": "0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d",
+      "matches_pin": true
+    },
+    "six": {
+      "version": "1.17.0",
+      "wheel": "research/public-sphinx-parser-corroboration-20261018-01/wheels/six-1.17.0-py2.py3-none-any.whl",
+      "zipimported_from_wheel": true,
+      "wheel_sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "matches_pin": true
+    },
+    "webencodings": {
+      "version": "0.5.1",
+      "wheel": "research/public-sphinx-parser-corroboration-20261018-01/wheels/webencodings-0.5.1-py2.py3-none-any.whl",
+      "zipimported_from_wheel": true,
+      "wheel_sha256": "a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78",
+      "matches_pin": true
+    }
+  },
+  "totals": {
+    "PASS": 186,
+    "FAIL": 0,
+    "RECORDED": 87
+  },
+  "global_checks": [
+    {
+      "check": "dependency html5lib is the pinned wheel through zipimport",
+      "result": "PASS",
+      "observed": {
+        "version": "1.1",
+        "wheel": "research/public-sphinx-parser-corroboration-20261018-01/wheels/html5lib-1.1-py2.py3-none-any.whl",
+        "zipimported_from_wheel": true,
+        "wheel_sha256": "0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d",
+        "matches_pin": true
+      }
+    },
+    {
+      "check": "dependency six is the pinned wheel through zipimport",
+      "result": "PASS",
+      "observed": {
+        "version": "1.17.0",
+        "wheel": "research/public-sphinx-parser-corroboration-20261018-01/wheels/six-1.17.0-py2.py3-none-any.whl",
+        "zipimported_from_wheel": true,
+        "wheel_sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+        "matches_pin": true
+      }
+    },
+    {
+      "check": "dependency webencodings is the pinned wheel through zipimport",
+      "result": "PASS",
+      "observed": {
+        "version": "0.5.1",
+        "wheel": "research/public-sphinx-parser-corroboration-20261018-01/wheels/webencodings-0.5.1-py2.py3-none-any.whl",
+        "zipimported_from_wheel": true,
+        "wheel_sha256": "a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78",
+        "matches_pin": true
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N1",
+      "anchor": "pkg.late",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n1_late_diagnostic.html",
+      "structural_disposition": "REVIEW",
+      "existing_helper_status": {
+        "dom_serialization": "REVIEW",
+        "text_content": "REVIEW"
+      },
+      "consumer_gate": "NOT_GRANTED",
+      "findings": [
+        "LXML_DIAGNOSTICS_PRESENT",
+        "HTML5LIB_ERRORS_PRESENT"
+      ],
+      "mutation_controls": {
+        "lxml": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [],
+          "equal_to_rule": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        },
+        "html5lib": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [],
+          "equal_to_rule": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "check": "structural disposition",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "comparison findings",
+          "result": "PASS",
+          "observed": [
+            "LXML_DIAGNOSTICS_PRESENT",
+            "HTML5LIB_ERRORS_PRESENT"
+          ],
+          "predicted": [
+            "LXML_DIAGNOSTICS_PRESENT",
+            "HTML5LIB_ERRORS_PRESENT"
+          ]
+        },
+        {
+          "check": "helper status",
+          "result": "RECORDED",
+          "observed": {
+            "dom_serialization": "REVIEW",
+            "text_content": "REVIEW"
+          }
+        },
+        {
+          "check": "lxml_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation lxml itertext equals rule",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation lxml itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "html5lib_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation elementtree_c_accelerated",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property R9 (corrected) a helper reasons and status unchanged",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) b any helper reason gives structural REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) c consumer_gate NOT_GRANTED",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "historical R9 on the successor axes (not a requirement)",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property report layout (pre-registered changed fields)",
+          "result": "PASS",
+          "observed": [
+            "environment",
+            "request_id",
+            "anchor",
+            "source",
+            "decoding_policy",
+            "parsers",
+            "name_mapping",
+            "existing_helper",
+            "trees",
+            "checks",
+            "comparison",
+            "observations",
+            "text_ledger",
+            "comparison_scope",
+            "structural_corroboration",
+            "consumer_gate"
+          ]
+        },
+        {
+          "check": "property checks: the four predecessor checks then the two oracle checks",
+          "result": "PASS",
+          "observed": [
+            "lxml_parse_diagnostics_equal_helper",
+            "mirror_reasons_equal_helper",
+            "mirror_membership_equals_helper",
+            "lxml_text_rule_equals_helper_text_content",
+            "lxml_text_rule_equals_oracle",
+            "html5lib_text_rule_equals_oracle"
+          ]
+        },
+        {
+          "check": "property T1 itertext is no check and no finding",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 comparison_scope as pre-registered",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 the scope's attributes are the compared ones",
+          "result": "PASS",
+          "observed": [
+            "id",
+            "class",
+            "href"
+          ]
+        },
+        {
+          "check": "property R7 diagnostics, errors, ambiguity, disagreement or helper reasons keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "property mutation lxml oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation lxml detected",
+          "result": "RECORDED",
+          "observed": []
+        },
+        {
+          "check": "mutation lxml equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "property mutation html5lib oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation html5lib detected",
+          "result": "RECORDED",
+          "observed": []
+        },
+        {
+          "check": "mutation html5lib equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "property unchanged fields equal the committed predecessor report",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "predecessor CONSISTENCY_CHECK_FAILED findings (removed in the successor if only itertext failed)",
+          "result": "RECORDED",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "N2",
+      "anchor": "pkg.target",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n2_comment_match.html",
+      "structural_disposition": "STRUCTURE_CORROBORATED",
+      "existing_helper_status": {
+        "dom_serialization": "OK_STRUCTURAL_UNIT",
+        "text_content": "OK_STRUCTURAL_UNIT"
+      },
+      "consumer_gate": "NOT_GRANTED",
+      "findings": [],
+      "mutation_controls": {
+        "lxml": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [],
+          "equal_to_rule": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        },
+        "html5lib": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [],
+          "equal_to_rule": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "check": "structural disposition",
+          "result": "PASS",
+          "observed": "STRUCTURE_CORROBORATED",
+          "predicted": "STRUCTURE_CORROBORATED"
+        },
+        {
+          "check": "comparison findings",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "helper status",
+          "result": "RECORDED",
+          "observed": {
+            "dom_serialization": "OK_STRUCTURAL_UNIT",
+            "text_content": "OK_STRUCTURAL_UNIT"
+          }
+        },
+        {
+          "check": "lxml_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation lxml itertext equals rule",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation lxml itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "html5lib_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation elementtree_c_accelerated",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property R9 (corrected) a helper reasons and status unchanged",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) b any helper reason gives structural REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) c consumer_gate NOT_GRANTED",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "historical R9 on the successor axes (not a requirement)",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property report layout (pre-registered changed fields)",
+          "result": "PASS",
+          "observed": [
+            "environment",
+            "request_id",
+            "anchor",
+            "source",
+            "decoding_policy",
+            "parsers",
+            "name_mapping",
+            "existing_helper",
+            "trees",
+            "checks",
+            "comparison",
+            "observations",
+            "text_ledger",
+            "comparison_scope",
+            "structural_corroboration",
+            "consumer_gate"
+          ]
+        },
+        {
+          "check": "property checks: the four predecessor checks then the two oracle checks",
+          "result": "PASS",
+          "observed": [
+            "lxml_parse_diagnostics_equal_helper",
+            "mirror_reasons_equal_helper",
+            "mirror_membership_equals_helper",
+            "lxml_text_rule_equals_helper_text_content",
+            "lxml_text_rule_equals_oracle",
+            "html5lib_text_rule_equals_oracle"
+          ]
+        },
+        {
+          "check": "property T1 itertext is no check and no finding",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 comparison_scope as pre-registered",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 the scope's attributes are the compared ones",
+          "result": "PASS",
+          "observed": [
+            "id",
+            "class",
+            "href"
+          ]
+        },
+        {
+          "check": "property R7 diagnostics, errors, ambiguity, disagreement or helper reasons keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "property mutation lxml oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation lxml detected",
+          "result": "RECORDED",
+          "observed": []
+        },
+        {
+          "check": "mutation lxml equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "property mutation html5lib oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation html5lib detected",
+          "result": "RECORDED",
+          "observed": []
+        },
+        {
+          "check": "mutation html5lib equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "property unchanged fields equal the committed predecessor report",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "predecessor CONSISTENCY_CHECK_FAILED findings (removed in the successor if only itertext failed)",
+          "result": "RECORDED",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "N3",
+      "anchor": "pkg.legacy",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n3_windows1252.html",
+      "structural_disposition": "STRUCTURE_CORROBORATED",
+      "existing_helper_status": {
+        "dom_serialization": "OK_STRUCTURAL_UNIT",
+        "text_content": "OK_STRUCTURAL_UNIT"
+      },
+      "consumer_gate": "NOT_GRANTED",
+      "findings": [],
+      "mutation_controls": {
+        "lxml": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": [
+            "M1",
+            "M2"
+          ]
+        },
+        "html5lib": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": [
+            "M1",
+            "M2"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "check": "structural disposition",
+          "result": "PASS",
+          "observed": "STRUCTURE_CORROBORATED",
+          "predicted": "STRUCTURE_CORROBORATED"
+        },
+        {
+          "check": "comparison findings",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "helper status",
+          "result": "RECORDED",
+          "observed": {
+            "dom_serialization": "OK_STRUCTURAL_UNIT",
+            "text_content": "OK_STRUCTURAL_UNIT"
+          }
+        },
+        {
+          "check": "lxml_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation lxml itertext equals rule",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation lxml itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "html5lib_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation elementtree_c_accelerated",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property R9 (corrected) a helper reasons and status unchanged",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) b any helper reason gives structural REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) c consumer_gate NOT_GRANTED",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "historical R9 on the successor axes (not a requirement)",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property report layout (pre-registered changed fields)",
+          "result": "PASS",
+          "observed": [
+            "environment",
+            "request_id",
+            "anchor",
+            "source",
+            "decoding_policy",
+            "parsers",
+            "name_mapping",
+            "existing_helper",
+            "trees",
+            "checks",
+            "comparison",
+            "observations",
+            "text_ledger",
+            "comparison_scope",
+            "structural_corroboration",
+            "consumer_gate"
+          ]
+        },
+        {
+          "check": "property checks: the four predecessor checks then the two oracle checks",
+          "result": "PASS",
+          "observed": [
+            "lxml_parse_diagnostics_equal_helper",
+            "mirror_reasons_equal_helper",
+            "mirror_membership_equals_helper",
+            "lxml_text_rule_equals_helper_text_content",
+            "lxml_text_rule_equals_oracle",
+            "html5lib_text_rule_equals_oracle"
+          ]
+        },
+        {
+          "check": "property T1 itertext is no check and no finding",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 comparison_scope as pre-registered",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 the scope's attributes are the compared ones",
+          "result": "PASS",
+          "observed": [
+            "id",
+            "class",
+            "href"
+          ]
+        },
+        {
+          "check": "property R7 diagnostics, errors, ambiguity, disagreement or helper reasons keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "property mutation lxml oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation lxml detected",
+          "result": "RECORDED",
+          "observed": [
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation lxml equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "check": "property mutation html5lib oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation html5lib detected",
+          "result": "RECORDED",
+          "observed": [
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation html5lib equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "check": "property unchanged fields equal the committed predecessor report",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "predecessor CONSISTENCY_CHECK_FAILED findings (removed in the successor if only itertext failed)",
+          "result": "RECORDED",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "N4",
+      "anchor": "pkg.inside",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n4_outside_diagnostic.html",
+      "structural_disposition": "REVIEW",
+      "existing_helper_status": {
+        "dom_serialization": "REVIEW",
+        "text_content": "REVIEW"
+      },
+      "consumer_gate": "NOT_GRANTED",
+      "findings": [
+        "LXML_DIAGNOSTICS_PRESENT",
+        "HTML5LIB_ERRORS_PRESENT"
+      ],
+      "mutation_controls": {
+        "lxml": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": [
+            "M1",
+            "M2"
+          ]
+        },
+        "html5lib": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": [
+            "M1",
+            "M2"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "check": "structural disposition",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "comparison findings",
+          "result": "PASS",
+          "observed": [
+            "LXML_DIAGNOSTICS_PRESENT",
+            "HTML5LIB_ERRORS_PRESENT"
+          ],
+          "predicted": [
+            "LXML_DIAGNOSTICS_PRESENT",
+            "HTML5LIB_ERRORS_PRESENT"
+          ]
+        },
+        {
+          "check": "helper status",
+          "result": "RECORDED",
+          "observed": {
+            "dom_serialization": "REVIEW",
+            "text_content": "REVIEW"
+          }
+        },
+        {
+          "check": "lxml_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation lxml itertext equals rule",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation lxml itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "html5lib_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation elementtree_c_accelerated",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property R9 (corrected) a helper reasons and status unchanged",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) b any helper reason gives structural REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) c consumer_gate NOT_GRANTED",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "historical R9 on the successor axes (not a requirement)",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property report layout (pre-registered changed fields)",
+          "result": "PASS",
+          "observed": [
+            "environment",
+            "request_id",
+            "anchor",
+            "source",
+            "decoding_policy",
+            "parsers",
+            "name_mapping",
+            "existing_helper",
+            "trees",
+            "checks",
+            "comparison",
+            "observations",
+            "text_ledger",
+            "comparison_scope",
+            "structural_corroboration",
+            "consumer_gate"
+          ]
+        },
+        {
+          "check": "property checks: the four predecessor checks then the two oracle checks",
+          "result": "PASS",
+          "observed": [
+            "lxml_parse_diagnostics_equal_helper",
+            "mirror_reasons_equal_helper",
+            "mirror_membership_equals_helper",
+            "lxml_text_rule_equals_helper_text_content",
+            "lxml_text_rule_equals_oracle",
+            "html5lib_text_rule_equals_oracle"
+          ]
+        },
+        {
+          "check": "property T1 itertext is no check and no finding",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 comparison_scope as pre-registered",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 the scope's attributes are the compared ones",
+          "result": "PASS",
+          "observed": [
+            "id",
+            "class",
+            "href"
+          ]
+        },
+        {
+          "check": "property R7 diagnostics, errors, ambiguity, disagreement or helper reasons keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "property mutation lxml oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation lxml detected",
+          "result": "RECORDED",
+          "observed": [
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation lxml equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "check": "property mutation html5lib oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation html5lib detected",
+          "result": "RECORDED",
+          "observed": [
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation html5lib equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "check": "property unchanged fields equal the committed predecessor report",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "predecessor CONSISTENCY_CHECK_FAILED findings (removed in the successor if only itertext failed)",
+          "result": "RECORDED",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "N5",
+      "anchor": "pkg.clean",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n5_clean_control.html",
+      "structural_disposition": "STRUCTURE_CORROBORATED",
+      "existing_helper_status": {
+        "dom_serialization": "OK_STRUCTURAL_UNIT",
+        "text_content": "OK_STRUCTURAL_UNIT"
+      },
+      "consumer_gate": "NOT_GRANTED",
+      "findings": [],
+      "mutation_controls": {
+        "lxml": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": [
+            "M1",
+            "M2"
+          ]
+        },
+        "html5lib": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": [
+            "M1",
+            "M2"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "check": "structural disposition",
+          "result": "PASS",
+          "observed": "STRUCTURE_CORROBORATED",
+          "predicted": "STRUCTURE_CORROBORATED"
+        },
+        {
+          "check": "comparison findings",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "helper status",
+          "result": "RECORDED",
+          "observed": {
+            "dom_serialization": "OK_STRUCTURAL_UNIT",
+            "text_content": "OK_STRUCTURAL_UNIT"
+          }
+        },
+        {
+          "check": "lxml_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation lxml itertext equals rule",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation lxml itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "html5lib_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation elementtree_c_accelerated",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property R9 (corrected) a helper reasons and status unchanged",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) b any helper reason gives structural REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) c consumer_gate NOT_GRANTED",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "historical R9 on the successor axes (not a requirement)",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property report layout (pre-registered changed fields)",
+          "result": "PASS",
+          "observed": [
+            "environment",
+            "request_id",
+            "anchor",
+            "source",
+            "decoding_policy",
+            "parsers",
+            "name_mapping",
+            "existing_helper",
+            "trees",
+            "checks",
+            "comparison",
+            "observations",
+            "text_ledger",
+            "comparison_scope",
+            "structural_corroboration",
+            "consumer_gate"
+          ]
+        },
+        {
+          "check": "property checks: the four predecessor checks then the two oracle checks",
+          "result": "PASS",
+          "observed": [
+            "lxml_parse_diagnostics_equal_helper",
+            "mirror_reasons_equal_helper",
+            "mirror_membership_equals_helper",
+            "lxml_text_rule_equals_helper_text_content",
+            "lxml_text_rule_equals_oracle",
+            "html5lib_text_rule_equals_oracle"
+          ]
+        },
+        {
+          "check": "property T1 itertext is no check and no finding",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 comparison_scope as pre-registered",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 the scope's attributes are the compared ones",
+          "result": "PASS",
+          "observed": [
+            "id",
+            "class",
+            "href"
+          ]
+        },
+        {
+          "check": "property R7 diagnostics, errors, ambiguity, disagreement or helper reasons keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "property mutation lxml oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation lxml detected",
+          "result": "RECORDED",
+          "observed": [
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation lxml equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "check": "property mutation html5lib oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation html5lib detected",
+          "result": "RECORDED",
+          "observed": [
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation html5lib equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "check": "property unchanged fields equal the committed predecessor report",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "predecessor CONSISTENCY_CHECK_FAILED findings (removed in the successor if only itertext failed)",
+          "result": "RECORDED",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "C17",
+      "anchor": "pkg.dup",
+      "file": "research/public-sphinx-anchor-units-20261018-01/fixtures/f4_duplicates.html",
+      "structural_disposition": "REVIEW",
+      "existing_helper_status": {
+        "dom_serialization": "REVIEW",
+        "text_content": "REVIEW"
+      },
+      "consumer_gate": "NOT_GRANTED",
+      "findings": [
+        "LXML_DIAGNOSTICS_PRESENT",
+        "ID_NOT_UNIQUE",
+        "STRUCTURAL_REASONS_PRESENT",
+        "ID_NOT_UNIQUE",
+        "STRUCTURAL_REASONS_PRESENT"
+      ],
+      "mutation_controls": {
+        "lxml": null,
+        "html5lib": null
+      },
+      "checks": [
+        {
+          "check": "structural disposition",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "comparison findings",
+          "result": "PASS",
+          "observed": [
+            "LXML_DIAGNOSTICS_PRESENT",
+            "ID_NOT_UNIQUE",
+            "STRUCTURAL_REASONS_PRESENT",
+            "ID_NOT_UNIQUE",
+            "STRUCTURAL_REASONS_PRESENT"
+          ],
+          "predicted": [
+            "LXML_DIAGNOSTICS_PRESENT",
+            "ID_NOT_UNIQUE",
+            "STRUCTURAL_REASONS_PRESENT",
+            "ID_NOT_UNIQUE",
+            "STRUCTURAL_REASONS_PRESENT"
+          ]
+        },
+        {
+          "check": "helper status",
+          "result": "RECORDED",
+          "observed": {
+            "dom_serialization": "REVIEW",
+            "text_content": "REVIEW"
+          }
+        },
+        {
+          "check": "lxml_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": null,
+          "predicted": null
+        },
+        {
+          "check": "observation lxml itertext equals rule",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "observation lxml itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "html5lib_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": null,
+          "predicted": null
+        },
+        {
+          "check": "observation html5lib itertext equals rule",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "observation html5lib itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": null
+        },
+        {
+          "check": "observation elementtree_c_accelerated",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property R9 (corrected) a helper reasons and status unchanged",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) b any helper reason gives structural REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) c consumer_gate NOT_GRANTED",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "historical R9 on the successor axes (not a requirement)",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property report layout (pre-registered changed fields)",
+          "result": "PASS",
+          "observed": [
+            "environment",
+            "request_id",
+            "anchor",
+            "source",
+            "decoding_policy",
+            "parsers",
+            "name_mapping",
+            "existing_helper",
+            "trees",
+            "checks",
+            "comparison",
+            "observations",
+            "text_ledger",
+            "comparison_scope",
+            "structural_corroboration",
+            "consumer_gate"
+          ]
+        },
+        {
+          "check": "property checks: the four predecessor checks then the two oracle checks",
+          "result": "PASS",
+          "observed": [
+            "lxml_parse_diagnostics_equal_helper",
+            "mirror_reasons_equal_helper",
+            "mirror_membership_equals_helper",
+            "lxml_text_rule_equals_helper_text_content",
+            "lxml_text_rule_equals_oracle",
+            "html5lib_text_rule_equals_oracle"
+          ]
+        },
+        {
+          "check": "property T1 itertext is no check and no finding",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 comparison_scope as pre-registered",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 the scope's attributes are the compared ones",
+          "result": "PASS",
+          "observed": [
+            "id",
+            "class",
+            "href"
+          ]
+        },
+        {
+          "check": "property R7 diagnostics, errors, ambiguity, disagreement or helper reasons keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "property unchanged fields equal the committed predecessor report",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "predecessor CONSISTENCY_CHECK_FAILED findings (removed in the successor if only itertext failed)",
+          "result": "RECORDED",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "anchor": "pkg.reparent",
+      "file": "research/public-sphinx-parser-corroboration-20261018-01/fixtures/c1_reparent_dd.html",
+      "structural_disposition": "REVIEW",
+      "existing_helper_status": {
+        "dom_serialization": "OK_STRUCTURAL_UNIT",
+        "text_content": "OK_STRUCTURAL_UNIT"
+      },
+      "consumer_gate": "NOT_GRANTED",
+      "findings": [
+        "HTML5LIB_ERRORS_PRESENT",
+        "MEMBERSHIP_DIFFERS",
+        "BOUNDARIES_DIFFERS",
+        "TOPOLOGY_DIFFERS"
+      ],
+      "mutation_controls": {
+        "lxml": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": [
+            "M1",
+            "M2"
+          ]
+        },
+        "html5lib": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": [
+            "M1",
+            "M2"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "check": "structural disposition",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "comparison findings",
+          "result": "PASS",
+          "observed": [
+            "HTML5LIB_ERRORS_PRESENT",
+            "MEMBERSHIP_DIFFERS",
+            "BOUNDARIES_DIFFERS",
+            "TOPOLOGY_DIFFERS"
+          ],
+          "predicted": [
+            "HTML5LIB_ERRORS_PRESENT",
+            "MEMBERSHIP_DIFFERS",
+            "BOUNDARIES_DIFFERS",
+            "TOPOLOGY_DIFFERS"
+          ]
+        },
+        {
+          "check": "helper status",
+          "result": "RECORDED",
+          "observed": {
+            "dom_serialization": "OK_STRUCTURAL_UNIT",
+            "text_content": "OK_STRUCTURAL_UNIT"
+          }
+        },
+        {
+          "check": "lxml_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation lxml itertext equals rule",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation lxml itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "html5lib_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation elementtree_c_accelerated",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property R9 (corrected) a helper reasons and status unchanged",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) b any helper reason gives structural REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) c consumer_gate NOT_GRANTED",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "historical R9 on the successor axes (not a requirement)",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property report layout (pre-registered changed fields)",
+          "result": "PASS",
+          "observed": [
+            "environment",
+            "request_id",
+            "anchor",
+            "source",
+            "decoding_policy",
+            "parsers",
+            "name_mapping",
+            "existing_helper",
+            "trees",
+            "checks",
+            "comparison",
+            "observations",
+            "text_ledger",
+            "comparison_scope",
+            "structural_corroboration",
+            "consumer_gate"
+          ]
+        },
+        {
+          "check": "property checks: the four predecessor checks then the two oracle checks",
+          "result": "PASS",
+          "observed": [
+            "lxml_parse_diagnostics_equal_helper",
+            "mirror_reasons_equal_helper",
+            "mirror_membership_equals_helper",
+            "lxml_text_rule_equals_helper_text_content",
+            "lxml_text_rule_equals_oracle",
+            "html5lib_text_rule_equals_oracle"
+          ]
+        },
+        {
+          "check": "property T1 itertext is no check and no finding",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 comparison_scope as pre-registered",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 the scope's attributes are the compared ones",
+          "result": "PASS",
+          "observed": [
+            "id",
+            "class",
+            "href"
+          ]
+        },
+        {
+          "check": "property R7 diagnostics, errors, ambiguity, disagreement or helper reasons keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "property mutation lxml oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation lxml detected",
+          "result": "RECORDED",
+          "observed": [
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation lxml equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "check": "property mutation html5lib oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation html5lib detected",
+          "result": "RECORDED",
+          "observed": [
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation html5lib equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "check": "property unchanged fields equal the committed predecessor report",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "predecessor CONSISTENCY_CHECK_FAILED findings (removed in the successor if only itertext failed)",
+          "result": "RECORDED",
+          "observed": []
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "anchor": "pkg.tail",
+      "file": "research/public-sphinx-parser-corroboration-20261018-01/fixtures/c2_text_tail.html",
+      "structural_disposition": "REVIEW",
+      "existing_helper_status": {
+        "dom_serialization": "OK_STRUCTURAL_UNIT",
+        "text_content": "OK_STRUCTURAL_UNIT"
+      },
+      "consumer_gate": "NOT_GRANTED",
+      "findings": [
+        "HTML5LIB_ERRORS_PRESENT"
+      ],
+      "mutation_controls": {
+        "lxml": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": []
+        },
+        "html5lib": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": []
+        }
+      },
+      "checks": [
+        {
+          "check": "structural disposition",
+          "result": "PASS",
+          "observed": "REVIEW",
+          "predicted": "REVIEW"
+        },
+        {
+          "check": "comparison findings",
+          "result": "PASS",
+          "observed": [
+            "HTML5LIB_ERRORS_PRESENT"
+          ],
+          "predicted": [
+            "HTML5LIB_ERRORS_PRESENT"
+          ]
+        },
+        {
+          "check": "helper status",
+          "result": "RECORDED",
+          "observed": {
+            "dom_serialization": "OK_STRUCTURAL_UNIT",
+            "text_content": "OK_STRUCTURAL_UNIT"
+          }
+        },
+        {
+          "check": "lxml_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation lxml itertext equals rule",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation lxml itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": false
+        },
+        {
+          "check": "html5lib_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule",
+          "result": "PASS",
+          "observed": false,
+          "predicted": false
+        },
+        {
+          "check": "observation html5lib itertext equals rule with comment payload",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation elementtree_c_accelerated",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property R9 (corrected) a helper reasons and status unchanged",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) b any helper reason gives structural REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) c consumer_gate NOT_GRANTED",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "historical R9 on the successor axes (not a requirement)",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property report layout (pre-registered changed fields)",
+          "result": "PASS",
+          "observed": [
+            "environment",
+            "request_id",
+            "anchor",
+            "source",
+            "decoding_policy",
+            "parsers",
+            "name_mapping",
+            "existing_helper",
+            "trees",
+            "checks",
+            "comparison",
+            "observations",
+            "text_ledger",
+            "comparison_scope",
+            "structural_corroboration",
+            "consumer_gate"
+          ]
+        },
+        {
+          "check": "property checks: the four predecessor checks then the two oracle checks",
+          "result": "PASS",
+          "observed": [
+            "lxml_parse_diagnostics_equal_helper",
+            "mirror_reasons_equal_helper",
+            "mirror_membership_equals_helper",
+            "lxml_text_rule_equals_helper_text_content",
+            "lxml_text_rule_equals_oracle",
+            "html5lib_text_rule_equals_oracle"
+          ]
+        },
+        {
+          "check": "property T1 itertext is no check and no finding",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 comparison_scope as pre-registered",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 the scope's attributes are the compared ones",
+          "result": "PASS",
+          "observed": [
+            "id",
+            "class",
+            "href"
+          ]
+        },
+        {
+          "check": "property R7 diagnostics, errors, ambiguity, disagreement or helper reasons keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "property mutation lxml oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation lxml detected",
+          "result": "PASS",
+          "observed": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "predicted": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation lxml equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": []
+        },
+        {
+          "check": "property mutation html5lib oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation html5lib detected",
+          "result": "PASS",
+          "observed": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "predicted": [
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation html5lib equal to the rule (undetectable by construction)",
+          "result": "RECORDED",
+          "observed": []
+        },
+        {
+          "check": "property unchanged fields equal the committed predecessor report",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "predecessor CONSISTENCY_CHECK_FAILED findings (removed in the successor if only itertext failed)",
+          "result": "RECORDED",
+          "observed": [
+            "CONSISTENCY_CHECK_FAILED"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W1",
+      "anchor": "pkg.long",
+      "file": "research/public-sphinx-text-policy-20261018-01/fixtures/w1_long_clean.html",
+      "structural_disposition": "STRUCTURE_CORROBORATED",
+      "existing_helper_status": {
+        "dom_serialization": "REVIEW_OVER_BUDGET",
+        "text_content": "REVIEW_OVER_BUDGET"
+      },
+      "consumer_gate": "NOT_GRANTED",
+      "findings": [],
+      "mutation_controls": {
+        "lxml": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": [
+            "M1",
+            "M2"
+          ]
+        },
+        "html5lib": {
+          "oracle_equals_rule": true,
+          "M0_control_equals_rule": true,
+          "detected": [
+            "M3",
+            "M4"
+          ],
+          "equal_to_rule": [
+            "M1",
+            "M2"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "check": "structural disposition",
+          "result": "PASS",
+          "observed": "STRUCTURE_CORROBORATED",
+          "predicted": "STRUCTURE_CORROBORATED"
+        },
+        {
+          "check": "comparison findings",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "helper status",
+          "result": "PASS",
+          "observed": {
+            "dom_serialization": "REVIEW_OVER_BUDGET",
+            "text_content": "REVIEW_OVER_BUDGET"
+          },
+          "predicted": {
+            "dom_serialization": "REVIEW_OVER_BUDGET",
+            "text_content": "REVIEW_OVER_BUDGET"
+          }
+        },
+        {
+          "check": "lxml_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation lxml itertext equals rule",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation lxml itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "html5lib_text_rule_equals_oracle",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "observation html5lib itertext equals rule with comment payload",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "observation elementtree_c_accelerated",
+          "result": "RECORDED",
+          "observed": true
+        },
+        {
+          "check": "property R9 (corrected) a helper reasons and status unchanged",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) b any helper reason gives structural REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R9 (corrected) c consumer_gate NOT_GRANTED",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "historical R9 on the successor axes (not a requirement)",
+          "result": "RECORDED",
+          "observed": false
+        },
+        {
+          "check": "property report layout (pre-registered changed fields)",
+          "result": "PASS",
+          "observed": [
+            "environment",
+            "request_id",
+            "anchor",
+            "source",
+            "decoding_policy",
+            "parsers",
+            "name_mapping",
+            "existing_helper",
+            "trees",
+            "checks",
+            "comparison",
+            "observations",
+            "text_ledger",
+            "comparison_scope",
+            "structural_corroboration",
+            "consumer_gate"
+          ]
+        },
+        {
+          "check": "property checks: the four predecessor checks then the two oracle checks",
+          "result": "PASS",
+          "observed": [
+            "lxml_parse_diagnostics_equal_helper",
+            "mirror_reasons_equal_helper",
+            "mirror_membership_equals_helper",
+            "lxml_text_rule_equals_helper_text_content",
+            "lxml_text_rule_equals_oracle",
+            "html5lib_text_rule_equals_oracle"
+          ]
+        },
+        {
+          "check": "property T1 itertext is no check and no finding",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 comparison_scope as pre-registered",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property T3 the scope's attributes are the compared ones",
+          "result": "PASS",
+          "observed": [
+            "id",
+            "class",
+            "href"
+          ]
+        },
+        {
+          "check": "property R7 diagnostics, errors, ambiguity, disagreement or helper reasons keep REVIEW",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R1 complete original bytes",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property R8 no forbidden report keys",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "property mutation lxml oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation lxml detected",
+          "result": "PASS",
+          "observed": [
+            "M3",
+            "M4"
+          ],
+          "predicted": [
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation lxml equal to the rule (undetectable by construction)",
+          "result": "PASS",
+          "observed": [
+            "M1",
+            "M2"
+          ],
+          "predicted": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "check": "property mutation html5lib oracle equals rule and M0 control",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "mutation html5lib detected",
+          "result": "PASS",
+          "observed": [
+            "M3",
+            "M4"
+          ],
+          "predicted": [
+            "M3",
+            "M4"
+          ]
+        },
+        {
+          "check": "mutation html5lib equal to the rule (undetectable by construction)",
+          "result": "PASS",
+          "observed": [
+            "M1",
+            "M2"
+          ],
+          "predicted": [
+            "M1",
+            "M2"
+          ]
+        },
+        {
+          "check": "W1 lxml text identity",
+          "result": "PASS",
+          "observed": [
+            2276,
+            "51e00d9ff52c6242ba0db0ad34d76adeebfc91ee82c3d8c29cc5d952f4875b35"
+          ],
+          "predicted": [
+            2276,
+            "51e00d9ff52c6242ba0db0ad34d76adeebfc91ee82c3d8c29cc5d952f4875b35"
+          ]
+        },
+        {
+          "check": "W1 lxml links",
+          "result": "PASS",
+          "observed": [
+            {
+              "href": "#pkg.long",
+              "text": "¶"
+            }
+          ],
+          "predicted": [
+            {
+              "href": "#pkg.long",
+              "text": "¶"
+            }
+          ]
+        },
+        {
+          "check": "W1 lxml exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "W1 lxml diagnostics/errors",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "W1 html5lib text identity",
+          "result": "PASS",
+          "observed": [
+            2276,
+            "51e00d9ff52c6242ba0db0ad34d76adeebfc91ee82c3d8c29cc5d952f4875b35"
+          ],
+          "predicted": [
+            2276,
+            "51e00d9ff52c6242ba0db0ad34d76adeebfc91ee82c3d8c29cc5d952f4875b35"
+          ]
+        },
+        {
+          "check": "W1 html5lib links",
+          "result": "PASS",
+          "observed": [
+            {
+              "href": "#pkg.long",
+              "text": "¶"
+            }
+          ],
+          "predicted": [
+            {
+              "href": "#pkg.long",
+              "text": "¶"
+            }
+          ]
+        },
+        {
+          "check": "W1 html5lib exact matches",
+          "result": "PASS",
+          "observed": 1,
+          "predicted": 1
+        },
+        {
+          "check": "W1 html5lib diagnostics/errors",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        }
+      ]
+    }
+  ]
+}

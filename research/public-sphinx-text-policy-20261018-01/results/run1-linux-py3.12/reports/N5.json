@@ -1,0 +1,352 @@
+{
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "lxml": "6.1.3",
+    "libxml2_runtime": "2.14.6",
+    "libxml2_compiled": "2.14.6",
+    "html5lib": "1.1",
+    "six": "1.17.0",
+    "webencodings": "0.5.1",
+    "elementtree": "xml.etree.ElementTree"
+  },
+  "request_id": "public-sphinx-text-policy-20261018-01",
+  "anchor": "pkg.clean",
+  "source": {
+    "locator": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/n5_clean_control.html",
+    "bytes": 287,
+    "sha256": "932ea06e032d5db1962cf65fdb1a0f3d520cdf531f73a6233b5fffcf3b47effb",
+    "parsed_by_both": "the complete original bytes"
+  },
+  "decoding_policy": "original bytes to both parsers; each chooses its encoding; compared by codecs.lookup(name).name; disagreement is REVIEW; nothing rewritten",
+  "parsers": {
+    "lxml": {
+      "options": "lxml.html.document_fromstring(data, parser=lxml.html.HTMLParser()) with its defaults, as anchor_unit.select_unit()",
+      "selected_encoding": "utf-8",
+      "diagnostics": []
+    },
+    "html5lib": {
+      "options": {
+        "tree": "getTreeBuilder('etree')",
+        "strict": false,
+        "namespaceHTMLElements": true,
+        "debug": false
+      },
+      "parse_kwargs": {
+        "override_encoding": null,
+        "transport_encoding": null,
+        "useChardet": false,
+        "scripting": false
+      },
+      "returned_root": "{http://www.w3.org/1999/xhtml}html",
+      "selected_encoding": "utf-8",
+      "encoding_certainty": "certain",
+      "errors": []
+    }
+  },
+  "name_mapping": {
+    "html5lib": "'{http://www.w3.org/1999/xhtml}<local>' -> '<local>'; other namespaces kept whole",
+    "lxml": "tags used as they are"
+  },
+  "existing_helper": {
+    "file": "research/public-sphinx-evidence-integrity-20261018-01/scripts/anchor_unit.py",
+    "sha256": "9c01351705ca8fe475df3925550d015cf69d4cbda324d042e32f0c909ec404e9",
+    "reasons": [],
+    "status": {
+      "dom_serialization": "OK_STRUCTURAL_UNIT",
+      "text_content": "OK_STRUCTURAL_UNIT"
+    },
+    "candidate": {
+      "signature_ids": [
+        "pkg.clean"
+      ],
+      "signatures": 1,
+      "descriptions": 1,
+      "first_line": 9,
+      "last_line": 10,
+      "text_sha256": "ade86fdbb43ad53ae5daec8f92d96b0a7d5787b279f019b2446a63fafc12352a",
+      "text_bytes": 42
+    }
+  },
+  "trees": {
+    "lxml": {
+      "exact_matches": [
+        {
+          "document_order": 6,
+          "element": {
+            "kind": "element",
+            "name": "dt",
+            "id": "pkg.clean",
+            "class": "sig sig-object py"
+          },
+          "parent": {
+            "kind": "element",
+            "name": "dl",
+            "class": "py function"
+          },
+          "sourceline": 9
+        }
+      ],
+      "match_count": 1,
+      "near_matches": [],
+      "rule_reasons": [],
+      "unit": {
+        "membership": {
+          "signature_ids": [
+            "pkg.clean"
+          ],
+          "signatures": 1,
+          "descriptions": 1,
+          "anchor_position": 1,
+          "nested_object_ids": []
+        },
+        "boundaries": {
+          "dl": {
+            "kind": "element",
+            "name": "dl",
+            "class": "py function"
+          },
+          "dl_parent": {
+            "kind": "element",
+            "name": "body"
+          },
+          "dl_children": [
+            [
+              "element",
+              "dt"
+            ],
+            [
+              "element",
+              "dd"
+            ]
+          ],
+          "unit_element_indexes": [
+            0,
+            1
+          ],
+          "previous_element": null,
+          "next_element": null,
+          "enclosing_object_id": null
+        },
+        "topology": [
+          [
+            0,
+            "element",
+            "dt",
+            {
+              "id": "pkg.clean",
+              "class": "sig sig-object py"
+            }
+          ],
+          [
+            0,
+            "element",
+            "dd",
+            {}
+          ],
+          [
+            1,
+            "element",
+            "p",
+            {}
+          ]
+        ],
+        "links": [],
+        "text": "clean()\nClean description. MARK-CLEAN-DESC",
+        "text_utf8_bytes": 42,
+        "text_sha256": "ade86fdbb43ad53ae5daec8f92d96b0a7d5787b279f019b2446a63fafc12352a"
+      }
+    },
+    "html5lib": {
+      "exact_matches": [
+        {
+          "document_order": 6,
+          "element": {
+            "kind": "element",
+            "name": "dt",
+            "id": "pkg.clean",
+            "class": "sig sig-object py"
+          },
+          "parent": {
+            "kind": "element",
+            "name": "dl",
+            "class": "py function"
+          }
+        }
+      ],
+      "match_count": 1,
+      "near_matches": [],
+      "rule_reasons": [],
+      "unit": {
+        "membership": {
+          "signature_ids": [
+            "pkg.clean"
+          ],
+          "signatures": 1,
+          "descriptions": 1,
+          "anchor_position": 1,
+          "nested_object_ids": []
+        },
+        "boundaries": {
+          "dl": {
+            "kind": "element",
+            "name": "dl",
+            "class": "py function"
+          },
+          "dl_parent": {
+            "kind": "element",
+            "name": "body"
+          },
+          "dl_children": [
+            [
+              "element",
+              "dt"
+            ],
+            [
+              "element",
+              "dd"
+            ]
+          ],
+          "unit_element_indexes": [
+            0,
+            1
+          ],
+          "previous_element": null,
+          "next_element": null,
+          "enclosing_object_id": null
+        },
+        "topology": [
+          [
+            0,
+            "element",
+            "dt",
+            {
+              "id": "pkg.clean",
+              "class": "sig sig-object py"
+            }
+          ],
+          [
+            0,
+            "element",
+            "dd",
+            {}
+          ],
+          [
+            1,
+            "element",
+            "p",
+            {}
+          ]
+        ],
+        "links": [],
+        "text": "clean()\nClean description. MARK-CLEAN-DESC",
+        "text_utf8_bytes": 42,
+        "text_sha256": "ade86fdbb43ad53ae5daec8f92d96b0a7d5787b279f019b2446a63fafc12352a"
+      }
+    }
+  },
+  "checks": {
+    "lxml_parse_diagnostics_equal_helper": true,
+    "mirror_reasons_equal_helper": true,
+    "mirror_membership_equals_helper": true,
+    "lxml_text_rule_equals_helper_text_content": true,
+    "lxml_text_rule_equals_oracle": true,
+    "html5lib_text_rule_equals_oracle": true
+  },
+  "comparison": {
+    "findings": [],
+    "agreements": [
+      "encoding",
+      "membership",
+      "boundaries",
+      "topology",
+      "links",
+      "text"
+    ]
+  },
+  "observations": {
+    "itertext": {
+      "note": "observation only, never a check or a finding",
+      "elementtree_c_accelerated": true,
+      "lxml": {
+        "equals_rule": true,
+        "equals_rule_with_comment_payload": true,
+        "text_utf8_bytes": 42,
+        "text_sha256": "ade86fdbb43ad53ae5daec8f92d96b0a7d5787b279f019b2446a63fafc12352a"
+      },
+      "html5lib": {
+        "equals_rule": true,
+        "equals_rule_with_comment_payload": true,
+        "text_utf8_bytes": 42,
+        "text_sha256": "ade86fdbb43ad53ae5daec8f92d96b0a7d5787b279f019b2446a63fafc12352a"
+      }
+    }
+  },
+  "text_ledger": {
+    "lxml": {
+      "nodes": {
+        "element": 3,
+        "comment": 0,
+        "pi": 0,
+        "other": 0
+      },
+      "excluded_comment_pi_other_payload_utf8_bytes": 0,
+      "kept_comment_pi_other_tails_utf8_bytes": 0,
+      "included_inter_unit_tails_utf8_bytes": 1,
+      "excluded_final_tail_utf8_bytes": 1,
+      "rule": {
+        "text_utf8_bytes": 42,
+        "text_sha256": "ade86fdbb43ad53ae5daec8f92d96b0a7d5787b279f019b2446a63fafc12352a"
+      },
+      "oracle": {
+        "method": "structure-only lxml copy of the unit's native nodes: each element as <e> with its text, each other node (comment, PI, entity) as an empty comment, each with its tail, inside one container; the last unit element's tail cleared; libxml2 XPath string() of the container",
+        "text_utf8_bytes": 42,
+        "text_sha256": "ade86fdbb43ad53ae5daec8f92d96b0a7d5787b279f019b2446a63fafc12352a",
+        "refused": null
+      }
+    },
+    "html5lib": {
+      "nodes": {
+        "element": 3,
+        "comment": 0,
+        "pi": 0,
+        "other": 0
+      },
+      "excluded_comment_pi_other_payload_utf8_bytes": 0,
+      "kept_comment_pi_other_tails_utf8_bytes": 0,
+      "included_inter_unit_tails_utf8_bytes": 1,
+      "excluded_final_tail_utf8_bytes": 1,
+      "rule": {
+        "text_utf8_bytes": 42,
+        "text_sha256": "ade86fdbb43ad53ae5daec8f92d96b0a7d5787b279f019b2446a63fafc12352a"
+      },
+      "oracle": {
+        "method": "structure-only lxml copy of the unit's native nodes: each element as <e> with its text, each other node (comment, PI, entity) as an empty comment, each with its tail, inside one container; the last unit element's tail cleared; libxml2 XPath string() of the container",
+        "text_utf8_bytes": 42,
+        "text_sha256": "ade86fdbb43ad53ae5daec8f92d96b0a7d5787b279f019b2446a63fafc12352a",
+        "refused": null
+      }
+    }
+  },
+  "comparison_scope": "compared between the two trees: encoding (codec name); exact id matches (count) and the rule's structural reasons; for a selected unit: membership (signature ids, signature and description counts, anchor position, nested object ids), boundaries (dl and its parent as kind/name/id/class, the kinds and names of all dl children, the unit's element indexes, neighbouring elements, enclosing object id), ordered topology of the unit (depth, node kind, mapped name and only the id, class and href attributes of each node), links (href and text of each a), and the exact concatenated unit text. Not compared: any other attribute (title, lang, style, data-*, ...), comment and PI payloads, where text sits inside the unit (only the concatenation), anything outside the unit and its dl, the document head, and the full DOM. Parser diagnostics and errors are not compared with each other; any of either makes REVIEW.",
+  "structural_corroboration": {
+    "disposition": "STRUCTURE_CORROBORATED",
+    "because": [
+      "both repaired interpretations agree on comparison_scope"
+    ],
+    "axis": "agreement of two repaired parses on comparison_scope only; existing_helper.status is reported unchanged beside it and neither changes the other"
+  },
+  "consumer_gate": {
+    "value": "NOT_GRANTED",
+    "prohibition": "No consumer may read structural_corroboration.disposition, existing_helper.status (OK_STRUCTURAL_UNIT, REVIEW or REVIEW_OVER_BUDGET) or any other field of this report as admission, as fitting any prompt, context or size limit, as semantic sufficiency, or as permission to send the unit or its source to a model. This report grants nothing.",
+    "not_claimed": [
+      "admission or any consumer permission",
+      "that the unit is semantically complete or answers any question",
+      "that two parsers establish source truth",
+      "that the unit's byte count fits any caller's final prompt",
+      "source byte positions (no serialization search, no lexical id counts)",
+      "equality after any text normalisation"
+    ]
+  }
+}

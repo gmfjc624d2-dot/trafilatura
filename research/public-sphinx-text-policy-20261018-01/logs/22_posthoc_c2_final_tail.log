@@ -1,0 +1,11 @@
+# POST-HOC (not pre-registered), after logs/21 showed one FAIL: where MARK-TAIL-TAIL sits in C2.
+# Read-only inspection of the pinned fixture and of the replay output already written by logs/20; nothing re-run, nothing edited.
+$ grep -n 'MARK-\|</dl>\|<dd>' research/public-sphinx-parser-corroboration-20261018-01/fixtures/c2_text_tail.html
+10:<dd><p>Alpha <!-- MARK-COMMENT-DATA -->Beta <em>Gamma</em> Delta<?pi MARK-PI-DATA?> Epsilon, see <a class="reference internal" href="#pkg.other">pkg.<code>other</code></a>.</p></dd>
+11:</dl>
+12:<p>Closing paragraph. MARK-TAIL-TAIL</p>
+exit=0
+$ python3 -I -c <print C2 text_ledger excluded_final_tail_utf8_bytes and the M3-detected lists from results/run1-linux-py3.12>
+lxml excluded_final_tail_utf8_bytes = 1 | mutants detected = ['M1', 'M2', 'M3', 'M4']
+html5lib excluded_final_tail_utf8_bytes = 1 | mutants detected = ['M1', 'M2', 'M3', 'M4']
+exit=0

@@ -1,0 +1,8 @@
+# POST-HOC (not a pre-registered replay check): the replay graded C1 html5lib errors only through the unchanged-field
+# projection against the committed predecessor report; here the written report is compared directly with
+# fixtures/expectations.json c1_html5lib_errors (corrected_expectation and historical_prediction). Read-only.
+$ python3 -I -c <compare results/run1-linux-py3.12/reports/C1.json parsers.html5lib.errors with both expectations>
+observed             [[11, "end-tag-too-early", {"name": "dd"}], [11, "end-tag-too-early", {"name": "div"}]]
+corrected_expectation PASS
+historical_prediction FAIL (kept as historical evidence)
+exit=0

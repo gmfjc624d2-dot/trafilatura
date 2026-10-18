@@ -1,0 +1,27 @@
+# first and only run of the focused tests (after logs/20_replay_run1.log); PYTHONPATH = the three retained wheels (zipimport), offline
+$ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=<wheels>/html5lib-1.1-py2.py3-none-any.whl:<wheels>/six-1.17.0-py2.py3-none-any.whl:<wheels>/webencodings-0.5.1-py2.py3-none-any.whl unshare -rn <lxml-only venv>/bin/python -W default -m unittest discover -s scripts -v
+test_corrected_r9_holds_where_the_historical_r9_does_not (test_text_policy.Axes.test_corrected_r9_holds_where_the_historical_r9_does_not) ... ok
+test_diagnostics_ambiguity_and_structural_differences_stay_review (test_text_policy.Axes.test_diagnostics_ambiguity_and_structural_differences_stay_review) ... ok
+test_w1_structural_axis_helper_status_and_gate_are_separate (test_text_policy.Axes.test_w1_structural_axis_helper_status_and_gate_are_separate) ... ok
+test_itertext_is_recorded_and_never_a_check_or_finding (test_text_policy.Observation.test_itertext_is_recorded_and_never_a_check_or_finding) ... ok
+test_a_wrong_final_tail_turns_the_clean_witness_to_review (test_text_policy.Oracle.test_a_wrong_final_tail_turns_the_clean_witness_to_review) ... ok
+test_an_oracle_refusal_is_review_never_a_pass (test_text_policy.Oracle.test_an_oracle_refusal_is_review_never_a_pass) ... ok
+test_each_mutated_rule_fails_both_oracle_checks_on_c2 (test_text_policy.Oracle.test_each_mutated_rule_fails_both_oracle_checks_on_c2) ... ok
+test_oracle_equals_the_rule_and_tells_every_mutant_apart_on_c2 (test_text_policy.Oracle.test_oracle_equals_the_rule_and_tells_every_mutant_apart_on_c2) ... FAIL
+test_the_oracle_runs_without_the_rule_functions (test_text_policy.Oracle.test_the_oracle_runs_without_the_rule_functions) ... ok
+test_dependencies_are_the_pinned_wheels (test_text_policy.Scope.test_dependencies_are_the_pinned_wheels) ... ok
+test_the_stated_scope_is_the_compared_one (test_text_policy.Scope.test_the_stated_scope_is_the_compared_one) ... ok
+
+======================================================================
+FAIL: test_oracle_equals_the_rule_and_tells_every_mutant_apart_on_c2 (test_text_policy.Oracle.test_oracle_equals_the_rule_and_tells_every_mutant_apart_on_c2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/research/public-sphinx-text-policy-20261018-01/scripts/test_text_policy.py", line 52, in test_oracle_equals_the_rule_and_tells_every_mutant_apart_on_c2
+    self.assertIn("MARK-TAIL-TAIL", tp.mutant_text(unit, "M3"))
+AssertionError: 'MARK-TAIL-TAIL' not found in 'tail()¶\nAlpha Beta Gamma Delta Epsilon, see pkg.other.\n'
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.039s
+
+FAILED (failures=1)
+exit=1
