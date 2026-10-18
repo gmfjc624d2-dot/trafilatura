@@ -1,0 +1,64 @@
+# fresh-clone check, 2026-10-18T01:18:33Z, Linux only; clone and replay directories are kept, nothing is deleted
+# clone: /home/user/verify/anchor-units-1dc085e-20261018T011807Z-702565e5
+# replay outputs: /home/user/verify/anchor-units-1dc085e-20261018T011807Z-702565e5-replay
+$ git clone --branch claude/adoring-turing-3ekxhe https://github.com/gmfjc624d2-dot/trafilatura.git <clone>
+$ git -C <clone> rev-parse HEAD
+1dc085e9e983fcd2e183813f476442dc64ce3ee5
+$ (cd <clone>/research/public-sphinx-anchor-units-20261018-01 && sha256sum -c SHA256SUMS)
+all 36 OK
+exit=0
+$ (... && sha256sum -c PREREGISTERED.sha256)
+all 22 OK
+exit=0
+$ git -C <clone> diff --stat 089f3cc HEAD -- research/public-sphinx-anchor-units-20261018-01/source research/public-sphinx-anchor-units-20261018-01/fixtures
+exit=0 (empty = pre-registered inputs unchanged)
+$ git -C <clone> diff --stat e7d2f5c HEAD -- . ':!research/public-sphinx-anchor-units-20261018-01'
+exit=0 (empty = nothing outside the new directory changed)
+$ (cd <clone>/research/public-evidence-spans-20261018-01 && sha256sum -c SHA256SUMS)   # earlier increment
+all 31 OK
+exit=0
+$ (cd <clone>/research/techdoc-extraction-v2.3.1 && grep -v .ruff_cache/ ARTIFACTS.sha256 | sha256sum -c)   # earlier increment; its 5 .ruff_cache lines list untracked files (disclosed before)
+all 89 tracked entries OK
+exit=0
+# below: inside 'unshare -rn' (no network), PYTHONPATH=<clone> so Trafilatura is imported from the clone
+$ unshare -rn <venv3.12>/bin/python scripts/build_fixtures.py check
+check: identical
+exit=0
+$ unshare -rn <venv3.12>/bin/python scripts/check_expectations.py | tail -1
+cases: 27, problems: 0
+exit=0
+$ unshare -rn <venv3.12>/bin/python scripts/probe_existing_apis.py <replay>/probe_existing_apis.json | grep -E '^H[123]|trafilatura.load_html' | cut -c1-60
+H1 confirmed {'id_attributes_in_any_extract_xml': [], 'case_
+H2 confirmed {'elements_with_id': 2, 'get_element_by_id_retu
+H3 confirmed {'default_tostring_has_stray_text': True, 'with
+exit=0
+$ unshare -rn <venv3.12>/bin/python -c 'import trafilatura; print(trafilatura.__file__)'
+/home/user/verify/anchor-units-1dc085e-20261018T011807Z-702565e5/trafilatura/__init__.py
+$ unshare -rn <venv3.12>/bin/python scripts/run_experiment.py <replay> | tail -3
+cases: 27, checks: 96, failed: 2, recorded: 4
+  FAIL C01: dom_serialization: budget fits -> {'observed': 'over', 'context_bytes': 2054, 'budget_bytes': 2048}
+  FAIL C12: dom_serialization: budget fits -> {'observed': 'over', 'context_bytes': 2187, 'budget_bytes': 2048}
+exit=1 (1 expected: 2 failed predictions)
+$ <venv3.12>/bin/python scripts/compare_results.py results/run1-linux-py3.12/results.json <replay>/results.json | tail -1
+cases compared: 27, differing: 0
+exit=0
+$ sha256 of committed vs replayed outputs
+results.json replay=a509c98cce5be37a40b88a3b2d9ca78ede00d675449889f2568697b3785bcead committed=a509c98cce5be37a40b88a3b2d9ca78ede00d675449889f2568697b3785bcead IDENTICAL
+summary.md replay=582ac7d0371b4bb1f0a39d2e0191cd28b98c9f53167fbd3a28f037f0040f7b36 committed=582ac7d0371b4bb1f0a39d2e0191cd28b98c9f53167fbd3a28f037f0040f7b36 IDENTICAL
+probe_existing_apis.json replay=93a7a74b6b9a4ebf7e2bc2b6f4cc984b318bd4f34320597dd81b664793af8dc5 committed=9ddad880fbba582b64292adc0cea9062367dead2f7eb8ceaf042992d9d4d79e2 DIFFERENT
+$ unshare -rn <venv3.12>/bin/python -m unittest discover -s scripts
+Ran 15 tests in 0.139s
+
+OK
+exit=0
+$ git -C <clone> status --porcelain
+exit=0 (empty = the replay left the clone unchanged)
+$ ls <replay>
+probe_existing_apis.json
+results.json
+summary.md
+$ <venv3.12>/bin/python -c <list every differing JSON leaf of committed vs replayed probe_existing_apis.json>
+/trafilatura/file: committed='/home/user/trafilatura/trafilatura/__init__.py' replay='/home/user/verify/anchor-units-1dc085e-20261018T011807Z-702565e5/trafilatura/__init__.py'
+/trafilatura_load_html_parser: committed='<lxml.html.HTMLParser object at 0x7fbf42f55ff0>' replay='<lxml.html.HTMLParser object at 0x7ff7e61c2570>'
+differing leaves: 2 of 222
+exit=0
