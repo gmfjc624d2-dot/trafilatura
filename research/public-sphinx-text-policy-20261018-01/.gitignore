@@ -1,0 +1,13 @@
+# every rule for this experiment lives here; the root .gitignore is unchanged.
+# the root ignores *.log and results/; in this directory they are the evidence
+!*.log
+!results/
+# caches and environments are never committed (they live outside the repository in the replay recipe)
+__pycache__/
+*.pyc
+.ruff_cache/
+.pytest_cache/
+.venv/
+venv/
+env/
+site/

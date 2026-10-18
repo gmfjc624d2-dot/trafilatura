@@ -1,0 +1,5 @@
+# keep wheels, fixtures, recorded outputs and logs byte-exact on every OS (they are hashed)
+# (no wheels here: the retained wheels stay in the predecessor directory)
+fixtures/** -text
+results/** -text
+logs/** -text

@@ -1,0 +1,7 @@
+$ python3.12 -I scripts/build_witness.py build && python3.12 -I scripts/build_witness.py check
+fixture fixtures/w1_long_clean.html: 2820 bytes sha256=8eb1ba90084dcba5bf4b52f0f6433d7b2fd2b2f8ff1dc6886abd2a531f1ce11a
+expected unit text: 2276 UTF-8 bytes sha256=51e00d9ff52c6242ba0db0ad34d76adeebfc91ee82c3d8c29cc5d952f4875b35
+fixture fixtures/w1_long_clean.html: 2820 bytes sha256=8eb1ba90084dcba5bf4b52f0f6433d7b2fd2b2f8ff1dc6886abd2a531f1ce11a
+expected unit text: 2276 UTF-8 bytes sha256=51e00d9ff52c6242ba0db0ad34d76adeebfc91ee82c3d8c29cc5d952f4875b35
+check: identical
+exit=0
