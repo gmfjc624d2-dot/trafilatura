@@ -1,0 +1,35 @@
+$ cd research/public-evidence-spans-20261018-01 && python3.12 scripts/evidence_bench.py results/run1-linux-py3.12   # first comparison run, 2026-10-18T00:36:25Z
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "sqlite_library_version": "3.45.1",
+  "compile_option_ENABLE_FTS5": true,
+  "oracle_sha256": "1b5547bb18ca67aa270cac57c7d30f30c4a124b186c571853772f34c612e8b7f"
+}
+fts5_unicode61: tokenize='unicode61' available=True
+fts5_unicode61_underscore: tokenize="unicode61 tokenchars '_'" available=True
+results: 102, disagreeing with the oracle: 22
+  D2-proxyhandler-empty-dict   literal                    plain               ORACLE_INCOMPLETE_REVIEW    expected SUFFICIENT_PER_ORACLE
+  D2-proxyhandler-empty-dict   fts5_unicode61             plain               ORACLE_INCOMPLETE_REVIEW    expected SUFFICIENT_PER_ORACLE
+  D2-proxyhandler-empty-dict   fts5_unicode61_underscore  plain               ORACLE_INCOMPLETE_REVIEW    expected SUFFICIENT_PER_ORACLE
+  D3-http-proxy-cgi            literal                    plain               ORACLE_INCOMPLETE_REVIEW    expected SUFFICIENT_PER_ORACLE
+  D3-http-proxy-cgi            fts5_unicode61             plain               ORACLE_INCOMPLETE_REVIEW    expected SUFFICIENT_PER_ORACLE
+  D3-http-proxy-cgi            fts5_unicode61_underscore  plain               ORACLE_INCOMPLETE_REVIEW    expected SUFFICIENT_PER_ORACLE
+  S4-timeout-not-reads         literal                    plain               ORACLE_INCOMPLETE_REVIEW    expected SUFFICIENT_PER_ORACLE
+  S4-timeout-not-reads         fts5_unicode61             plain               ORACLE_INCOMPLETE_REVIEW    expected SUFFICIENT_PER_ORACLE
+  S4-timeout-not-reads         fts5_unicode61_underscore  plain               ORACLE_INCOMPLETE_REVIEW    expected SUFFICIENT_PER_ORACLE
+  S5-cjk-timeout               fts5_unicode61             plain               ABSTAIN_NO_HITS             expected SUFFICIENT_PER_ORACLE
+  S5-cjk-timeout               fts5_unicode61             oracle_dependencies ABSTAIN_NO_HITS             expected SUFFICIENT_PER_ORACLE
+  S5-cjk-timeout               fts5_unicode61_underscore  plain               ABSTAIN_NO_HITS             expected SUFFICIENT_PER_ORACLE
+  S5-cjk-timeout               fts5_unicode61_underscore  oracle_dependencies ABSTAIN_NO_HITS             expected SUFFICIENT_PER_ORACLE
+  S7-nfd-resume                literal                    plain               ABSTAIN_NO_HITS             expected SUFFICIENT_PER_ORACLE
+  S7-nfd-resume                literal                    oracle_dependencies ABSTAIN_NO_HITS             expected SUFFICIENT_PER_ORACLE
+  S8-quota-readonly-budget     literal                    plain               ABSTAIN_NO_HITS             expected ABSTAIN_BUDGET
+  S8-quota-readonly-budget     literal                    oracle_dependencies ABSTAIN_NO_HITS             expected ABSTAIN_BUDGET
+  S8-quota-readonly-budget     fts5_unicode61             plain               ORACLE_INCOMPLETE_REVIEW    expected ABSTAIN_BUDGET
+  S8-quota-readonly-budget     fts5_unicode61_underscore  plain               ORACLE_INCOMPLETE_REVIEW    expected ABSTAIN_BUDGET
+  S9-pool-sizing-oversize      literal                    plain               ORACLE_INCOMPLETE_REVIEW    expected ABSTAIN_BUDGET
+  S9-pool-sizing-oversize      fts5_unicode61             plain               ORACLE_INCOMPLETE_REVIEW    expected ABSTAIN_BUDGET
+  S9-pool-sizing-oversize      fts5_unicode61_underscore  plain               ORACLE_INCOMPLETE_REVIEW    expected ABSTAIN_BUDGET
+exit=1

@@ -1,0 +1,18 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "sqlite_library_version": "3.45.1",
+  "compile_option_ENABLE_FTS5": true,
+  "tokenizers": {
+    "fts5_unicode61": {
+      "tokenize": "unicode61",
+      "available": true
+    },
+    "fts5_unicode61_underscore": {
+      "tokenize": "unicode61 tokenchars '_'",
+      "available": true
+    }
+  },
+  "oracle_sha256": "1b5547bb18ca67aa270cac57c7d30f30c4a124b186c571853772f34c612e8b7f"
+}

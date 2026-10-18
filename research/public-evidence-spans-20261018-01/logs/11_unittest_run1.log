@@ -1,0 +1,26 @@
+$ cd research/public-evidence-spans-20261018-01 && python3.12 -m unittest discover -s scripts -v   # first test run, 2026-10-18T00:36:44Z
+test_missing_fts5_is_reported_not_substituted (test_evidence_bench.Availability.test_missing_fts5_is_reported_not_substituted) ... ok
+test_status_names_the_library_version (test_evidence_bench.Availability.test_status_names_the_library_version) ... ok
+test_character_budget_would_admit_an_oversized_passage (test_evidence_bench.Budget.test_character_budget_would_admit_an_oversized_passage)
+negative control: S15 is under 2048 characters, so a character budget would take it ... ok
+test_duplicates_are_suppressed_with_their_offsets (test_evidence_bench.Budget.test_duplicates_are_suppressed_with_their_offsets) ... ok
+test_every_context_fits_and_holds_whole_passages_only (test_evidence_bench.Budget.test_every_context_fits_and_holds_whole_passages_only) ... ok
+test_labels_and_separators_are_counted (test_evidence_bench.Budget.test_labels_and_separators_are_counted) ... ok
+test_oracle_dependencies_never_assemble_a_partial_required_set (test_evidence_bench.Budget.test_oracle_dependencies_never_assemble_a_partial_required_set) ... ok
+test_literal_is_case_sensitive_and_unnormalised (test_evidence_bench.Literal.test_literal_is_case_sensitive_and_unnormalised) ... ok
+test_offsets_are_utf8_byte_offsets_into_the_plain_text_fixture (test_evidence_bench.Offsets.test_offsets_are_utf8_byte_offsets_into_the_plain_text_fixture) ... ok
+test_repeated_paragraphs_keep_their_own_offsets (test_evidence_bench.Offsets.test_repeated_paragraphs_keep_their_own_offsets) ... ok
+test_a_hit_is_not_sufficiency (test_evidence_bench.Sufficiency.test_a_hit_is_not_sufficiency)
+negative control: every method finds check_hostname, the meaning is in another document ... ok
+test_absent_answer_gives_no_hits (test_evidence_bench.Sufficiency.test_absent_answer_gives_no_hits) ... ok
+test_nothing_is_semantically_reviewed (test_evidence_bench.Sufficiency.test_nothing_is_semantically_reviewed) ... ok
+test_query_is_quoted_per_term (test_evidence_bench.Tokenizers.test_query_is_quoted_per_term) ... ok
+test_underscore_identifier_collides_with_two_words_by_default (test_evidence_bench.Tokenizers.test_underscore_identifier_collides_with_two_words_by_default) ... ok
+test_unquoted_query_syntax_leaks_operators (test_evidence_bench.Tokenizers.test_unquoted_query_syntax_leaks_operators)
+negative control for the quoting in fts_query() ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.008s
+
+OK
+exit=0
