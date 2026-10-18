@@ -1,0 +1,56 @@
+# fresh-clone recovery check, 2026-10-18T03:41:52Z, Linux only; clone and replay directories are kept, nothing is deleted
+# clone: /home/user/verify/parser-corroboration-2c2abfe-20261018T034152Z-69c8e1b8
+# outputs (outside the clone): /home/user/verify/parser-corroboration-2c2abfe-20261018T034152Z-69c8e1b8-replay
+$ git clone --branch claude/adoring-turing-3ekxhe https://github.com/gmfjc624d2-dot/trafilatura.git <clone>
+exit=0
+$ git -C <clone> rev-parse HEAD; for c in 5c41ba8 6df1d6f; do git -C <clone> merge-base --is-ancestor $c HEAD; done
+2c2abfed7517054557addf1286cfc0533216eba5
+5c41ba875753666d0b3fb780e14f046f77a7ad01 is an ancestor
+6df1d6f6ce07ef1622d9574dfca3a4c76948392c is an ancestor
+exit=0
+$ git -C <clone> diff --stat 5c41ba8 HEAD -- . ':!research/public-sphinx-parser-corroboration-20261018-01'   # empty: root .gitignore and earlier research unchanged
+exit=0
+$ (cd <clone>/research/public-sphinx-parser-corroboration-20261018-01 && sha256sum -c --quiet SHA256SUMS && sha256sum -c --quiet PREREGISTERED.sha256)
+all 40 + 21 OK
+exit=0
+$ python3.12 -I -c <every pinned fixture and the pinned helper/comparator resolve in the clone with their sha256>
+10 pinned paths, problems: []
+exit=0
+# below: inside unshare -rn (no network), PYTHONDONTWRITEBYTECODE=1, from <clone>/research/public-sphinx-parser-corroboration-20261018-01
+$ unshare -rn python3.12 -I scripts/verify_wheels.py | tail -1
+wheels: 3, problems: 0
+exit=0
+$ unshare -rn python3.12 -m pip install --no-index --find-links <clone-wheels> --require-hashes --target <outputs>/site -r wheels/requirements.lock | grep Successfully
+Successfully installed html5lib-1.1 six-1.17.0 webencodings-0.5.1
+exit=0
+$ unshare -rn <lxml-only venv>/bin/python -c <lxml version; html5lib absent without PYTHONPATH>
+lxml 6.1.3 (2, 14, 6)
+html5lib absent without PYTHONPATH
+exit=0
+$ PYTHONPATH=<outputs>/site unshare -rn <lxml-only venv>/bin/python -W default scripts/replay.py <outputs>/run --against results/run1-linux-py3.12 | tail -14   # 1 expected: the 2 kept failures
+   RECORDED helper status: observed "OK_STRUCTURAL_UNIT"
+   RECORDED lxml diagnostics (line, code[, data]): observed []
+   RECORDED agree topology: observed true
+   FAIL property consistency html5lib_text_rule_equals_itertext: observed false
+{"PASS": 275, "FAIL": 2, "RECORDED": 12}
+compare reports/C1.json: 0 difference(s) outside environment.python/.platform/.machine
+compare reports/C17.json: 0 difference(s) outside environment.python/.platform/.machine
+compare reports/C2.json: 0 difference(s) outside environment.python/.platform/.machine
+compare reports/N1.json: 0 difference(s) outside environment.python/.platform/.machine
+compare reports/N2.json: 0 difference(s) outside environment.python/.platform/.machine
+compare reports/N3.json: 0 difference(s) outside environment.python/.platform/.machine
+compare reports/N4.json: 0 difference(s) outside environment.python/.platform/.machine
+compare reports/N5.json: 0 difference(s) outside environment.python/.platform/.machine
+compare summary.json: 0 difference(s) outside environment.python/.platform/.machine
+exit=1
+$ PYTHONPATH=<outputs>/site unshare -rn <lxml-only venv>/bin/python -W default -m unittest discover -s scripts 2>&1 | tail -3   # 2 kept failures expected
+FAIL: test_comment_and_pi_data_excluded_tails_kept_final_tail_dropped (test_corroborate.TextRule.test_comment_and_pi_data_excluded_tails_kept_final_tail_dropped)
+FAIL: test_rule_on_a_hand_built_elementtree (test_corroborate.TextRule.test_rule_on_a_hand_built_elementtree)
+Ran 13 tests in 0.029s
+
+FAILED (failures=2)
+exit=1
+$ git -C <clone> status --short --ignored; ls -d <clone> <outputs>   # empty status: nothing written into the clone; both kept
+<clone>
+<outputs>
+exit=0
