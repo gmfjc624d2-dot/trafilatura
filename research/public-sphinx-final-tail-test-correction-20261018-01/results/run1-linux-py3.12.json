@@ -1,0 +1,87 @@
+{
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "lxml": "6.1.3",
+    "libxml2_runtime": "2.14.6",
+    "libxml2_compiled": "2.14.6",
+    "html5lib": "1.1",
+    "six": "1.17.0",
+    "webencodings": "0.5.1",
+    "elementtree": "xml.etree.ElementTree"
+  },
+  "request_id": "public-sphinx-final-tail-test-correction-20261018-01",
+  "corrected_sha256": "fc722920fce92e08c0619b67a69857480b0eea1ab11e702fc6bbc225c0721fca",
+  "dependencies": {
+    "html5lib": {
+      "version": "1.1",
+      "wheel": "research/public-sphinx-parser-corroboration-20261018-01/wheels/html5lib-1.1-py2.py3-none-any.whl",
+      "zipimported_from_wheel": true,
+      "wheel_sha256": "0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d",
+      "matches_pin": true
+    },
+    "six": {
+      "version": "1.17.0",
+      "wheel": "research/public-sphinx-parser-corroboration-20261018-01/wheels/six-1.17.0-py2.py3-none-any.whl",
+      "zipimported_from_wheel": true,
+      "wheel_sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "matches_pin": true
+    },
+    "webencodings": {
+      "version": "0.5.1",
+      "wheel": "research/public-sphinx-parser-corroboration-20261018-01/wheels/webencodings-0.5.1-py2.py3-none-any.whl",
+      "zipimported_from_wheel": true,
+      "wheel_sha256": "a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78",
+      "matches_pin": true
+    }
+  },
+  "tests_run": 11,
+  "outcomes": [
+    {
+      "test": "test_text_policy.Axes.test_corrected_r9_holds_where_the_historical_r9_does_not",
+      "outcome": "ok"
+    },
+    {
+      "test": "test_text_policy.Axes.test_diagnostics_ambiguity_and_structural_differences_stay_review",
+      "outcome": "ok"
+    },
+    {
+      "test": "test_text_policy.Axes.test_w1_structural_axis_helper_status_and_gate_are_separate",
+      "outcome": "ok"
+    },
+    {
+      "test": "test_text_policy.Observation.test_itertext_is_recorded_and_never_a_check_or_finding",
+      "outcome": "ok"
+    },
+    {
+      "test": "test_text_policy.Oracle.test_a_wrong_final_tail_turns_the_clean_witness_to_review",
+      "outcome": "ok"
+    },
+    {
+      "test": "test_text_policy.Oracle.test_an_oracle_refusal_is_review_never_a_pass",
+      "outcome": "ok"
+    },
+    {
+      "test": "test_text_policy.Oracle.test_each_mutated_rule_fails_both_oracle_checks_on_c2",
+      "outcome": "ok"
+    },
+    {
+      "test": "test_text_policy.Oracle.test_oracle_equals_the_rule_and_tells_every_mutant_apart_on_c2",
+      "outcome": "ok"
+    },
+    {
+      "test": "test_text_policy.Oracle.test_the_oracle_runs_without_the_rule_functions",
+      "outcome": "ok"
+    },
+    {
+      "test": "test_text_policy.Scope.test_dependencies_are_the_pinned_wheels",
+      "outcome": "ok"
+    },
+    {
+      "test": "test_text_policy.Scope.test_the_stated_scope_is_the_compared_one",
+      "outcome": "ok"
+    }
+  ],
+  "returncode": 0
+}

@@ -1,0 +1,7 @@
+# check that the macOS comparison command accepts the execution record: the pinned json-numeric comparator, committed record against itself (no suite is run)
+$ python3 -I research/public-json-numeric-integrity-20261018-01/scripts/compare_results.py research/public-sphinx-final-tail-test-correction-20261018-01/results/run1-linux-py3.12.json research/public-sphinx-final-tail-test-correction-20261018-01/results/run1-linux-py3.12.json
+exempt $.environment.python: committed "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]" | replay "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+exempt $.environment.platform: committed "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39" | replay "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39"
+exempt $.environment.machine: committed "x86_64" | replay "x86_64"
+differences outside the 3 exempt paths: 0
+exit=0
