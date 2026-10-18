@@ -1,0 +1,67 @@
+{
+  "regions_note": "raw byte ranges [byte_start, byte_end) of the dt...dd run each fixture author intends as the unit; recorded from sentinels before any selection code existed",
+  "files": {
+    "fixtures/f1_functions.html": {
+      "bytes": 2688,
+      "sha256": "509ba4109594637c3874b8c27b9c84ab4135978a5a60ec2a770a6a043ed946eb"
+    },
+    "fixtures/f2_signatures.html": {
+      "bytes": 3807,
+      "sha256": "c8469e9c1ecd1fa4aa138404d14f21f22bc46b5858145413d7480ca9c11e9aeb"
+    },
+    "fixtures/f3_classes.html": {
+      "bytes": 5603,
+      "sha256": "c4572b9176cd5eb4eb175198239c8f612420d07b78c1355a2768b9efdacfc6b0"
+    },
+    "fixtures/f4_duplicates.html": {
+      "bytes": 1362,
+      "sha256": "6d1da7f63c5b4e62ae51f4ac16a14fe16a12d02fcde13a944c32bb3071493ec3"
+    },
+    "fixtures/f5_unicode.html": {
+      "bytes": 897,
+      "sha256": "4d6c0bc15616668f409bbc4de26a1633848865325d54b269741471731e6beeea"
+    },
+    "fixtures/f6_malformed.html": {
+      "bytes": 1124,
+      "sha256": "488703a5f72c349eb7fea20d5e830bc559d8de6f491d5f78ff812d18321ec841"
+    }
+  },
+  "regions": {
+    "unit:pkg.fetch": {
+      "file": "fixtures/f1_functions.html",
+      "byte_start": 276,
+      "byte_end": 1848,
+      "sha256": "12e92f2451a4593bd7360a611c57cf170ebc6dccc9b4155f7680bc0ef03ec6b2"
+    },
+    "unit:pkg.span": {
+      "file": "fixtures/f2_signatures.html",
+      "byte_start": 247,
+      "byte_end": 1239,
+      "sha256": "3af9226bf81febe2e6168ae501e214bb8ec2c1604bf0c2d5a2cc280a1e58e76a"
+    },
+    "unit:pkg.get": {
+      "file": "fixtures/f2_signatures.html",
+      "byte_start": 1271,
+      "byte_end": 2178,
+      "sha256": "8d59e2ce503883c901bf8824216d84d37d697c13b4ebc4822c9be5f69fb28e88"
+    },
+    "unit:pkg.Client.open": {
+      "file": "fixtures/f3_classes.html",
+      "byte_start": 827,
+      "byte_end": 1441,
+      "sha256": "3def0388cf99e38a87e50f1ece7ba50f6987cc0b94326f5bc50e419a5e302d32"
+    },
+    "unit:pkg.Client": {
+      "file": "fixtures/f3_classes.html",
+      "byte_start": 241,
+      "byte_end": 1950,
+      "sha256": "1cbf0cca1a6b9bc7d49d900f807f8e9f804d1e465a15d4196493c8268df05e5a"
+    },
+    "unit:pkg.naïve": {
+      "file": "fixtures/f5_unicode.html",
+      "byte_start": 244,
+      "byte_end": 803,
+      "sha256": "6c76fe67e11f5a2aaa7dd624ee08044a29b38cc33cdfaf0cfa4c6390425dc521"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+$ curl -sS -o /dev/null -w 'http=%{http_code}\n' --max-time 30 https://numpy.org/doc/2.5/reference/generated/numpy.where.html   # 2026-10-18T01:10:10Z
+curl: (56) CONNECT tunnel failed, response 403
+http=000
+exit=56
+$ curl -sS -o /dev/null -w 'http=%{http_code}\n' --max-time 30 https://docs.python.org/3.12/library/urllib.request.html   # 2026-10-18T01:10:11Z
+curl: (56) CONNECT tunnel failed, response 403
+http=000
+exit=56
+$ curl -sS -o /dev/null -w 'http=%{http_code}\n' --max-time 30 https://trafilatura.readthedocs.io/en/latest/corefunctions.html   # 2026-10-18T01:10:11Z
+curl: (56) CONNECT tunnel failed, response 403
+http=000
+exit=56
+$ curl -sS -o /dev/null -w 'http=%{http_code}\n' --max-time 30 https://www.sphinx-doc.org/en/master/usage/domains/python.html   # 2026-10-18T01:10:12Z
+curl: (56) CONNECT tunnel failed, response 403
+http=000
+exit=56
+$ curl -sS -o /dev/null -w 'http=%{http_code}\n' --max-time 30 https://lxml.de/apidoc/lxml.html   # 2026-10-18T01:10:12Z
+curl: (56) CONNECT tunnel failed, response 403
+http=000
+exit=56

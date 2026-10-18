@@ -1,0 +1,34 @@
+$ git ls-remote https://github.com/numpy/doc HEAD refs/heads/main
+be1a2c96dd1e28fd5492efb9e9f7e3bce33bd7ab	HEAD
+be1a2c96dd1e28fd5492efb9e9f7e3bce33bd7ab	refs/heads/main
+exit=0
+$ git clone --depth 1 --filter=tree:0 --no-checkout https://github.com/numpy/doc <numpy-doc>   # run 2026-10-18, exit 0
+$ git -C <numpy-doc> log -1 --format='%H %cI %s'
+be1a2c96dd1e28fd5492efb9e9f7e3bce33bd7ab 2026-06-28T11:34:24+03:00 Merge pull request #42 from mattip/v2.5.0
+$ git -C <numpy-doc> ls-tree HEAD stable README.md 2.5/reference/generated/numpy.where.html
+100644 blob 62a13db7cbd8c6a89574eb2e1fc7ba9f3daeb24f	2.5/reference/generated/numpy.where.html
+100644 blob 30a8f19a74f6cb377a2f6a0cb982a7e7eab73c00	README.md
+120000 blob 68151b2e100d81a8e6521a3c29d354e582323ad7	stable
+$ git -C <numpy-doc> cat-file blob $(git rev-parse HEAD:stable)   # symlink target
+2.5
+$ git -C <numpy-doc> ls-tree HEAD | grep -ci license   # no license file in numpy/doc
+0
+$ git -C <numpy-doc> cat-file blob 62a13db7cbd8c6a89574eb2e1fc7ba9f3daeb24f > source/numpy-2.5/numpy.where.html
+$ git ls-remote https://github.com/numpy/numpy refs/tags/v2.5.0 'refs/tags/v2.5.0^{}'
+9fb2ec2a791cc87f480693e50a1ace34a02ee531	refs/tags/v2.5.0
+6910b28fc12f4c3e821f315e24c51a6a2d89ba49	refs/tags/v2.5.0^{}
+exit=0
+$ git clone --depth 1 --filter=tree:0 --no-checkout --branch v2.5.0 https://github.com/numpy/numpy <numpy-src>   # run 2026-10-18, exit 0
+$ git -C <numpy-src> log -1 --format='%H %cI %s'
+6910b28fc12f4c3e821f315e24c51a6a2d89ba49 2026-06-21T13:43:16-06:00 Merge pull request #31706 from charris/prepare-2.5.0-release
+$ git -C <numpy-src> ls-tree HEAD LICENSE.txt
+100644 blob f37a12cc4cccf83af4517809791777e71c1df2a9	LICENSE.txt
+$ git -C <numpy-src> cat-file blob f37a12cc4cccf83af4517809791777e71c1df2a9 > source/numpy-2.5/LICENSE.txt
+$ git hash-object source/numpy-2.5/numpy.where.html source/numpy-2.5/LICENSE.txt
+62a13db7cbd8c6a89574eb2e1fc7ba9f3daeb24f
+f37a12cc4cccf83af4517809791777e71c1df2a9
+$ sha256sum source/numpy-2.5/numpy.where.html source/numpy-2.5/LICENSE.txt
+ee9fb008cbdfa6371e548559f477f5a672d2563627b9efe5213b184bd1f80f48  source/numpy-2.5/numpy.where.html
+1be1df33863f97a7bc1c4d67980bd6c69c9a6fef0a5ee76e6ad6cb91e56e8491  source/numpy-2.5/LICENSE.txt
+$ grep -o 'Created using <a[^>]*>Sphinx</a> [0-9.]*' source/numpy-2.5/numpy.where.html
+Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.

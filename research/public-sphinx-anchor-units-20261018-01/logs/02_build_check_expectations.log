@@ -1,0 +1,33 @@
+$ python3.12 scripts/build_fixtures.py check
+check: identical
+exit=0
+$ python3.12 scripts/check_expectations.py
+C01 'pkg.fetch'                                id-count=1 region=[276, 1848]
+C02 'pkg.store'                                id-count=1 region=None
+C03 'term-proxy'                               id-count=1 region=None
+C04 'fetch-label'                              id-count=1 region=None
+C05 'module-pkg'                               id-count=1 region=None
+C06 'pkg.absent'                               id-count=0 region=None
+C07 'pkg.span'                                 id-count=1 region=[247, 1239]
+C08 'pkg.fetch_one'                            id-count=1 region=[1271, 2178]
+C09 'pkg.empty_doc'                            id-count=1 region=None
+C10 'pkg.no_dd'                                id-count=1 region=None
+C11 'pkg.twin_b'                               id-count=1 region=None
+C12 'pkg.Client'                               id-count=1 region=[241, 1950]
+C13 'pkg.Client.open'                          id-count=1 region=[827, 1441]
+C14 'pkg.BigClient'                            id-count=1 region=None
+C15 'pkg.helper'                               id-count=1 region=None
+C16 'pkg.helper.inner'                         id-count=1 region=None
+C17 'pkg.dup'                                  id-count=2 region=None
+C18 'pkg.naïve'                                id-count=1 region=[244, 803]
+C19 'pkg.naïve'                               id-count=0 region=None
+C20 'pkg.na%C3%AFve'                           id-count=0 region=None
+C21 'pkg.broken'                               id-count=1 region=None
+C22 'pkg.after'                                id-count=1 region=None
+C23 'pkg.badbytes'                             id-count=1 region=None
+P01 'numpy.where'                              id-count=1 region=[24394, 34656]
+P02 'numpy.nonzero'                            id-count=0 region=None
+P03 '8ca37ba8-cc5f-4462-bfd1-6b08f701b406'     id-count=1 region=None
+P04 'numpy-where'                              id-count=1 region=None
+cases: 27, problems: 0
+exit=0

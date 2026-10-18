@@ -1,0 +1,5 @@
+# keep sources, fixtures and recorded outputs byte-exact on every OS (they are hashed)
+source/** -text
+fixtures/* -text
+results/** -text
+logs/* -text

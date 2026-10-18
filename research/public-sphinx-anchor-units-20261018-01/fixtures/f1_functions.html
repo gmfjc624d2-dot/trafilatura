@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>pkg functions</title>
+</head>
+<body>
+<div class="body" role="main">
+<section id="module-pkg">
+<h1>pkg</h1>
+<p>Module introduction. MARK-PAGE-INTRO</p>
+<span id="fetch-label"></span><dl class="py function">
+<dt class="sig sig-object py" id="pkg.fetch">
+<span class="sig-prename descclassname"><span class="pre">pkg.</span></span><span class="sig-name descname"><span class="pre">fetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout=30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkg.fetch" title="Link to this definition">¶</a></dt>
+<dd><p>Fetch <em>url</em> and return the body. MARK-FETCH-DESC</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The connection is reused between calls. MARK-FETCH-NOTE</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Never pass untrusted URLs without validation. MARK-FETCH-WARNING</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> – the address to fetch. MARK-FETCH-PARAM</p></li>
+<li><p><strong>timeout</strong> – seconds, must be positive.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>def fetch(url, timeout=30):
+    if timeout &lt;= 0:
+        raise ValueError("timeout")  # MARK-FETCH-CODE
+    return get(url) &amp; checks
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span>MARK-FETCH-VERSION added <em>timeout</em>.</p>
+</div>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pkg.store">
+<span class="sig-prename descclassname"><span class="pre">pkg.</span></span><span class="sig-name descname"><span class="pre">store</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkg.store" title="Link to this definition">¶</a></dt>
+<dd><p>Store a value. MARK-STORE-DESC</p>
+</dd>MARK-STORE-STRAY text inside the object dl
+</dl>
+<dl class="glossary simple">
+<dt id="term-proxy">proxy</dt><dd><p>An intermediary server. MARK-GLOSSARY-PROXY</p>
+</dd>
+</dl>
+<p>Closing paragraph of the page. MARK-PAGE-TAIL</p>
+</section>
+</div>
+</body>
+</html>
