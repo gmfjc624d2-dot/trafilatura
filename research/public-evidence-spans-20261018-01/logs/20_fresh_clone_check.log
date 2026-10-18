@@ -1,0 +1,51 @@
+# fresh-clone check, 2026-10-18T00:40:21Z, Linux only
+$ git clone --branch claude/adoring-turing-3ekxhe https://github.com/gmfjc624d2-dot/trafilatura.git <fresh>
+$ git -C <fresh> rev-parse HEAD
+9b0d490286422737b7bb93863fb41c5690c13aaa
+$ cd <fresh>/research/public-evidence-spans-20261018-01 && sha256sum -c SHA256SUMS
+all 30 OK
+exit=0
+$ sha256sum -c PREREGISTERED.sha256
+all 19 OK
+exit=0
+$ git -C <fresh> diff --stat 2c6f091 HEAD -- research/public-evidence-spans-20261018-01/source research/public-evidence-spans-20261018-01/fixtures   # pre-registered inputs untouched since pre-registration
+exit=0 (empty diff = unchanged)
+$ git -C <fresh> diff --stat 80c0550 HEAD -- . ':!research/public-evidence-spans-20261018-01'   # nothing outside the new directory changed
+exit=0 (empty diff = unchanged)
+$ cd <fresh>/research/techdoc-extraction-v2.3.1 && sha256sum -c ARTIFACTS.sha256   # earlier increment, left unmodified
+  sha256sum: .ruff_cache/.gitignore: No such file or directory
+  .ruff_cache/.gitignore: FAILED open or read
+  sha256sum: .ruff_cache/0.16.10/13155567231681545963: No such file or directory
+  .ruff_cache/0.16.10/13155567231681545963: FAILED open or read
+  sha256sum: .ruff_cache/0.16.10/15278873410185183288: No such file or directory
+  .ruff_cache/0.16.10/15278873410185183288: FAILED open or read
+  sha256sum: .ruff_cache/0.16.10/450724894132553365: No such file or directory
+  .ruff_cache/0.16.10/450724894132553365: FAILED open or read
+  sha256sum: .ruff_cache/CACHEDIR.TAG: No such file or directory
+  .ruff_cache/CACHEDIR.TAG: FAILED open or read
+  sha256sum: WARNING: 5 listed files could not be read
+exit=1
+$ ... grep -v .ruff_cache ARTIFACTS.sha256 | sha256sum -c   # the tracked entries
+all 89 tracked entries OK
+exit=0
+# the following run inside 'unshare -rn' (no network interface)
+$ unshare -rn python3.12 scripts/build_fixtures.py check
+check: identical
+exit=0
+$ unshare -rn python3.12 scripts/check_oracle.py | tail -1
+cases: 17, problems: 0
+exit=0
+$ unshare -rn python3.12 scripts/evidence_bench.py <scratch>/replay | tail -1
+results: 102, disagreeing with the oracle: 22
+exit=1 (1 expected: 22 disagreements)
+$ sha256sum <scratch>/replay/{environment.json,results.json,summary.md} results/run1-linux-py3.12/{environment.json,results.json,summary.md}
+environment.json replay=82b7dffef78590f2815d1122e8383be635aebccc9ace117b6b1ff107659f8a21 committed=82b7dffef78590f2815d1122e8383be635aebccc9ace117b6b1ff107659f8a21 IDENTICAL
+results.json replay=0a78b67154895fb11092daf02b58b4bd7aa222d801fc319bafdbda6502d95f67 committed=0a78b67154895fb11092daf02b58b4bd7aa222d801fc319bafdbda6502d95f67 IDENTICAL
+summary.md replay=6021335da4a2dd88295e98a2138eea0e44c6910dc37cd2591dab81bb31ffae7b committed=6021335da4a2dd88295e98a2138eea0e44c6910dc37cd2591dab81bb31ffae7b IDENTICAL
+$ unshare -rn python3.12 -m unittest discover -s scripts
+Ran 16 tests in 0.008s
+
+OK
+exit=0
+$ git -C <fresh> status --porcelain   # replay left the clone unchanged
+exit=0 (empty = clean)
