@@ -1,0 +1,3285 @@
+{
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "decimal": "1.70",
+    "libmpdec": "2.5.1",
+    "int_max_str_digits": 4300
+  },
+  "comparator": {
+    "label": "baseline",
+    "file": "compare_results_baseline_9a7933f.py",
+    "sha256": "9a7933f84a550e07ad862733cde7f1090eece844776836fb7ba4a8a99c6a50dc"
+  },
+  "summary": {
+    "checks": 275,
+    "pass": 245,
+    "fail": 30,
+    "fail, predicted (kept)": 30,
+    "findings (result differs from prediction)": 0,
+    "cli outcomes": {
+      "crash": 2,
+      "different": 17,
+      "equal": 34,
+      "invalid": 13
+    }
+  },
+  "cli_cases": [
+    {
+      "id": "K01",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "K02",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "K03",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "K04",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "K05",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "K06",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "K07",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "K08",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "E01",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "E09",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "Z01",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (value): committed 0.0 | replay -0.0",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "Z02",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (value): committed 0.0 | replay -0.0",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "T01",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"integer\" | replay \"float\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"boolean\" | replay \"integer\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"boolean\" | replay \"integer\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"integer\" | replay \"float\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"integer\" | replay \"float\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"null\" | replay \"integer\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.x (type): committed \"string\" | replay \"integer\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "I01",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: duplicate object key(s) ['x']"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "I02",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: non-standard JSON constant NaN"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "I03",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: non-standard JSON constant Infinity"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "I04",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: non-standard JSON constant -Infinity"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "I05",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: Expecting value: line 1 column 6 (char 5)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "I06",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: Extra data: line 1 column 9 (char 8)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "I07",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: 'utf-8' codec can't decode byte 0xff in position 6: invalid start byte"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "I08",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: Expecting ',' delimiter: line 1 column 7 (char 6)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "I09",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "I10",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: [Errno 2] No such file or directory: '<root>/fixtures/cases/I10_a.json'"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "I11",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "I12",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: Expecting ',' delimiter: line 1 column 7 (char 6)"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "L01",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "L02",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "L03",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "L04",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "L05",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "L06",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "L07",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "L08",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "L09",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "L10",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "L11",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "L12",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "G01",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "G02",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "G03",
+      "exit": 2,
+      "observed": "invalid",
+      "stdout": [
+        "INVALID INPUT: Exceeds the limit (4300 digits) for integer string conversion: value has 5000 digits; use sys.set_int_max_str_digits() to increase the limit"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "invalid"
+        }
+      ]
+    },
+    {
+      "id": "G04",
+      "exit": 1,
+      "observed": "crash",
+      "stdout": [],
+      "stderr_last_line": "RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string",
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "crash"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "crash"
+        }
+      ]
+    },
+    {
+      "id": "R01",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $ (key order): committed [\"a\", \"b\"] | replay [\"b\", \"a\"]",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $ (keys): committed [] | replay [\"b\"]",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $[0] (value): committed 1 | replay 2",
+        "DIFFERS $[1] (value): committed 2 | replay 1",
+        "differences outside the 3 exempt paths: 2"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $ (length): committed 1 | replay 2",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "R06",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\"",
+        "DIFFERS $.a.b[0].c (value): committed 1.5 | replay 1.51",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "X01",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed \"3.12.3\" | replay \"3.12.14\"",
+        "exempt $.environment.platform: committed \"Linux-x86_64\" | replay \"macOS-arm64\"",
+        "exempt $.environment.machine: committed \"x86_64\" | replay \"arm64\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "X02",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"3.12.3\" | replay \"3.12.3\"",
+        "exempt $.environment.platform: committed \"Linux-x86_64\" | replay \"Linux-x86_64\"",
+        "exempt $.environment.machine: committed \"x86_64\" | replay \"x86_64\"",
+        "DIFFERS $.environment.lxml (value): committed \"6.1.3\" | replay \"6.1.4\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "X03",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"3.12.3\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"Linux-x86_64\" | replay \"Linux-x86_64\"",
+        "exempt $.environment.machine: committed \"x86_64\" | replay \"x86_64\"",
+        "DIFFERS $.environment (keys): committed [\"python\"] | replay []",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "X04",
+      "exit": 1,
+      "observed": "different",
+      "stdout": [
+        "exempt $.environment.python: committed \"3.12.3\" | replay \"3.12.3\"",
+        "exempt $.environment.platform: committed \"Linux-x86_64\" | replay \"Linux-x86_64\"",
+        "exempt $.environment.machine: committed \"x86_64\" | replay \"x86_64\"",
+        "DIFFERS $.other.python (value): committed \"3.12.3\" | replay \"3.12.14\"",
+        "differences outside the 3 exempt paths: 1"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        }
+      ]
+    },
+    {
+      "id": "X05",
+      "exit": 0,
+      "observed": "equal",
+      "stdout": [
+        "exempt $.environment.python: committed {\"v\": Infinity} | replay {\"v\": Infinity}",
+        "exempt $.environment.platform: committed \"p\" | replay \"p\"",
+        "exempt $.environment.machine: committed \"m\" | replay \"m\"",
+        "differences outside the 3 exempt paths: 0"
+      ],
+      "stderr_last_line": null,
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "D01",
+      "exit": 1,
+      "observed": "crash",
+      "stdout": [
+        "exempt $.environment.python: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.platform: committed \"<missing>\" | replay \"<missing>\"",
+        "exempt $.environment.machine: committed \"<missing>\" | replay \"<missing>\""
+      ],
+      "stderr_last_line": "UnicodeEncodeError: 'utf-8' codec can't encode character '\\ud800' in position 32: surrogates not allowed",
+      "checks": [
+        {
+          "check": "baseline prediction outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "crash"
+        },
+        {
+          "check": "baseline prediction output",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": []
+        },
+        {
+          "check": "requirement outcome",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "crash"
+        }
+      ]
+    }
+  ],
+  "api_cases": [
+    {
+      "id": "A01",
+      "observed": {
+        "verdicts": {
+          "K01": "equal",
+          "K02": "equal",
+          "K03": "equal",
+          "K04": "equal",
+          "K05": "equal",
+          "K06": "equal",
+          "K07": "equal",
+          "K08": "equal",
+          "E01": "equal",
+          "E02": "equal",
+          "E03": "equal",
+          "E04": "equal",
+          "E05": "equal",
+          "E06": "equal",
+          "E07": "equal",
+          "E08": "equal",
+          "E09": "equal",
+          "Z01": "different",
+          "Z02": "different"
+        },
+        "low_precision_equals_default": true,
+        "caller_context_unchanged": true
+      },
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "verdicts": {
+              "K01": "equal",
+              "K02": "equal",
+              "K03": "equal",
+              "K04": "equal",
+              "K05": "equal",
+              "K06": "equal",
+              "K07": "equal",
+              "K08": "equal",
+              "E01": "equal",
+              "E02": "equal",
+              "E03": "equal",
+              "E04": "equal",
+              "E05": "equal",
+              "E06": "equal",
+              "E07": "equal",
+              "E08": "equal",
+              "E09": "equal",
+              "Z01": "different",
+              "Z02": "different"
+            },
+            "low_precision_equals_default": true,
+            "caller_context_unchanged": true
+          }
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": {
+            "verdicts": {
+              "K01": "equal",
+              "K02": "equal",
+              "K03": "equal",
+              "K04": "equal",
+              "K05": "equal",
+              "K06": "equal",
+              "K07": "equal",
+              "K08": "equal",
+              "E01": "equal",
+              "E02": "equal",
+              "E03": "equal",
+              "E04": "equal",
+              "E05": "equal",
+              "E06": "equal",
+              "E07": "equal",
+              "E08": "equal",
+              "E09": "equal",
+              "Z01": "different",
+              "Z02": "different"
+            },
+            "low_precision_equals_default": true,
+            "caller_context_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "observed": {
+        "unchanged": true
+      },
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "unchanged": true
+          }
+        },
+        {
+          "check": "requirement",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "A03",
+      "observed": {
+        "collision_after_as_json": "equal",
+        "x_type": "float",
+        "x_text": "0.1",
+        "emitted_equals_binary_exact": true
+      },
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "collision_after_as_json": "equal",
+            "x_type": "float",
+            "x_text": "0.1",
+            "emitted_equals_binary_exact": true
+          }
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": {
+            "collision_after_as_json": "equal",
+            "x_type": "float",
+            "x_text": "0.1",
+            "emitted_equals_binary_exact": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "observed": "error:InvalidJSONError",
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:InvalidJSONError"
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "error:InvalidJSONError"
+        }
+      ]
+    },
+    {
+      "id": "A05",
+      "observed": "error:InvalidJSONError",
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:InvalidJSONError"
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "error:InvalidJSONError"
+        }
+      ]
+    },
+    {
+      "id": "A06",
+      "observed": "error:TypeError",
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:TypeError"
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "error:TypeError"
+        }
+      ]
+    },
+    {
+      "id": "A07",
+      "observed": "str",
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "str"
+        },
+        {
+          "check": "requirement",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "str"
+        }
+      ]
+    },
+    {
+      "id": "A08",
+      "observed": "equal",
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "A09",
+      "observed": "error:TypeError",
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:TypeError"
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "error:TypeError"
+        }
+      ]
+    },
+    {
+      "id": "A10",
+      "observed": "error:RecursionError",
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "error:RecursionError"
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "error:RecursionError"
+        }
+      ]
+    },
+    {
+      "id": "A11",
+      "observed": "equal",
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "A12",
+      "observed": "equal",
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        }
+      ]
+    },
+    {
+      "id": "A13",
+      "observed": {
+        "type": "integer",
+        "text": "0"
+      },
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "type": "integer",
+            "text": "0"
+          }
+        },
+        {
+          "check": "requirement",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "type": "integer",
+            "text": "0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "A14",
+      "observed": {
+        "type": "float",
+        "negative_sign": true
+      },
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "type": "float",
+            "negative_sign": true
+          }
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": {
+            "type": "float",
+            "negative_sign": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "A15",
+      "observed": {
+        "default": [],
+        "no_exceptions": [
+          "$.environment.python"
+        ]
+      },
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "default": [],
+            "no_exceptions": [
+              "$.environment.python"
+            ]
+          }
+        },
+        {
+          "check": "requirement",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": {
+            "default": [],
+            "no_exceptions": [
+              "$.environment.python"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A16",
+      "observed": "ok",
+      "checks": [
+        {
+          "check": "baseline expectation",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "ok"
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": "ok"
+        }
+      ]
+    }
+  ],
+  "retained": [
+    {
+      "file": "research/public-evidence-spans-20261018-01/fixtures/oracle.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 2
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/fixtures/oracle_resolved.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 171
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/fixtures/passages.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 204
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/environment.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {}
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "float": 110,
+          "integer": 1083
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/source/urllib.request.rst.excerpts.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 47
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-anchor-units-20261018-01/fixtures/expectations.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 20
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-anchor-units-20261018-01/fixtures/expectations_resolved.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 43
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-anchor-units-20261018-01/fixtures/regions.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 18
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-anchor-units-20261018-01/results/run1-linux-py3.12/probe_existing_apis.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 75
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-anchor-units-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 396
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/byte_facts.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 40
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/expectations.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 56
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/fixtures/files.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 5
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/baseline-linux-py3.12/baseline_reproduction.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 176
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 590
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/fixtures/expectations.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 1
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/link_resolution.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 1
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/matrix_summary.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 358
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/posthoc_corpus_classification.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 4
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/posthoc_matrix_classification.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 22
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/public_corpus_links_as-is.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 578
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/public_corpus_links_naive-ablation.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 578
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/link_resolution.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 1
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/matrix_summary.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 358
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/public_corpus_links_as-is.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 578
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/public_corpus_links_naive-ablation.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 578
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/link_resolution.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 1
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/matrix_summary.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 310
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/posthoc_corpus_classification.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {}
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/posthoc_matrix_classification.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 10
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/public_corpus_links_as-is.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 578
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/techdoc-extraction-v2.3.1/results/public_fixture_provenance.json",
+      "observed": {
+        "sha256_pinned": true,
+        "loads": "ok",
+        "self_equal": true,
+        "numbers": {
+          "integer": 95
+        }
+      },
+      "checks": [
+        {
+          "check": "self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "cli": "equal",
+      "checks": [
+        {
+          "check": "CLI self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": 0
+        }
+      ]
+    },
+    {
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json",
+      "cli": "equal",
+      "checks": [
+        {
+          "check": "CLI self-comparison",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": 0
+        }
+      ]
+    },
+    {
+      "id": "S02a",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": "equal",
+      "differs": [],
+      "checks": [
+        {
+          "check": "baseline outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "S02b",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": "different",
+      "differs": [
+        "DIFFERS $.environment.lxml (value): committed \"6.1.3\" | replay \"6.1.4\""
+      ],
+      "checks": [
+        {
+          "check": "baseline outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "S02c",
+      "file": "research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": "different",
+      "differs": [
+        "DIFFERS $.old_cases[0].output.contexts.text_content.context_bytes (type): committed \"integer\" | replay \"float\""
+      ],
+      "checks": [
+        {
+          "check": "baseline outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "different"
+        },
+        {
+          "check": "requirement",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "S02d",
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": "equal",
+      "differs": [],
+      "checks": [
+        {
+          "check": "baseline outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement",
+          "result": "FAIL",
+          "predicted": "FAIL",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "S02e",
+      "file": "research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json",
+      "observed": "equal",
+      "differs": [],
+      "checks": [
+        {
+          "check": "baseline outcome",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": "equal"
+        },
+        {
+          "check": "requirement",
+          "result": "PASS",
+          "predicted": "PASS",
+          "detail": null
+        }
+      ]
+    }
+  ]
+}

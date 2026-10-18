@@ -1,0 +1,9 @@
+# POST-HOC (not pre-registered), after logs/10 showed that O1 failed: the v3.12.3 pure-Python number pattern
+# needs an ASCII first digit ([1-9] or 0) and uses \d only after it; standard library only, no comparator involved
+$ python3.12 -c <py_make_scanner on [1١] and [1.١]>
+3.12.3
+'[\u0661]' -> JSONDecodeError Expecting value: line 1 column 2 (char 1)
+'[1\u0661]' -> [11] hook saw [('parse_int', '1\u0661')]
+'[1.\u0661]' -> [1.1] hook saw [('parse_float', '1.\u0661')]
+'[1e\u0661]' -> [10.0] hook saw [('parse_float', '1e\u0661')]
+exit=0

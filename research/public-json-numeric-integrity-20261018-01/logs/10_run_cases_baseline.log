@@ -1,0 +1,185 @@
+# first run of the 9a7933f baseline on the pre-registered cases; no repaired comparator exists yet
+$ unshare -rn python3.12 scripts/run_cases.py baseline results/baseline-linux-py3.12
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "decimal": "1.70",
+  "libmpdec": "2.5.1",
+  "int_max_str_digits": 4300
+}
+K01 equal     exit 0 FAILED requirement outcome
+K02 equal     exit 0 FAILED requirement outcome
+K03 equal     exit 0 FAILED requirement outcome
+K04 equal     exit 0 FAILED requirement outcome
+K05 equal     exit 0 FAILED requirement outcome
+K06 equal     exit 0 FAILED requirement outcome
+K07 equal     exit 0 FAILED requirement outcome
+K08 equal     exit 0 FAILED requirement outcome
+E01 equal     exit 0 
+E02 equal     exit 0 
+E03 equal     exit 0 
+E04 equal     exit 0 
+E05 equal     exit 0 
+E06 equal     exit 0 
+E07 equal     exit 0 
+E08 equal     exit 0 
+E09 equal     exit 0 
+Z01 different exit 1 
+      DIFFERS $.x (value): committed 0.0 | replay -0.0
+Z02 different exit 1 
+      DIFFERS $.x (value): committed 0.0 | replay -0.0
+T01 different exit 1 
+      DIFFERS $.x (type): committed "integer" | replay "float"
+T02 different exit 1 
+      DIFFERS $.x (type): committed "boolean" | replay "integer"
+T03 different exit 1 
+      DIFFERS $.x (type): committed "boolean" | replay "integer"
+T04 different exit 1 
+      DIFFERS $.x (type): committed "integer" | replay "float"
+T05 different exit 1 
+      DIFFERS $.x (type): committed "integer" | replay "float"
+T06 different exit 1 
+      DIFFERS $.x (type): committed "null" | replay "integer"
+T07 different exit 1 
+      DIFFERS $.x (type): committed "string" | replay "integer"
+I01 invalid   exit 2 
+      INVALID INPUT: duplicate object key(s) ['x']
+I02 invalid   exit 2 
+      INVALID INPUT: non-standard JSON constant NaN
+I03 invalid   exit 2 
+      INVALID INPUT: non-standard JSON constant Infinity
+I04 invalid   exit 2 
+      INVALID INPUT: non-standard JSON constant -Infinity
+I05 invalid   exit 2 
+      INVALID INPUT: Expecting value: line 1 column 6 (char 5)
+I06 invalid   exit 2 
+      INVALID INPUT: Extra data: line 1 column 9 (char 8)
+I07 invalid   exit 2 
+      INVALID INPUT: 'utf-8' codec can't decode byte 0xff in position 6: invalid start byte
+I08 invalid   exit 2 
+      INVALID INPUT: Expecting ',' delimiter: line 1 column 7 (char 6)
+I09 invalid   exit 2 
+      INVALID INPUT: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+I10 invalid   exit 2 
+      INVALID INPUT: [Errno 2] No such file or directory: '<root>/fixtures/cases/I10_a.json'
+I11 invalid   exit 2 
+      INVALID INPUT: Expecting value: line 1 column 1 (char 0)
+I12 invalid   exit 2 
+      INVALID INPUT: Expecting ',' delimiter: line 1 column 7 (char 6)
+L01 equal     exit 0 
+L02 equal     exit 0 FAILED requirement outcome
+L03 equal     exit 0 
+L04 equal     exit 0 FAILED requirement outcome
+L05 equal     exit 0 
+L06 equal     exit 0 
+L07 equal     exit 0 FAILED requirement outcome
+L08 equal     exit 0 FAILED requirement outcome
+L09 equal     exit 0 FAILED requirement outcome
+L10 equal     exit 0 FAILED requirement outcome
+L11 equal     exit 0 
+L12 equal     exit 0 FAILED requirement outcome
+G01 equal     exit 0 
+G02 equal     exit 0 FAILED requirement outcome
+G03 invalid   exit 2 
+      INVALID INPUT: Exceeds the limit (4300 digits) for integer string conversion: value has 5000 digits; use sys.set_int_max_str_digits() to increase the limit
+G04 crash     exit 1 FAILED requirement outcome
+      stderr: RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string
+R01 different exit 1 
+      DIFFERS $ (key order): committed ["a", "b"] | replay ["b", "a"]
+R02 different exit 1 
+      DIFFERS $ (keys): committed [] | replay ["b"]
+R03 different exit 1 
+      DIFFERS $[0] (value): committed 1 | replay 2
+      DIFFERS $[1] (value): committed 2 | replay 1
+R04 different exit 1 
+      DIFFERS $ (length): committed 1 | replay 2
+R05 equal     exit 0 
+R06 different exit 1 
+      DIFFERS $.a.b[0].c (value): committed 1.5 | replay 1.51
+X01 equal     exit 0 
+X02 different exit 1 
+      DIFFERS $.environment.lxml (value): committed "6.1.3" | replay "6.1.4"
+X03 different exit 1 
+      DIFFERS $.environment (keys): committed ["python"] | replay []
+X04 different exit 1 
+      DIFFERS $.other.python (value): committed "3.12.3" | replay "3.12.14"
+X05 equal     exit 0 
+      exempt $.environment.python: committed {"v": Infinity} | replay {"v": Infinity}
+      exempt $.environment.platform: committed "p" | replay "p"
+      exempt $.environment.machine: committed "m" | replay "m"
+D01 crash     exit 1 FAILED requirement outcome
+      stderr: UnicodeEncodeError: 'utf-8' codec can't encode character '\ud800' in position 32: surrogates not allowed
+A01 {"verdicts": {"K01": "equal", "K02": "equal", "K03": "equal", "K04": "equal", "K05": "equal", "K06": "equal", "K07": "equal", "K08": "equal", "E01": "equal", "E02": "equal", "E03": "equal", "E04": "eq ['PASS', 'FAIL']
+A02 {"unchanged": true} ['PASS', 'PASS']
+A03 {"collision_after_as_json": "equal", "x_type": "float", "x_text": "0.1", "emitted_equals_binary_exact": true} ['PASS', 'FAIL']
+A04 "error:InvalidJSONError" ['PASS', 'FAIL']
+A05 "error:InvalidJSONError" ['PASS', 'FAIL']
+A06 "error:TypeError" ['PASS', 'FAIL']
+A07 "str" ['PASS', 'PASS']
+A08 "equal" ['PASS', 'FAIL']
+A09 "error:TypeError" ['PASS', 'FAIL']
+A10 "error:RecursionError" ['PASS', 'FAIL']
+A11 "equal" ['PASS', 'FAIL']
+A12 "equal" ['PASS', 'PASS']
+A13 {"type": "integer", "text": "0"} ['PASS', 'PASS']
+A14 {"type": "float", "negative_sign": true} ['PASS', 'FAIL']
+A15 {"default": [], "no_exceptions": ["$.environment.python"]} ['PASS', 'PASS']
+A16 "ok" ['PASS', 'FAIL']
+self research/public-evidence-spans-20261018-01/fixtures/oracle.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 2}} ['PASS']
+self research/public-evidence-spans-20261018-01/fixtures/oracle_resolved.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 171}} ['PASS']
+self research/public-evidence-spans-20261018-01/fixtures/passages.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 204}} ['PASS']
+self research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/environment.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {}} ['PASS']
+self research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"float": 110, "integer": 1083}} ['PASS']
+self research/public-evidence-spans-20261018-01/source/urllib.request.rst.excerpts.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 47}} ['PASS']
+self research/public-sphinx-anchor-units-20261018-01/fixtures/expectations.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 20}} ['PASS']
+self research/public-sphinx-anchor-units-20261018-01/fixtures/expectations_resolved.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 43}} ['PASS']
+self research/public-sphinx-anchor-units-20261018-01/fixtures/regions.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 18}} ['PASS']
+self research/public-sphinx-anchor-units-20261018-01/results/run1-linux-py3.12/probe_existing_apis.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 75}} ['PASS']
+self research/public-sphinx-anchor-units-20261018-01/results/run1-linux-py3.12/results.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 396}} ['PASS']
+self research/public-sphinx-evidence-integrity-20261018-01/fixtures/byte_facts.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 40}} ['PASS']
+self research/public-sphinx-evidence-integrity-20261018-01/fixtures/expectations.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 56}} ['PASS']
+self research/public-sphinx-evidence-integrity-20261018-01/fixtures/files.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 5}} ['PASS']
+self research/public-sphinx-evidence-integrity-20261018-01/results/baseline-linux-py3.12/baseline_reproduction.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 176}} ['PASS']
+self research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 590}} ['PASS']
+self research/techdoc-extraction-v2.3.1/fixtures/expectations.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 1}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/link_resolution.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 1}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/matrix_summary.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 358}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/posthoc_corpus_classification.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 4}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/posthoc_matrix_classification.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 22}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/public_corpus_links_as-is.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 578}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1-rerun/public_corpus_links_naive-ablation.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 578}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/link_resolution.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 1}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/matrix_summary.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 358}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/public_corpus_links_as-is.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 578}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/baseline-v2.3.1/public_corpus_links_naive-ablation.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 578}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/link_resolution.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 1}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/matrix_summary.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 310}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/posthoc_corpus_classification.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/posthoc_matrix_classification.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 10}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/patched-bb0e4fa/public_corpus_links_as-is.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 578}} ['PASS']
+self research/techdoc-extraction-v2.3.1/results/public_fixture_provenance.json {"sha256_pinned": true, "loads": "ok", "self_equal": true, "numbers": {"integer": 95}} ['PASS']
+self research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json "equal" ['PASS']
+self research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json "equal" ['PASS']
+S02a research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json "equal" ['PASS', 'PASS']
+S02b research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json "different" ['PASS', 'PASS']
+S02c research/public-sphinx-evidence-integrity-20261018-01/results/run1-linux-py3.12/results.json "different" ['PASS', 'PASS']
+S02d research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json "equal" ['PASS', 'FAIL']
+S02e research/public-evidence-spans-20261018-01/results/run1-linux-py3.12/results.json "equal" ['PASS', 'PASS']
+interpreter: {"O1": {"default hooks": "error:JSONDecodeError", "module hooks": "error:JSONDecodeError"}, "O2": {"adjusted": 999999999999999999, "context_Emax": 999999}, "O3": {"default context": "error:InvalidOperation", "InvalidOperation not trapped": "NaN"}, "O4": "RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string"}
+{
+  "checks": 275,
+  "pass": 245,
+  "fail": 30,
+  "fail, predicted (kept)": 30,
+  "findings (result differs from prediction)": 0,
+  "cli outcomes": {
+    "crash": 2,
+    "different": 17,
+    "equal": 34,
+    "invalid": 13
+  }
+}
+FINDING O1 null
+interpreter observations: 4 checks, findings 1
+exit=1
