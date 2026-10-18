@@ -1,0 +1,43 @@
+# acquisition, 2026-10-18T03:28:00Z: registry records, wheels, webencodings license; into <acq> (scratch; data only, never executed)
+$ curl -sS -o <acq>/registry/html5lib_1.1.json https://pypi.org/pypi/html5lib/1.1/json
+exit=0 bytes=18655
+$ curl -sS -o <acq>/registry/six_1.17.0.json https://pypi.org/pypi/six/1.17.0/json
+exit=0 bytes=3904
+$ curl -sS -o <acq>/registry/webencodings_0.5.1.json https://pypi.org/pypi/webencodings/0.5.1/json
+exit=0 bytes=4351
+$ curl -sS -o <acq>/registry/html5lib.json https://pypi.org/pypi/html5lib/json
+exit=0 bytes=41620
+$ curl -sS -o <acq>/registry/six.json https://pypi.org/pypi/six/json
+exit=0 bytes=40256
+$ curl -sS -o <acq>/registry/webencodings.json https://pypi.org/pypi/webencodings/json
+exit=0 bytes=13754
+$ curl -sS -o <acq>/registry/webencodings_0.6.0.json https://pypi.org/pypi/webencodings/0.6.0/json
+exit=0 bytes=5414
+$ curl -sS -o <acq>/registry/webencodings_0.6.1.json https://pypi.org/pypi/webencodings/0.6.1/json
+exit=0 bytes=5458
+$ curl -sS -o <acq>/downloads/html5lib-1.1-py2.py3-none-any.whl https://files.pythonhosted.org/packages/6c/dd/a834df6482147d48e225a49515aabc28974ad5a4ca3215c18a882565b028/html5lib-1.1-py2.py3-none-any.whl
+exit=0 bytes=112173 registry_size=112173
+$ echo '0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d  html5lib-1.1-py2.py3-none-any.whl' | sha256sum -c   # registry digest
+html5lib-1.1-py2.py3-none-any.whl: OK
+exit=0
+$ curl -sS -o <acq>/downloads/six-1.17.0-py2.py3-none-any.whl https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
+exit=0 bytes=11050 registry_size=11050
+$ echo '4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274  six-1.17.0-py2.py3-none-any.whl' | sha256sum -c   # registry digest
+six-1.17.0-py2.py3-none-any.whl: OK
+exit=0
+$ curl -sS -o <acq>/downloads/webencodings-0.5.1-py2.py3-none-any.whl https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
+exit=0 bytes=11774 registry_size=11774
+$ echo 'a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78  webencodings-0.5.1-py2.py3-none-any.whl' | sha256sum -c   # registry digest
+webencodings-0.5.1-py2.py3-none-any.whl: OK
+exit=0
+$ curl -sS -o <acq>/webencodings-v0.5.1-LICENSE https://raw.githubusercontent.com/gsnedders/python-webencodings/v0.5.1/LICENSE   # the 0.5.1 wheel and sdist carry no license file
+exit=0 sha256=f23bae6ada76095610a77137fb92aec7342723900211c5826d54b4c57907ca56 gitblob=3d0d3e70595daa53078b9ef093b39f4505d73906
+$ git ls-remote https://github.com/gsnedders/python-webencodings.git refs/tags/v0.5.1 refs/tags/v0.5.1^{}   # lightweight tag: no peeled line
+fa2cb5d75ab41e63ace691bc0825d3432ba7d694	refs/tags/v0.5.1
+exit=0
+$ cmp each file with the first download (<acq-first>)
+html5lib-1.1-py2.py3-none-any.whl identical
+six-1.17.0-py2.py3-none-any.whl identical
+webencodings-0.5.1-py2.py3-none-any.whl identical
+LICENSE identical
+exit=0

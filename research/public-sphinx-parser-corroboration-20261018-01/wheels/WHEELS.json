@@ -1,0 +1,133 @@
+{
+  "schema": 1,
+  "request_id": "public-sphinx-parser-corroboration-20261018-01",
+  "purpose": "pure-Python wheels for the html5lib corroboration experiment, retained so replay needs no network; lxml is not included (native wheel)",
+  "acquired": "logs/01_acquisition.log: registry JSON from pypi.org, wheel bytes from files.pythonhosted.org, both checked; nothing installed system-wide",
+  "verified_by": "scripts/verify_wheels.py: file sha256 and size, zip integrity, every RECORD hash, METADATA name/version/license/requirements, WHEEL tags, no native members, license file hashes",
+  "choices": {
+    "html5lib": "1.1, as requested; its latest PyPI release (uploaded 2020-06-22). Requires-Dist: six (>=1.9), webencodings. Its classifiers list Python up to 3.8; Python 3.12 compatibility is executed evidence on Linux only.",
+    "six": "1.17.0, the latest release (2024-12-04), satisfies six>=1.9; its six.py defines the meta-path importer method find_spec, which Python 3.12 import machinery uses (find_module/load_module were removed in 3.12)",
+    "webencodings": "0.5.1 (2017-04-05), the release that existed when html5lib 1.1 was published and the one it was tested with. 0.6.0 and 0.6.1 (both 2026-08-15, Requires-Python >=3.10, project URLs moved) satisfy the unversioned requirement too; they were not chosen because html5lib 1.1 with them was not examined here. This is not a judgement of either line."
+  },
+  "wheels": [
+    {
+      "filename": "html5lib-1.1-py2.py3-none-any.whl",
+      "sha256": "0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d",
+      "bytes": 112173,
+      "registry": {
+        "url": "https://files.pythonhosted.org/packages/6c/dd/a834df6482147d48e225a49515aabc28974ad5a4ca3215c18a882565b028/html5lib-1.1-py2.py3-none-any.whl",
+        "sha256": "0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d",
+        "size": 112173,
+        "upload_time": "2020-06-22T23:32:36.781398Z",
+        "yanked": false
+      },
+      "metadata": {
+        "name": "html5lib",
+        "version": "1.1",
+        "license": "MIT License",
+        "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
+        "requires_dist": [
+          "six (>=1.9)",
+          "webencodings",
+          "genshi ; extra == 'all'",
+          "chardet (>=2.2) ; extra == 'all'",
+          "lxml ; (platform_python_implementation == 'CPython') and extra == 'all'",
+          "chardet (>=2.2) ; extra == 'chardet'",
+          "genshi ; extra == 'genshi'",
+          "lxml ; (platform_python_implementation == 'CPython') and extra == 'lxml'"
+        ]
+      },
+      "wheel": {
+        "root_is_purelib": true,
+        "tags": [
+          "py2-none-any",
+          "py3-none-any"
+        ]
+      },
+      "record_entries": 39,
+      "licenses": [
+        {
+          "path": "wheels/licenses/html5lib-1.1-LICENSE",
+          "sha256": "16a39991619e92f18680932da2a9199fdf7d95df3ecaedc52ea06218aabafd6f",
+          "source": "member html5lib-1.1.dist-info/LICENSE of the wheel"
+        },
+        {
+          "path": "wheels/licenses/html5lib-1.1-AUTHORS.rst",
+          "sha256": "0eb3403227e80e9b90c899fe296f87e8af13b766b9aca9d5d94178f8346b1942",
+          "source": "member html5lib-1.1.dist-info/AUTHORS.rst of the wheel"
+        }
+      ]
+    },
+    {
+      "filename": "six-1.17.0-py2.py3-none-any.whl",
+      "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "bytes": 11050,
+      "registry": {
+        "url": "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl",
+        "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+        "size": 11050,
+        "upload_time": "2024-12-04T17:35:26.475808Z",
+        "yanked": false
+      },
+      "metadata": {
+        "name": "six",
+        "version": "1.17.0",
+        "license": "MIT",
+        "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*",
+        "requires_dist": []
+      },
+      "wheel": {
+        "root_is_purelib": true,
+        "tags": [
+          "py2-none-any",
+          "py3-none-any"
+        ]
+      },
+      "record_entries": 6,
+      "licenses": [
+        {
+          "path": "wheels/licenses/six-1.17.0-LICENSE",
+          "sha256": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0",
+          "source": "member six-1.17.0.dist-info/LICENSE of the wheel"
+        }
+      ]
+    },
+    {
+      "filename": "webencodings-0.5.1-py2.py3-none-any.whl",
+      "sha256": "a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78",
+      "bytes": 11774,
+      "registry": {
+        "url": "https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl",
+        "sha256": "a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78",
+        "size": 11774,
+        "upload_time": "2017-04-05T20:21:32.581689Z",
+        "yanked": false
+      },
+      "metadata": {
+        "name": "webencodings",
+        "version": "0.5.1",
+        "license": "BSD",
+        "requires_python": null,
+        "requires_dist": []
+      },
+      "wheel": {
+        "root_is_purelib": true,
+        "tags": [
+          "py2-none-any",
+          "py3-none-any"
+        ]
+      },
+      "record_entries": 11,
+      "licenses": [
+        {
+          "path": "wheels/licenses/webencodings-0.5.1-LICENSE",
+          "sha256": "f23bae6ada76095610a77137fb92aec7342723900211c5826d54b4c57907ca56",
+          "source": "LICENSE at https://github.com/gsnedders/python-webencodings tag v0.5.1 (lightweight tag, commit fa2cb5d75ab41e63ace691bc0825d3432ba7d694, blob 3d0d3e70595daa53078b9ef093b39f4505d73906); neither the 0.5.1 wheel nor its sdist contains a license file, their METADATA says License: BSD and webencodings/__init__.py says ':license: BSD, see LICENSE for details.'"
+        }
+      ]
+    }
+  ],
+  "not_included": {
+    "lxml": "native wheel; replay uses an existing lxml (recorded: lxml 6.1.3, libxml2 2.14.6 on Linux)"
+  }
+}

@@ -1,0 +1,381 @@
+{
+  "source": "https://pypi.org/pypi/<project>/<version>/json, fetched by logs/01_acquisition.log; trimmed to these fields",
+  "releases_seen": {
+    "html5lib": {
+      "latest": "1.1",
+      "last_five": [
+        [
+          "1.0b10",
+          "2016-07-15T01:37:36.369280Z"
+        ],
+        [
+          "0.999999999",
+          "2016-07-15T01:38:04.154156Z"
+        ],
+        [
+          "1.0.1",
+          "2017-12-07T14:10:04.239928Z"
+        ],
+        [
+          "1.0",
+          "2017-12-07T14:43:03.932507Z"
+        ],
+        [
+          "1.1",
+          "2020-06-22T23:32:36.781398Z"
+        ]
+      ]
+    },
+    "six": {
+      "latest": "1.17.0",
+      "last_five": [
+        [
+          "1.13.0",
+          "2019-11-05T17:28:34.350776Z"
+        ],
+        [
+          "1.14.0",
+          "2020-01-15T18:10:19.607402Z"
+        ],
+        [
+          "1.15.0",
+          "2020-05-21T15:25:54.177349Z"
+        ],
+        [
+          "1.16.0",
+          "2021-05-05T14:18:17.237677Z"
+        ],
+        [
+          "1.17.0",
+          "2024-12-04T17:35:26.475808Z"
+        ]
+      ]
+    },
+    "webencodings": {
+      "latest": "0.6.1",
+      "last_five": [
+        [
+          "0.4",
+          "2013-11-30T16:56:50.797198Z"
+        ],
+        [
+          "0.5",
+          "2016-05-31T22:27:13.686331Z"
+        ],
+        [
+          "0.5.1",
+          "2017-04-05T20:21:32.581689Z"
+        ],
+        [
+          "0.6.0",
+          "2026-08-15T12:45:53.323349Z"
+        ],
+        [
+          "0.6.1",
+          "2026-08-15T14:22:56.310482Z"
+        ]
+      ]
+    }
+  },
+  "html5lib_1.1": {
+    "info": {
+      "name": "html5lib",
+      "version": "1.1",
+      "summary": "HTML parser based on the WHATWG HTML specification",
+      "license": "MIT License",
+      "license_expression": null,
+      "requires_dist": [
+        "six (>=1.9)",
+        "webencodings",
+        "genshi ; extra == 'all'",
+        "chardet (>=2.2) ; extra == 'all'",
+        "lxml ; (platform_python_implementation == 'CPython') and extra == 'all'",
+        "chardet (>=2.2) ; extra == 'chardet'",
+        "genshi ; extra == 'genshi'",
+        "lxml ; (platform_python_implementation == 'CPython') and extra == 'lxml'"
+      ],
+      "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
+      "home_page": "https://github.com/html5lib/html5lib-python",
+      "project_urls": {
+        "Homepage": "https://github.com/html5lib/html5lib-python"
+      },
+      "author": "",
+      "maintainer": "James Graham",
+      "classifiers": [
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Text Processing :: Markup :: HTML"
+      ]
+    },
+    "files": [
+      {
+        "filename": "html5lib-1.1-py2.py3-none-any.whl",
+        "packagetype": "bdist_wheel",
+        "size": 112173,
+        "upload_time_iso_8601": "2020-06-22T23:32:36.781398Z",
+        "url": "https://files.pythonhosted.org/packages/6c/dd/a834df6482147d48e225a49515aabc28974ad5a4ca3215c18a882565b028/html5lib-1.1-py2.py3-none-any.whl",
+        "yanked": false,
+        "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
+        "sha256": "0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d"
+      },
+      {
+        "filename": "html5lib-1.1.tar.gz",
+        "packagetype": "sdist",
+        "size": 272215,
+        "upload_time_iso_8601": "2020-06-22T23:32:38.834992Z",
+        "url": "https://files.pythonhosted.org/packages/ac/b6/b55c3f49042f1df3dcd422b7f224f939892ee94f22abcf503a9b7339eaf2/html5lib-1.1.tar.gz",
+        "yanked": false,
+        "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
+        "sha256": "b2e5b40261e20f354d198eae92afc10d750afb487ed5e50f9c4eaf07c184146f"
+      }
+    ]
+  },
+  "six_1.17.0": {
+    "info": {
+      "name": "six",
+      "version": "1.17.0",
+      "summary": "Python 2 and 3 compatibility utilities",
+      "license": "MIT",
+      "license_expression": null,
+      "requires_dist": null,
+      "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7",
+      "home_page": "https://github.com/benjaminp/six",
+      "project_urls": {
+        "Homepage": "https://github.com/benjaminp/six"
+      },
+      "author": "Benjamin Peterson",
+      "maintainer": null,
+      "classifiers": [
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 3",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Utilities"
+      ]
+    },
+    "files": [
+      {
+        "filename": "six-1.17.0-py2.py3-none-any.whl",
+        "packagetype": "bdist_wheel",
+        "size": 11050,
+        "upload_time_iso_8601": "2024-12-04T17:35:26.475808Z",
+        "url": "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl",
+        "yanked": false,
+        "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7",
+        "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+      },
+      {
+        "filename": "six-1.17.0.tar.gz",
+        "packagetype": "sdist",
+        "size": 34031,
+        "upload_time_iso_8601": "2024-12-04T17:35:28.174320Z",
+        "url": "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz",
+        "yanked": false,
+        "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7",
+        "sha256": "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
+      }
+    ]
+  },
+  "webencodings_0.5.1": {
+    "info": {
+      "name": "webencodings",
+      "version": "0.5.1",
+      "summary": "Character encoding aliases for legacy web content",
+      "license": "BSD",
+      "license_expression": null,
+      "requires_dist": null,
+      "requires_python": "",
+      "home_page": "https://github.com/SimonSapin/python-webencodings",
+      "project_urls": {
+        "Homepage": "https://github.com/SimonSapin/python-webencodings"
+      },
+      "author": "Geoffrey Sneddon",
+      "maintainer": "",
+      "classifiers": [
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: BSD License",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 2.6",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Topic :: Internet :: WWW/HTTP"
+      ]
+    },
+    "files": [
+      {
+        "filename": "webencodings-0.5.1-py2.py3-none-any.whl",
+        "packagetype": "bdist_wheel",
+        "size": 11774,
+        "upload_time_iso_8601": "2017-04-05T20:21:32.581689Z",
+        "url": "https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl",
+        "yanked": false,
+        "requires_python": null,
+        "sha256": "a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78"
+      },
+      {
+        "filename": "webencodings-0.5.1.tar.gz",
+        "packagetype": "sdist",
+        "size": 9721,
+        "upload_time_iso_8601": "2017-04-05T20:21:34.189869Z",
+        "url": "https://files.pythonhosted.org/packages/0b/02/ae6ceac1baeda530866a85075641cec12989bd8d31af6d5ab4a3e8c92f47/webencodings-0.5.1.tar.gz",
+        "yanked": false,
+        "requires_python": null,
+        "sha256": "b36a1c245f2d304965eb4e0a82848379241dc04b865afcc4aab16748587e1923"
+      }
+    ]
+  },
+  "webencodings_0.6.0": {
+    "info": {
+      "name": "webencodings",
+      "version": "0.6.0",
+      "summary": "Character encoding aliases for legacy web content",
+      "license": null,
+      "license_expression": null,
+      "requires_dist": [
+        "sphinx; extra == \"doc\"",
+        "furo; extra == \"doc\"",
+        "pytest; extra == \"test\"",
+        "ruff; extra == \"test\""
+      ],
+      "requires_python": ">=3.10",
+      "home_page": null,
+      "project_urls": {
+        "Changelog": "https://github.com/gsnedders/python-webencodings/releases",
+        "Code": "https://github.com/gsnedders/python-webencodings",
+        "Documentation": "http://packages.python.org/webencodings/",
+        "Homepage": "https://github.com/gsnedders/python-webencodings",
+        "Issues": "https://github.com/gsnedders/python-webencodings/issues"
+      },
+      "author": null,
+      "maintainer": null,
+      "classifiers": [
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: BSD License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Topic :: Internet :: WWW/HTTP"
+      ]
+    },
+    "files": [
+      {
+        "filename": "webencodings-0.6.0-py3-none-any.whl",
+        "packagetype": "bdist_wheel",
+        "size": 8764,
+        "upload_time_iso_8601": "2026-08-15T12:45:53.323349Z",
+        "url": "https://files.pythonhosted.org/packages/60/85/342120bed3252e21b2075226717927f5f83be9479ffbd274dc7cb101790e/webencodings-0.6.0-py3-none-any.whl",
+        "yanked": false,
+        "requires_python": ">=3.10",
+        "sha256": "d27ff2f4dfe3807b344b2d696982278be61f0db44175c0199b99172f19ab9aef"
+      },
+      {
+        "filename": "webencodings-0.6.0.tar.gz",
+        "packagetype": "sdist",
+        "size": 15037,
+        "upload_time_iso_8601": "2026-08-15T12:45:54.541857Z",
+        "url": "https://files.pythonhosted.org/packages/c3/d6/ea3dfb6bafbc4c120556f19f4ca8a5a5d88afb3902567dc2102cc4e1bcb5/webencodings-0.6.0.tar.gz",
+        "yanked": false,
+        "requires_python": ">=3.10",
+        "sha256": "a5dddb9e355a6feb04ad51afb20194f600654d4cb2d8ae6d4efa2d684df1d699"
+      }
+    ]
+  },
+  "webencodings_0.6.1": {
+    "info": {
+      "name": "webencodings",
+      "version": "0.6.1",
+      "summary": "Character encoding aliases for legacy web content",
+      "license": null,
+      "license_expression": null,
+      "requires_dist": [
+        "sphinx; extra == \"doc\"",
+        "furo; extra == \"doc\"",
+        "pytest; extra == \"test\"",
+        "ruff; extra == \"test\""
+      ],
+      "requires_python": ">=3.10",
+      "home_page": null,
+      "project_urls": {
+        "Changelog": "https://github.com/CourtBouillon/webencodings/releases",
+        "Code": "https://github.com/CourtBouillon/webencodings",
+        "Documentation": "https://doc.courtbouillon.org/webencodings",
+        "Donation": "https://opencollective.com/courtbouillon",
+        "Homepage": "https://github.com/CourtBouillon/webencodings",
+        "Issues": "https://github.com/CourtBouillon/webencodings/issues"
+      },
+      "author": null,
+      "maintainer": null,
+      "classifiers": [
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: BSD License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Topic :: Internet :: WWW/HTTP"
+      ]
+    },
+    "files": [
+      {
+        "filename": "webencodings-0.6.1-py3-none-any.whl",
+        "packagetype": "bdist_wheel",
+        "size": 8745,
+        "upload_time_iso_8601": "2026-08-15T14:22:56.310482Z",
+        "url": "https://files.pythonhosted.org/packages/77/c6/040cbc72480d789a5f40d63fb484d3106554c4dfa2d2b70ad5022057750f/webencodings-0.6.1-py3-none-any.whl",
+        "yanked": false,
+        "requires_python": ">=3.10",
+        "sha256": "7fab6269c8bf237c657876b52058ccb182e861518d1c695c1a9aaa8c1c105d5b"
+      },
+      {
+        "filename": "webencodings-0.6.1.tar.gz",
+        "packagetype": "sdist",
+        "size": 15001,
+        "upload_time_iso_8601": "2026-08-15T14:22:57.549569Z",
+        "url": "https://files.pythonhosted.org/packages/d5/a0/8fd707bcb776a7be556bad06a2ea5fb9bd519df78ef8e26f70ccf0f38bff/webencodings-0.6.1.tar.gz",
+        "yanked": false,
+        "requires_python": ">=3.10",
+        "sha256": "565f9ad031c702dae404e27a099e3e09186a3ab1b9520f06d215502b651fd910"
+      }
+    ]
+  }
+}

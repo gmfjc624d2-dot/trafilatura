@@ -1,0 +1,6 @@
+$ unshare -rn python3.12 -I scripts/verify_wheels.py   # standard library only; nothing installed or imported
+{"filename": "html5lib-1.1-py2.py3-none-any.whl", "record_hashes_checked": 38, "members": 39, "name": "html5lib", "version": "1.1", "license": "MIT License", "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*", "requires_dist": ["six (>=1.9)", "webencodings", "genshi ; extra == 'all'", "chardet (>=2.2) ; extra == 'all'", "lxml ; (platform_python_implementation == 'CPython') and extra == 'all'", "chardet (>=2.2) ; extra == 'chardet'", "genshi ; extra == 'genshi'", "lxml ; (platform_python_implementation == 'CPython') and extra == 'lxml'"]}
+{"filename": "six-1.17.0-py2.py3-none-any.whl", "record_hashes_checked": 5, "members": 6, "name": "six", "version": "1.17.0", "license": "MIT", "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*", "requires_dist": []}
+{"filename": "webencodings-0.5.1-py2.py3-none-any.whl", "record_hashes_checked": 10, "members": 11, "name": "webencodings", "version": "0.5.1", "license": "BSD", "requires_python": null, "requires_dist": []}
+wheels: 3, problems: 0
+exit=0
