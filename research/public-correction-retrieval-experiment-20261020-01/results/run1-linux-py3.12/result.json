@@ -1,0 +1,1688 @@
+{
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "implementation": "CPython",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "sqlite_library_version": "3.45.1",
+    "sqlite_compile_option_ENABLE_FTS5": true,
+    "fts5_tokenizer_probe": {
+      "unicode61": {
+        "available": true
+      },
+      "unicode61 tokenchars '/'": {
+        "available": true
+      }
+    }
+  },
+  "result": {
+    "schema": 1,
+    "request_id": "public-correction-retrieval-experiment-20261020-01",
+    "inputs": [
+      {
+        "path": "research/public-evidence-spans-20261018-01/scripts/spans.py",
+        "sha256": "6bc15cee4920d91cd5c3afe2b4a3f4fa1a0591fbfdd75915c18bf710b8bb19d8"
+      },
+      {
+        "path": "research/public-evidence-spans-20261018-01/scripts/evidence_bench.py",
+        "sha256": "b74774f13bc2d6d534ade87e7ab537c80c5c9668df31a33706006f7d9bf3b9d4"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/corpus.json",
+        "sha256": "43e9ad338a465ab4a8aa49a37db069772048c603f3172caa38fc8c4221f58cb0"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/fixtures/queries.json",
+        "sha256": "1acf7329f6576970deb90683b995934961389b7fec847ceb7d85e2dd6f1bdeae"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/fixtures/expectations.json",
+        "sha256": "c760d910a621330ec1d9e58fb621fb78cdf722d26a30a1fd35f015fa0f1b8444"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R01.txt",
+        "sha256": "0a22992f95c4f365a51942e333b1e00848425d8c1f83b61f4330ec73545127ec"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R02.txt",
+        "sha256": "6481be3606165fcea416067d9554a835d3142b117969749d21c8044060262d41"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R03.txt",
+        "sha256": "25cb46c40275d8946b77d49e5311b95b148ff407e689c5eaf681208d6ea895ca"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R04.txt",
+        "sha256": "03d168af945aa248a38c9194e288706f82ba68cbc340d462bcfce17a2b82e3d9"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R05.txt",
+        "sha256": "72b506310744e61a02631598ef568c5e5aacc3af58a0cf47399d1680dcf156fb"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R06.txt",
+        "sha256": "57cc37c7b635664270b7e1ee35f53e968745b11b92bdfc19ba3283471447bc71"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R07.txt",
+        "sha256": "cd9fa744a083465d54554f2a3c8ab5dc045f131d94cddfcb7899757c3b785d50"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R08.txt",
+        "sha256": "1e7173f8e21d991cb6ae43d623b5493b3d034f6a324f0021eb4ed89591a56126"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R09.txt",
+        "sha256": "d4a92290d6bcda14f57d60653c77a6a6ec36dccdf75483d8846ea8286c9b7a0d"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R10.txt",
+        "sha256": "1ed009dc8c31b2e40505cca9e0e6432df9ff70422d30ff45cebcb55514afc087"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R11.txt",
+        "sha256": "a0759a363d4310a3fe7e4f832add572d017d832d736849ca0db4efe4bf7350da"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R12.txt",
+        "sha256": "cfba5dc7b93b2290d89e0c7cd62be9cd0766019339a8a37e8b5670befd87275b"
+      },
+      {
+        "path": "research/public-correction-retrieval-experiment-20261020-01/scripts/correction_retrieval.py",
+        "sha256": "4bbfcf4431288c72402b855cf284929948c0ab071514563d2d13f76bfd8182c5"
+      }
+    ],
+    "queries": [
+      {
+        "id": "Q1",
+        "identifier": "14/2019",
+        "issuer": "Library Board",
+        "question": "Is the move of the reading room to the north building still in force?",
+        "content_words": [
+          "move",
+          "reading",
+          "room",
+          "north",
+          "building",
+          "force"
+        ],
+        "target_records": [
+          "R02"
+        ],
+        "same_identifier_other_issuers": [
+          {
+            "record_id": "R06",
+            "issuer": "City Council"
+          }
+        ],
+        "original": [
+          {
+            "locator": "R02#p0",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R02.txt",
+            "byte_start": 0,
+            "byte_end": 53,
+            "sha256": "4468d394ee5761139b7f76846b5895cc10d9b7b88a982698f4799e760a2c152e",
+            "record_id": "R02",
+            "issuer": "Library Board",
+            "declared_date": "2019-05-14",
+            "date_relation": "same",
+            "identifier_mentions": [],
+            "text": "Library Board. Minutes of the meeting of 14 May 2019."
+          },
+          {
+            "locator": "R02#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R02.txt",
+            "byte_start": 55,
+            "byte_end": 155,
+            "sha256": "51f9b4d788b309b56da2cc4b3030451310dc8baa8b5ffba289d258bcaa716175",
+            "record_id": "R02",
+            "issuer": "Library Board",
+            "declared_date": "2019-05-14",
+            "date_relation": "same",
+            "identifier_mentions": [
+              {
+                "identifier": "14/2019",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R02",
+                    "issuer": "Library Board"
+                  },
+                  {
+                    "record_id": "R06",
+                    "issuer": "City Council"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "Item 3. Agreement 14/2019. The Library Board approves moving the reading room to the north building."
+          },
+          {
+            "locator": "R02#p2",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R02.txt",
+            "byte_start": 157,
+            "byte_end": 232,
+            "sha256": "ff8ed3726e69d81190cce5bc64b268e9c2f9f9f1118249d0f53037cbc206fda9",
+            "record_id": "R02",
+            "issuer": "Library Board",
+            "declared_date": "2019-05-14",
+            "date_relation": "same",
+            "identifier_mentions": [],
+            "text": "Clause 1. The reading room moves to the north building on 2 September 2019."
+          },
+          {
+            "locator": "R02#p3",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R02.txt",
+            "byte_start": 234,
+            "byte_end": 286,
+            "sha256": "89d23b156e56aea47be9c46a591e7fcbd0a3006efbc937e9c0505c876a65dabd",
+            "record_id": "R02",
+            "issuer": "Library Board",
+            "declared_date": "2019-05-14",
+            "date_relation": "same",
+            "identifier_mentions": [],
+            "text": "Clause 2. The reading room opens from 9:00 to 20:00."
+          }
+        ],
+        "strategies": {
+          "content_words_python": {
+            "status": "RUN",
+            "candidates": [
+              "R12#p1",
+              "R01#p1",
+              "R03#p1",
+              "R04#p1",
+              "R05#p1",
+              "R09#p1"
+            ]
+          },
+          "literal_substring_reused": {
+            "status": "RUN",
+            "candidates": [
+              "R03#p1",
+              "R04#p1",
+              "R05#p1",
+              "R06#p1",
+              "R07#p1",
+              "R10#p1"
+            ]
+          },
+          "literal_bounded": {
+            "status": "RUN",
+            "candidates": [
+              "R03#p1",
+              "R04#p1",
+              "R05#p1",
+              "R06#p1",
+              "R07#p1"
+            ]
+          },
+          "fts5_content_unicode61": {
+            "status": "RUN",
+            "candidates": [
+              "R12#p1",
+              "R01#p1",
+              "R09#p1",
+              "R05#p1",
+              "R03#p1",
+              "R04#p1"
+            ]
+          },
+          "fts5_identifier_unicode61": {
+            "status": "RUN",
+            "candidates": [
+              "R08#p1",
+              "R07#p1",
+              "R06#p1",
+              "R05#p1",
+              "R03#p1",
+              "R04#p1"
+            ]
+          },
+          "fts5_identifier_slash": {
+            "status": "RUN",
+            "candidates": [
+              "R07#p1",
+              "R06#p1",
+              "R05#p1",
+              "R03#p1",
+              "R04#p1"
+            ]
+          }
+        },
+        "candidates": [
+          {
+            "locator": "R01#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R01.txt",
+            "byte_start": 57,
+            "byte_end": 190,
+            "sha256": "eb14aaf02aca09181b68b954ce215bd393038945d9fc0ae6417dc552e8b2e056",
+            "record_id": "R01",
+            "issuer": "Library Board",
+            "declared_date": "2019-03-12",
+            "date_relation": "earlier",
+            "identifier_mentions": [],
+            "text": "Item 4. A member proposes moving the reading room to the north building. The proposal is referred to the next meeting without a vote.",
+            "found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ],
+            "not_found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R06#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R06.txt",
+            "byte_start": 63,
+            "byte_end": 138,
+            "sha256": "754f9dc6fd60a5df7cd9626ac9e65f9dd777d565c25213e78bacbb7a2d17689a",
+            "record_id": "R06",
+            "issuer": "City Council",
+            "declared_date": "2019-06-20",
+            "date_relation": "later",
+            "identifier_mentions": [
+              {
+                "identifier": "14/2019",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R02",
+                    "issuer": "Library Board"
+                  },
+                  {
+                    "record_id": "R06",
+                    "issuer": "City Council"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "Agreement 14/2019. The City Council approves resurfacing the market square.",
+            "found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ],
+            "not_found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ]
+          },
+          {
+            "locator": "R03#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R03.txt",
+            "byte_start": 42,
+            "byte_end": 161,
+            "sha256": "cc1d65cbb87bbdf54caab92f7caf14b8f349642ef67be7119c30742cf298f261",
+            "record_id": "R03",
+            "issuer": "Library Board",
+            "declared_date": "2019-08-26",
+            "date_relation": "later",
+            "identifier_mentions": [
+              {
+                "identifier": "14/2019",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R02",
+                    "issuer": "Library Board"
+                  },
+                  {
+                    "record_id": "R06",
+                    "issuer": "City Council"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "In implementation of agreement 14/2019, the reading room is closed from 2 to 6 September 2019 while furniture is moved.",
+            "found_by": [
+              "content_words_python",
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_content_unicode61",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ],
+            "not_found_by": []
+          },
+          {
+            "locator": "R04#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R04.txt",
+            "byte_start": 60,
+            "byte_end": 197,
+            "sha256": "66b1a8a79d155e78970b6e606d1494820776025b0275b0c2d0edd7a1dab77393",
+            "record_id": "R04",
+            "issuer": "Library Board",
+            "declared_date": "2019-11-19",
+            "date_relation": "later",
+            "identifier_mentions": [
+              {
+                "identifier": "14/2019",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R02",
+                    "issuer": "Library Board"
+                  },
+                  {
+                    "record_id": "R06",
+                    "issuer": "City Council"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "Item 5. Clause 2 of agreement 14/2019 is amended to read: the reading room opens from 10:00 to 18:00. All other clauses remain unchanged.",
+            "found_by": [
+              "content_words_python",
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_content_unicode61",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ],
+            "not_found_by": []
+          },
+          {
+            "locator": "R10#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R10.txt",
+            "byte_start": 59,
+            "byte_end": 143,
+            "sha256": "beab1249d3a8785b2f60c84fb590def23f1b6182d73ac8d85b24f8afc49a10d1",
+            "record_id": "R10",
+            "issuer": "Library Board",
+            "declared_date": "2019-12-03",
+            "date_relation": "later",
+            "identifier_mentions": [
+              {
+                "identifier": "114/2019",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R10",
+                    "issuer": "Library Board"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "Item 2. Agreement 114/2019. The Library Board approves a loan period of three weeks.",
+            "found_by": [
+              "literal_substring_reused"
+            ],
+            "not_found_by": [
+              "content_words_python",
+              "literal_bounded",
+              "fts5_content_unicode61",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R05#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R05.txt",
+            "byte_start": 43,
+            "byte_end": 158,
+            "sha256": "eaa57d06d6f6d30d88357e3460a6a2da0c4485fead6a115582dfa392b34bc4a6",
+            "record_id": "R05",
+            "issuer": "Library Board",
+            "declared_date": "2020-01-10",
+            "date_relation": "later",
+            "identifier_mentions": [
+              {
+                "identifier": "14/2019",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R02",
+                    "issuer": "Library Board"
+                  },
+                  {
+                    "record_id": "R06",
+                    "issuer": "City Council"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "This notice does NOT revoke agreement 14/2019. Holiday opening hours for the reading room are published separately.",
+            "found_by": [
+              "content_words_python",
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_content_unicode61",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ],
+            "not_found_by": []
+          },
+          {
+            "locator": "R12#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R12.txt",
+            "byte_start": 59,
+            "byte_end": 152,
+            "sha256": "733152b818f6c4857d6a36d41aaed12046170dfca6936b1c7e6070981e88a993",
+            "record_id": "R12",
+            "issuer": "Library Board",
+            "declared_date": "2020-01-28",
+            "date_relation": "later",
+            "identifier_mentions": [],
+            "text": "Item 4. The move of the reading room to the north building is suspended until further notice.",
+            "found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ],
+            "not_found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R07#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R07.txt",
+            "byte_start": 60,
+            "byte_end": 109,
+            "sha256": "724a0542c182c51203ef777e2fd52d491234af6ab48a778b85f3a14be58a67d3",
+            "record_id": "R07",
+            "issuer": "Library Board",
+            "declared_date": "2020-02-11",
+            "date_relation": "later",
+            "identifier_mentions": [
+              {
+                "identifier": "14/2019",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R02",
+                    "issuer": "Library Board"
+                  },
+                  {
+                    "record_id": "R06",
+                    "issuer": "City Council"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "Item 2. Agreement 14/2019 is left without effect.",
+            "found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ],
+            "not_found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ]
+          },
+          {
+            "locator": "R08#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R08.txt",
+            "byte_start": 46,
+            "byte_end": 95,
+            "sha256": "0ed760be857c27460790d2fcb153003e80932c4d65886092c18120f54b279333",
+            "record_id": "R08",
+            "issuer": "Library Board",
+            "declared_date": "2020-02-25",
+            "date_relation": "later",
+            "identifier_mentions": [],
+            "text": "Invoice 14-2019 for bookbinding services is paid.",
+            "found_by": [
+              "fts5_identifier_unicode61"
+            ],
+            "not_found_by": [
+              "content_words_python",
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_content_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R09#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R09.txt",
+            "byte_start": 57,
+            "byte_end": 146,
+            "sha256": "c98089f0eb7045eacf4b6739bd6dc628a0c2f73deed53350358645e3a11b9f73",
+            "record_id": "R09",
+            "issuer": "Library Board",
+            "declared_date": "2020-03-10",
+            "date_relation": "later",
+            "identifier_mentions": [
+              {
+                "identifier": "22/2019",
+                "issued_by_in_declared_corpus": [],
+                "resolution": "UNRESOLVED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "Item 1. As provided in agreement 22/2019, the reading room keeps its catalogue terminals.",
+            "found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ],
+            "not_found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          }
+        ],
+        "records_without_returned_passage": [
+          {
+            "record_id": "R11",
+            "issuer": "Library Board",
+            "declared_date": "2021-06-15",
+            "date_relation": "later"
+          }
+        ],
+        "determination": "NOT_MADE",
+        "uncertainty": [
+          "Determination: NOT MADE. Whether any candidate changes, confirms or is unrelated to the target is not decided here; a matching identifier, hash, issuer or later declared date asserts nothing.",
+          "A declared scope does not prove completeness, the absence of changes outside it, or current normative validity; no match inside it is not evidence that the target is current.",
+          "14/2019 is also issued by City Council (R06): a mention of 14/2019 does not say which body's act is meant.",
+          "Mentioned in a candidate but issued by no record in the declared corpus: 22/2019."
+        ],
+        "declared_scope": {
+          "corpus_id": "synthetic-library-board-2019-2021",
+          "statement": "exactly the 12 synthetic records listed here, and nothing else; declared dates are the records' own declarations, not verified; this list is the whole corpus searched, and it is not claimed to be complete for any real body or period",
+          "records": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08",
+            "R09",
+            "R10",
+            "R11",
+            "R12"
+          ],
+          "declared_dates": [
+            "2019-03-12",
+            "2021-06-15"
+          ],
+          "manifest_sha256": "43e9ad338a465ab4a8aa49a37db069772048c603f3172caa38fc8c4221f58cb0"
+        }
+      },
+      {
+        "id": "Q2",
+        "identifier": "3/2021",
+        "issuer": "Library Board",
+        "question": "Is the purchase of new shelving for the archive still in force?",
+        "content_words": [
+          "purchase",
+          "new",
+          "shelving",
+          "archive",
+          "force"
+        ],
+        "target_records": [
+          "R11"
+        ],
+        "same_identifier_other_issuers": [],
+        "original": [
+          {
+            "locator": "R11#p0",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R11.txt",
+            "byte_start": 0,
+            "byte_end": 54,
+            "sha256": "a4d16074ed40cdf46c7727b0292099ddbe5e796b86803aa40446fdf6b7fd0189",
+            "record_id": "R11",
+            "issuer": "Library Board",
+            "declared_date": "2021-06-15",
+            "date_relation": "same",
+            "identifier_mentions": [],
+            "text": "Library Board. Minutes of the meeting of 15 June 2021."
+          },
+          {
+            "locator": "R11#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R11.txt",
+            "byte_start": 56,
+            "byte_end": 154,
+            "sha256": "bb3985649cf1ed2b13621bfe954678aa761a664dd0e00c552e905714479dd5a6",
+            "record_id": "R11",
+            "issuer": "Library Board",
+            "declared_date": "2021-06-15",
+            "date_relation": "same",
+            "identifier_mentions": [
+              {
+                "identifier": "3/2021",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R11",
+                    "issuer": "Library Board"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "Item 6. Agreement 3/2021. The Library Board approves the purchase of new shelving for the archive."
+          }
+        ],
+        "strategies": {
+          "content_words_python": {
+            "status": "RUN",
+            "candidates": []
+          },
+          "literal_substring_reused": {
+            "status": "RUN",
+            "candidates": []
+          },
+          "literal_bounded": {
+            "status": "RUN",
+            "candidates": []
+          },
+          "fts5_content_unicode61": {
+            "status": "RUN",
+            "candidates": []
+          },
+          "fts5_identifier_unicode61": {
+            "status": "RUN",
+            "candidates": []
+          },
+          "fts5_identifier_slash": {
+            "status": "RUN",
+            "candidates": []
+          }
+        },
+        "candidates": [],
+        "records_without_returned_passage": [
+          {
+            "record_id": "R01",
+            "issuer": "Library Board",
+            "declared_date": "2019-03-12",
+            "date_relation": "earlier"
+          },
+          {
+            "record_id": "R02",
+            "issuer": "Library Board",
+            "declared_date": "2019-05-14",
+            "date_relation": "earlier"
+          },
+          {
+            "record_id": "R03",
+            "issuer": "Library Board",
+            "declared_date": "2019-08-26",
+            "date_relation": "earlier"
+          },
+          {
+            "record_id": "R04",
+            "issuer": "Library Board",
+            "declared_date": "2019-11-19",
+            "date_relation": "earlier"
+          },
+          {
+            "record_id": "R05",
+            "issuer": "Library Board",
+            "declared_date": "2020-01-10",
+            "date_relation": "earlier"
+          },
+          {
+            "record_id": "R06",
+            "issuer": "City Council",
+            "declared_date": "2019-06-20",
+            "date_relation": "earlier"
+          },
+          {
+            "record_id": "R07",
+            "issuer": "Library Board",
+            "declared_date": "2020-02-11",
+            "date_relation": "earlier"
+          },
+          {
+            "record_id": "R08",
+            "issuer": "Library Board",
+            "declared_date": "2020-02-25",
+            "date_relation": "earlier"
+          },
+          {
+            "record_id": "R09",
+            "issuer": "Library Board",
+            "declared_date": "2020-03-10",
+            "date_relation": "earlier"
+          },
+          {
+            "record_id": "R10",
+            "issuer": "Library Board",
+            "declared_date": "2019-12-03",
+            "date_relation": "earlier"
+          },
+          {
+            "record_id": "R12",
+            "issuer": "Library Board",
+            "declared_date": "2020-01-28",
+            "date_relation": "earlier"
+          }
+        ],
+        "determination": "NOT_MADE",
+        "uncertainty": [
+          "Determination: NOT MADE. Whether any candidate changes, confirms or is unrelated to the target is not decided here; a matching identifier, hash, issuer or later declared date asserts nothing.",
+          "A declared scope does not prove completeness, the absence of changes outside it, or current normative validity; no match inside it is not evidence that the target is current.",
+          "No strategy returned a candidate passage. This is not evidence that the target is current, unchanged or valid."
+        ],
+        "declared_scope": {
+          "corpus_id": "synthetic-library-board-2019-2021",
+          "statement": "exactly the 12 synthetic records listed here, and nothing else; declared dates are the records' own declarations, not verified; this list is the whole corpus searched, and it is not claimed to be complete for any real body or period",
+          "records": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08",
+            "R09",
+            "R10",
+            "R11",
+            "R12"
+          ],
+          "declared_dates": [
+            "2019-03-12",
+            "2021-06-15"
+          ],
+          "manifest_sha256": "43e9ad338a465ab4a8aa49a37db069772048c603f3172caa38fc8c4221f58cb0"
+        }
+      },
+      {
+        "id": "Q3",
+        "identifier": "22/2019",
+        "issuer": "Library Board",
+        "question": "Do the catalogue terminals stay in the reading room?",
+        "content_words": [
+          "catalogue",
+          "terminals",
+          "stay",
+          "reading",
+          "room"
+        ],
+        "target_records": [],
+        "same_identifier_other_issuers": [],
+        "original": [],
+        "strategies": {
+          "content_words_python": {
+            "status": "RUN",
+            "candidates": [
+              "R09#p1",
+              "R01#p1",
+              "R02#p1",
+              "R02#p2",
+              "R02#p3",
+              "R03#p1",
+              "R04#p1",
+              "R05#p1",
+              "R12#p1"
+            ]
+          },
+          "literal_substring_reused": {
+            "status": "RUN",
+            "candidates": [
+              "R09#p1"
+            ]
+          },
+          "literal_bounded": {
+            "status": "RUN",
+            "candidates": [
+              "R09#p1"
+            ]
+          },
+          "fts5_content_unicode61": {
+            "status": "RUN",
+            "candidates": [
+              "R09#p1",
+              "R02#p3",
+              "R02#p2",
+              "R02#p1",
+              "R12#p1",
+              "R05#p1",
+              "R03#p1",
+              "R01#p1",
+              "R04#p1"
+            ]
+          },
+          "fts5_identifier_unicode61": {
+            "status": "RUN",
+            "candidates": [
+              "R09#p1"
+            ]
+          },
+          "fts5_identifier_slash": {
+            "status": "RUN",
+            "candidates": [
+              "R09#p1"
+            ]
+          }
+        },
+        "candidates": [
+          {
+            "locator": "R01#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R01.txt",
+            "byte_start": 57,
+            "byte_end": 190,
+            "sha256": "eb14aaf02aca09181b68b954ce215bd393038945d9fc0ae6417dc552e8b2e056",
+            "record_id": "R01",
+            "issuer": "Library Board",
+            "declared_date": "2019-03-12",
+            "date_relation": "no_target_record",
+            "identifier_mentions": [],
+            "text": "Item 4. A member proposes moving the reading room to the north building. The proposal is referred to the next meeting without a vote.",
+            "found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ],
+            "not_found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R02#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R02.txt",
+            "byte_start": 55,
+            "byte_end": 155,
+            "sha256": "51f9b4d788b309b56da2cc4b3030451310dc8baa8b5ffba289d258bcaa716175",
+            "record_id": "R02",
+            "issuer": "Library Board",
+            "declared_date": "2019-05-14",
+            "date_relation": "no_target_record",
+            "identifier_mentions": [
+              {
+                "identifier": "14/2019",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R02",
+                    "issuer": "Library Board"
+                  },
+                  {
+                    "record_id": "R06",
+                    "issuer": "City Council"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "Item 3. Agreement 14/2019. The Library Board approves moving the reading room to the north building.",
+            "found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ],
+            "not_found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R02#p2",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R02.txt",
+            "byte_start": 157,
+            "byte_end": 232,
+            "sha256": "ff8ed3726e69d81190cce5bc64b268e9c2f9f9f1118249d0f53037cbc206fda9",
+            "record_id": "R02",
+            "issuer": "Library Board",
+            "declared_date": "2019-05-14",
+            "date_relation": "no_target_record",
+            "identifier_mentions": [],
+            "text": "Clause 1. The reading room moves to the north building on 2 September 2019.",
+            "found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ],
+            "not_found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R02#p3",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R02.txt",
+            "byte_start": 234,
+            "byte_end": 286,
+            "sha256": "89d23b156e56aea47be9c46a591e7fcbd0a3006efbc937e9c0505c876a65dabd",
+            "record_id": "R02",
+            "issuer": "Library Board",
+            "declared_date": "2019-05-14",
+            "date_relation": "no_target_record",
+            "identifier_mentions": [],
+            "text": "Clause 2. The reading room opens from 9:00 to 20:00.",
+            "found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ],
+            "not_found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R03#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R03.txt",
+            "byte_start": 42,
+            "byte_end": 161,
+            "sha256": "cc1d65cbb87bbdf54caab92f7caf14b8f349642ef67be7119c30742cf298f261",
+            "record_id": "R03",
+            "issuer": "Library Board",
+            "declared_date": "2019-08-26",
+            "date_relation": "no_target_record",
+            "identifier_mentions": [
+              {
+                "identifier": "14/2019",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R02",
+                    "issuer": "Library Board"
+                  },
+                  {
+                    "record_id": "R06",
+                    "issuer": "City Council"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "In implementation of agreement 14/2019, the reading room is closed from 2 to 6 September 2019 while furniture is moved.",
+            "found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ],
+            "not_found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R04#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R04.txt",
+            "byte_start": 60,
+            "byte_end": 197,
+            "sha256": "66b1a8a79d155e78970b6e606d1494820776025b0275b0c2d0edd7a1dab77393",
+            "record_id": "R04",
+            "issuer": "Library Board",
+            "declared_date": "2019-11-19",
+            "date_relation": "no_target_record",
+            "identifier_mentions": [
+              {
+                "identifier": "14/2019",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R02",
+                    "issuer": "Library Board"
+                  },
+                  {
+                    "record_id": "R06",
+                    "issuer": "City Council"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "Item 5. Clause 2 of agreement 14/2019 is amended to read: the reading room opens from 10:00 to 18:00. All other clauses remain unchanged.",
+            "found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ],
+            "not_found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R05#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R05.txt",
+            "byte_start": 43,
+            "byte_end": 158,
+            "sha256": "eaa57d06d6f6d30d88357e3460a6a2da0c4485fead6a115582dfa392b34bc4a6",
+            "record_id": "R05",
+            "issuer": "Library Board",
+            "declared_date": "2020-01-10",
+            "date_relation": "no_target_record",
+            "identifier_mentions": [
+              {
+                "identifier": "14/2019",
+                "issued_by_in_declared_corpus": [
+                  {
+                    "record_id": "R02",
+                    "issuer": "Library Board"
+                  },
+                  {
+                    "record_id": "R06",
+                    "issuer": "City Council"
+                  }
+                ],
+                "resolution": "ISSUED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "This notice does NOT revoke agreement 14/2019. Holiday opening hours for the reading room are published separately.",
+            "found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ],
+            "not_found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R12#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R12.txt",
+            "byte_start": 59,
+            "byte_end": 152,
+            "sha256": "733152b818f6c4857d6a36d41aaed12046170dfca6936b1c7e6070981e88a993",
+            "record_id": "R12",
+            "issuer": "Library Board",
+            "declared_date": "2020-01-28",
+            "date_relation": "no_target_record",
+            "identifier_mentions": [],
+            "text": "Item 4. The move of the reading room to the north building is suspended until further notice.",
+            "found_by": [
+              "content_words_python",
+              "fts5_content_unicode61"
+            ],
+            "not_found_by": [
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ]
+          },
+          {
+            "locator": "R09#p1",
+            "file": "research/public-correction-retrieval-experiment-20261020-01/corpus/records/R09.txt",
+            "byte_start": 57,
+            "byte_end": 146,
+            "sha256": "c98089f0eb7045eacf4b6739bd6dc628a0c2f73deed53350358645e3a11b9f73",
+            "record_id": "R09",
+            "issuer": "Library Board",
+            "declared_date": "2020-03-10",
+            "date_relation": "no_target_record",
+            "identifier_mentions": [
+              {
+                "identifier": "22/2019",
+                "issued_by_in_declared_corpus": [],
+                "resolution": "UNRESOLVED_IN_DECLARED_CORPUS"
+              }
+            ],
+            "text": "Item 1. As provided in agreement 22/2019, the reading room keeps its catalogue terminals.",
+            "found_by": [
+              "content_words_python",
+              "literal_substring_reused",
+              "literal_bounded",
+              "fts5_content_unicode61",
+              "fts5_identifier_unicode61",
+              "fts5_identifier_slash"
+            ],
+            "not_found_by": []
+          }
+        ],
+        "records_without_returned_passage": [
+          {
+            "record_id": "R06",
+            "issuer": "City Council",
+            "declared_date": "2019-06-20",
+            "date_relation": "no_target_record"
+          },
+          {
+            "record_id": "R07",
+            "issuer": "Library Board",
+            "declared_date": "2020-02-11",
+            "date_relation": "no_target_record"
+          },
+          {
+            "record_id": "R08",
+            "issuer": "Library Board",
+            "declared_date": "2020-02-25",
+            "date_relation": "no_target_record"
+          },
+          {
+            "record_id": "R10",
+            "issuer": "Library Board",
+            "declared_date": "2019-12-03",
+            "date_relation": "no_target_record"
+          },
+          {
+            "record_id": "R11",
+            "issuer": "Library Board",
+            "declared_date": "2021-06-15",
+            "date_relation": "no_target_record"
+          }
+        ],
+        "determination": "NOT_MADE",
+        "uncertainty": [
+          "Determination: NOT MADE. Whether any candidate changes, confirms or is unrelated to the target is not decided here; a matching identifier, hash, issuer or later declared date asserts nothing.",
+          "A declared scope does not prove completeness, the absence of changes outside it, or current normative validity; no match inside it is not evidence that the target is current.",
+          "No record in the declared corpus issues 22/2019 for Library Board: the target is unresolved.",
+          "Mentioned in a candidate but issued by no record in the declared corpus: 22/2019."
+        ],
+        "declared_scope": {
+          "corpus_id": "synthetic-library-board-2019-2021",
+          "statement": "exactly the 12 synthetic records listed here, and nothing else; declared dates are the records' own declarations, not verified; this list is the whole corpus searched, and it is not claimed to be complete for any real body or period",
+          "records": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08",
+            "R09",
+            "R10",
+            "R11",
+            "R12"
+          ],
+          "declared_dates": [
+            "2019-03-12",
+            "2021-06-15"
+          ],
+          "manifest_sha256": "43e9ad338a465ab4a8aa49a37db069772048c603f3172caa38fc8c4221f58cb0"
+        }
+      }
+    ],
+    "reader_md_sha256": "013df7346d2cd0530cd13245f456237c933734cf0eba06ee6ab0a88ecc7a35ad",
+    "grading": {
+      "totals": {
+        "PASS": 41,
+        "FAIL": 0,
+        "NOT_RUN": 0
+      },
+      "checks": [
+        {
+          "check": "Q1 content_words_python candidates",
+          "result": "PASS",
+          "observed": [
+            "R01#p1",
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R09#p1",
+            "R12#p1"
+          ],
+          "predicted": [
+            "R01#p1",
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R09#p1",
+            "R12#p1"
+          ]
+        },
+        {
+          "check": "Q1 literal_substring_reused candidates",
+          "result": "PASS",
+          "observed": [
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R06#p1",
+            "R07#p1",
+            "R10#p1"
+          ],
+          "predicted": [
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R06#p1",
+            "R07#p1",
+            "R10#p1"
+          ]
+        },
+        {
+          "check": "Q1 literal_bounded candidates",
+          "result": "PASS",
+          "observed": [
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R06#p1",
+            "R07#p1"
+          ],
+          "predicted": [
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R06#p1",
+            "R07#p1"
+          ]
+        },
+        {
+          "check": "Q1 fts5_content_unicode61 candidates",
+          "result": "PASS",
+          "observed": [
+            "R01#p1",
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R09#p1",
+            "R12#p1"
+          ],
+          "predicted": [
+            "R01#p1",
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R09#p1",
+            "R12#p1"
+          ]
+        },
+        {
+          "check": "Q1 fts5_identifier_unicode61 candidates",
+          "result": "PASS",
+          "observed": [
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R06#p1",
+            "R07#p1",
+            "R08#p1"
+          ],
+          "predicted": [
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R06#p1",
+            "R07#p1",
+            "R08#p1"
+          ]
+        },
+        {
+          "check": "Q1 fts5_identifier_slash candidates",
+          "result": "PASS",
+          "observed": [
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R06#p1",
+            "R07#p1"
+          ],
+          "predicted": [
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R06#p1",
+            "R07#p1"
+          ]
+        },
+        {
+          "check": "Q2 content_words_python candidates",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "Q2 literal_substring_reused candidates",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "Q2 literal_bounded candidates",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "Q2 fts5_content_unicode61 candidates",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "Q2 fts5_identifier_unicode61 candidates",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "Q2 fts5_identifier_slash candidates",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "Q3 content_words_python candidates",
+          "result": "PASS",
+          "observed": [
+            "R01#p1",
+            "R02#p1",
+            "R02#p2",
+            "R02#p3",
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R09#p1",
+            "R12#p1"
+          ],
+          "predicted": [
+            "R01#p1",
+            "R02#p1",
+            "R02#p2",
+            "R02#p3",
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R09#p1",
+            "R12#p1"
+          ]
+        },
+        {
+          "check": "Q3 literal_substring_reused candidates",
+          "result": "PASS",
+          "observed": [
+            "R09#p1"
+          ],
+          "predicted": [
+            "R09#p1"
+          ]
+        },
+        {
+          "check": "Q3 literal_bounded candidates",
+          "result": "PASS",
+          "observed": [
+            "R09#p1"
+          ],
+          "predicted": [
+            "R09#p1"
+          ]
+        },
+        {
+          "check": "Q3 fts5_content_unicode61 candidates",
+          "result": "PASS",
+          "observed": [
+            "R01#p1",
+            "R02#p1",
+            "R02#p2",
+            "R02#p3",
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R09#p1",
+            "R12#p1"
+          ],
+          "predicted": [
+            "R01#p1",
+            "R02#p1",
+            "R02#p2",
+            "R02#p3",
+            "R03#p1",
+            "R04#p1",
+            "R05#p1",
+            "R09#p1",
+            "R12#p1"
+          ]
+        },
+        {
+          "check": "Q3 fts5_identifier_unicode61 candidates",
+          "result": "PASS",
+          "observed": [
+            "R09#p1"
+          ],
+          "predicted": [
+            "R09#p1"
+          ]
+        },
+        {
+          "check": "Q3 fts5_identifier_slash candidates",
+          "result": "PASS",
+          "observed": [
+            "R09#p1"
+          ],
+          "predicted": [
+            "R09#p1"
+          ]
+        },
+        {
+          "check": "Q1 target records",
+          "result": "PASS",
+          "observed": [
+            "R02"
+          ],
+          "predicted": [
+            "R02"
+          ]
+        },
+        {
+          "check": "Q1 same identifier, other issuers",
+          "result": "PASS",
+          "observed": [
+            "R06"
+          ],
+          "predicted": [
+            "R06"
+          ]
+        },
+        {
+          "check": "Q1 later records not returned",
+          "result": "PASS",
+          "observed": [
+            "R11"
+          ],
+          "predicted": [
+            "R11"
+          ]
+        },
+        {
+          "check": "Q1 unresolved mentions",
+          "result": "PASS",
+          "observed": [
+            "22/2019"
+          ],
+          "predicted": [
+            "22/2019"
+          ]
+        },
+        {
+          "check": "Q2 target records",
+          "result": "PASS",
+          "observed": [
+            "R11"
+          ],
+          "predicted": [
+            "R11"
+          ]
+        },
+        {
+          "check": "Q2 same identifier, other issuers",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "Q2 later records not returned",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "Q2 number of candidates",
+          "result": "PASS",
+          "observed": 0,
+          "predicted": 0
+        },
+        {
+          "check": "Q3 target records",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "Q3 same identifier, other issuers",
+          "result": "PASS",
+          "observed": [],
+          "predicted": []
+        },
+        {
+          "check": "Q3 records not returned",
+          "result": "PASS",
+          "observed": [
+            "R06",
+            "R07",
+            "R08",
+            "R10",
+            "R11"
+          ],
+          "predicted": [
+            "R06",
+            "R07",
+            "R08",
+            "R10",
+            "R11"
+          ]
+        },
+        {
+          "check": "Q3 unresolved mentions",
+          "result": "PASS",
+          "observed": [
+            "22/2019"
+          ],
+          "predicted": [
+            "22/2019"
+          ]
+        },
+        {
+          "check": "finding: strategies missing the identifier-only change R07#p1",
+          "result": "PASS",
+          "observed": [
+            "content_words_python",
+            "fts5_content_unicode61"
+          ],
+          "predicted": [
+            "content_words_python",
+            "fts5_content_unicode61"
+          ]
+        },
+        {
+          "check": "finding: strategies missing the change without identifier R12#p1",
+          "result": "PASS",
+          "observed": [
+            "literal_substring_reused",
+            "literal_bounded",
+            "fts5_identifier_unicode61",
+            "fts5_identifier_slash"
+          ],
+          "predicted": [
+            "literal_substring_reused",
+            "literal_bounded",
+            "fts5_identifier_unicode61",
+            "fts5_identifier_slash"
+          ]
+        },
+        {
+          "check": "finding: irrelevant or ambiguous candidates per strategy (Q1)",
+          "result": "PASS",
+          "observed": {
+            "content_words_python": [
+              "R09#p1"
+            ],
+            "literal_substring_reused": [
+              "R06#p1",
+              "R10#p1"
+            ],
+            "literal_bounded": [
+              "R06#p1"
+            ],
+            "fts5_content_unicode61": [
+              "R09#p1"
+            ],
+            "fts5_identifier_unicode61": [
+              "R06#p1",
+              "R08#p1"
+            ],
+            "fts5_identifier_slash": [
+              "R06#p1"
+            ]
+          },
+          "predicted": {
+            "content_words_python": [
+              "R09#p1"
+            ],
+            "literal_substring_reused": [
+              "R06#p1",
+              "R10#p1"
+            ],
+            "literal_bounded": [
+              "R06#p1"
+            ],
+            "fts5_content_unicode61": [
+              "R09#p1"
+            ],
+            "fts5_identifier_unicode61": [
+              "R06#p1",
+              "R08#p1"
+            ],
+            "fts5_identifier_slash": [
+              "R06#p1"
+            ]
+          }
+        },
+        {
+          "check": "finding: non-changing mentions returned by every identifier strategy (Q1)",
+          "result": "PASS",
+          "observed": [
+            "R03#p1",
+            "R05#p1"
+          ],
+          "predicted": [
+            "R03#p1",
+            "R05#p1"
+          ]
+        },
+        {
+          "check": "finding: no single strategy returns R04, R07 and R12",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "finding: the union returns R04, R07 and R12",
+          "result": "PASS",
+          "observed": true,
+          "predicted": true
+        },
+        {
+          "check": "property P1 every shown passage equals the bytes at its locator",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "property P2 no assertion-like key in the result",
+          "result": "PASS",
+          "observed": []
+        },
+        {
+          "check": "property P3 determination NOT_MADE and the scope limitation in every query",
+          "result": "PASS",
+          "observed": 3
+        },
+        {
+          "check": "property P4 discovery is deterministic within one process",
+          "result": "PASS",
+          "observed": null
+        },
+        {
+          "check": "property P5 unavailable tokenizers are NOT_RUN, never substituted",
+          "result": "PASS",
+          "observed": []
+        }
+      ]
+    }
+  }
+}

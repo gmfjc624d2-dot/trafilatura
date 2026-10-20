@@ -1,0 +1,26 @@
+# first and only primary run of the experiment (after commit ce9a1ff), from the repository root, offline, isolated mode
+$ unshare -rn python3.12 -I research/public-correction-retrieval-experiment-20261020-01/scripts/correction_retrieval.py research/public-correction-retrieval-experiment-20261020-01/results/run1-linux-py3.12
+environment: {"python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]", "implementation": "CPython", "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39", "machine": "x86_64", "sqlite_library_version": "3.45.1", "sqlite_compile_option_ENABLE_FTS5": true, "fts5_tokenizer_probe": {"unicode61": {"available": true}, "unicode61 tokenchars '/'": {"available": true}}}
+Q1 Library Board 14/2019: target=['R02'] candidates=10 determination=NOT_MADE
+   content_words_python        RUN     ['R12#p1', 'R01#p1', 'R03#p1', 'R04#p1', 'R05#p1', 'R09#p1']
+   literal_substring_reused    RUN     ['R03#p1', 'R04#p1', 'R05#p1', 'R06#p1', 'R07#p1', 'R10#p1']
+   literal_bounded             RUN     ['R03#p1', 'R04#p1', 'R05#p1', 'R06#p1', 'R07#p1']
+   fts5_content_unicode61      RUN     ['R12#p1', 'R01#p1', 'R09#p1', 'R05#p1', 'R03#p1', 'R04#p1']
+   fts5_identifier_unicode61   RUN     ['R08#p1', 'R07#p1', 'R06#p1', 'R05#p1', 'R03#p1', 'R04#p1']
+   fts5_identifier_slash       RUN     ['R07#p1', 'R06#p1', 'R05#p1', 'R03#p1', 'R04#p1']
+Q2 Library Board 3/2021: target=['R11'] candidates=0 determination=NOT_MADE
+   content_words_python        RUN     []
+   literal_substring_reused    RUN     []
+   literal_bounded             RUN     []
+   fts5_content_unicode61      RUN     []
+   fts5_identifier_unicode61   RUN     []
+   fts5_identifier_slash       RUN     []
+Q3 Library Board 22/2019: target=[] candidates=9 determination=NOT_MADE
+   content_words_python        RUN     ['R09#p1', 'R01#p1', 'R02#p1', 'R02#p2', 'R02#p3', 'R03#p1', 'R04#p1', 'R05#p1', 'R12#p1']
+   literal_substring_reused    RUN     ['R09#p1']
+   literal_bounded             RUN     ['R09#p1']
+   fts5_content_unicode61      RUN     ['R09#p1', 'R02#p3', 'R02#p2', 'R02#p1', 'R12#p1', 'R05#p1', 'R03#p1', 'R01#p1', 'R04#p1']
+   fts5_identifier_unicode61   RUN     ['R09#p1']
+   fts5_identifier_slash       RUN     ['R09#p1']
+{"PASS": 41, "FAIL": 0, "NOT_RUN": 0}
+exit=0
