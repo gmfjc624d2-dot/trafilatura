@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "note": "the consumer's inputs: the target identifier, the issuer it is attributed to, and a later question; content words are derived from the question by the fixed stopword rule, never chosen per query",
+  "queries": [
+    {"id": "Q1", "identifier": "14/2019", "issuer": "Library Board", "question": "Is the move of the reading room to the north building still in force?"},
+    {"id": "Q2", "identifier": "3/2021", "issuer": "Library Board", "question": "Is the purchase of new shelving for the archive still in force?"},
+    {"id": "Q3", "identifier": "22/2019", "issuer": "Library Board", "question": "Do the catalogue terminals stay in the reading room?"}
+  ]
+}

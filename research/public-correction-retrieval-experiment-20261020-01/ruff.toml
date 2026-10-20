@@ -1,0 +1,10 @@
+# research harness: the project rules, linted for the Python 3.9 floor of the replay
+extend = "../../pyproject.toml"
+target-version = "py39"
+
+[lint.per-file-ignores]
+"scripts/*" = [
+    "T20",      # print is the report channel
+    "ANN",      # annotations
+    "INP001",   # standalone scripts, not a package
+]

@@ -1,0 +1,5 @@
+# keep the corpus, fixtures, recorded outputs and logs byte-exact on every OS (they are hashed)
+corpus/** -text
+fixtures/** -text
+results/** -text
+logs/** -text

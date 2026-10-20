@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "request_id": "public-correction-retrieval-experiment-20261020-01",
+  "hypothesis_source": "5778f7a62a870c2cce556fcf6980a48914eb9bc5 research/public-library-context-critique-20261020-01/REPORT.md (implicit closure: a later change written by identifier alone is missed by content relation)",
+  "status": "PRE-REGISTERED before the experiment script existed and before any retrieval ran; not edited after results are seen. Read only by the grading step, after discovery has produced its output.",
+  "task": "candidate discovery only: for each query, which passages of the declared corpus each strategy returns. No strategy, and no output, classifies a relation or states that a target is corrected, accepted, authoritative or currently valid",
+  "pins": {
+    "corpus/corpus.json": "43e9ad338a465ab4a8aa49a37db069772048c603f3172caa38fc8c4221f58cb0",
+    "fixtures/queries.json": "see PREREGISTERED.sha256",
+    "research/public-evidence-spans-20261018-01/scripts/evidence_bench.py": "b74774f13bc2d6d534ade87e7ab537c80c5c9668df31a33706006f7d9bf3b9d4",
+    "research/public-evidence-spans-20261018-01/scripts/spans.py": "6bc15cee4920d91cd5c3afe2b4a3f4fa1a0591fbfdd75915c18bf710b8bb19d8"
+  },
+  "methods": {
+    "passages": "one passage per paragraph of a record file (paragraphs are separated by one blank line); locator corpus/records/<id>.txt#p<n> with UTF-8 byte range and sha256",
+    "target_records": "records whose issuer equals the query issuer and whose issues_identifiers contains the query identifier; their passages are shown as the original and are not candidates",
+    "content_words": "question casefolded, tokens = maximal runs of a-z, minus the stopwords a an and do does for in is it of still the to",
+    "content_words_python": "candidate if the passage's a-z token set (casefolded) shares at least one content word; ordered by number of shared content words (descending), then locator",
+    "literal_substring_reused": "the earlier helper literal_search(passages, [identifier]) from research/public-evidence-spans-20261018-01/scripts/evidence_bench.py, unchanged: plain substring containment",
+    "literal_bounded": "the identifier as an exact substring that is neither preceded nor followed by an ASCII letter or digit",
+    "fts5_content_unicode61": "SQLite FTS5 table, tokenize 'unicode61'; MATCH the content words, each quoted by the earlier helper fts_query([word]), joined by OR; all matches, ordered by bm25 then rowid",
+    "fts5_identifier_unicode61": "same table; MATCH fts_query([identifier]) (one quoted string, so the tokenizer turns 14/2019 into the phrase 14 2019); all matches, bm25 then rowid",
+    "fts5_identifier_slash": "SQLite FTS5 table, tokenize \"unicode61 tokenchars '/'\"; MATCH fts_query([identifier]); all matches, bm25 then rowid",
+    "fts5_unavailable": "a tokenizer the SQLite build cannot create is reported NOT_RUN for its strategies and never replaced by another algorithm",
+    "identifier_mentions": "in every returned passage, each maximal match of 1-4 digits '/' 4 digits not adjacent to a letter or digit, resolved only against issues_identifiers in the manifest: which records (and issuers) issue that string, or UNRESOLVED_IN_DECLARED_CORPUS",
+    "date_relation": "the passage record's declared_date compared with the target record's declared_date as strings (ISO dates): earlier / same / later, or no_target_record; a declared date is reported, never verified, and never implies precedence or effect"
+  },
+  "expected_candidates": {
+    "Q1": {
+      "content_words_python": ["R01#p1", "R03#p1", "R04#p1", "R05#p1", "R09#p1", "R12#p1"],
+      "literal_substring_reused": ["R03#p1", "R04#p1", "R05#p1", "R06#p1", "R07#p1", "R10#p1"],
+      "literal_bounded": ["R03#p1", "R04#p1", "R05#p1", "R06#p1", "R07#p1"],
+      "fts5_content_unicode61": ["R01#p1", "R03#p1", "R04#p1", "R05#p1", "R09#p1", "R12#p1"],
+      "fts5_identifier_unicode61": ["R03#p1", "R04#p1", "R05#p1", "R06#p1", "R07#p1", "R08#p1"],
+      "fts5_identifier_slash": ["R03#p1", "R04#p1", "R05#p1", "R06#p1", "R07#p1"]
+    },
+    "Q2": {
+      "content_words_python": [],
+      "literal_substring_reused": [],
+      "literal_bounded": [],
+      "fts5_content_unicode61": [],
+      "fts5_identifier_unicode61": [],
+      "fts5_identifier_slash": []
+    },
+    "Q3": {
+      "content_words_python": ["R01#p1", "R02#p1", "R02#p2", "R02#p3", "R03#p1", "R04#p1", "R05#p1", "R09#p1", "R12#p1"],
+      "literal_substring_reused": ["R09#p1"],
+      "literal_bounded": ["R09#p1"],
+      "fts5_content_unicode61": ["R01#p1", "R02#p1", "R02#p2", "R02#p3", "R03#p1", "R04#p1", "R05#p1", "R09#p1", "R12#p1"],
+      "fts5_identifier_unicode61": ["R09#p1"],
+      "fts5_identifier_slash": ["R09#p1"]
+    }
+  },
+  "expected_reader_facts": {
+    "Q1": {"target_records": ["R02"], "same_identifier_other_issuers": ["R06"], "later_records_not_returned": ["R11"], "unresolved_mentions": ["22/2019"]},
+    "Q2": {"target_records": ["R11"], "same_identifier_other_issuers": [], "later_records_not_returned": [], "candidates": 0},
+    "Q3": {"target_records": [], "same_identifier_other_issuers": [], "unresolved_mentions": ["22/2019"], "records_not_returned": ["R06", "R07", "R08", "R10", "R11"]},
+    "every_query": "determination NOT_MADE and the scope limitation sentence present"
+  },
+  "evaluation_annotations": {
+    "note": "ground truth for grading and the report only; written by the experimenter; never read by discovery or by the reader output",
+    "R01#p1": "proposal, earlier than the approval; context, not a later change",
+    "R02": "the approval itself: agreement 14/2019 of the Library Board, clauses 1 and 2",
+    "R03#p1": "mere implementation citation of 14/2019; not a change",
+    "R04#p1": "partial amendment: clause 2 only; other clauses unchanged",
+    "R05#p1": "explicit statement that it does NOT revoke 14/2019; not a change",
+    "R06#p1": "the same number 14/2019 issued by a different body (City Council) about another subject; ambiguous for an identifier search",
+    "R07#p1": "later full revocation by identifier alone ('Agreement 14/2019 is left without effect'); no topic words",
+    "R08#p1": "invoice 14-2019: a different identifier form; irrelevant",
+    "R09#p1": "reference to agreement 22/2019, which no record in the corpus issues: unresolved; shares topic words with Q1",
+    "R10#p1": "agreement 114/2019: a different identifier containing 14/2019 as a substring; irrelevant",
+    "R11#p1": "agreement 3/2021, the latest record; no record is declared later",
+    "R12#p1": "later suspension of the move described by content without any identifier (added beyond the requested list, to show the opposite miss)"
+  },
+  "predicted_findings": {
+    "misses_identifier_only_change_Q1_R07#p1": ["content_words_python", "fts5_content_unicode61"],
+    "misses_change_without_identifier_Q1_R12#p1": ["literal_substring_reused", "literal_bounded", "fts5_identifier_unicode61", "fts5_identifier_slash"],
+    "irrelevant_or_ambiguous_candidates_Q1": {
+      "content_words_python": ["R09#p1"],
+      "literal_substring_reused": ["R06#p1", "R10#p1"],
+      "literal_bounded": ["R06#p1"],
+      "fts5_content_unicode61": ["R09#p1"],
+      "fts5_identifier_unicode61": ["R06#p1", "R08#p1"],
+      "fts5_identifier_slash": ["R06#p1"]
+    },
+    "non_changing_mentions_returned_by_every_identifier_strategy_Q1": ["R03#p1", "R05#p1"],
+    "no_single_strategy_returns_all_of_R04_R07_R12": true,
+    "union_returns_R04_R07_R12": true,
+    "Q2_all_strategies_empty": "zero candidates is reported as no candidate in the declared corpus, never as current, unchanged or valid",
+    "Q3_target_unresolved": "no record issues 22/2019; content strategies return 9 passages that share only 'reading room'"
+  },
+  "graded_properties": [
+    "P1 every returned passage equals the bytes at its locator, with the manifest's sha256",
+    "P2 no key anywhere in the machine-readable result matches /revo|valid|current|in_force|accept|authori|correct|supersed/",
+    "P3 every query has determination NOT_MADE, and the reader states the scope limitation for every query, including the empty one",
+    "P4 discovery run twice in one process gives identical output",
+    "P5 a strategy whose tokenizer is unavailable is NOT_RUN, never substituted"
+  ],
+  "limits": [
+    "Twelve invented English records and three queries: an illustration of retrieval behaviour, not a benchmark, and not evidence about any real archive, language, OCR quality or scale.",
+    "Candidate discovery only. Nothing here decides whether a candidate changes the target; R03, R04, R05 and R07 are all returned by identifier search and look alike to it.",
+    "A declared search scope does not prove completeness, the absence of changes outside the scope, or current normative validity; no match inside the scope is not evidence that a target is current (correction to the earlier critique, which proposed answering 'current within scope X').",
+    "A matching identifier, hash, issuer or later declared date is never an assertion of correction, acceptance, authority or current validity; declared dates and issuers are the records' own declarations, unverified.",
+    "The identifier pattern and the stopword list fit this synthetic corpus only; no stemming is used, so 'moving' and 'moves' do not match 'move' (kept as part of the result, not tuned away).",
+    "bm25 order is recorded, not graded; only candidate sets are graded.",
+    "Linux evidence only; macOS (and Python 3.9, which is syntax-checked here but not executed) are not qualified by this run."
+  ]
+}

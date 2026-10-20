@@ -1,0 +1,303 @@
+{
+  "schema": 1,
+  "corpus_id": "synthetic-library-board-2019-2021",
+  "declared_scope": "exactly the 12 synthetic records listed here, and nothing else; declared dates are the records' own declarations, not verified; this list is the whole corpus searched, and it is not claimed to be complete for any real body or period",
+  "records": [
+    {
+      "record_id": "R01",
+      "file": "corpus/records/R01.txt",
+      "bytes": 191,
+      "sha256": "0a22992f95c4f365a51942e333b1e00848425d8c1f83b61f4330ec73545127ec",
+      "issuer": "Library Board",
+      "declared_date": "2019-03-12",
+      "issues_identifiers": [],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 55,
+          "sha256": "b906395f9ac06f4995dc6c25ca91799bbf53732bd654463a559568f556867649"
+        },
+        {
+          "n": 1,
+          "byte_start": 57,
+          "byte_end": 190,
+          "sha256": "eb14aaf02aca09181b68b954ce215bd393038945d9fc0ae6417dc552e8b2e056"
+        }
+      ]
+    },
+    {
+      "record_id": "R02",
+      "file": "corpus/records/R02.txt",
+      "bytes": 287,
+      "sha256": "6481be3606165fcea416067d9554a835d3142b117969749d21c8044060262d41",
+      "issuer": "Library Board",
+      "declared_date": "2019-05-14",
+      "issues_identifiers": [
+        "14/2019"
+      ],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 53,
+          "sha256": "4468d394ee5761139b7f76846b5895cc10d9b7b88a982698f4799e760a2c152e"
+        },
+        {
+          "n": 1,
+          "byte_start": 55,
+          "byte_end": 155,
+          "sha256": "51f9b4d788b309b56da2cc4b3030451310dc8baa8b5ffba289d258bcaa716175"
+        },
+        {
+          "n": 2,
+          "byte_start": 157,
+          "byte_end": 232,
+          "sha256": "ff8ed3726e69d81190cce5bc64b268e9c2f9f9f1118249d0f53037cbc206fda9"
+        },
+        {
+          "n": 3,
+          "byte_start": 234,
+          "byte_end": 286,
+          "sha256": "89d23b156e56aea47be9c46a591e7fcbd0a3006efbc937e9c0505c876a65dabd"
+        }
+      ]
+    },
+    {
+      "record_id": "R03",
+      "file": "corpus/records/R03.txt",
+      "bytes": 162,
+      "sha256": "25cb46c40275d8946b77d49e5311b95b148ff407e689c5eaf681208d6ea895ca",
+      "issuer": "Library Board",
+      "declared_date": "2019-08-26",
+      "issues_identifiers": [],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 40,
+          "sha256": "d17d99c21e3d07bb86385543e787809cda852953442d4087c67e1d86bb33df50"
+        },
+        {
+          "n": 1,
+          "byte_start": 42,
+          "byte_end": 161,
+          "sha256": "cc1d65cbb87bbdf54caab92f7caf14b8f349642ef67be7119c30742cf298f261"
+        }
+      ]
+    },
+    {
+      "record_id": "R04",
+      "file": "corpus/records/R04.txt",
+      "bytes": 198,
+      "sha256": "03d168af945aa248a38c9194e288706f82ba68cbc340d462bcfce17a2b82e3d9",
+      "issuer": "Library Board",
+      "declared_date": "2019-11-19",
+      "issues_identifiers": [],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 58,
+          "sha256": "0a9061012000407ed10bbe2b3e1bde6fa4bc629f1cbbb8cb5272d2510795032d"
+        },
+        {
+          "n": 1,
+          "byte_start": 60,
+          "byte_end": 197,
+          "sha256": "66b1a8a79d155e78970b6e606d1494820776025b0275b0c2d0edd7a1dab77393"
+        }
+      ]
+    },
+    {
+      "record_id": "R05",
+      "file": "corpus/records/R05.txt",
+      "bytes": 159,
+      "sha256": "72b506310744e61a02631598ef568c5e5aacc3af58a0cf47399d1680dcf156fb",
+      "issuer": "Library Board",
+      "declared_date": "2020-01-10",
+      "issues_identifiers": [],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 41,
+          "sha256": "331f3bf2f41fd3491158737a813942c0174b49c2b7a740407beadea8cdf6bb2e"
+        },
+        {
+          "n": 1,
+          "byte_start": 43,
+          "byte_end": 158,
+          "sha256": "eaa57d06d6f6d30d88357e3460a6a2da0c4485fead6a115582dfa392b34bc4a6"
+        }
+      ]
+    },
+    {
+      "record_id": "R06",
+      "file": "corpus/records/R06.txt",
+      "bytes": 139,
+      "sha256": "57cc37c7b635664270b7e1ee35f53e968745b11b92bdfc19ba3283471447bc71",
+      "issuer": "City Council",
+      "declared_date": "2019-06-20",
+      "issues_identifiers": [
+        "14/2019"
+      ],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 61,
+          "sha256": "b4b162d9f677d99cccb7ef2d43298c0016b9441cc093917ca6565913eecabc8f"
+        },
+        {
+          "n": 1,
+          "byte_start": 63,
+          "byte_end": 138,
+          "sha256": "754f9dc6fd60a5df7cd9626ac9e65f9dd777d565c25213e78bacbb7a2d17689a"
+        }
+      ]
+    },
+    {
+      "record_id": "R07",
+      "file": "corpus/records/R07.txt",
+      "bytes": 110,
+      "sha256": "cd9fa744a083465d54554f2a3c8ab5dc045f131d94cddfcb7899757c3b785d50",
+      "issuer": "Library Board",
+      "declared_date": "2020-02-11",
+      "issues_identifiers": [],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 58,
+          "sha256": "c426feb50479fc3d036bb8ec3bfbc7326c2dbb659ee481375d9c0fae828f218a"
+        },
+        {
+          "n": 1,
+          "byte_start": 60,
+          "byte_end": 109,
+          "sha256": "724a0542c182c51203ef777e2fd52d491234af6ab48a778b85f3a14be58a67d3"
+        }
+      ]
+    },
+    {
+      "record_id": "R08",
+      "file": "corpus/records/R08.txt",
+      "bytes": 96,
+      "sha256": "1e7173f8e21d991cb6ae43d623b5493b3d034f6a324f0021eb4ed89591a56126",
+      "issuer": "Library Board",
+      "declared_date": "2020-02-25",
+      "issues_identifiers": [],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 44,
+          "sha256": "dfd9141685cacf9f067d31d4b10d01f9f302990367838fae413493ea135ca247"
+        },
+        {
+          "n": 1,
+          "byte_start": 46,
+          "byte_end": 95,
+          "sha256": "0ed760be857c27460790d2fcb153003e80932c4d65886092c18120f54b279333"
+        }
+      ]
+    },
+    {
+      "record_id": "R09",
+      "file": "corpus/records/R09.txt",
+      "bytes": 147,
+      "sha256": "d4a92290d6bcda14f57d60653c77a6a6ec36dccdf75483d8846ea8286c9b7a0d",
+      "issuer": "Library Board",
+      "declared_date": "2020-03-10",
+      "issues_identifiers": [],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 55,
+          "sha256": "99ce7e434613d6789e4242d55254c68e0922119b02ec45549d35281f20d3aebc"
+        },
+        {
+          "n": 1,
+          "byte_start": 57,
+          "byte_end": 146,
+          "sha256": "c98089f0eb7045eacf4b6739bd6dc628a0c2f73deed53350358645e3a11b9f73"
+        }
+      ]
+    },
+    {
+      "record_id": "R10",
+      "file": "corpus/records/R10.txt",
+      "bytes": 144,
+      "sha256": "1ed009dc8c31b2e40505cca9e0e6432df9ff70422d30ff45cebcb55514afc087",
+      "issuer": "Library Board",
+      "declared_date": "2019-12-03",
+      "issues_identifiers": [
+        "114/2019"
+      ],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 57,
+          "sha256": "5db943176d46595228614dcc16b4e9d896887649d0b063f001dce6d83d89bca3"
+        },
+        {
+          "n": 1,
+          "byte_start": 59,
+          "byte_end": 143,
+          "sha256": "beab1249d3a8785b2f60c84fb590def23f1b6182d73ac8d85b24f8afc49a10d1"
+        }
+      ]
+    },
+    {
+      "record_id": "R11",
+      "file": "corpus/records/R11.txt",
+      "bytes": 155,
+      "sha256": "a0759a363d4310a3fe7e4f832add572d017d832d736849ca0db4efe4bf7350da",
+      "issuer": "Library Board",
+      "declared_date": "2021-06-15",
+      "issues_identifiers": [
+        "3/2021"
+      ],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 54,
+          "sha256": "a4d16074ed40cdf46c7727b0292099ddbe5e796b86803aa40446fdf6b7fd0189"
+        },
+        {
+          "n": 1,
+          "byte_start": 56,
+          "byte_end": 154,
+          "sha256": "bb3985649cf1ed2b13621bfe954678aa761a664dd0e00c552e905714479dd5a6"
+        }
+      ]
+    },
+    {
+      "record_id": "R12",
+      "file": "corpus/records/R12.txt",
+      "bytes": 153,
+      "sha256": "cfba5dc7b93b2290d89e0c7cd62be9cd0766019339a8a37e8b5670befd87275b",
+      "issuer": "Library Board",
+      "declared_date": "2020-01-28",
+      "issues_identifiers": [],
+      "passages": [
+        {
+          "n": 0,
+          "byte_start": 0,
+          "byte_end": 57,
+          "sha256": "eb59c443477a51071748181520eaa94d5c9d3ed6ab33353e6ff8a9b587bdf462"
+        },
+        {
+          "n": 1,
+          "byte_start": 59,
+          "byte_end": 152,
+          "sha256": "733152b818f6c4857d6a36d41aaed12046170dfca6936b1c7e6070981e88a993"
+        }
+      ]
+    }
+  ]
+}

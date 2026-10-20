@@ -1,0 +1,32 @@
+# build and check the synthetic corpus (standard library only)
+$ python3.12 -I scripts/build_corpus.py build
+corpus/records/R01.txt: 191 bytes sha256=0a22992f95c4f365a51942e333b1e00848425d8c1f83b61f4330ec73545127ec
+corpus/records/R02.txt: 287 bytes sha256=6481be3606165fcea416067d9554a835d3142b117969749d21c8044060262d41
+corpus/records/R03.txt: 162 bytes sha256=25cb46c40275d8946b77d49e5311b95b148ff407e689c5eaf681208d6ea895ca
+corpus/records/R04.txt: 198 bytes sha256=03d168af945aa248a38c9194e288706f82ba68cbc340d462bcfce17a2b82e3d9
+corpus/records/R05.txt: 159 bytes sha256=72b506310744e61a02631598ef568c5e5aacc3af58a0cf47399d1680dcf156fb
+corpus/records/R06.txt: 139 bytes sha256=57cc37c7b635664270b7e1ee35f53e968745b11b92bdfc19ba3283471447bc71
+corpus/records/R07.txt: 110 bytes sha256=cd9fa744a083465d54554f2a3c8ab5dc045f131d94cddfcb7899757c3b785d50
+corpus/records/R08.txt: 96 bytes sha256=1e7173f8e21d991cb6ae43d623b5493b3d034f6a324f0021eb4ed89591a56126
+corpus/records/R09.txt: 147 bytes sha256=d4a92290d6bcda14f57d60653c77a6a6ec36dccdf75483d8846ea8286c9b7a0d
+corpus/records/R10.txt: 144 bytes sha256=1ed009dc8c31b2e40505cca9e0e6432df9ff70422d30ff45cebcb55514afc087
+corpus/records/R11.txt: 155 bytes sha256=a0759a363d4310a3fe7e4f832add572d017d832d736849ca0db4efe4bf7350da
+corpus/records/R12.txt: 153 bytes sha256=cfba5dc7b93b2290d89e0c7cd62be9cd0766019339a8a37e8b5670befd87275b
+corpus/corpus.json: 8870 bytes sha256=43e9ad338a465ab4a8aa49a37db069772048c603f3172caa38fc8c4221f58cb0
+exit=0
+$ python3.12 -I scripts/build_corpus.py check
+corpus/records/R01.txt: 191 bytes sha256=0a22992f95c4f365a51942e333b1e00848425d8c1f83b61f4330ec73545127ec
+corpus/records/R02.txt: 287 bytes sha256=6481be3606165fcea416067d9554a835d3142b117969749d21c8044060262d41
+corpus/records/R03.txt: 162 bytes sha256=25cb46c40275d8946b77d49e5311b95b148ff407e689c5eaf681208d6ea895ca
+corpus/records/R04.txt: 198 bytes sha256=03d168af945aa248a38c9194e288706f82ba68cbc340d462bcfce17a2b82e3d9
+corpus/records/R05.txt: 159 bytes sha256=72b506310744e61a02631598ef568c5e5aacc3af58a0cf47399d1680dcf156fb
+corpus/records/R06.txt: 139 bytes sha256=57cc37c7b635664270b7e1ee35f53e968745b11b92bdfc19ba3283471447bc71
+corpus/records/R07.txt: 110 bytes sha256=cd9fa744a083465d54554f2a3c8ab5dc045f131d94cddfcb7899757c3b785d50
+corpus/records/R08.txt: 96 bytes sha256=1e7173f8e21d991cb6ae43d623b5493b3d034f6a324f0021eb4ed89591a56126
+corpus/records/R09.txt: 147 bytes sha256=d4a92290d6bcda14f57d60653c77a6a6ec36dccdf75483d8846ea8286c9b7a0d
+corpus/records/R10.txt: 144 bytes sha256=1ed009dc8c31b2e40505cca9e0e6432df9ff70422d30ff45cebcb55514afc087
+corpus/records/R11.txt: 155 bytes sha256=a0759a363d4310a3fe7e4f832add572d017d832d736849ca0db4efe4bf7350da
+corpus/records/R12.txt: 153 bytes sha256=cfba5dc7b93b2290d89e0c7cd62be9cd0766019339a8a37e8b5670befd87275b
+corpus/corpus.json: 8870 bytes sha256=43e9ad338a465ab4a8aa49a37db069772048c603f3172caa38fc8c4221f58cb0
+check: identical
+exit=0
