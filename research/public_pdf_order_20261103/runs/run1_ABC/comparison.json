@@ -1,0 +1,364 @@
+{
+ "A": {
+  "pypdf_plain": {
+   "length": 117,
+   "newline_count": 3,
+   "unexpected_text": [],
+   "observed_token_texts": ["If", "the", "blue", "latch", "is", "closed", ",", "do", "not", "move", "the", "crate", "more", "than", "12", "cm", ".", "The", "green", "lamp", "remains", "on", ".", "Span", ":", "12", "cm", "Delay", ":", "7", "s"],
+   "token_sequence_equals": {"declared": true, "drawing": true, "geometric": true},
+   "nonspace_multiset": {
+    "equal": true,
+    "missing": {},
+    "extra": {}
+   },
+   "nonspace_order_equals": {"declared": true, "drawing": true},
+   "identity_checks": {
+    "not_count": 1,
+    "do_not_separators": [" "],
+    "closed_count": 1,
+    "clo_whitespace_sed_count": 0,
+    "numbers_in_text_order": ["12", "12", "7"],
+    "number_unit_pairs_in_text_order": [
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "7", "separator": " ", "unit": "s"}
+    ]
+   },
+   "aligned_to": "declared",
+   "separators": {"pairs_checked": 27, "mismatches": []},
+   "line_membership": {
+    "lines": [
+     {"line": 0, "blocks": ["S1"], "text": "If the blue latch is closed, do not move the crate more than 12 cm."},
+     {"line": 1, "blocks": ["S2"], "text": "The green lamp remains on."},
+     {"line": 2, "blocks": ["R1"], "text": "Span: 12 cm"},
+     {"line": 3, "blocks": ["R2"], "text": "Delay: 7 s"}
+    ],
+    "block_lines": {"S1": [0], "S2": [1], "R1": [2], "R2": [3]},
+    "blocks_split_across_lines": [],
+    "lines_mixing_blocks": []
+   },
+   "period_segments": [
+    {"blocks": ["S1"], "token_ids": ["S1.t00", "S1.t02", "S1.t04", "S1.t06", "S1.t08", "S1.t10", "S1.t11", "S1.t13", "S1.t15", "S1.t17", "S1.t19", "S1.t21", "S1.t23", "S1.t25", "S1.t27", "S1.t29", "S1.t30"], "text": "If the blue latch is closed, do not move the crate more than 12 cm."},
+    {"blocks": ["S2"], "token_ids": ["S2.t00", "S2.t02", "S2.t04", "S2.t06", "S2.t08", "S2.t09"], "text": "The green lamp remains on."},
+    {"blocks": ["R1", "R2"], "token_ids": ["R1.t00", "R1.t01", "R1.t03", "R1.t05", "R2.t00", "R2.t01", "R2.t03", "R2.t05"], "text": "Span: 12 cm\nDelay: 7 s"}
+   ],
+   "s1_limit_context": {
+    "negation_token": "S1.t15",
+    "limit_tokens": ["S1.t27", "S1.t29"],
+    "same_line_as_negation": true,
+    "same_period_segment_as_negation": true,
+    "preceding_token": {"token_id": "S1.t25", "text": "than", "separator": " "},
+    "following_token": {"token_id": "S1.t30", "text": ".", "separator": ""}
+   }
+  },
+  "pypdf_layout": {
+   "length": 120,
+   "newline_count": 6,
+   "unexpected_text": [],
+   "observed_token_texts": ["If", "the", "blue", "latch", "is", "closed", ",", "do", "not", "move", "the", "crate", "more", "than", "12", "cm", ".", "The", "green", "lamp", "remains", "on", ".", "Span", ":", "12", "cm", "Delay", ":", "7", "s"],
+   "token_sequence_equals": {"declared": true, "drawing": true, "geometric": true},
+   "nonspace_multiset": {
+    "equal": true,
+    "missing": {},
+    "extra": {}
+   },
+   "nonspace_order_equals": {"declared": true, "drawing": true},
+   "identity_checks": {
+    "not_count": 1,
+    "do_not_separators": [" "],
+    "closed_count": 1,
+    "clo_whitespace_sed_count": 0,
+    "numbers_in_text_order": ["12", "12", "7"],
+    "number_unit_pairs_in_text_order": [
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "7", "separator": " ", "unit": "s"}
+    ]
+   },
+   "aligned_to": "declared",
+   "separators": {"pairs_checked": 27, "mismatches": []},
+   "line_membership": {
+    "lines": [
+     {"line": 0, "blocks": ["S1"], "text": "If the blue latch is closed, do not move the crate more than 12 cm."},
+     {"line": 2, "blocks": ["S2"], "text": "The green lamp remains on."},
+     {"line": 4, "blocks": ["R1"], "text": "Span: 12 cm"},
+     {"line": 6, "blocks": ["R2"], "text": "Delay: 7 s"}
+    ],
+    "block_lines": {"S1": [0], "S2": [2], "R1": [4], "R2": [6]},
+    "blocks_split_across_lines": [],
+    "lines_mixing_blocks": []
+   },
+   "period_segments": [
+    {"blocks": ["S1"], "token_ids": ["S1.t00", "S1.t02", "S1.t04", "S1.t06", "S1.t08", "S1.t10", "S1.t11", "S1.t13", "S1.t15", "S1.t17", "S1.t19", "S1.t21", "S1.t23", "S1.t25", "S1.t27", "S1.t29", "S1.t30"], "text": "If the blue latch is closed, do not move the crate more than 12 cm."},
+    {"blocks": ["S2"], "token_ids": ["S2.t00", "S2.t02", "S2.t04", "S2.t06", "S2.t08", "S2.t09"], "text": "The green lamp remains on."},
+    {"blocks": ["R1", "R2"], "token_ids": ["R1.t00", "R1.t01", "R1.t03", "R1.t05", "R2.t00", "R2.t01", "R2.t03", "R2.t05"], "text": "Span: 12 cm\n\nDelay: 7 s"}
+   ],
+   "s1_limit_context": {
+    "negation_token": "S1.t15",
+    "limit_tokens": ["S1.t27", "S1.t29"],
+    "same_line_as_negation": true,
+    "same_period_segment_as_negation": true,
+    "preceding_token": {"token_id": "S1.t25", "text": "than", "separator": " "},
+    "following_token": {"token_id": "S1.t30", "text": ".", "separator": ""}
+   }
+  },
+  "pypdf_plain_visitor": {"auxiliary": true, "text_equals_pypdf_plain": true},
+  "pdfplumber_chars": {
+   "count_observed": 114,
+   "count_expected": 114,
+   "unmatched_observed": [],
+   "unmatched_expected": [],
+   "duplicate_matches": [],
+   "max_abs_deviation": {"origin_x": 0.0, "origin_y": 0.0, "advance": 0.0, "x1_minus_x0_vs_advance": 0.0},
+   "font_mismatches": [],
+   "observed_order_equals": {"drawing": true, "declared": true},
+   "geometric_sort_of_observed_equals_declared": true,
+   "all_checks_pass": true
+  }
+ },
+ "B": {
+  "pypdf_plain": {
+   "length": 117,
+   "newline_count": 3,
+   "unexpected_text": [],
+   "observed_token_texts": ["If", "the", "blue", "latch", "is", "closed", ",", "do", "not", "move", "the", "crate", "more", "than", "12", "cm", ".", "The", "green", "lamp", "remains", "on", ".", "Span", ":", "12", "cm", "Delay", ":", "7", "s"],
+   "token_sequence_equals": {"declared": true, "drawing": true, "geometric": true},
+   "nonspace_multiset": {
+    "equal": true,
+    "missing": {},
+    "extra": {}
+   },
+   "nonspace_order_equals": {"declared": true, "drawing": true},
+   "identity_checks": {
+    "not_count": 1,
+    "do_not_separators": [" "],
+    "closed_count": 1,
+    "clo_whitespace_sed_count": 0,
+    "numbers_in_text_order": ["12", "12", "7"],
+    "number_unit_pairs_in_text_order": [
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "7", "separator": " ", "unit": "s"}
+    ]
+   },
+   "aligned_to": "declared",
+   "separators": {"pairs_checked": 27, "mismatches": []},
+   "line_membership": {
+    "lines": [
+     {"line": 0, "blocks": ["S1"], "text": "If the blue latch is closed, do not move the crate more than 12 cm."},
+     {"line": 1, "blocks": ["S2"], "text": "The green lamp remains on."},
+     {"line": 2, "blocks": ["R1"], "text": "Span: 12 cm"},
+     {"line": 3, "blocks": ["R2"], "text": "Delay: 7 s"}
+    ],
+    "block_lines": {"S1": [0], "S2": [1], "R1": [2], "R2": [3]},
+    "blocks_split_across_lines": [],
+    "lines_mixing_blocks": []
+   },
+   "period_segments": [
+    {"blocks": ["S1"], "token_ids": ["S1.t00", "S1.t02", "S1.t04", "S1.t06", "S1.t08", "S1.t10", "S1.t11", "S1.t13", "S1.t15", "S1.t17", "S1.t19", "S1.t21", "S1.t23", "S1.t25", "S1.t27", "S1.t29", "S1.t30"], "text": "If the blue latch is closed, do not move the crate more than 12 cm."},
+    {"blocks": ["S2"], "token_ids": ["S2.t00", "S2.t02", "S2.t04", "S2.t06", "S2.t08", "S2.t09"], "text": "The green lamp remains on."},
+    {"blocks": ["R1", "R2"], "token_ids": ["R1.t00", "R1.t01", "R1.t03", "R1.t05", "R2.t00", "R2.t01", "R2.t03", "R2.t05"], "text": "Span: 12 cm\nDelay: 7 s"}
+   ],
+   "s1_limit_context": {
+    "negation_token": "S1.t15",
+    "limit_tokens": ["S1.t27", "S1.t29"],
+    "same_line_as_negation": true,
+    "same_period_segment_as_negation": true,
+    "preceding_token": {"token_id": "S1.t25", "text": "than", "separator": " "},
+    "following_token": {"token_id": "S1.t30", "text": ".", "separator": ""}
+   }
+  },
+  "pypdf_layout": {
+   "length": 120,
+   "newline_count": 6,
+   "unexpected_text": [],
+   "observed_token_texts": ["If", "the", "blue", "latch", "is", "closed", ",", "do", "not", "move", "the", "crate", "more", "than", "12", "cm", ".", "The", "green", "lamp", "remains", "on", ".", "Span", ":", "12", "cm", "Delay", ":", "7", "s"],
+   "token_sequence_equals": {"declared": true, "drawing": true, "geometric": true},
+   "nonspace_multiset": {
+    "equal": true,
+    "missing": {},
+    "extra": {}
+   },
+   "nonspace_order_equals": {"declared": true, "drawing": true},
+   "identity_checks": {
+    "not_count": 1,
+    "do_not_separators": [" "],
+    "closed_count": 1,
+    "clo_whitespace_sed_count": 0,
+    "numbers_in_text_order": ["12", "12", "7"],
+    "number_unit_pairs_in_text_order": [
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "7", "separator": " ", "unit": "s"}
+    ]
+   },
+   "aligned_to": "declared",
+   "separators": {"pairs_checked": 27, "mismatches": []},
+   "line_membership": {
+    "lines": [
+     {"line": 0, "blocks": ["S1"], "text": "If the blue latch is closed, do not move the crate more than 12 cm."},
+     {"line": 2, "blocks": ["S2"], "text": "The green lamp remains on."},
+     {"line": 4, "blocks": ["R1"], "text": "Span: 12 cm"},
+     {"line": 6, "blocks": ["R2"], "text": "Delay: 7 s"}
+    ],
+    "block_lines": {"S1": [0], "S2": [2], "R1": [4], "R2": [6]},
+    "blocks_split_across_lines": [],
+    "lines_mixing_blocks": []
+   },
+   "period_segments": [
+    {"blocks": ["S1"], "token_ids": ["S1.t00", "S1.t02", "S1.t04", "S1.t06", "S1.t08", "S1.t10", "S1.t11", "S1.t13", "S1.t15", "S1.t17", "S1.t19", "S1.t21", "S1.t23", "S1.t25", "S1.t27", "S1.t29", "S1.t30"], "text": "If the blue latch is closed, do not move the crate more than 12 cm."},
+    {"blocks": ["S2"], "token_ids": ["S2.t00", "S2.t02", "S2.t04", "S2.t06", "S2.t08", "S2.t09"], "text": "The green lamp remains on."},
+    {"blocks": ["R1", "R2"], "token_ids": ["R1.t00", "R1.t01", "R1.t03", "R1.t05", "R2.t00", "R2.t01", "R2.t03", "R2.t05"], "text": "Span: 12 cm\n\nDelay: 7 s"}
+   ],
+   "s1_limit_context": {
+    "negation_token": "S1.t15",
+    "limit_tokens": ["S1.t27", "S1.t29"],
+    "same_line_as_negation": true,
+    "same_period_segment_as_negation": true,
+    "preceding_token": {"token_id": "S1.t25", "text": "than", "separator": " "},
+    "following_token": {"token_id": "S1.t30", "text": ".", "separator": ""}
+   }
+  },
+  "pypdf_plain_visitor": {"auxiliary": true, "text_equals_pypdf_plain": true},
+  "pdfplumber_chars": {
+   "count_observed": 114,
+   "count_expected": 114,
+   "unmatched_observed": [],
+   "unmatched_expected": [],
+   "duplicate_matches": [],
+   "max_abs_deviation": {"origin_x": 0.0, "origin_y": 0.0, "advance": 0.0, "x1_minus_x0_vs_advance": 0.0},
+   "font_mismatches": [],
+   "observed_order_equals": {"drawing": true, "declared": true},
+   "geometric_sort_of_observed_equals_declared": true,
+   "all_checks_pass": true
+  }
+ },
+ "C": {
+  "pypdf_plain": {
+   "length": 118,
+   "newline_count": 4,
+   "unexpected_text": [],
+   "observed_token_texts": ["If", "the", "blue", "latch", "is", "closed", ",", "do", "not", "move", "the", "crate", "more", "than", "The", "green", "lamp", "remains", "on", ".", "12", "cm", ".", "Span", ":", "12", "cm", "Delay", ":", "7", "s"],
+   "token_sequence_equals": {"declared": false, "drawing": true, "geometric": false},
+   "nonspace_multiset": {
+    "equal": true,
+    "missing": {},
+    "extra": {}
+   },
+   "nonspace_order_equals": {"declared": false, "drawing": true},
+   "identity_checks": {
+    "not_count": 1,
+    "do_not_separators": [" "],
+    "closed_count": 1,
+    "clo_whitespace_sed_count": 0,
+    "numbers_in_text_order": ["12", "12", "7"],
+    "number_unit_pairs_in_text_order": [
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "7", "separator": " ", "unit": "s"}
+    ]
+   },
+   "aligned_to": "drawing",
+   "separators": {
+    "pairs_checked": 27,
+    "mismatches": [
+     {"pair": ["S1.t25", "S1.t27"], "texts": ["than", "12"], "expected": " ", "observed": null, "adjacent_in_output": false, "output_positions": [13, 20], "match": false}
+    ]
+   },
+   "line_membership": {
+    "lines": [
+     {"line": 0, "blocks": ["S1"], "text": "If the blue latch is closed, do not move the crate more than "},
+     {"line": 1, "blocks": ["S2"], "text": "The green lamp remains on."},
+     {"line": 2, "blocks": ["S1"], "text": "12 cm."},
+     {"line": 3, "blocks": ["R1"], "text": "Span: 12 cm"},
+     {"line": 4, "blocks": ["R2"], "text": "Delay: 7 s"}
+    ],
+    "block_lines": {"S1": [0, 2], "S2": [1], "R1": [3], "R2": [4]},
+    "blocks_split_across_lines": ["S1"],
+    "lines_mixing_blocks": []
+   },
+   "period_segments": [
+    {"blocks": ["S1", "S2"], "token_ids": ["S1.t00", "S1.t02", "S1.t04", "S1.t06", "S1.t08", "S1.t10", "S1.t11", "S1.t13", "S1.t15", "S1.t17", "S1.t19", "S1.t21", "S1.t23", "S1.t25", "S2.t00", "S2.t02", "S2.t04", "S2.t06", "S2.t08", "S2.t09"], "text": "If the blue latch is closed, do not move the crate more than \nThe green lamp remains on."},
+    {"blocks": ["S1"], "token_ids": ["S1.t27", "S1.t29", "S1.t30"], "text": "12 cm."},
+    {"blocks": ["R1", "R2"], "token_ids": ["R1.t00", "R1.t01", "R1.t03", "R1.t05", "R2.t00", "R2.t01", "R2.t03", "R2.t05"], "text": "Span: 12 cm\nDelay: 7 s"}
+   ],
+   "s1_limit_context": {
+    "negation_token": "S1.t15",
+    "limit_tokens": ["S1.t27", "S1.t29"],
+    "same_line_as_negation": false,
+    "same_period_segment_as_negation": false,
+    "preceding_token": {"token_id": "S2.t09", "text": ".", "separator": "\n"},
+    "following_token": {"token_id": "S1.t30", "text": ".", "separator": ""}
+   }
+  },
+  "pypdf_layout": {
+   "length": 143,
+   "newline_count": 6,
+   "unexpected_text": [],
+   "observed_token_texts": ["If", "the", "blue", "latch", "is", "closed", ",", "do", "not", "move", "the", "crate", "more", "than", "12", "cm", ".", "The", "green", "lamp", "remains", "on", ".", "Span", ":", "12", "cm", "Delay", ":", "7", "s"],
+   "token_sequence_equals": {"declared": true, "drawing": false, "geometric": true},
+   "nonspace_multiset": {
+    "equal": true,
+    "missing": {},
+    "extra": {}
+   },
+   "nonspace_order_equals": {"declared": true, "drawing": false},
+   "identity_checks": {
+    "not_count": 1,
+    "do_not_separators": [" "],
+    "closed_count": 1,
+    "clo_whitespace_sed_count": 0,
+    "numbers_in_text_order": ["12", "12", "7"],
+    "number_unit_pairs_in_text_order": [
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "12", "separator": " ", "unit": "cm"},
+     {"number": "7", "separator": " ", "unit": "s"}
+    ]
+   },
+   "aligned_to": "declared",
+   "separators": {
+    "pairs_checked": 27,
+    "mismatches": [
+     {"pair": ["S1.t25", "S1.t27"], "texts": ["than", "12"], "expected": " ", "observed": "                        ", "adjacent_in_output": true, "match": false}
+    ]
+   },
+   "line_membership": {
+    "lines": [
+     {"line": 0, "blocks": ["S1"], "text": "If the blue latch is closed, do not move the crate more than                        12 cm."},
+     {"line": 2, "blocks": ["S2"], "text": "The green lamp remains on."},
+     {"line": 4, "blocks": ["R1"], "text": "Span: 12 cm"},
+     {"line": 6, "blocks": ["R2"], "text": "Delay: 7 s"}
+    ],
+    "block_lines": {"S1": [0], "S2": [2], "R1": [4], "R2": [6]},
+    "blocks_split_across_lines": [],
+    "lines_mixing_blocks": []
+   },
+   "period_segments": [
+    {"blocks": ["S1"], "token_ids": ["S1.t00", "S1.t02", "S1.t04", "S1.t06", "S1.t08", "S1.t10", "S1.t11", "S1.t13", "S1.t15", "S1.t17", "S1.t19", "S1.t21", "S1.t23", "S1.t25", "S1.t27", "S1.t29", "S1.t30"], "text": "If the blue latch is closed, do not move the crate more than                        12 cm."},
+    {"blocks": ["S2"], "token_ids": ["S2.t00", "S2.t02", "S2.t04", "S2.t06", "S2.t08", "S2.t09"], "text": "The green lamp remains on."},
+    {"blocks": ["R1", "R2"], "token_ids": ["R1.t00", "R1.t01", "R1.t03", "R1.t05", "R2.t00", "R2.t01", "R2.t03", "R2.t05"], "text": "Span: 12 cm\n\nDelay: 7 s"}
+   ],
+   "s1_limit_context": {
+    "negation_token": "S1.t15",
+    "limit_tokens": ["S1.t27", "S1.t29"],
+    "same_line_as_negation": true,
+    "same_period_segment_as_negation": true,
+    "preceding_token": {"token_id": "S1.t25", "text": "than", "separator": "                        "},
+    "following_token": {"token_id": "S1.t30", "text": ".", "separator": ""}
+   }
+  },
+  "pypdf_plain_visitor": {"auxiliary": true, "text_equals_pypdf_plain": true},
+  "pdfplumber_chars": {
+   "count_observed": 114,
+   "count_expected": 114,
+   "unmatched_observed": [],
+   "unmatched_expected": [],
+   "duplicate_matches": [],
+   "max_abs_deviation": {"origin_x": 0.0, "origin_y": 0.0, "advance": 0.0, "x1_minus_x0_vs_advance": 0.0},
+   "font_mismatches": [],
+   "observed_order_equals": {"drawing": true, "declared": false},
+   "geometric_sort_of_observed_equals_declared": true,
+   "all_checks_pass": true
+  }
+ }
+}

@@ -1,0 +1,8 @@
+Initial pinned run, fixtures A/B/C only (before control D existed).
+command (from research/public_pdf_order_20261103, pinned venv):
+    python -I run_extractors.py
+  with the then-default output directory "results"; the files were moved
+  unchanged into runs/run1_ABC because the repository .gitignore ignores
+  any directory named results/.
+exit status: 0
+run_stdout.txt / run_stderr.txt: the process stdout/stderr of that run.

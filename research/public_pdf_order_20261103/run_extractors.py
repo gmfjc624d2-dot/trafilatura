@@ -6,7 +6,7 @@ Writes exact raw outputs, captured warnings/log records/stdout/stderr and
 exceptions, then the comparison against fixtures/manifest.json. Refuses to
 run with package versions other than the pins (no silent substitution).
 
-    python -I run_extractors.py [--out results]
+    python -I run_extractors.py [--out runs/<name>]
 """
 
 from __future__ import annotations
@@ -158,7 +158,7 @@ def environment(found: dict[str, str]) -> dict[str, Any]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("--out", type=Path, default=HERE / "results")
+    parser.add_argument("--out", type=Path, default=HERE / "runs" / "local")
     parser.add_argument("--fixtures", type=Path, default=HERE / "fixtures")
     args = parser.parse_args(argv)
     found = check_pins()

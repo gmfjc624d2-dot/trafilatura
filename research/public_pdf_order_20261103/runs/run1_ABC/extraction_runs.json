@@ -1,0 +1,32 @@
+{
+ "A": {
+  "pdf": "A_plain_order.pdf",
+  "pdf_sha256": "670de083e4667f3bc5f138f8587fd6bc5ff3e0a1d90bf5e89fbb084981e78e16",
+  "methods": {
+   "pypdf_plain": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/A.pypdf_plain.txt", "raw_sha256": "5066496bad366c7f5c5cc160b21b60aaf14eeeb2de31e8f4a20fb446261766fe", "raw_repr": "'If the blue latch is closed, do not move the crate more than 12 cm.\\nThe green lamp remains on.\\nSpan: 12 cm\\nDelay: 7 s'"},
+   "pypdf_layout": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/A.pypdf_layout.txt", "raw_sha256": "fb43ecd795904b5ca4e87e625f8e452be308b7404f8ed3a723a26fcb26d929a9", "raw_repr": "'If the blue latch is closed, do not move the crate more than 12 cm.\\n\\nThe green lamp remains on.\\n\\nSpan: 12 cm\\n\\nDelay: 7 s'"},
+   "pypdf_plain_visitor": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/A.pypdf_plain_visitor.json", "raw_sha256": "ce196f16533edea929496a6b71d4cee59b2d61903c2e8c82fe2bd86ba28365da"},
+   "pdfplumber_chars": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/A.pdfplumber_chars.json", "raw_sha256": "6e3e7b13157c2544d8a0903b86f8ce0ef8b93f3913fca668c74547a34f998803"}
+  }
+ },
+ "B": {
+  "pdf": "B_styled_runs.pdf",
+  "pdf_sha256": "4669bc16d55a46d2a67b82a9f6a27a09fc8e03e8106783a66b813cd40fd32569",
+  "methods": {
+   "pypdf_plain": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/B.pypdf_plain.txt", "raw_sha256": "5066496bad366c7f5c5cc160b21b60aaf14eeeb2de31e8f4a20fb446261766fe", "raw_repr": "'If the blue latch is closed, do not move the crate more than 12 cm.\\nThe green lamp remains on.\\nSpan: 12 cm\\nDelay: 7 s'"},
+   "pypdf_layout": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/B.pypdf_layout.txt", "raw_sha256": "fb43ecd795904b5ca4e87e625f8e452be308b7404f8ed3a723a26fcb26d929a9", "raw_repr": "'If the blue latch is closed, do not move the crate more than 12 cm.\\n\\nThe green lamp remains on.\\n\\nSpan: 12 cm\\n\\nDelay: 7 s'"},
+   "pypdf_plain_visitor": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/B.pypdf_plain_visitor.json", "raw_sha256": "2fdd9d73914c38708379ae1d1ed5f782cc07351168fc4dbefeaf735095b51223"},
+   "pdfplumber_chars": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/B.pdfplumber_chars.json", "raw_sha256": "382c2435d9c213858c3a9ed2de603d385ddeafb64e450fac7fba182a2b479dc8"}
+  }
+ },
+ "C": {
+  "pdf": "C_late_suffix.pdf",
+  "pdf_sha256": "d4a3723b1b71a9d43ac8f709327165a0cf07886e1a52148c57502c6e57eaf2b2",
+  "methods": {
+   "pypdf_plain": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/C.pypdf_plain.txt", "raw_sha256": "6f573fae2fc3e3cbafd00e907db6a4b77e352d20d08dfd6193ea47e046c47f38", "raw_repr": "'If the blue latch is closed, do not move the crate more than \\nThe green lamp remains on.\\n12 cm.\\nSpan: 12 cm\\nDelay: 7 s'"},
+   "pypdf_layout": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/C.pypdf_layout.txt", "raw_sha256": "d42f19946f250edb4fa0ee6ba47290dc627b58a74d85c2a1d34f62fa17ae433e", "raw_repr": "'If the blue latch is closed, do not move the crate more than                        12 cm.\\n\\nThe green lamp remains on.\\n\\nSpan: 12 cm\\n\\nDelay: 7 s'"},
+   "pypdf_plain_visitor": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/C.pypdf_plain_visitor.json", "raw_sha256": "e16a0eeb426a4d8a2f096711f722b7cd78a621af85bb8dfb02ebed37690a697a"},
+   "pdfplumber_chars": {"status": "ok", "python_warnings": [], "log_records": [], "stdout": "", "stderr": "", "raw_file": "raw/C.pdfplumber_chars.json", "raw_sha256": "2fc7578bccb6b193706c1156119262452bfa99469f314452ba0246f2f6e20ba2"}
+  }
+ }
+}

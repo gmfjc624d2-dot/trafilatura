@@ -1,0 +1,9 @@
+A pypdf_plain    tokens=declared:True  drawing:True  sep_mismatch:0 limit_with_negation(line/segment):True/True
+A pypdf_layout   tokens=declared:True  drawing:True  sep_mismatch:0 limit_with_negation(line/segment):True/True
+A pdfplumber_chars geometry_ok:True stream=drawing:True geo_sort=declared:True
+B pypdf_plain    tokens=declared:True  drawing:True  sep_mismatch:0 limit_with_negation(line/segment):True/True
+B pypdf_layout   tokens=declared:True  drawing:True  sep_mismatch:0 limit_with_negation(line/segment):True/True
+B pdfplumber_chars geometry_ok:True stream=drawing:True geo_sort=declared:True
+C pypdf_plain    tokens=declared:False drawing:True  sep_mismatch:1 limit_with_negation(line/segment):False/False
+C pypdf_layout   tokens=declared:True  drawing:False sep_mismatch:1 limit_with_negation(line/segment):True/True
+C pdfplumber_chars geometry_ok:True stream=drawing:True geo_sort=declared:True
