@@ -50,9 +50,9 @@ def independent_expected() -> dict[str, tuple[str, float, float]]:
 # Independent minimal PDF reader (only what these fixtures use)
 # ---------------------------------------------------------------------------
 
+
 def read_objects(pdf: bytes) -> dict[int, bytes]:
-    objs = {int(n): body for n, body in
-            re.findall(rb"(\d+) 0 obj\n(.*?)\nendobj\n", pdf, flags=re.S)}
+    objs = {int(n): body for n, body in re.findall(rb"(\d+) 0 obj\n(.*?)\nendobj\n", pdf, flags=re.DOTALL)}
     # cross-check the xref table
     xref_at = int(re.search(rb"startxref\n(\d+)\n%%EOF\n$", pdf).group(1))
     table = pdf[xref_at:].split(b"\n")
@@ -70,8 +70,8 @@ def content_of(objs: dict[int, bytes]) -> bytes:
     num = int(re.search(rb"/Contents (\d+) 0 R", page).group(1))
     m = re.match(rb"<< /Length (\d+) >>\nstream\n", objs[num])
     length = int(m.group(1))
-    data = objs[num][m.end():m.end() + length]
-    assert objs[num][m.end() + length:] == b"endstream"
+    data = objs[num][m.end() : m.end() + length]
+    assert objs[num][m.end() + length :] == b"endstream"
     return data
 
 
@@ -103,7 +103,7 @@ def simulate(content: bytes, fonts: dict[str, dict]) -> list[dict]:
     pos = 0
     while pos < len(content):
         m = TOKEN.match(content, pos)
-        assert m, content[pos:pos + 20]
+        assert m, content[pos : pos + 20]
         pos = m.end()
         tok = m.group()
         if tok.isspace():
@@ -126,8 +126,7 @@ def simulate(content: bytes, fonts: dict[str, dict]) -> list[dict]:
             f = fonts[font]
             for ch in text:
                 adv = f["Widths"][ord(ch) - f["FirstChar"]] / 1000 * size
-                glyphs.append({"char": ch, "origin": [tm[4], tm[5]],
-                               "base_font": f["BaseFont"], "advance": adv})
+                glyphs.append({"char": ch, "origin": [tm[4], tm[5]], "base_font": f["BaseFont"], "advance": adv})
                 tm[4] += adv
         else:
             raise AssertionError(f"unexpected operator {op} (fixtures use BT/ET/Tf/Tm/Tj only)")
@@ -144,6 +143,7 @@ def parsed(name: str):
 # ---------------------------------------------------------------------------
 # Generator / manifest consistency
 # ---------------------------------------------------------------------------
+
 
 def test_generator_reproduces_committed_files_byte_for_byte():
     _, first = gen.build_all()
@@ -163,23 +163,27 @@ def test_declared_origins_match_independent_derivation():
         ch, x, y = exp[c["char_id"]]
         assert (c["char"], c["expected_origin"], c["expected_advance"]) == (ch, [x, y], ADVANCE)
     # layout sanity: every glyph inside a 1-inch margin, baselines 24 pt apart
-    for bid, ((x0, y0), text) in SOURCE.items():
+    for (x0, _), text in SOURCE.values():
         assert x0 >= 72 and x0 + len(text) * ADVANCE <= 612 - 72
     assert MANIFEST["page"]["MediaBox"] == [0, 0, 612, 792]
 
 
 @pytest.mark.parametrize("name", FIXTURES)
 def test_pdf_bytes_reparsed_independently_match_manifest(name):
-    pdf, objs, content, fonts = parsed(name)
+    pdf, _, content, fonts = parsed(name)
     fx = MANIFEST["fixtures"][name]
     assert hashlib.sha256(pdf).hexdigest() == fx["pdf_sha256"]
     assert content.decode("ascii") == fx["content_stream"]
     sim = simulate(content, fonts)
     glyphs = fx["glyphs"]
     assert len(sim) == len(glyphs)
-    for s, g in zip(sim, glyphs):
-        assert (s["char"], s["origin"], s["base_font"], s["advance"]) == \
-               (g["char"], g["origin"], g["base_font"], g["advance"]), g["char_id"]
+    for s, g in zip(sim, glyphs, strict=True):
+        assert (s["char"], s["origin"], s["base_font"], s["advance"]) == (
+            g["char"],
+            g["origin"],
+            g["base_font"],
+            g["advance"],
+        ), g["char_id"]
     # the PDF's geometry equals the independent expectation, glyph for glyph
     exp = independent_expected()
     assert Counter((s["char"], *s["origin"]) for s in sim) == Counter(exp.values())
@@ -207,8 +211,7 @@ def test_only_the_declared_perturbations_differ():
     geo = {n: sorted((g["char_id"], tuple(g["origin"])) for g in fx[n]["glyphs"]) for n in FIXTURES}
     assert all(geo[n] == geo["A"] for n in FIXTURES)
     assert set(font_of["A"].values()) == {"Courier"}
-    styled = {f"S1:{i}": "Courier-Oblique" for i in (24, 25, 26)} | \
-             {f"S1:{i}": "Courier-Bold" for i in (32, 33, 34)}
+    styled = {f"S1:{i}": "Courier-Oblique" for i in (24, 25, 26)} | {f"S1:{i}": "Courier-Bold" for i in (32, 33, 34)}
     for n in ("B", "C", "D"):
         diff = {k: v for k, v in font_of[n].items() if v != "Courier"}
         assert diff == styled, n
@@ -225,8 +228,11 @@ def test_only_the_declared_perturbations_differ():
     # C and D contain exactly the same operations, only in a different order
     assert sorted(lines["C"]) == sorted(lines["D"]) and lines["C"] != lines["D"]
     # D = B with the last S1 Tj split and one explicit Tm to the suffix origin
-    assert [x for x in lines["D"] if x not in lines["B"]] == \
-           ["( move the crate more than ) Tj", "1 0 0 1 438 720 Tm", "(12 cm.) Tj"]
+    assert [x for x in lines["D"] if x not in lines["B"]] == [
+        "( move the crate more than ) Tj",
+        "1 0 0 1 438 720 Tm",
+        "(12 cm.) Tj",
+    ]
     assert [x for x in lines["B"] if x not in lines["D"]] == ["( move the crate more than 12 cm.) Tj"]
 
 
@@ -237,13 +243,12 @@ def test_order_fields_and_operation_indexes(name):
     glyphs = fx["glyphs"]
     assert [g["draw_seq"] for g in glyphs] == list(range(len(glyphs)))
     assert fx["drawing_order"] == [g["char_id"] for g in glyphs]
-    assert fx["geometric_order"] == [g["char_id"] for g in
-                                     sorted(glyphs, key=lambda g: (-g["origin"][1], g["origin"][0]))]
+    assert fx["geometric_order"] == [g["char_id"] for g in sorted(glyphs, key=lambda g: (-g["origin"][1], g["origin"][0]))]
     assert fx["geometric_order"] == MANIFEST["declared_structure"]["declared_order"]
     assert fx["drawing_equals_declared"] == (name != "C")
     for op in fx["operations"]:
         start = op["byte_offset"]
-        assert content[start:start + op["byte_length"]].decode() == op["source"]
+        assert content[start : start + op["byte_length"]].decode() == op["source"]
     ops = fx["operations"]
     for run in fx["runs"]:
         op = ops[run["op_index"]]
@@ -320,8 +325,7 @@ def test_comparator_detects_detached_limit_in_drawing_order_text():
 
 def test_comparator_reports_unexpected_text():
     r = oc.compare_text(A_TEXT.replace("lamp", "la�mp"), MANIFEST, "A")
-    assert r["unexpected_text"] == [{"offset": A_TEXT.index("lamp") + 2, "char": "�",
-                                     "codepoint": "U+FFFD"}]
+    assert r["unexpected_text"] == [{"offset": A_TEXT.index("lamp") + 2, "char": "�", "codepoint": "U+FFFD"}]
 
 
 def test_compare_chars_detects_moved_glyph_and_font_change():
@@ -333,9 +337,16 @@ def test_compare_chars_detects_moved_glyph_and_font_change():
             x, y = g["origin"]
             if i == shift_index:
                 x += 0.5
-            out.append({"text": g["char"], "origin": [x, y], "advance": g["advance"],
-                        "x0": x, "x1": x + g["advance"],
-                        "fontname": "Courier" if i == font_index else g["base_font"]})
+            out.append(
+                {
+                    "text": g["char"],
+                    "origin": [x, y],
+                    "advance": g["advance"],
+                    "x0": x,
+                    "x1": x + g["advance"],
+                    "fontname": "Courier" if i == font_index else g["base_font"],
+                }
+            )
         return out
 
     clean = oc.compare_chars(records(), MANIFEST, "B")
@@ -343,8 +354,7 @@ def test_compare_chars_detects_moved_glyph_and_font_change():
     moved = oc.compare_chars(records(shift_index=5), MANIFEST, "B")
     assert not moved["all_checks_pass"] and moved["unmatched_expected"] == ["S1:05"]
     refont = oc.compare_chars(records(font_index=33), MANIFEST, "B")
-    assert refont["font_mismatches"] == [{"char_id": "S1:33", "observed": "Courier",
-                                          "expected": "Courier-Bold"}]
+    assert refont["font_mismatches"] == [{"char_id": "S1:33", "observed": "Courier", "expected": "Courier-Bold"}]
 
 
 # ---------------------------------------------------------------------------
@@ -361,8 +371,7 @@ def test_preserved_raw_outputs_match_recorded_hashes(run_dir):
     for fixture, rec in runs.items():
         assert rec["pdf_sha256"] == MANIFEST["fixtures"][fixture]["pdf_sha256"]
         for info in rec["methods"].values():
-            files = info.get("raw_files") or ({info["raw_file"]: info["raw_sha256"]}
-                                               if "raw_file" in info else {})
+            files = info.get("raw_files") or ({info["raw_file"]: info["raw_sha256"]} if "raw_file" in info else {})
             for rel, sha in files.items():
                 assert hashlib.sha256((run_dir / rel).read_bytes()).hexdigest() == sha, rel
                 checked += 1

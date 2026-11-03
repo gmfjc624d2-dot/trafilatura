@@ -41,6 +41,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import itertools
 import json
 import sys
 from pathlib import Path
@@ -72,9 +73,7 @@ FONTS: dict[str, dict[str, str]] = {
 ENCODING = "WinAnsiEncoding"
 # Characters used by the fixture text. For these codes WinAnsiEncoding,
 # StandardEncoding and ASCII agree, so the code is the ASCII value.
-ALLOWED_CHARS = set(
-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:"
-)
+ALLOWED_CHARS = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:")
 
 
 def glyph_advance(char: str) -> float:
@@ -94,63 +93,89 @@ def glyph_advance(char: str) -> float:
 # (text, kind, clause_id, roles, measurement_id).
 
 S1_SPEC: list[Any] = [
-    ("If", "word", "S1.cl1", ["condition", "condition_marker"], None), " ",
-    ("the", "word", "S1.cl1", ["condition"], None), " ",
-    ("blue", "word", "S1.cl1", ["condition"], None), " ",
-    ("latch", "word", "S1.cl1", ["condition"], None), " ",
-    ("is", "word", "S1.cl1", ["condition"], None), " ",
+    ("If", "word", "S1.cl1", ["condition", "condition_marker"], None),
+    " ",
+    ("the", "word", "S1.cl1", ["condition"], None),
+    " ",
+    ("blue", "word", "S1.cl1", ["condition"], None),
+    " ",
+    ("latch", "word", "S1.cl1", ["condition"], None),
+    " ",
+    ("is", "word", "S1.cl1", ["condition"], None),
+    " ",
     ("closed", "word", "S1.cl1", ["condition"], None),
-    (",", "punct", None, ["clause_boundary"], None), " ",
-    ("do", "word", "S1.cl2", ["auxiliary"], None), " ",
-    ("not", "word", "S1.cl2", ["negation"], None), " ",
-    ("move", "word", "S1.cl2", [], None), " ",
-    ("the", "word", "S1.cl2", [], None), " ",
-    ("crate", "word", "S1.cl2", [], None), " ",
-    ("more", "word", "S1.cl2", ["comparator"], None), " ",
-    ("than", "word", "S1.cl2", ["comparator"], None), " ",
-    ("12", "number", "S1.cl2", ["number"], "S1.m1"), " ",
+    (",", "punct", None, ["clause_boundary"], None),
+    " ",
+    ("do", "word", "S1.cl2", ["auxiliary"], None),
+    " ",
+    ("not", "word", "S1.cl2", ["negation"], None),
+    " ",
+    ("move", "word", "S1.cl2", [], None),
+    " ",
+    ("the", "word", "S1.cl2", [], None),
+    " ",
+    ("crate", "word", "S1.cl2", [], None),
+    " ",
+    ("more", "word", "S1.cl2", ["comparator"], None),
+    " ",
+    ("than", "word", "S1.cl2", ["comparator"], None),
+    " ",
+    ("12", "number", "S1.cl2", ["number"], "S1.m1"),
+    " ",
     ("cm", "word", "S1.cl2", ["unit"], "S1.m1"),
     (".", "punct", None, ["sentence_terminal"], None),
 ]
 S2_SPEC: list[Any] = [
-    ("The", "word", "S2.cl1", [], None), " ",
-    ("green", "word", "S2.cl1", [], None), " ",
-    ("lamp", "word", "S2.cl1", [], None), " ",
-    ("remains", "word", "S2.cl1", [], None), " ",
+    ("The", "word", "S2.cl1", [], None),
+    " ",
+    ("green", "word", "S2.cl1", [], None),
+    " ",
+    ("lamp", "word", "S2.cl1", [], None),
+    " ",
+    ("remains", "word", "S2.cl1", [], None),
+    " ",
     ("on", "word", "S2.cl1", [], None),
     (".", "punct", None, ["sentence_terminal"], None),
 ]
 R1_SPEC: list[Any] = [
     ("Span", "word", "R1.label", ["label"], None),
-    (":", "punct", "R1.label", ["label_delimiter"], None), " ",
-    ("12", "number", "R1.value", ["value", "number"], "R1.m1"), " ",
+    (":", "punct", "R1.label", ["label_delimiter"], None),
+    " ",
+    ("12", "number", "R1.value", ["value", "number"], "R1.m1"),
+    " ",
     ("cm", "word", "R1.value", ["value", "unit"], "R1.m1"),
 ]
 R2_SPEC: list[Any] = [
     ("Delay", "word", "R2.label", ["label"], None),
-    (":", "punct", "R2.label", ["label_delimiter"], None), " ",
-    ("7", "number", "R2.value", ["value", "number"], "R2.m1"), " ",
+    (":", "punct", "R2.label", ["label_delimiter"], None),
+    " ",
+    ("7", "number", "R2.value", ["value", "number"], "R2.m1"),
+    " ",
     ("s", "word", "R2.value", ["value", "unit"], "R2.m1"),
 ]
 
 BLOCKS: list[dict[str, Any]] = [
-    {"block_id": "S1", "kind": "sentence", "origin": [72, 720], "spec": S1_SPEC,
-     "text": "If the blue latch is closed, do not move the crate more than 12 cm."},
-    {"block_id": "S2", "kind": "sentence", "origin": [72, 696], "spec": S2_SPEC,
-     "text": "The green lamp remains on."},
-    {"block_id": "R1", "kind": "label_value_line", "origin": [72, 672], "spec": R1_SPEC,
-     "text": "Span: 12 cm"},
-    {"block_id": "R2", "kind": "label_value_line", "origin": [72, 648], "spec": R2_SPEC,
-     "text": "Delay: 7 s"},
+    {
+        "block_id": "S1",
+        "kind": "sentence",
+        "origin": [72, 720],
+        "spec": S1_SPEC,
+        "text": "If the blue latch is closed, do not move the crate more than 12 cm.",
+    },
+    {"block_id": "S2", "kind": "sentence", "origin": [72, 696], "spec": S2_SPEC, "text": "The green lamp remains on."},
+    {"block_id": "R1", "kind": "label_value_line", "origin": [72, 672], "spec": R1_SPEC, "text": "Span: 12 cm"},
+    {"block_id": "R2", "kind": "label_value_line", "origin": [72, 648], "spec": R2_SPEC, "text": "Delay: 7 s"},
 ]
 
 MEASUREMENTS = {
-    "S1.m1": {"block_id": "S1", "number": "12", "unit": "cm",
-              "note": "limit inside the negated main clause of S1"},
-    "R1.m1": {"block_id": "R1", "number": "12", "unit": "cm",
-              "note": "value of label 'Span'; same surface string as S1.m1 by design"},
-    "R2.m1": {"block_id": "R2", "number": "7", "unit": "s",
-              "note": "value of label 'Delay'"},
+    "S1.m1": {"block_id": "S1", "number": "12", "unit": "cm", "note": "limit inside the negated main clause of S1"},
+    "R1.m1": {
+        "block_id": "R1",
+        "number": "12",
+        "unit": "cm",
+        "note": "value of label 'Span'; same surface string as S1.m1 by design",
+    },
+    "R2.m1": {"block_id": "R2", "number": "7", "unit": "s", "note": "value of label 'Delay'"},
 }
 CLAUSES = {
     "S1.cl1": {"block_id": "S1", "role": "condition"},
@@ -184,9 +209,11 @@ FIXTURES: dict[str, dict[str, Any]] = {
     },
     "B": {
         "file": "B_styled_runs.pdf",
-        "summary": ("as A, but 'not' in Courier-Bold (F2) and 'closed' split into "
-                    "'clo' (F1) + 'sed' (F3 Courier-Oblique); runs continue by "
-                    "implicit advance"),
+        "summary": (
+            "as A, but 'not' in Courier-Bold (F2) and 'closed' split into "
+            "'clo' (F1) + 'sed' (F3 Courier-Oblique); runs continue by "
+            "implicit advance"
+        ),
         "runs": [
             ("F1", "S1", 0, 24, "Tm"),
             ("F3", "S1", 24, 27, "advance"),
@@ -200,8 +227,7 @@ FIXTURES: dict[str, dict[str, Any]] = {
     },
     "C": {
         "file": "C_late_suffix.pdf",
-        "summary": ("as B, but S1 suffix '12 cm.' painted after S2, explicitly "
-                    "positioned with Tm at its original origin"),
+        "summary": ("as B, but S1 suffix '12 cm.' painted after S2, explicitly positioned with Tm at its original origin"),
         "runs": [
             ("F1", "S1", 0, 24, "Tm"),
             ("F3", "S1", 24, 27, "advance"),
@@ -216,8 +242,10 @@ FIXTURES: dict[str, dict[str, Any]] = {
     },
     "D": {
         "file": "D_explicit_suffix_in_order.pdf",
-        "summary": ("as B (same drawing order), but the S1 suffix '12 cm.' is a separate "
-                    "run positioned by the same explicit Tm as in C"),
+        "summary": (
+            "as B (same drawing order), but the S1 suffix '12 cm.' is a separate "
+            "run positioned by the same explicit Tm as in C"
+        ),
         "added_after_initial_run": True,
         "justification": (
             "In run1 the C layout output separated 'than' and '12' by 24 spaces. "
@@ -225,7 +253,8 @@ FIXTURES: dict[str, dict[str, Any]] = {
             "re-positioned by an explicit Tm. D keeps B's drawing order and adds only "
             "the Tm, so B/D tests the equivalent operator pair (implicit advance vs "
             "explicit Tm to the same origin, cf. the TJ-vs-Td pair in pypdf's #3951 "
-            "regression test) and C/D isolates drawing order."),
+            "regression test) and C/D isolates drawing order."
+        ),
         "runs": [
             ("F1", "S1", 0, 24, "Tm"),
             ("F3", "S1", 24, 27, "advance"),
@@ -254,12 +283,10 @@ def _expand_spec(block: dict[str, Any]) -> list[dict[str, Any]]:
             prev_item, next_item = spec[i - 1], spec[i + 1]
             clause = prev_item[2] if prev_item[2] == next_item[2] else None
             meas = prev_item[4] if prev_item[4] and prev_item[4] == next_item[4] else None
-            tokens.append({"text": " ", "kind": "space", "clause_id": clause,
-                           "roles": [], "measurement_id": meas})
+            tokens.append({"text": " ", "kind": "space", "clause_id": clause, "roles": [], "measurement_id": meas})
         else:
             text, kind, clause, roles, meas = item
-            tokens.append({"text": text, "kind": kind, "clause_id": clause,
-                           "roles": list(roles), "measurement_id": meas})
+            tokens.append({"text": text, "kind": kind, "clause_id": clause, "roles": list(roles), "measurement_id": meas})
     return tokens
 
 
@@ -284,32 +311,54 @@ def declared_structure() -> dict[str, Any]:
             for ch in tok["text"]:
                 cid = f"{bid}:{pos:02d}"
                 char_ids.append(cid)
-                chars_out.append({
-                    "char_id": cid,
-                    "char": ch,
-                    "block_id": bid,
-                    "index_in_block": pos,
+                chars_out.append(
+                    {
+                        "char_id": cid,
+                        "char": ch,
+                        "block_id": bid,
+                        "index_in_block": pos,
+                        "token_id": tid,
+                        "token_kind": tok["kind"],
+                        "clause_id": tok["clause_id"],
+                        "measurement_id": tok["measurement_id"],
+                        "roles": tok["roles"],
+                        # x = block origin + sum of preceding declared advances
+                        "expected_origin": [x0 + sum(glyph_advance(c) for c in text[:pos]), y0],
+                        "expected_advance": glyph_advance(ch),
+                    }
+                )
+                pos += 1
+            tokens_out.append(
+                {
                     "token_id": tid,
-                    "token_kind": tok["kind"],
+                    "block_id": bid,
+                    "text": tok["text"],
+                    "kind": tok["kind"],
                     "clause_id": tok["clause_id"],
                     "measurement_id": tok["measurement_id"],
                     "roles": tok["roles"],
-                    # x = block origin + sum of preceding declared advances
-                    "expected_origin": [x0 + sum(glyph_advance(c) for c in text[:pos]), y0],
-                    "expected_advance": glyph_advance(ch),
-                })
-                pos += 1
-            tokens_out.append({"token_id": tid, "block_id": bid, "text": tok["text"],
-                               "kind": tok["kind"], "clause_id": tok["clause_id"],
-                               "measurement_id": tok["measurement_id"],
-                               "roles": tok["roles"], "char_ids": char_ids})
-        blocks_out.append({"block_id": bid, "kind": block["kind"], "text": text,
-                           "origin": [x0, y0], "token_ids": token_ids,
-                           "char_count": len(text),
-                           "line_end_x": x0 + sum(glyph_advance(c) for c in text)})
-    return {"blocks": blocks_out, "tokens": tokens_out, "characters": chars_out,
-            "clauses": CLAUSES, "measurements": MEASUREMENTS,
-            "declared_order": [c["char_id"] for c in chars_out]}
+                    "char_ids": char_ids,
+                }
+            )
+        blocks_out.append(
+            {
+                "block_id": bid,
+                "kind": block["kind"],
+                "text": text,
+                "origin": [x0, y0],
+                "token_ids": token_ids,
+                "char_count": len(text),
+                "line_end_x": x0 + sum(glyph_advance(c) for c in text),
+            }
+        )
+    return {
+        "blocks": blocks_out,
+        "tokens": tokens_out,
+        "characters": chars_out,
+        "clauses": CLAUSES,
+        "measurements": MEASUREMENTS,
+        "declared_order": [c["char_id"] for c in chars_out],
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -346,8 +395,7 @@ def build_fixture(name: str, decl: dict[str, Any]) -> dict[str, Any]:
         first_origin = run_chars[0]["expected_origin"]
         if font != current_font:
             lines.append(f"/{font} {FONT_SIZE} Tf")
-            op_roles.append({"kind": "select_font", "font_resource": font,
-                             "before_run": run_id})
+            op_roles.append({"kind": "select_font", "font_resource": font, "before_run": run_id})
             current_font = font
         if positioning == "Tm":
             lines.append(f"1 0 0 1 {_num(first_origin[0])} {_num(first_origin[1])} Tm")
@@ -365,49 +413,79 @@ def build_fixture(name: str, decl: dict[str, Any]) -> dict[str, Any]:
         for g_idx, c in enumerate(run_chars):
             if pen != c["expected_origin"]:
                 raise AssertionError(f"{c['char_id']}: pen {pen} != declared {c['expected_origin']}")
-            glyphs.append({
-                "draw_seq": draw_seq, "char_id": c["char_id"], "char": c["char"],
-                "run_id": run_id, "op_index": show_index, "index_in_run": g_idx,
-                "font_resource": font, "base_font": FONTS[font]["BaseFont"],
-                "origin": list(pen), "advance": glyph_advance(c["char"]),
-            })
+            glyphs.append(
+                {
+                    "draw_seq": draw_seq,
+                    "char_id": c["char_id"],
+                    "char": c["char"],
+                    "run_id": run_id,
+                    "op_index": show_index,
+                    "index_in_run": g_idx,
+                    "font_resource": font,
+                    "base_font": FONTS[font]["BaseFont"],
+                    "origin": list(pen),
+                    "advance": glyph_advance(c["char"]),
+                }
+            )
             draw_seq += 1
             pen = [pen[0] + glyph_advance(c["char"]), pen[1]]
-        runs.append({"run_id": run_id, "block_id": bid, "char_start": start,
-                     "char_end": end, "text": text, "font_resource": font,
-                     "base_font": FONTS[font]["BaseFont"], "positioning": positioning,
-                     "op_index": show_index,
-                     "char_ids": [c["char_id"] for c in run_chars]})
+        runs.append(
+            {
+                "run_id": run_id,
+                "block_id": bid,
+                "char_start": start,
+                "char_end": end,
+                "text": text,
+                "font_resource": font,
+                "base_font": FONTS[font]["BaseFont"],
+                "positioning": positioning,
+                "op_index": show_index,
+                "char_ids": [c["char_id"] for c in run_chars],
+            }
+        )
     lines.append("ET")
     op_roles.append({"kind": "end_text"})
 
     content = ("\n".join(lines) + "\n").encode("ascii")
     operations, offset = [], 0
-    for idx, (line, role) in enumerate(zip(lines, op_roles)):
+    for idx, (line, role) in enumerate(zip(lines, op_roles, strict=True)):
         raw = line.encode("ascii")
         if line.endswith(" Tj"):
             operator, operands = "Tj", [line[: -len(" Tj")]]
         else:
             parts = line.split(" ")
             operator, operands = parts[-1], parts[:-1]
-        operations.append({"op_index": idx, "operator": operator, "operands": operands,
-                           "source": line, "byte_offset": offset,
-                           "byte_length": len(raw), **role})
+        operations.append(
+            {
+                "op_index": idx,
+                "operator": operator,
+                "operands": operands,
+                "source": line,
+                "byte_offset": offset,
+                "byte_length": len(raw),
+                **role,
+            }
+        )
         offset += len(raw) + 1
     assert offset == len(content)
 
     drawing_order = [g["char_id"] for g in glyphs]
     declared_pos = {cid: i for i, cid in enumerate(decl["declared_order"])}
     perturbations = {
-        "non_F1_glyphs": {f: [g["char_id"] for g in glyphs if g["font_resource"] == f]
-                          for f in FONTS if f != "F1"},
+        "non_F1_glyphs": {f: [g["char_id"] for g in glyphs if g["font_resource"] == f] for f in FONTS if f != "F1"},
         "run_boundaries_between_adjacent_nonspace_glyphs": [
-            [a["char_id"], b["char_id"]] for a, b in zip(glyphs, glyphs[1:])
-            if a["run_id"] != b["run_id"] and a["char"] != " " and b["char"] != " "
-            and a["char_id"].split(":")[0] == b["char_id"].split(":")[0]],
+            [a["char_id"], b["char_id"]]
+            for a, b in itertools.pairwise(glyphs)
+            if a["run_id"] != b["run_id"]
+            and a["char"] != " "
+            and b["char"] != " "
+            and a["char_id"].split(":")[0] == b["char_id"].split(":")[0]
+        ],
         "glyphs_drawn_out_of_declared_order": [
-            g["char_id"] for i, g in enumerate(glyphs)
-            if any(declared_pos[h["char_id"]] > declared_pos[g["char_id"]] for h in glyphs[:i])],
+            g["char_id"]
+            for i, g in enumerate(glyphs)
+            if any(declared_pos[h["char_id"]] > declared_pos[g["char_id"]] for h in glyphs[:i])
+        ],
     }
     geometric_order = [g["char_id"] for g in sorted(glyphs, key=lambda g: (-g["origin"][1], g["origin"][0]))]
     pdf = build_pdf(content)
@@ -449,10 +527,11 @@ def build_pdf(content: bytes) -> bytes:
     objects = [
         b"<< /Type /Catalog /Pages 2 0 R >>",
         b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
-        (f"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 {PAGE_WIDTH} {PAGE_HEIGHT}] "
-         f"/Resources << /Font << {font_refs} >> >> /Contents 4 0 R >>").encode("ascii"),
-        b"<< /Length " + str(len(content)).encode("ascii") + b" >>\nstream\n"
-        + content + b"endstream",
+        (
+            f"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 {PAGE_WIDTH} {PAGE_HEIGHT}] "
+            f"/Resources << /Font << {font_refs} >> >> /Contents 4 0 R >>"
+        ).encode("ascii"),
+        b"<< /Length " + str(len(content)).encode("ascii") + b" >>\nstream\n" + content + b"endstream",
     ] + [font_object(f) for f in FONTS]
     out = bytearray(b"%PDF-1.7\n%\xe2\xe3\xcf\xd3\n")
     offsets = []
@@ -463,8 +542,7 @@ def build_pdf(content: bytes) -> bytes:
     out += f"xref\n0 {len(objects) + 1}\n".encode("ascii") + b"0000000000 65535 f \n"
     for off in offsets:
         out += f"{off:010d} 00000 n \n".encode("ascii")
-    out += (f"trailer\n<< /Size {len(objects) + 1} /Root 1 0 R >>\n"
-            f"startxref\n{xref}\n%%EOF\n").encode("ascii")
+    out += (f"trailer\n<< /Size {len(objects) + 1} /Root 1 0 R >>\nstartxref\n{xref}\n%%EOF\n").encode("ascii")
     return bytes(out)
 
 
@@ -510,36 +588,54 @@ def build_all() -> tuple[dict[str, Any], dict[str, bytes]]:
         fixtures[name] = fx
 
     def geometry(name: str) -> list[tuple]:
-        return sorted((g["char_id"], g["char"], tuple(g["origin"]), g["advance"])
-                      for g in fixtures[name]["glyphs"])
+        return sorted((g["char_id"], g["char"], tuple(g["origin"]), g["advance"]) for g in fixtures[name]["glyphs"])
 
-    declared_geometry = sorted((c["char_id"], c["char"], tuple(c["expected_origin"]),
-                                c["expected_advance"]) for c in decl["characters"])
-    cross = {name: {"glyph_geometry_equals_declared": geometry(name) == declared_geometry,
-                    "glyph_geometry_equals_A": geometry(name) == geometry("A")}
-             for name in fixtures}
+    declared_geometry = sorted(
+        (c["char_id"], c["char"], tuple(c["expected_origin"]), c["expected_advance"]) for c in decl["characters"]
+    )
+    cross = {
+        name: {
+            "glyph_geometry_equals_declared": geometry(name) == declared_geometry,
+            "glyph_geometry_equals_A": geometry(name) == geometry("A"),
+        }
+        for name in fixtures
+    }
 
     manifest = {
         "manifest_version": MANIFEST_VERSION,
         "request_id": REQUEST_ID,
-        "notice": ("Fictional text authored for this fixture. Not derived from, and not "
-                   "attributable to, any real document."),
+        "notice": ("Fictional text authored for this fixture. Not derived from, and not attributable to, any real document."),
         "generator": "generate_fixtures.py",
         "page": {"MediaBox": [0, 0, PAGE_WIDTH, PAGE_HEIGHT], "count": 1},
-        "text_state": {"font_size": FONT_SIZE, **TEXT_STATE,
-                       "note": "PDF initial text state; no Tc/Tw/Tz/TL/Ts/Tr operators emitted"},
-        "fonts": {f: {"resource": f, "Type": "Font", "Subtype": "Type1",
-                      "BaseFont": FONTS[f]["BaseFont"], "style": FONTS[f]["style"],
-                      "Encoding": ENCODING, "FirstChar": FIRST_CHAR, "LastChar": LAST_CHAR,
-                      "Widths_all_equal": GLYPH_WIDTH,
-                      "Widths_count": LAST_CHAR - FIRST_CHAR + 1,
-                      "embedded": False, "FontDescriptor": None,
-                      "object_source": font_object(f).decode("ascii")}
-                  for f in FONTS},
-        "metric_derivation": ("advance_pt = (Widths[code-FirstChar]/1000 * font_size + Tc + "
-                              "(Tw if code==32)) * Tz/100 = (600/1000*10 + 0 + 0) * 1 = 6.0; "
-                              "expected x = block origin x + 6.0 * index_in_block; "
-                              "expected y = block baseline y"),
+        "text_state": {
+            "font_size": FONT_SIZE,
+            **TEXT_STATE,
+            "note": "PDF initial text state; no Tc/Tw/Tz/TL/Ts/Tr operators emitted",
+        },
+        "fonts": {
+            f: {
+                "resource": f,
+                "Type": "Font",
+                "Subtype": "Type1",
+                "BaseFont": FONTS[f]["BaseFont"],
+                "style": FONTS[f]["style"],
+                "Encoding": ENCODING,
+                "FirstChar": FIRST_CHAR,
+                "LastChar": LAST_CHAR,
+                "Widths_all_equal": GLYPH_WIDTH,
+                "Widths_count": LAST_CHAR - FIRST_CHAR + 1,
+                "embedded": False,
+                "FontDescriptor": None,
+                "object_source": font_object(f).decode("ascii"),
+            }
+            for f in FONTS
+        },
+        "metric_derivation": (
+            "advance_pt = (Widths[code-FirstChar]/1000 * font_size + Tc + "
+            "(Tw if code==32)) * Tz/100 = (600/1000*10 + 0 + 0) * 1 = 6.0; "
+            "expected x = block origin x + 6.0 * index_in_block; "
+            "expected y = block baseline y"
+        ),
         "order_definitions": {
             "declared_order": "fixture author's intended reading order: S1, S2, R1, R2, each left to right",
             "drawing_order": "order in which glyphs are painted by the content stream (draw_seq)",
@@ -557,8 +653,7 @@ def build_all() -> tuple[dict[str, Any], dict[str, bytes]]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
-    parser.add_argument("--check", action="store_true",
-                        help="verify existing files are byte-identical; write nothing")
+    parser.add_argument("--check", action="store_true", help="verify existing files are byte-identical; write nothing")
     args = parser.parse_args(argv)
     _, files = build_all()
     if args.check:

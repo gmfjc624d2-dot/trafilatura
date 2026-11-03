@@ -24,7 +24,10 @@ import sys
 import traceback
 import warnings
 from pathlib import Path
-from typing import Any, Callable
+from typing import TYPE_CHECKING, Any
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -33,17 +36,27 @@ import order_compare  # noqa: E402
 from generate_fixtures import dump_json  # noqa: E402
 
 PINS = {"pypdf": "6.21.4", "pdfplumber": "0.11.9", "pdfminer.six": "20251230"}
-CHAR_KEYS = ("text", "fontname", "size", "adv", "matrix", "x0", "x1", "y0", "y1",
-             "top", "bottom", "width", "height", "upright")
+CHAR_KEYS = (
+    "text",
+    "fontname",
+    "size",
+    "adv",
+    "matrix",
+    "x0",
+    "x1",
+    "y0",
+    "y1",
+    "top",
+    "bottom",
+    "width",
+    "height",
+    "upright",
+)
 
 
 def check_pins() -> dict[str, str]:
-    found = {}
-    for dist, want in PINS.items():
-        try:
-            found[dist] = md.version(dist)
-        except md.PackageNotFoundError:
-            found[dist] = "not installed"
+    installed = {d.metadata["Name"].lower(): d.version for d in md.distributions()}
+    found = {dist: installed.get(dist.lower(), "not installed") for dist in PINS}
     bad = {d: v for d, v in found.items() if v != PINS[d]}
     if bad:
         print(f"refusing to run: expected {PINS}, found {found}", file=sys.stderr)
@@ -57,8 +70,7 @@ class _ListHandler(logging.Handler):
         self.records: list[dict[str, Any]] = []
 
     def emit(self, record: logging.LogRecord) -> None:
-        self.records.append({"logger": record.name, "level": record.levelname,
-                             "message": record.getMessage()})
+        self.records.append({"logger": record.name, "level": record.levelname, "message": record.getMessage()})
 
 
 def capture(fn: Callable[[], Any]) -> tuple[Any, dict[str, Any]]:
@@ -70,19 +82,16 @@ def capture(fn: Callable[[], Any]) -> tuple[Any, dict[str, Any]]:
     info: dict[str, Any] = {"status": "ok"}
     value = None
     try:
-        with warnings.catch_warnings(record=True) as caught, \
-                contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+        with warnings.catch_warnings(record=True) as caught, contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
             warnings.simplefilter("always")
             try:
                 value = fn()
             except Exception as exc:  # recorded as a failure case, not hidden
                 info["status"] = "error"
-                info["exception"] = {"type": type(exc).__name__, "message": str(exc),
-                                     "traceback": traceback.format_exc()}
+                info["exception"] = {"type": type(exc).__name__, "message": str(exc), "traceback": traceback.format_exc()}
     finally:
         root.removeHandler(handler)
-    info["python_warnings"] = [{"category": w.category.__name__, "message": str(w.message)}
-                               for w in caught]
+    info["python_warnings"] = [{"category": w.category.__name__, "message": str(w.message)} for w in caught]
     info["log_records"] = handler.records
     info["stdout"] = out.getvalue()
     info["stderr"] = err.getvalue()
@@ -91,23 +100,32 @@ def capture(fn: Callable[[], Any]) -> tuple[Any, dict[str, Any]]:
 
 def pypdf_plain(path: Path) -> str:
     from pypdf import PdfReader
+
     return PdfReader(path).pages[0].extract_text()
 
 
 def pypdf_layout(path: Path) -> str:
     from pypdf import PdfReader
+
     return PdfReader(path).pages[0].extract_text(extraction_mode="layout")
 
 
 def pypdf_plain_visitor(path: Path) -> dict[str, Any]:
     """Auxiliary: pypdf plain-mode chunks with the matrices pypdf reports."""
     from pypdf import PdfReader
+
     chunks: list[dict[str, Any]] = []
 
     def visit(text: str, cm: Any, tm: Any, font: Any, size: Any) -> None:
-        chunks.append({"text": text, "cm": [float(v) for v in cm], "tm": [float(v) for v in tm],
-                       "font": None if font is None else str(font.get("/BaseFont")),
-                       "font_size": float(size)})
+        chunks.append(
+            {
+                "text": text,
+                "cm": [float(v) for v in cm],
+                "tm": [float(v) for v in tm],
+                "font": None if font is None else str(font.get("/BaseFont")),
+                "font_size": float(size),
+            }
+        )
 
     text = PdfReader(path).pages[0].extract_text(visitor_text=visit)
     return {"text": text, "chunks": chunks}
@@ -116,10 +134,11 @@ def pypdf_plain_visitor(path: Path) -> dict[str, Any]:
 def pypdf_layout_debug(path: Path) -> dict[str, str]:
     """Auxiliary: pypdf's own layout-mode debug files (bts/tjs/bt_groups), verbatim."""
     import tempfile
+
     from pypdf import PdfReader
+
     with tempfile.TemporaryDirectory() as tmp:
-        text = PdfReader(path).pages[0].extract_text(
-            extraction_mode="layout", layout_mode_debug_path=Path(tmp))
+        text = PdfReader(path).pages[0].extract_text(extraction_mode="layout", layout_mode_debug_path=Path(tmp))
         files = {p.name: p.read_text("utf-8") for p in sorted(Path(tmp).iterdir())}
     files["_extract_text_return.txt"] = text
     return files
@@ -127,6 +146,7 @@ def pypdf_layout_debug(path: Path) -> dict[str, str]:
 
 def pdfplumber_chars(path: Path) -> list[dict[str, Any]]:
     import pdfplumber
+
     with pdfplumber.open(path) as pdf:
         out = []
         for c in pdf.pages[0].chars:
@@ -148,12 +168,16 @@ METHODS: dict[str, tuple[Callable[[Path], Any], str]] = {
 
 def environment(found: dict[str, str]) -> dict[str, Any]:
     from pypdf import PageObject
+
     dists = sorted((d.metadata["Name"], d.version) for d in md.distributions())
     lic = {}
     for name, _ in dists:
         meta = md.metadata(name)
-        lic[name] = meta.get("License-Expression") or meta.get("License") or \
-            "; ".join(v for v in (meta.get_all("Classifier") or []) if v.startswith("License"))
+        lic[name] = (
+            meta.get("License-Expression")
+            or meta.get("License")
+            or "; ".join(v for v in (meta.get_all("Classifier") or []) if v.startswith("License"))
+        )
     return {
         "python": sys.version,
         "implementation": platform.python_implementation(),
@@ -191,7 +215,7 @@ def main(argv: list[str] | None = None) -> int:
         runs[name] = {"pdf": fx["file"], "pdf_sha256": sha, "methods": {}}
         comparison[name] = {}
         for method, (fn, ext) in METHODS.items():
-            value, info = capture(lambda fn=fn: fn(pdf))
+            value, info = capture(lambda fn=fn, pdf=pdf: fn(pdf))
             rel = f"raw/{name}.{method}.{ext}"
             if info["status"] == "ok" and ext == "dir":
                 (args.out / rel).mkdir(parents=True, exist_ok=True)
@@ -201,8 +225,7 @@ def main(argv: list[str] | None = None) -> int:
                     (args.out / rel / fname).write_bytes(data)
                     info["raw_files"][f"{rel}/{fname}"] = hashlib.sha256(data).hexdigest()
             elif info["status"] == "ok":
-                data = (value.encode("utf-8") if ext == "txt"
-                        else (dump_json(value) + "\n").encode("utf-8"))
+                data = value.encode("utf-8") if ext == "txt" else (dump_json(value) + "\n").encode("utf-8")
                 (args.out / rel).write_bytes(data)
                 info["raw_file"] = rel
                 info["raw_sha256"] = hashlib.sha256(data).hexdigest()
@@ -220,14 +243,14 @@ def main(argv: list[str] | None = None) -> int:
             elif method == "pypdf_layout_debug":
                 comparison[name][method] = {
                     "auxiliary": True,
-                    "return_equals_pypdf_layout":
-                        value["_extract_text_return.txt"] == texts.get((name, "pypdf_layout")),
-                    "tj_positions": order_compare.compare_layout_tjs(
-                        json.loads(value["tjs.json"]), manifest, name)}
+                    "return_equals_pypdf_layout": value["_extract_text_return.txt"] == texts.get((name, "pypdf_layout")),
+                    "tj_positions": order_compare.compare_layout_tjs(json.loads(value["tjs.json"]), manifest, name),
+                }
             else:
                 comparison[name][method] = {
                     "auxiliary": True,
-                    "text_equals_pypdf_plain": value["text"] == texts.get((name, "pypdf_plain"))}
+                    "text_equals_pypdf_plain": value["text"] == texts.get((name, "pypdf_plain")),
+                }
 
     (args.out / "extraction_runs.json").write_text(dump_json(runs) + "\n", "utf-8")
     (args.out / "comparison.json").write_text(dump_json(comparison) + "\n", "utf-8")
@@ -237,15 +260,19 @@ def main(argv: list[str] | None = None) -> int:
         for method, res in methods.items():
             if method in ("pypdf_plain", "pypdf_layout") and "token_sequence_equals" in res:
                 lc = res.get("s1_limit_context", {})
-                print(f"{name} {method:14s} tokens=declared:{res['token_sequence_equals']['declared']!s:5} "
-                      f"drawing:{res['token_sequence_equals']['drawing']!s:5} "
-                      f"sep_mismatch:{len(res.get('separators', {}).get('mismatches', [])) if 'separators' in res else 'n/a'} "
-                      f"limit_with_negation(line/segment):"
-                      f"{lc.get('same_line_as_negation')}/{lc.get('same_period_segment_as_negation')}")
+                print(
+                    f"{name} {method:14s} tokens=declared:{res['token_sequence_equals']['declared']!s:5} "
+                    f"drawing:{res['token_sequence_equals']['drawing']!s:5} "
+                    f"sep_mismatch:{len(res.get('separators', {}).get('mismatches', [])) if 'separators' in res else 'n/a'} "
+                    f"limit_with_negation(line/segment):"
+                    f"{lc.get('same_line_as_negation')}/{lc.get('same_period_segment_as_negation')}"
+                )
             elif method == "pdfplumber_chars" and "all_checks_pass" in res:
-                print(f"{name} {method:14s} geometry_ok:{res['all_checks_pass']} "
-                      f"stream=drawing:{res['observed_order_equals']['drawing']} "
-                      f"geo_sort=declared:{res['geometric_sort_of_observed_equals_declared']}")
+                print(
+                    f"{name} {method:14s} geometry_ok:{res['all_checks_pass']} "
+                    f"stream=drawing:{res['observed_order_equals']['drawing']} "
+                    f"geo_sort=declared:{res['geometric_sort_of_observed_equals_declared']}"
+                )
             elif res.get("status") == "extractor_error":
                 print(f"{name} {method}: EXTRACTOR ERROR")
     return 0

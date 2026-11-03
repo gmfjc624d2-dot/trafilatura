@@ -1,0 +1,16 @@
+# Lint/format settings for this standalone research directory. Extends the
+# repository configuration and only adds exemptions for patterns that are
+# deliberate here (scripts, not a package).
+extend = "../../pyproject.toml"
+
+[lint.per-file-ignores]
+"*.py" = [
+    "T20",      # print is the output channel of the generator/runner scripts
+    "PLC0415",  # extractors are imported lazily so the generator/tests do not need them
+    "INP001",   # script directory, not a package
+    "PERF203",  # per-call capture of extractor failures is the point
+]
+"tests/*" = [
+    "ANN",      # annotations, as for the repository's tests/
+    "PT018",    # composite assertions keep each consistency check on one line
+]

@@ -1,0 +1,8 @@
+Final pinned run, fixtures A/B/C/D, with the final comparator code.
+environment: fresh CPython 3.13 venv installed offline from the hashed wheels:
+    pip install --no-index --find-links <wheels/linux> --require-hashes --no-deps -r requirements-lock.txt
+command (from research/public_pdf_order_20261103):
+    python -I run_extractors.py --out runs/run3_final_ABCD
+exit status: 0
+Raw outputs and extraction_runs.json are byte-identical to runs/run2_ABCD; comparison.json
+differs from run2 only by the added "counts_match" field of the per-Tj layout comparison.
