@@ -18,6 +18,11 @@ B  same characters and glyph origins as A; the negation "not" is drawn with
 C  same font runs and glyph origins as B, but the final measurement suffix of
    the first sentence ("12 cm.") is painted after the second sentence, with an
    explicit Tm placing it at its original coordinates.
+D  added after the initial A/B/C run (see REPORT.md and runs/run1_ABC): same
+   font runs, glyph origins and drawing order as B, but the suffix "12 cm." is
+   a separate run placed by the same explicit Tm as in C. B/D is one
+   equivalent operator pair (implicit advance vs explicit Tm to the same
+   origin); C/D differ only in drawing order.
 
 Glyph positions are derived from declared metrics only:
 
@@ -209,6 +214,30 @@ FIXTURES: dict[str, dict[str, Any]] = {
             ("F1", "R2", 0, 10, "Tm"),
         ],
     },
+    "D": {
+        "file": "D_explicit_suffix_in_order.pdf",
+        "summary": ("as B (same drawing order), but the S1 suffix '12 cm.' is a separate "
+                    "run positioned by the same explicit Tm as in C"),
+        "added_after_initial_run": True,
+        "justification": (
+            "In run1 the C layout output separated 'than' and '12' by 24 spaces. "
+            "C changes two things relative to B: the suffix is drawn late and it is "
+            "re-positioned by an explicit Tm. D keeps B's drawing order and adds only "
+            "the Tm, so B/D tests the equivalent operator pair (implicit advance vs "
+            "explicit Tm to the same origin, cf. the TJ-vs-Td pair in pypdf's #3951 "
+            "regression test) and C/D isolates drawing order."),
+        "runs": [
+            ("F1", "S1", 0, 24, "Tm"),
+            ("F3", "S1", 24, 27, "advance"),
+            ("F1", "S1", 27, 32, "advance"),
+            ("F2", "S1", 32, 35, "advance"),
+            ("F1", "S1", 35, 61, "advance"),
+            ("F1", "S1", 61, 67, "Tm"),
+            ("F1", "S2", 0, 26, "Tm"),
+            ("F1", "R1", 0, 11, "Tm"),
+            ("F1", "R2", 0, 10, "Tm"),
+        ],
+    },
 }
 INITIAL_FIXTURES = ("A", "B", "C")
 
@@ -386,6 +415,7 @@ def build_fixture(name: str, decl: dict[str, Any]) -> dict[str, Any]:
         "file": plan["file"],
         "summary": plan["summary"],
         "added_after_initial_run": bool(plan.get("added_after_initial_run")),
+        "justification": plan.get("justification"),
         "pdf_sha256": hashlib.sha256(pdf).hexdigest(),
         "pdf_bytes": len(pdf),
         "content_stream_sha256": hashlib.sha256(content).hexdigest(),

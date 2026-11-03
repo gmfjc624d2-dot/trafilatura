@@ -1,0 +1,5 @@
+If the blue latch is closed, do not move the crate more than 
+The green lamp remains on.
+12 cm.
+Span: 12 cm
+Delay: 7 s

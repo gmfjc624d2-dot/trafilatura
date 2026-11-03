@@ -1,0 +1,55 @@
+{
+  "720": [
+    {
+      "tx": 0.0,
+      "ty": 720.0,
+      "font_size": 10.0,
+      "font_height": 10.0,
+      "text": "If the blue latch is clo",
+      "displaced_tx": 144.0,
+      "flip_sort": 1
+    },
+    {
+      "tx": 0.0,
+      "ty": 720.0,
+      "font_size": 10.0,
+      "font_height": 10.0,
+      "text": "sed, do not move the crate more than 12 cm.",
+      "displaced_tx": 192.0,
+      "flip_sort": 1
+    }
+  ],
+  "696": [
+    {
+      "tx": 0.0,
+      "ty": 696.0,
+      "font_size": 10.0,
+      "font_height": 10.0,
+      "text": "The green lamp remains on.",
+      "displaced_tx": 156.0,
+      "flip_sort": 1
+    }
+  ],
+  "672": [
+    {
+      "tx": 0.0,
+      "ty": 672.0,
+      "font_size": 10.0,
+      "font_height": 10.0,
+      "text": "Span: 12 cm",
+      "displaced_tx": 66.0,
+      "flip_sort": 1
+    }
+  ],
+  "648": [
+    {
+      "tx": 0.0,
+      "ty": 648.0,
+      "font_size": 10.0,
+      "font_height": 10.0,
+      "text": "Delay: 7 s",
+      "displaced_tx": 60.0,
+      "flip_sort": 1
+    }
+  ]
+}

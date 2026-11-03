@@ -222,6 +222,34 @@ def limit_context(text: str, mapped: list[dict[str, Any]], pos_of: dict[str, int
     }
 
 
+def compare_layout_tjs(tjs: list[dict[str, Any]], manifest: dict[str, Any],
+                       fixture: str) -> dict[str, Any]:
+    """pypdf layout-mode per-Tj tx/displaced_tx vs the declared run origins.
+
+    Each fixture run is exactly one Tj operator, so Tj records pair with runs
+    by stream position; the pairing is confirmed by comparing texts.
+    """
+    runs = manifest["fixtures"][fixture]["runs"]
+    glyph = {g["char_id"]: g for g in manifest["fixtures"][fixture]["glyphs"]}
+    rows = []
+    for tj, run in zip(tjs, runs):
+        first = glyph[run["char_ids"][0]]
+        exp_tx = first["origin"][0]
+        exp_end = exp_tx + sum(glyph[c]["advance"] for c in run["char_ids"])
+        rows.append({
+            "run_id": run["run_id"], "positioning": run["positioning"],
+            "text_matches_run": tj.get("text") == run["text"],
+            "expected_tx": exp_tx, "observed_tx": tj.get("tx"),
+            "expected_displaced_tx": exp_end, "observed_displaced_tx": tj.get("displaced_tx"),
+            "expected_ty": first["origin"][1], "observed_ty": tj.get("ty"),
+        })
+    for r in rows:
+        r["tx_matches"] = (r["observed_tx"] is not None
+                           and abs(r["observed_tx"] - r["expected_tx"]) <= ORIGIN_TOL)
+    return {"tj_count": len(tjs), "run_count": len(runs), "rows": rows,
+            "runs_with_tx_mismatch": [r["run_id"] for r in rows if not r["tx_matches"]]}
+
+
 # ---------------------------------------------------------------------------
 # Character records (pdfplumber / pdfminer)
 # ---------------------------------------------------------------------------

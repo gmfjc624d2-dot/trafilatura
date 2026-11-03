@@ -113,6 +113,18 @@ def pypdf_plain_visitor(path: Path) -> dict[str, Any]:
     return {"text": text, "chunks": chunks}
 
 
+def pypdf_layout_debug(path: Path) -> dict[str, str]:
+    """Auxiliary: pypdf's own layout-mode debug files (bts/tjs/bt_groups), verbatim."""
+    import tempfile
+    from pypdf import PdfReader
+    with tempfile.TemporaryDirectory() as tmp:
+        text = PdfReader(path).pages[0].extract_text(
+            extraction_mode="layout", layout_mode_debug_path=Path(tmp))
+        files = {p.name: p.read_text("utf-8") for p in sorted(Path(tmp).iterdir())}
+    files["_extract_text_return.txt"] = text
+    return files
+
+
 def pdfplumber_chars(path: Path) -> list[dict[str, Any]]:
     import pdfplumber
     with pdfplumber.open(path) as pdf:
@@ -129,6 +141,7 @@ METHODS: dict[str, tuple[Callable[[Path], Any], str]] = {
     "pypdf_plain": (pypdf_plain, "txt"),
     "pypdf_layout": (pypdf_layout, "txt"),
     "pypdf_plain_visitor": (pypdf_plain_visitor, "json"),
+    "pypdf_layout_debug": (pypdf_layout_debug, "dir"),
     "pdfplumber_chars": (pdfplumber_chars, "json"),
 }
 
@@ -180,7 +193,14 @@ def main(argv: list[str] | None = None) -> int:
         for method, (fn, ext) in METHODS.items():
             value, info = capture(lambda fn=fn: fn(pdf))
             rel = f"raw/{name}.{method}.{ext}"
-            if info["status"] == "ok":
+            if info["status"] == "ok" and ext == "dir":
+                (args.out / rel).mkdir(parents=True, exist_ok=True)
+                info["raw_files"] = {}
+                for fname, content in value.items():
+                    data = content.encode("utf-8")
+                    (args.out / rel / fname).write_bytes(data)
+                    info["raw_files"][f"{rel}/{fname}"] = hashlib.sha256(data).hexdigest()
+            elif info["status"] == "ok":
                 data = (value.encode("utf-8") if ext == "txt"
                         else (dump_json(value) + "\n").encode("utf-8"))
                 (args.out / rel).write_bytes(data)
@@ -197,6 +217,13 @@ def main(argv: list[str] | None = None) -> int:
                 comparison[name][method] = order_compare.compare_text(value, manifest, name)
             elif method == "pdfplumber_chars":
                 comparison[name][method] = order_compare.compare_chars(value, manifest, name)
+            elif method == "pypdf_layout_debug":
+                comparison[name][method] = {
+                    "auxiliary": True,
+                    "return_equals_pypdf_layout":
+                        value["_extract_text_return.txt"] == texts.get((name, "pypdf_layout")),
+                    "tj_positions": order_compare.compare_layout_tjs(
+                        json.loads(value["tjs.json"]), manifest, name)}
             else:
                 comparison[name][method] = {
                     "auxiliary": True,
