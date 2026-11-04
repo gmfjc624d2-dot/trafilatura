@@ -1,0 +1,14 @@
+prerun_utc: 2026-11-04T02:00:42.420151Z
+git_head: d77a5bd18f18b5720f8b704ac220c4aa446a21a6
+git_status:
+?? research/public_pdf_order_20261103/erratum_label_swap.py
+external sha256 (separate reads, cross-check only):
+c4fe692100533e8e7d1a99a627e863c83bfa2cf2ee6f1801b4688801a8c560ca  erratum_label_swap.py
+c3ff4e5a343f84fc252308f5daa6745f51841b8672e48a7b4297d7bc3b462be1  order_compare.py
+466edb436f2efdfc9de10f96f927dfe18a2e0a60309b98c4915bd9061230db86  runs/run3_final_ABCD/raw/D.pypdf_layout_debug.dir/tjs.json
+1ae79721d47ef69a11bf6189ddbfdf0ef9bf31e1cfc3a5e81e0dab969b9bbf8e  fixtures/manifest.json
+6129d5e551a624a437475f61b1cceeb2cde0501d6d358dabadca9c959ae531db  runs/run3_final_ABCD/comparison.json
+interpreter: /usr/local/bin/python3 Python 3.13.18
+run1_ABC
+run2_ABCD
+run3_final_ABCD

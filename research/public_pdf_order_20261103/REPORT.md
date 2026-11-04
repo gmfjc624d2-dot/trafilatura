@@ -5,6 +5,12 @@ generated PDFs, pinned extractors, **Linux x86_64 only**. Evidence:
 `runs/run3_final_ABCD/` (final), `runs/run1_ABC/` (initial three controls),
 `runs/run2_ABCD/` (after adding D; raw outputs byte-identical to run3).
 
+> **Erratum (2026-11-04).** Three statements below are corrected in
+> [ERRATUM.md](ERRATUM.md); their original wording is kept unchanged and marked:
+> E1, D also splits the final `Tj` (it does not add only a `Tm`); E2, the S1 limit
+> is the *first* `12 cm` in C plain output; E3, D has a same-font run boundary
+> (with a `Tm`). The erratum also reports a bounded label-swap run of the comparator.
+
 ## Question
 
 Can controlled style changes or a late-painted measurement change the extracted
@@ -30,6 +36,7 @@ only in the content stream (every other PDF object is byte-identical):
   equivalent operator pair (implicit advance vs. an explicit `Tm` to the same
   origin; the same pattern as pypdf #3951's TJ-vs-Td test), and C/D differ only
   in drawing order. C and D contain the same operation lines in a different order.
+  *[Corrected in ERRATUM.md E1: D also splits the final `Tj`; C changes three things.]*
 
 ## Observations (pypdf 6.21.4, pdfplumber 0.11.9 / pdfminer.six 20251230)
 
@@ -54,6 +61,7 @@ What changed, per controlled representation:
   change at exactly S1:24–26 (`Courier-Oblique`) and S1:32–34 (`Courier-Bold`).
   One internal effect does exist (see Mechanism), but it is not visible in B's text.
 * **Late paint plus explicit `Tm` (C vs B).**
+  *[See ERRATUM.md E1: plus a split `Tj`.]*
   * Plain mode follows drawing order. Under the comparator's mechanical rules, S1
     is split across lines 0 and 2. The limit `12 cm` lands on a different line and
     a different period-segment than its negation `not`. The first period-segment
@@ -63,6 +71,8 @@ What changed, per controlled representation:
     widens `than`→`12` from 1 to 24 spaces.
 * **Explicit `Tm` only (D vs B).** Plain output is unchanged. Layout output widens
   `than`→`12` to 36 spaces. Order and line membership stay as declared.
+  *[Corrected in ERRATUM.md E1: not `Tm` only; D also splits the final `Tj`, and the
+  two changes are not separated by any fixture.]*
 * **Drawing order only (C vs D).** Plain mode differs: C follows stream order, D
   follows declared order. Layout mode puts both in declared order; only the space
   counts differ (24 vs 36).
@@ -108,6 +118,8 @@ repair is proposed.
   are mapped to declared IDs only by sequence alignment (to drawing order there).
   Only the manifest, or geometry under a rule, says it belongs to S1 and not to
   `Span:`. These PDFs carry no structure tree or marked content.
+  *[Corrected in ERRATUM.md E2: the S1 limit is the first `12 cm` (line 2); the
+  second is `Span: 12 cm`.]*
 * Geometric order equals declared order **by construction** in this family. This
   is no evidence that geometry gives semantic order in general: columns, captions,
   floats and rotated text are untested. No general PDF reading-order guarantee is
@@ -116,6 +128,7 @@ repair is proposed.
   any font change shows the same layout-mode `tx` effect is shown only by source
   reading, not by a fixture. Testing it would need an all-Courier multi-run
   control, which was not added because of the one-pair limit.
+  *[Corrected in ERRATUM.md E3: D ops 11→13 are a same-font boundary, but with a `Tm`.]*
 * Whether pypdf maintainers regard the layout-mode `Tj` behaviour as a defect or
   as an accepted approximation is unknown.
 * Fonts are non-embedded standard-14 fonts. Extraction depends only on the

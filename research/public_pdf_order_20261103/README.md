@@ -6,7 +6,8 @@ in a fork of Trafilatura. It does **not** change Trafilatura's extractor, is not
 imported by the `trafilatura` package, and is not collected by the repository's
 test suite (`pytest.ini` and `ruff.toml` here are local to this directory).
 
-Findings are in **[REPORT.md](REPORT.md)**.
+Findings are in **[REPORT.md](REPORT.md)**. Corrections dated 2026-11-04 are in
+**[ERRATUM.md](ERRATUM.md)**.
 
 All text is fictional and was written for these fixtures. The PDFs are not derived
 from, and are not attributable to, any real document.
@@ -25,6 +26,9 @@ from, and are not attributable to, any real document.
 | `runs/run1_ABC/` | first pinned run, A/B/C only, unchanged |
 | `runs/run2_ABCD/` | run after adding D |
 | `runs/run3_final_ABCD/` | final run (final code, offline hash-locked install); the report cites this one |
+| `ERRATUM.md` | 2026-11-04 corrections (E1–E3) to `REPORT.md` as published at `d77a5bd`, and the bounded label-swap result |
+| `erratum_label_swap.py` | stdlib-only runner for the controlled label-swap run; writes the STARTED and RESULT receipts |
+| `runs/erratum_20261104_label_swap/` | that run: receipts, preserved original and variant trace, process output, `RUN.md` (no extractor was re-run) |
 | `requirements-lock.txt` | exact pins with sha256 for the Linux x86_64 wheels used and the macOS arm64 wheels on PyPI (CPython 3.13) |
 | `provenance.json` | upstream source revisions, reused pypdf PRs, installed-vs-tag checks, wheel files and hashes, licenses |
 | `SHA256SUMS` | sha256 of every tracked file in this directory except itself |

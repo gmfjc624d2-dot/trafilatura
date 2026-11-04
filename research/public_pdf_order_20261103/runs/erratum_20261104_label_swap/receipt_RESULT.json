@@ -1,0 +1,408 @@
+{
+ "receipt_type": "RESULT",
+ "request_id": "public-pdf-order-erratum-20261104-01",
+ "result_id": "59fb11f1ba10448cad3448dd596c1e9f",
+ "process_nonce": "443b2e5cf7254eb7a57870ddeb902910",
+ "links": {
+  "started_receipt_id": "14fee30bda5d45209cfa6a91e30422b8",
+  "started_receipt_file": "receipt_STARTED.json",
+  "started_receipt_sha256": "8eb325d7a5c2baa8d396621c9c5538dece3a25c710532971beded68f00fed821"
+ },
+ "finished_at_utc": "2026-11-04T02:00:49.816922+00:00",
+ "elapsed_ns_since_process_start_of_main": 37305006,
+ "outcome": "completed",
+ "summary": {
+  "original_equals_run3_recorded_tj_positions": true,
+  "counts_match": [
+   true,
+   true
+  ],
+  "runs_with_tx_mismatch": [
+   [
+    "D.r1",
+    "D.r2",
+    "D.r3",
+    "D.r4"
+   ],
+   [
+    "D.r1",
+    "D.r2",
+    "D.r3",
+    "D.r4"
+   ]
+  ],
+  "rows": [
+   {
+    "run_id": "D.r0",
+    "input_label_in_variant": "If the blue latch is clo",
+    "text_matches_run": [
+     true,
+     true
+    ],
+    "tx_matches": [
+     true,
+     true
+    ]
+   },
+   {
+    "run_id": "D.r1",
+    "input_label_in_variant": "sed",
+    "text_matches_run": [
+     true,
+     true
+    ],
+    "tx_matches": [
+     false,
+     false
+    ]
+   },
+   {
+    "run_id": "D.r2",
+    "input_label_in_variant": ", do ",
+    "text_matches_run": [
+     true,
+     true
+    ],
+    "tx_matches": [
+     false,
+     false
+    ]
+   },
+   {
+    "run_id": "D.r3",
+    "input_label_in_variant": "not",
+    "text_matches_run": [
+     true,
+     true
+    ],
+    "tx_matches": [
+     false,
+     false
+    ]
+   },
+   {
+    "run_id": "D.r4",
+    "input_label_in_variant": "12 cm.",
+    "text_matches_run": [
+     true,
+     false
+    ],
+    "tx_matches": [
+     false,
+     false
+    ]
+   },
+   {
+    "run_id": "D.r5",
+    "input_label_in_variant": " move the crate more than ",
+    "text_matches_run": [
+     true,
+     false
+    ],
+    "tx_matches": [
+     true,
+     true
+    ]
+   },
+   {
+    "run_id": "D.r6",
+    "input_label_in_variant": "The green lamp remains on.",
+    "text_matches_run": [
+     true,
+     true
+    ],
+    "tx_matches": [
+     true,
+     true
+    ]
+   },
+   {
+    "run_id": "D.r7",
+    "input_label_in_variant": "Span: 12 cm",
+    "text_matches_run": [
+     true,
+     true
+    ],
+    "tx_matches": [
+     true,
+     true
+    ]
+   },
+   {
+    "run_id": "D.r8",
+    "input_label_in_variant": "Delay: 7 s",
+    "text_matches_run": [
+     true,
+     true
+    ],
+    "tx_matches": [
+     true,
+     true
+    ]
+   }
+  ],
+  "result_fields_that_differ": [
+   ".rows[4].text_matches_run",
+   ".rows[5].text_matches_run"
+  ]
+ },
+ "raw_results": {
+  "original": {
+   "tj_count": 9,
+   "run_count": 9,
+   "counts_match": true,
+   "rows": [
+    {
+     "run_id": "D.r0",
+     "positioning": "Tm",
+     "text_matches_run": true,
+     "expected_tx": 72,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 216.0,
+     "observed_displaced_tx": 216.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": true
+    },
+    {
+     "run_id": "D.r1",
+     "positioning": "advance",
+     "text_matches_run": true,
+     "expected_tx": 216.0,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 234.0,
+     "observed_displaced_tx": 90.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": false
+    },
+    {
+     "run_id": "D.r2",
+     "positioning": "advance",
+     "text_matches_run": true,
+     "expected_tx": 234.0,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 264.0,
+     "observed_displaced_tx": 102.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": false
+    },
+    {
+     "run_id": "D.r3",
+     "positioning": "advance",
+     "text_matches_run": true,
+     "expected_tx": 264.0,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 282.0,
+     "observed_displaced_tx": 90.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": false
+    },
+    {
+     "run_id": "D.r4",
+     "positioning": "advance",
+     "text_matches_run": true,
+     "expected_tx": 282.0,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 438.0,
+     "observed_displaced_tx": 228.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": false
+    },
+    {
+     "run_id": "D.r5",
+     "positioning": "Tm",
+     "text_matches_run": true,
+     "expected_tx": 438.0,
+     "observed_tx": 438.0,
+     "expected_displaced_tx": 474.0,
+     "observed_displaced_tx": 474.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": true
+    },
+    {
+     "run_id": "D.r6",
+     "positioning": "Tm",
+     "text_matches_run": true,
+     "expected_tx": 72,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 228.0,
+     "observed_displaced_tx": 228.0,
+     "expected_ty": 696,
+     "observed_ty": 696.0,
+     "tx_matches": true
+    },
+    {
+     "run_id": "D.r7",
+     "positioning": "Tm",
+     "text_matches_run": true,
+     "expected_tx": 72,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 138.0,
+     "observed_displaced_tx": 138.0,
+     "expected_ty": 672,
+     "observed_ty": 672.0,
+     "tx_matches": true
+    },
+    {
+     "run_id": "D.r8",
+     "positioning": "Tm",
+     "text_matches_run": true,
+     "expected_tx": 72,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 132.0,
+     "observed_displaced_tx": 132.0,
+     "expected_ty": 648,
+     "observed_ty": 648.0,
+     "tx_matches": true
+    }
+   ],
+   "runs_with_tx_mismatch": [
+    "D.r1",
+    "D.r2",
+    "D.r3",
+    "D.r4"
+   ]
+  },
+  "variant": {
+   "tj_count": 9,
+   "run_count": 9,
+   "counts_match": true,
+   "rows": [
+    {
+     "run_id": "D.r0",
+     "positioning": "Tm",
+     "text_matches_run": true,
+     "expected_tx": 72,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 216.0,
+     "observed_displaced_tx": 216.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": true
+    },
+    {
+     "run_id": "D.r1",
+     "positioning": "advance",
+     "text_matches_run": true,
+     "expected_tx": 216.0,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 234.0,
+     "observed_displaced_tx": 90.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": false
+    },
+    {
+     "run_id": "D.r2",
+     "positioning": "advance",
+     "text_matches_run": true,
+     "expected_tx": 234.0,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 264.0,
+     "observed_displaced_tx": 102.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": false
+    },
+    {
+     "run_id": "D.r3",
+     "positioning": "advance",
+     "text_matches_run": true,
+     "expected_tx": 264.0,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 282.0,
+     "observed_displaced_tx": 90.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": false
+    },
+    {
+     "run_id": "D.r4",
+     "positioning": "advance",
+     "text_matches_run": false,
+     "expected_tx": 282.0,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 438.0,
+     "observed_displaced_tx": 228.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": false
+    },
+    {
+     "run_id": "D.r5",
+     "positioning": "Tm",
+     "text_matches_run": false,
+     "expected_tx": 438.0,
+     "observed_tx": 438.0,
+     "expected_displaced_tx": 474.0,
+     "observed_displaced_tx": 474.0,
+     "expected_ty": 720,
+     "observed_ty": 720.0,
+     "tx_matches": true
+    },
+    {
+     "run_id": "D.r6",
+     "positioning": "Tm",
+     "text_matches_run": true,
+     "expected_tx": 72,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 228.0,
+     "observed_displaced_tx": 228.0,
+     "expected_ty": 696,
+     "observed_ty": 696.0,
+     "tx_matches": true
+    },
+    {
+     "run_id": "D.r7",
+     "positioning": "Tm",
+     "text_matches_run": true,
+     "expected_tx": 72,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 138.0,
+     "observed_displaced_tx": 138.0,
+     "expected_ty": 672,
+     "observed_ty": 672.0,
+     "tx_matches": true
+    },
+    {
+     "run_id": "D.r8",
+     "positioning": "Tm",
+     "text_matches_run": true,
+     "expected_tx": 72,
+     "observed_tx": 72.0,
+     "expected_displaced_tx": 132.0,
+     "observed_displaced_tx": 132.0,
+     "expected_ty": 648,
+     "observed_ty": 648.0,
+     "tx_matches": true
+    }
+   ],
+   "runs_with_tx_mismatch": [
+    "D.r1",
+    "D.r2",
+    "D.r3",
+    "D.r4"
+   ]
+  }
+ },
+ "diagnostics": {
+  "python_warnings": [],
+  "modules_imported_during_evaluation": [
+   "_heapq",
+   "difflib",
+   "heapq"
+  ],
+  "retained_buffers_rehashed_after_evaluation": {
+   "comparator_source": "c3ff4e5a343f84fc252308f5daa6745f51841b8672e48a7b4297d7bc3b462be1",
+   "trace_original": "466edb436f2efdfc9de10f96f927dfe18a2e0a60309b98c4915bd9061230db86",
+   "manifest": "1ae79721d47ef69a11bf6189ddbfdf0ef9bf31e1cfc3a5e81e0dab969b9bbf8e",
+   "run3_recorded_comparison": "6129d5e551a624a437475f61b1cceeb2cde0501d6d358dabadca9c959ae531db",
+   "trace_variant": "adbe8f9832be10c914955d1424ddad04cc80536daa7f4812722f56498218d0d8"
+  }
+ }
+}
