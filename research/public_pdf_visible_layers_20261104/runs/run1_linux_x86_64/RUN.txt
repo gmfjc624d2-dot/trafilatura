@@ -1,0 +1,13 @@
+Run 1 (actual tool run), Linux x86_64, 2026-11-04, at commit cac30f6404eff20401b890bf5e97922591942ed4.
+command (from research/public_pdf_visible_layers_20261104, hash-locked CPython 3.13 venv,
+system Poppler 24.02.0):
+    python -I run_tools.py --out runs/run1_linux_x86_64
+exit status 0, stderr empty; process output in run_stdout.txt.
+
+Kept unchanged, including a runner bug: run_tools.py called PdfObject.get_pos(),
+which does not exist in pypdfium2 5.14.0 (the method is get_bounds()). PDFium
+text extraction therefore raised on fixture A, and the runner then marked it
+unavailable for B-E, so checks pdfium_text.presence, render_mode (P10) and
+cells.pdfium are not_run here. That is a defect in this experiment's code, not
+a missing dependency. It is fixed in the next commit; see runs/run2_linux_x86_64.
+Tracebacks in tool_runs.json contain the container's checkout path.

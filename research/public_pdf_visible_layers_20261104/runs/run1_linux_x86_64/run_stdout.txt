@@ -1,0 +1,28 @@
+pass     P13 (method) truth.raster_decode
+pass     P1           pdfium.B_eq_C
+pass     P2           pdfium.B_eq_D
+pass     P3           pdfium.E_ne_B
+pass     P4           pdfium.B_region_eq_raster
+pass     P7           pdfium.A_ne_B
+pass     P13          pdfium.decode_C
+pass     P5           poppler.B_eq_C
+pass     P5           poppler.B_eq_D
+pass     P5           poppler.E_ne_B
+fail     P5           poppler.B_region_eq_raster
+pass     P7           poppler.A_ne_B
+fail     P13          poppler.decode_C
+observed P6           cross.pdfium_vs_poppler_B
+pass     P8/P9        pypdf_plain.presence
+pass     P8/P9        pypdf_layout.presence
+pass     P8/P9        pdfplumber_text.presence
+not_run  P8/P9        pdfium_text.presence
+pass     P8/P9        poppler_plain.presence
+pass     P8/P9        poppler_layout.presence
+not_run  P10          render_mode
+fail     P11          geometry.coverage_7_over_2
+pass     P12          geometry.C_vs_D.pdfplumber
+pass     P14          cells.pdfplumber
+not_run  P14          cells.pdfium
+pass     P14          cells.poppler
+fail     P15          derived.P15
+checks: 27; fail=4, not_run=3, observed=1, pass=19

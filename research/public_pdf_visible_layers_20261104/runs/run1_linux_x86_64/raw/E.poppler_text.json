@@ -1,0 +1,141 @@
+{
+ "plain": {
+  "argv": [
+   "pdftotext",
+   "-enc",
+   "UTF-8",
+   "fixtures/E_raster_visible_wrong.pdf",
+   "-"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "text": "Item\n\nValue\n\nGap\n\n17 mm\n\nDelay\n\n7 s\n\nLoad\n\n18 kg\n\n\f"
+ },
+ "layout": {
+  "argv": [
+   "pdftotext",
+   "-enc",
+   "UTF-8",
+   "-layout",
+   "fixtures/E_raster_visible_wrong.pdf",
+   "-"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "text": "Item    Value\nGap     17 mm\nDelay   7 s\nLoad    18 kg\n\f"
+ },
+ "bbox_layout": {
+  "argv": [
+   "pdftotext",
+   "-enc",
+   "UTF-8",
+   "-bbox-layout",
+   "fixtures/E_raster_visible_wrong.pdf",
+   "-"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n</head>\n<body>\n<doc>\n  <page width=\"612.000000\" height=\"792.000000\">\n    <flow>\n      <block xMin=\"78.000000\" yMin=\"77.710000\" xMax=\"102.000000\" yMax=\"85.570000\">\n        <line xMin=\"78.000000\" yMin=\"77.710000\" xMax=\"102.000000\" yMax=\"85.570000\">\n          <word xMin=\"78.000000\" yMin=\"77.710000\" xMax=\"102.000000\" yMax=\"85.570000\">Item</word>\n        </line>\n      </block>\n    </flow>\n    <flow>\n      <block xMin=\"138.000000\" yMin=\"77.710000\" xMax=\"168.000000\" yMax=\"85.570000\">\n        <line xMin=\"138.000000\" yMin=\"77.710000\" xMax=\"168.000000\" yMax=\"85.570000\">\n          <word xMin=\"138.000000\" yMin=\"77.710000\" xMax=\"168.000000\" yMax=\"85.570000\">Value</word>\n        </line>\n      </block>\n    </flow>\n    <flow>\n      <block xMin=\"78.000000\" yMin=\"93.710000\" xMax=\"96.000000\" yMax=\"101.570000\">\n        <line xMin=\"78.000000\" yMin=\"93.710000\" xMax=\"96.000000\" yMax=\"101.570000\">\n          <word xMin=\"78.000000\" yMin=\"93.710000\" xMax=\"96.000000\" yMax=\"101.570000\">Gap</word>\n        </line>\n      </block>\n    </flow>\n    <flow>\n      <block xMin=\"138.000000\" yMin=\"93.710000\" xMax=\"168.000000\" yMax=\"101.570000\">\n        <line xMin=\"138.000000\" yMin=\"93.710000\" xMax=\"168.000000\" yMax=\"101.570000\">\n          <word xMin=\"138.000000\" yMin=\"93.710000\" xMax=\"150.000000\" yMax=\"101.570000\">17</word>\n          <word xMin=\"156.000000\" yMin=\"93.710000\" xMax=\"168.000000\" yMax=\"101.570000\">mm</word>\n        </line>\n      </block>\n    </flow>\n    <flow>\n      <block xMin=\"78.000000\" yMin=\"109.710000\" xMax=\"108.000000\" yMax=\"117.570000\">\n        <line xMin=\"78.000000\" yMin=\"109.710000\" xMax=\"108.000000\" yMax=\"117.570000\">\n          <word xMin=\"78.000000\" yMin=\"109.710000\" xMax=\"108.000000\" yMax=\"117.570000\">Delay</word>\n        </line>\n      </block>\n    </flow>\n    <flow>\n      <block xMin=\"138.000000\" yMin=\"109.710000\" xMax=\"156.000000\" yMax=\"117.570000\">\n        <line xMin=\"138.000000\" yMin=\"109.710000\" xMax=\"156.000000\" yMax=\"117.570000\">\n          <word xMin=\"138.000000\" yMin=\"109.710000\" xMax=\"144.000000\" yMax=\"117.570000\">7</word>\n          <word xMin=\"150.000000\" yMin=\"109.710000\" xMax=\"156.000000\" yMax=\"117.570000\">s</word>\n        </line>\n      </block>\n    </flow>\n    <flow>\n      <block xMin=\"78.000000\" yMin=\"125.710000\" xMax=\"102.000000\" yMax=\"133.570000\">\n        <line xMin=\"78.000000\" yMin=\"125.710000\" xMax=\"102.000000\" yMax=\"133.570000\">\n          <word xMin=\"78.000000\" yMin=\"125.710000\" xMax=\"102.000000\" yMax=\"133.570000\">Load</word>\n        </line>\n      </block>\n    </flow>\n    <flow>\n      <block xMin=\"138.000000\" yMin=\"125.710000\" xMax=\"168.000000\" yMax=\"133.570000\">\n        <line xMin=\"138.000000\" yMin=\"125.710000\" xMax=\"168.000000\" yMax=\"133.570000\">\n          <word xMin=\"138.000000\" yMin=\"125.710000\" xMax=\"150.000000\" yMax=\"133.570000\">18</word>\n          <word xMin=\"156.000000\" yMin=\"125.710000\" xMax=\"168.000000\" yMax=\"133.570000\">kg</word>\n        </line>\n      </block>\n    </flow>\n  </page>\n</doc>\n</body>\n</html>\n"
+ },
+ "words_pdf_coords": [
+  {
+   "text": "Item",
+   "box": [
+    78.0,
+    706.4300000000001,
+    102.0,
+    714.29
+   ]
+  },
+  {
+   "text": "Value",
+   "box": [
+    138.0,
+    706.4300000000001,
+    168.0,
+    714.29
+   ]
+  },
+  {
+   "text": "Gap",
+   "box": [
+    78.0,
+    690.4300000000001,
+    96.0,
+    698.29
+   ]
+  },
+  {
+   "text": "17",
+   "box": [
+    138.0,
+    690.4300000000001,
+    150.0,
+    698.29
+   ]
+  },
+  {
+   "text": "mm",
+   "box": [
+    156.0,
+    690.4300000000001,
+    168.0,
+    698.29
+   ]
+  },
+  {
+   "text": "Delay",
+   "box": [
+    78.0,
+    674.4300000000001,
+    108.0,
+    682.29
+   ]
+  },
+  {
+   "text": "7",
+   "box": [
+    138.0,
+    674.4300000000001,
+    144.0,
+    682.29
+   ]
+  },
+  {
+   "text": "s",
+   "box": [
+    150.0,
+    674.4300000000001,
+    156.0,
+    682.29
+   ]
+  },
+  {
+   "text": "Load",
+   "box": [
+    78.0,
+    658.4300000000001,
+    102.0,
+    666.29
+   ]
+  },
+  {
+   "text": "18",
+   "box": [
+    138.0,
+    658.4300000000001,
+    150.0,
+    666.29
+   ]
+  },
+  {
+   "text": "kg",
+   "box": [
+    156.0,
+    658.4300000000001,
+    168.0,
+    666.29
+   ]
+  }
+ ]
+}

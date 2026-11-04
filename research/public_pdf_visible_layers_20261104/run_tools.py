@@ -222,7 +222,7 @@ def pdfium_text(path: Path) -> dict[str, Any]:
             )
         objects = []
         for obj in page.get_objects():
-            rec = {"type": obj.type, "pos": list(obj.get_pos())}
+            rec = {"type": obj.type, "bounds": list(obj.get_bounds())}
             if obj.type == raw.FPDF_PAGEOBJ_TEXT:
                 rec["render_mode"] = raw.FPDFTextObj_GetTextRenderMode(obj.raw)
             objects.append(rec)
@@ -639,6 +639,7 @@ def main() -> int:
     renders: dict[str, dict[str, Any]] = {"pdfium": {}, "poppler": {}}
     texts: dict[str, dict[str, Any]] = {k: {} for k in ("pypdf_text", "pdfplumber_text", "pdfium_text", "poppler_text")}
     render_index: dict[str, Any] = {}
+    failed: dict[str, list[str]] = {}
     for name, fx in manifest["fixtures"].items():
         pdf = Path("fixtures") / fx["file"]
         sha = hashlib.sha256((HERE / pdf).read_bytes()).hexdigest()
@@ -660,7 +661,7 @@ def main() -> int:
             value, info = capture(lambda fn=fn, pdf=pdf: fn(pdf))
             rec["runs"][tool] = info
             if info["status"] != "ok":
-                missing.setdefault(tool, f"{tool} raised on {name}")
+                failed.setdefault(tool, []).append(name)  # keep running the other fixtures
                 continue
             if tool.endswith("_render"):
                 rname = tool.split("_")[0]
@@ -697,6 +698,9 @@ def main() -> int:
                         value["bbox_layout"]["text"].encode("utf-8")
                     )
         tool_runs["fixtures"][name] = rec
+    for tool, names in failed.items():  # a tool that failed on any fixture is excluded from analysis
+        missing[tool] = f"{tool} raised on fixture(s) {', '.join(names)}"
+        tool_runs["fixtures_failed"] = failed
 
     checks: list[dict[str, Any]] = []
     analysis_error = None

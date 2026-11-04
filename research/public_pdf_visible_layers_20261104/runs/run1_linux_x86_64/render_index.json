@@ -1,0 +1,142 @@
+{
+ "A.pdfium": {
+  "size": [
+   1224,
+   1584
+  ],
+  "mode": "RGB",
+  "pixel_sha256": "5608bbcf940cdb642b284237650086303573730d4290ffc95c73763b33255c00",
+  "png": "renders/A.pdfium.png",
+  "png_sha256": "9e14ae973b63d9aec8d34ffce7c637e4e191f57accf66d7d221898de5135d2d6",
+  "png_roundtrip_lossless": true,
+  "native_channels": 3,
+  "options": {
+   "scale": 2,
+   "rev_byteorder": true,
+   "smoothing": "pypdfium2 defaults"
+  }
+ },
+ "A.poppler": {
+  "size": [
+   1224,
+   1584
+  ],
+  "mode": "RGB",
+  "pixel_sha256": "a18aa2e7780687394020570ca4204ae66e5d20becfbb0480dda047ba2a6ac112",
+  "png": "renders/A.poppler.png",
+  "png_sha256": "6c05e0459a07480a753bf70575571ef3af437cc9b477fe52a39e5c5a17a4eb2a",
+  "png_roundtrip_lossless": true
+ },
+ "B.pdfium": {
+  "size": [
+   1224,
+   1584
+  ],
+  "mode": "RGB",
+  "pixel_sha256": "23e8d096b38d2255e0f26fbe8b1db1bf56f76361da7dd13ae80cc0e35ca0d98a",
+  "png": "renders/B.pdfium.png",
+  "png_sha256": "228221c6f2513a1ba0c2ae5357fc265d4d4c89c3169cc2327798040998ccbbf3",
+  "png_roundtrip_lossless": true,
+  "native_channels": 3,
+  "options": {
+   "scale": 2,
+   "rev_byteorder": true,
+   "smoothing": "pypdfium2 defaults"
+  }
+ },
+ "B.poppler": {
+  "size": [
+   1224,
+   1584
+  ],
+  "mode": "RGB",
+  "pixel_sha256": "17e4351316102010d6fbf15bf67a0d1d1589d59bcd490fcee2e4af754cf8bfd8",
+  "png": "renders/B.poppler.png",
+  "png_sha256": "33e0e7d16995aaeef7952b1bbbb97f94d92dc8d9e90c938c8faf44588d4d35a3",
+  "png_roundtrip_lossless": true
+ },
+ "C.pdfium": {
+  "size": [
+   1224,
+   1584
+  ],
+  "mode": "RGB",
+  "pixel_sha256": "23e8d096b38d2255e0f26fbe8b1db1bf56f76361da7dd13ae80cc0e35ca0d98a",
+  "png": "renders/C.pdfium.png",
+  "png_sha256": "228221c6f2513a1ba0c2ae5357fc265d4d4c89c3169cc2327798040998ccbbf3",
+  "png_roundtrip_lossless": true,
+  "native_channels": 3,
+  "options": {
+   "scale": 2,
+   "rev_byteorder": true,
+   "smoothing": "pypdfium2 defaults"
+  }
+ },
+ "C.poppler": {
+  "size": [
+   1224,
+   1584
+  ],
+  "mode": "RGB",
+  "pixel_sha256": "17e4351316102010d6fbf15bf67a0d1d1589d59bcd490fcee2e4af754cf8bfd8",
+  "png": "renders/C.poppler.png",
+  "png_sha256": "33e0e7d16995aaeef7952b1bbbb97f94d92dc8d9e90c938c8faf44588d4d35a3",
+  "png_roundtrip_lossless": true
+ },
+ "D.pdfium": {
+  "size": [
+   1224,
+   1584
+  ],
+  "mode": "RGB",
+  "pixel_sha256": "23e8d096b38d2255e0f26fbe8b1db1bf56f76361da7dd13ae80cc0e35ca0d98a",
+  "png": "renders/D.pdfium.png",
+  "png_sha256": "228221c6f2513a1ba0c2ae5357fc265d4d4c89c3169cc2327798040998ccbbf3",
+  "png_roundtrip_lossless": true,
+  "native_channels": 3,
+  "options": {
+   "scale": 2,
+   "rev_byteorder": true,
+   "smoothing": "pypdfium2 defaults"
+  }
+ },
+ "D.poppler": {
+  "size": [
+   1224,
+   1584
+  ],
+  "mode": "RGB",
+  "pixel_sha256": "17e4351316102010d6fbf15bf67a0d1d1589d59bcd490fcee2e4af754cf8bfd8",
+  "png": "renders/D.poppler.png",
+  "png_sha256": "33e0e7d16995aaeef7952b1bbbb97f94d92dc8d9e90c938c8faf44588d4d35a3",
+  "png_roundtrip_lossless": true
+ },
+ "E.pdfium": {
+  "size": [
+   1224,
+   1584
+  ],
+  "mode": "RGB",
+  "pixel_sha256": "b364ed1a2aa1a4ea0c8f0f025422cf8bb10ede399cc26c60138ff90e14844b41",
+  "png": "renders/E.pdfium.png",
+  "png_sha256": "d0815159e6114b304e27cac3d674815a99142ce05e4ab9f0aeeed9388421e146",
+  "png_roundtrip_lossless": true,
+  "native_channels": 3,
+  "options": {
+   "scale": 2,
+   "rev_byteorder": true,
+   "smoothing": "pypdfium2 defaults"
+  }
+ },
+ "E.poppler": {
+  "size": [
+   1224,
+   1584
+  ],
+  "mode": "RGB",
+  "pixel_sha256": "13ae24dcaee6186744130b0f697de82ee64595bb663be1ef0c544c62d99cfe6d",
+  "png": "renders/E.poppler.png",
+  "png_sha256": "c40b785469ae80a2b13c0d73e0489a8ab3e13c16a8f03b927a58d5819f88bbb6",
+  "png_roundtrip_lossless": true
+ }
+}
