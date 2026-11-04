@@ -75,12 +75,13 @@ FONT_ROWS = {
     "g": "..... ..... .#### #...# #...# #...# .#### ....# .###.",
     " ": "..... ..... ..... ..... ..... ..... ..... ..... .....",
 }
-FONT = {ch: [row for row in spec.split()] for ch, spec in FONT_ROWS.items()}
+FONT = {ch: spec.split() for ch, spec in FONT_ROWS.items()}
 
 
 def check_font() -> None:
     for ch, rows in FONT.items():
-        assert len(rows) == CAP_ROWS + DESC_ROWS and all(len(r) == 5 for r in rows), ch
+        assert len(rows) == CAP_ROWS + DESC_ROWS, ch
+        assert all(len(r) == 5 for r in rows), ch
     glyphs = ["".join(rows) for rows in FONT.values()]
     assert len(set(glyphs)) == len(glyphs), "bitmap glyphs must be pairwise distinct"
 
