@@ -1,0 +1,17 @@
+Item
+
+Value
+
+Gap
+
+17 mm
+
+Delay
+
+7 s
+
+Load
+
+18 kg
+
+

@@ -1,0 +1,12 @@
+Run 2 (actual tool run), Linux x86_64, 2026-11-04, at commit 439c3ffd27e05031ab7df80e5003e4e58bda6ece
+(runner with the get_bounds() fix). This is the run cited by REPORT.md.
+command (from research/public_pdf_visible_layers_20261104, hash-locked CPython 3.13.18 venv,
+system Poppler 24.02.0-1ubuntu9.11):
+    python -I run_tools.py --out runs/run2_linux_x86_64
+exit status 0, stderr empty; process output in run_stdout.txt; prerun_external.txt was
+recorded by the shell before the run.
+Result: 28 checks, 22 pass, 5 fail, 1 observed (no prediction), 0 not_run.
+All 10 renders are pixel-identical to run1, and every raw text file present in both
+runs is byte-identical; run2 adds the PDFium text records that run1 lacked.
+supplement_pdfplumber_char_keys.txt: one further tool invocation made after run2
+(command and output inside the file).

@@ -1,0 +1,2007 @@
+{
+ "analysis_error": null,
+ "checks": [
+  {
+   "check_id": "truth.raster_decode",
+   "prediction": "P13 (method)",
+   "description": "exact template decode of the authored raster",
+   "expected": {
+    "r0c0": "Item",
+    "r0c1": "Value",
+    "r1c0": "Gap",
+    "r1c1": "12 mm",
+    "r2c0": "Delay",
+    "r2c1": "7 s",
+    "r3c0": "Load",
+    "r3c1": "18 kg"
+   },
+   "observed": {
+    "r0c0": "Item",
+    "r0c1": "Value",
+    "r1c0": "Gap",
+    "r1c1": "12 mm",
+    "r2c0": "Delay",
+    "r2c1": "7 s",
+    "r3c0": "Load",
+    "r3c1": "18 kg"
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "pdfium.B_eq_C",
+   "prediction": "P1",
+   "description": "PDFium: render(B) == render(C)",
+   "expected": true,
+   "observed": {
+    "comparable": true,
+    "identical": true,
+    "differing_pixels": 0
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "pdfium.B_eq_D",
+   "prediction": "P2",
+   "description": "PDFium: render(B) == render(D)",
+   "expected": true,
+   "observed": {
+    "comparable": true,
+    "identical": true,
+    "differing_pixels": 0
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "pdfium.E_ne_B",
+   "prediction": "P3",
+   "description": "PDFium: render(E) != render(B), diffs inside text cells (+1 pt)",
+   "expected": {
+    "identical": false,
+    "outside_count": 0
+   },
+   "observed": {
+    "comparable": true,
+    "identical": false,
+    "differing_pixels": 1326,
+    "bbox_px": [
+     157,
+     155,
+     337,
+     267
+    ],
+    "confinement": {
+     "pixels_checked": 1326,
+     "outside_count": 0,
+     "outside_sample": []
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "pdfium.B_region_eq_raster",
+   "prediction": "P4",
+   "description": "PDFium: image rectangle == authored raster, rest white",
+   "expected": {
+    "exact": true
+   },
+   "observed": {
+    "B": {
+     "inside_mismatches": 0,
+     "outside_non_white": 0,
+     "inside_sample": [],
+     "outside_sample": [],
+     "exact": true
+    },
+    "C": {
+     "inside_mismatches": 0,
+     "outside_non_white": 0,
+     "inside_sample": [],
+     "outside_sample": [],
+     "exact": true
+    },
+    "D": {
+     "inside_mismatches": 0,
+     "outside_non_white": 0,
+     "inside_sample": [],
+     "outside_sample": [],
+     "exact": true
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "pdfium.A_ne_B",
+   "prediction": "P7",
+   "description": "PDFium: render(A) != render(B)",
+   "expected": false,
+   "observed": {
+    "comparable": true,
+    "identical": false,
+    "differing_pixels": 2976,
+    "bbox_px": [
+     156,
+     154,
+     337,
+     268
+    ]
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "pdfium.decode_C",
+   "prediction": "P13",
+   "description": "PDFium: exact template decode of render(C) == visible truth",
+   "expected": {
+    "r0c0": "Item",
+    "r0c1": "Value",
+    "r1c0": "Gap",
+    "r1c1": "12 mm",
+    "r2c0": "Delay",
+    "r2c1": "7 s",
+    "r3c0": "Load",
+    "r3c1": "18 kg"
+   },
+   "observed": {
+    "C": {
+     "r0c0": "Item",
+     "r0c1": "Value",
+     "r1c0": "Gap",
+     "r1c1": "12 mm",
+     "r2c0": "Delay",
+     "r2c1": "7 s",
+     "r3c0": "Load",
+     "r3c1": "18 kg"
+    },
+    "all_fixtures": {
+     "B": {
+      "r0c0": {
+       "cell_id": "r0c0",
+       "decoded": "Item",
+       "ambiguous_blocks": 0
+      },
+      "r0c1": {
+       "cell_id": "r0c1",
+       "decoded": "Value",
+       "ambiguous_blocks": 0
+      },
+      "r1c0": {
+       "cell_id": "r1c0",
+       "decoded": "Gap",
+       "ambiguous_blocks": 0
+      },
+      "r1c1": {
+       "cell_id": "r1c1",
+       "decoded": "12 mm",
+       "ambiguous_blocks": 0
+      },
+      "r2c0": {
+       "cell_id": "r2c0",
+       "decoded": "Delay",
+       "ambiguous_blocks": 0
+      },
+      "r2c1": {
+       "cell_id": "r2c1",
+       "decoded": "7 s",
+       "ambiguous_blocks": 0
+      },
+      "r3c0": {
+       "cell_id": "r3c0",
+       "decoded": "Load",
+       "ambiguous_blocks": 0
+      },
+      "r3c1": {
+       "cell_id": "r3c1",
+       "decoded": "18 kg",
+       "ambiguous_blocks": 0
+      }
+     },
+     "C": {
+      "r0c0": {
+       "cell_id": "r0c0",
+       "decoded": "Item",
+       "ambiguous_blocks": 0
+      },
+      "r0c1": {
+       "cell_id": "r0c1",
+       "decoded": "Value",
+       "ambiguous_blocks": 0
+      },
+      "r1c0": {
+       "cell_id": "r1c0",
+       "decoded": "Gap",
+       "ambiguous_blocks": 0
+      },
+      "r1c1": {
+       "cell_id": "r1c1",
+       "decoded": "12 mm",
+       "ambiguous_blocks": 0
+      },
+      "r2c0": {
+       "cell_id": "r2c0",
+       "decoded": "Delay",
+       "ambiguous_blocks": 0
+      },
+      "r2c1": {
+       "cell_id": "r2c1",
+       "decoded": "7 s",
+       "ambiguous_blocks": 0
+      },
+      "r3c0": {
+       "cell_id": "r3c0",
+       "decoded": "Load",
+       "ambiguous_blocks": 0
+      },
+      "r3c1": {
+       "cell_id": "r3c1",
+       "decoded": "18 kg",
+       "ambiguous_blocks": 0
+      }
+     },
+     "D": {
+      "r0c0": {
+       "cell_id": "r0c0",
+       "decoded": "Item",
+       "ambiguous_blocks": 0
+      },
+      "r0c1": {
+       "cell_id": "r0c1",
+       "decoded": "Value",
+       "ambiguous_blocks": 0
+      },
+      "r1c0": {
+       "cell_id": "r1c0",
+       "decoded": "Gap",
+       "ambiguous_blocks": 0
+      },
+      "r1c1": {
+       "cell_id": "r1c1",
+       "decoded": "12 mm",
+       "ambiguous_blocks": 0
+      },
+      "r2c0": {
+       "cell_id": "r2c0",
+       "decoded": "Delay",
+       "ambiguous_blocks": 0
+      },
+      "r2c1": {
+       "cell_id": "r2c1",
+       "decoded": "7 s",
+       "ambiguous_blocks": 0
+      },
+      "r3c0": {
+       "cell_id": "r3c0",
+       "decoded": "Load",
+       "ambiguous_blocks": 0
+      },
+      "r3c1": {
+       "cell_id": "r3c1",
+       "decoded": "18 kg",
+       "ambiguous_blocks": 0
+      }
+     },
+     "E": {
+      "r0c0": {
+       "cell_id": "r0c0",
+       "decoded": "????",
+       "ambiguous_blocks": 43
+      },
+      "r0c1": {
+       "cell_id": "r0c1",
+       "decoded": "?????",
+       "ambiguous_blocks": 61
+      },
+      "r1c0": {
+       "cell_id": "r1c0",
+       "decoded": "???",
+       "ambiguous_blocks": 42
+      },
+      "r1c1": {
+       "cell_id": "r1c1",
+       "decoded": "?? ??",
+       "ambiguous_blocks": 42
+      },
+      "r2c0": {
+       "cell_id": "r2c0",
+       "decoded": "?????",
+       "ambiguous_blocks": 59
+      },
+      "r2c1": {
+       "cell_id": "r2c1",
+       "decoded": "? ?",
+       "ambiguous_blocks": 32
+      },
+      "r3c0": {
+       "cell_id": "r3c0",
+       "decoded": "????",
+       "ambiguous_blocks": 54
+      },
+      "r3c1": {
+       "cell_id": "r3c1",
+       "decoded": "?? ??",
+       "ambiguous_blocks": 55
+      }
+     }
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "poppler.B_eq_C",
+   "prediction": "P5",
+   "description": "Poppler: render(B) == render(C)",
+   "expected": true,
+   "observed": {
+    "comparable": true,
+    "identical": true,
+    "differing_pixels": 0
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "poppler.B_eq_D",
+   "prediction": "P5",
+   "description": "Poppler: render(B) == render(D)",
+   "expected": true,
+   "observed": {
+    "comparable": true,
+    "identical": true,
+    "differing_pixels": 0
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "poppler.E_ne_B",
+   "prediction": "P5",
+   "description": "Poppler: render(E) != render(B), diffs inside text cells (+1 pt)",
+   "expected": {
+    "identical": false,
+    "outside_count": 0
+   },
+   "observed": {
+    "comparable": true,
+    "identical": false,
+    "differing_pixels": 2026,
+    "bbox_px": [
+     157,
+     152,
+     336,
+     269
+    ],
+    "confinement": {
+     "pixels_checked": 2026,
+     "outside_count": 0,
+     "outside_sample": []
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "poppler.B_region_eq_raster",
+   "prediction": "P5",
+   "description": "Poppler: image rectangle == authored raster, rest white",
+   "expected": {
+    "exact": true
+   },
+   "observed": {
+    "B": {
+     "inside_mismatches": 3423,
+     "outside_non_white": 369,
+     "inside_sample": [
+      [
+       146,
+       146,
+       [
+        248,
+        248,
+        248
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       147,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       148,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       149,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       150,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       151,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       152,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       153,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       154,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       155,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ]
+     ],
+     "outside_sample": [
+      [
+       384,
+       144,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       145,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       146,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       147,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       148,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       149,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       150,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       151,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       152,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       153,
+       [
+        0,
+        0,
+        0
+       ]
+      ]
+     ],
+     "exact": false
+    },
+    "C": {
+     "inside_mismatches": 3423,
+     "outside_non_white": 369,
+     "inside_sample": [
+      [
+       146,
+       146,
+       [
+        248,
+        248,
+        248
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       147,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       148,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       149,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       150,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       151,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       152,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       153,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       154,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       155,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ]
+     ],
+     "outside_sample": [
+      [
+       384,
+       144,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       145,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       146,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       147,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       148,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       149,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       150,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       151,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       152,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       153,
+       [
+        0,
+        0,
+        0
+       ]
+      ]
+     ],
+     "exact": false
+    },
+    "D": {
+     "inside_mismatches": 3423,
+     "outside_non_white": 369,
+     "inside_sample": [
+      [
+       146,
+       146,
+       [
+        248,
+        248,
+        248
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       147,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       148,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       149,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       150,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       151,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       152,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       153,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       154,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       155,
+       146,
+       [
+        251,
+        251,
+        251
+       ],
+       [
+        255,
+        255,
+        255
+       ]
+      ]
+     ],
+     "outside_sample": [
+      [
+       384,
+       144,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       145,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       146,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       147,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       148,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       149,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       150,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       151,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       152,
+       [
+        0,
+        0,
+        0
+       ]
+      ],
+      [
+       384,
+       153,
+       [
+        0,
+        0,
+        0
+       ]
+      ]
+     ],
+     "exact": false
+    }
+   },
+   "status": "fail",
+   "missing_condition": null
+  },
+  {
+   "check_id": "poppler.A_ne_B",
+   "prediction": "P7",
+   "description": "Poppler: render(A) != render(B)",
+   "expected": false,
+   "observed": {
+    "comparable": true,
+    "identical": false,
+    "differing_pixels": 5105,
+    "bbox_px": [
+     144,
+     144,
+     385,
+     273
+    ]
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "poppler.decode_C",
+   "prediction": "P13",
+   "description": "Poppler: exact template decode of render(C) == visible truth",
+   "expected": {
+    "r0c0": "Item",
+    "r0c1": "Value",
+    "r1c0": "Gap",
+    "r1c1": "12 mm",
+    "r2c0": "Delay",
+    "r2c1": "7 s",
+    "r3c0": "Load",
+    "r3c1": "18 kg"
+   },
+   "observed": {
+    "C": {
+     "r0c0": "????",
+     "r0c1": "?????",
+     "r1c0": "???",
+     "r1c1": "?? ??",
+     "r2c0": "?????",
+     "r2c1": "? ?",
+     "r3c0": "????",
+     "r3c1": "?? ??"
+    },
+    "all_fixtures": {
+     "B": {
+      "r0c0": {
+       "cell_id": "r0c0",
+       "decoded": "????",
+       "ambiguous_blocks": 108
+      },
+      "r0c1": {
+       "cell_id": "r0c1",
+       "decoded": "?????",
+       "ambiguous_blocks": 125
+      },
+      "r1c0": {
+       "cell_id": "r1c0",
+       "decoded": "???",
+       "ambiguous_blocks": 88
+      },
+      "r1c1": {
+       "cell_id": "r1c1",
+       "decoded": "?? ??",
+       "ambiguous_blocks": 112
+      },
+      "r2c0": {
+       "cell_id": "r2c0",
+       "decoded": "?????",
+       "ambiguous_blocks": 133
+      },
+      "r2c1": {
+       "cell_id": "r2c1",
+       "decoded": "? ?",
+       "ambiguous_blocks": 52
+      },
+      "r3c0": {
+       "cell_id": "r3c0",
+       "decoded": "????",
+       "ambiguous_blocks": 98
+      },
+      "r3c1": {
+       "cell_id": "r3c1",
+       "decoded": "?? ??",
+       "ambiguous_blocks": 114
+      }
+     },
+     "C": {
+      "r0c0": {
+       "cell_id": "r0c0",
+       "decoded": "????",
+       "ambiguous_blocks": 108
+      },
+      "r0c1": {
+       "cell_id": "r0c1",
+       "decoded": "?????",
+       "ambiguous_blocks": 125
+      },
+      "r1c0": {
+       "cell_id": "r1c0",
+       "decoded": "???",
+       "ambiguous_blocks": 88
+      },
+      "r1c1": {
+       "cell_id": "r1c1",
+       "decoded": "?? ??",
+       "ambiguous_blocks": 112
+      },
+      "r2c0": {
+       "cell_id": "r2c0",
+       "decoded": "?????",
+       "ambiguous_blocks": 133
+      },
+      "r2c1": {
+       "cell_id": "r2c1",
+       "decoded": "? ?",
+       "ambiguous_blocks": 52
+      },
+      "r3c0": {
+       "cell_id": "r3c0",
+       "decoded": "????",
+       "ambiguous_blocks": 98
+      },
+      "r3c1": {
+       "cell_id": "r3c1",
+       "decoded": "?? ??",
+       "ambiguous_blocks": 114
+      }
+     },
+     "D": {
+      "r0c0": {
+       "cell_id": "r0c0",
+       "decoded": "????",
+       "ambiguous_blocks": 108
+      },
+      "r0c1": {
+       "cell_id": "r0c1",
+       "decoded": "?????",
+       "ambiguous_blocks": 125
+      },
+      "r1c0": {
+       "cell_id": "r1c0",
+       "decoded": "???",
+       "ambiguous_blocks": 88
+      },
+      "r1c1": {
+       "cell_id": "r1c1",
+       "decoded": "?? ??",
+       "ambiguous_blocks": 112
+      },
+      "r2c0": {
+       "cell_id": "r2c0",
+       "decoded": "?????",
+       "ambiguous_blocks": 133
+      },
+      "r2c1": {
+       "cell_id": "r2c1",
+       "decoded": "? ?",
+       "ambiguous_blocks": 52
+      },
+      "r3c0": {
+       "cell_id": "r3c0",
+       "decoded": "????",
+       "ambiguous_blocks": 98
+      },
+      "r3c1": {
+       "cell_id": "r3c1",
+       "decoded": "?? ??",
+       "ambiguous_blocks": 114
+      }
+     },
+     "E": {
+      "r0c0": {
+       "cell_id": "r0c0",
+       "decoded": "????",
+       "ambiguous_blocks": 120
+      },
+      "r0c1": {
+       "cell_id": "r0c1",
+       "decoded": "?????",
+       "ambiguous_blocks": 143
+      },
+      "r1c0": {
+       "cell_id": "r1c0",
+       "decoded": "???",
+       "ambiguous_blocks": 100
+      },
+      "r1c1": {
+       "cell_id": "r1c1",
+       "decoded": "?? ??",
+       "ambiguous_blocks": 124
+      },
+      "r2c0": {
+       "cell_id": "r2c0",
+       "decoded": "?????",
+       "ambiguous_blocks": 152
+      },
+      "r2c1": {
+       "cell_id": "r2c1",
+       "decoded": "? ?",
+       "ambiguous_blocks": 52
+      },
+      "r3c0": {
+       "cell_id": "r3c0",
+       "decoded": "????",
+       "ambiguous_blocks": 121
+      },
+      "r3c1": {
+       "cell_id": "r3c1",
+       "decoded": "?? ??",
+       "ambiguous_blocks": 132
+      }
+     }
+    }
+   },
+   "status": "fail",
+   "missing_condition": null
+  },
+  {
+   "check_id": "cross.pdfium_vs_poppler_B",
+   "prediction": "P6",
+   "description": "PDFium vs Poppler render(B)",
+   "expected": "no prediction",
+   "observed": {
+    "comparable": true,
+    "identical": false,
+    "differing_pixels": 3792,
+    "bbox_px": [
+     144,
+     144,
+     385,
+     273
+    ]
+   },
+   "status": "observed",
+   "missing_condition": null
+  },
+  {
+   "check_id": "pypdf_plain.presence",
+   "prediction": "P8/P9",
+   "description": "pypdf_plain: B empty; A and D contain the authored strings; C contains the hidden strings incl. 17 mm",
+   "expected": {
+    "B_nonspace": 0,
+    "A": true,
+    "C": true,
+    "D": true
+   },
+   "observed": {
+    "nonspace_chars": {
+     "A": 31,
+     "B": 0,
+     "C": 31,
+     "D": 31,
+     "E": 31
+    },
+    "A": true,
+    "C": true,
+    "D": true,
+    "raw_repr": {
+     "A": "'Item Value\\nGap 12 mm\\nDelay 7 s\\nLoad 18 kg'",
+     "B": "''",
+     "C": "'Item Value\\nGap 17 mm\\nDelay 7 s\\nLoad 18 kg'",
+     "D": "'Item Value\\nGap 12 mm\\nDelay 7 s\\nLoad 18 kg'",
+     "E": "'Item Value\\nGap 17 mm\\nDelay 7 s\\nLoad 18 kg'"
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "pypdf_layout.presence",
+   "prediction": "P8/P9",
+   "description": "pypdf_layout: B empty; A and D contain the authored strings; C contains the hidden strings incl. 17 mm",
+   "expected": {
+    "B_nonspace": 0,
+    "A": true,
+    "C": true,
+    "D": true
+   },
+   "observed": {
+    "nonspace_chars": {
+     "A": 31,
+     "B": 0,
+     "C": 31,
+     "D": 31,
+     "E": 31
+    },
+    "A": true,
+    "C": true,
+    "D": true,
+    "raw_repr": {
+     "A": "'Item      Value\\nGap       12 mm\\nDelay     7 s\\nLoad      18 kg'",
+     "B": "''",
+     "C": "'Item      Value\\nGap       17 mm\\nDelay     7 s\\nLoad      18 kg'",
+     "D": "'Item      Value\\nGap       12 mm\\nDelay     7 s\\nLoad      18 kg'",
+     "E": "'Item      Value\\nGap       17 mm\\nDelay     7 s\\nLoad      18 kg'"
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "pdfplumber_text.presence",
+   "prediction": "P8/P9",
+   "description": "pdfplumber_text: B empty; A and D contain the authored strings; C contains the hidden strings incl. 17 mm",
+   "expected": {
+    "B_nonspace": 0,
+    "A": true,
+    "C": true,
+    "D": true
+   },
+   "observed": {
+    "nonspace_chars": {
+     "A": 31,
+     "B": 0,
+     "C": 31,
+     "D": 31,
+     "E": 31
+    },
+    "A": true,
+    "C": true,
+    "D": true,
+    "raw_repr": {
+     "A": "'Item Value\\nGap 12 mm\\nDelay 7 s\\nLoad 18 kg'",
+     "B": "''",
+     "C": "'Item Value\\nGap 17 mm\\nDelay 7 s\\nLoad 18 kg'",
+     "D": "'Item Value\\nGap 12 mm\\nDelay 7 s\\nLoad 18 kg'",
+     "E": "'Item Value\\nGap 17 mm\\nDelay 7 s\\nLoad 18 kg'"
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "pdfium_text.presence",
+   "prediction": "P8/P9",
+   "description": "pdfium_text: B empty; A and D contain the authored strings; C contains the hidden strings incl. 17 mm",
+   "expected": {
+    "B_nonspace": 0,
+    "A": true,
+    "C": true,
+    "D": true
+   },
+   "observed": {
+    "nonspace_chars": {
+     "A": 31,
+     "B": 0,
+     "C": 31,
+     "D": 31,
+     "E": 31
+    },
+    "A": true,
+    "C": true,
+    "D": true,
+    "raw_repr": {
+     "A": "'Item Value\\r\\nGap 12 mm\\r\\nDelay 7 s\\r\\nLoad 18 kg'",
+     "B": "''",
+     "C": "'Item Value\\r\\nGap 17 mm\\r\\nDelay 7 s\\r\\nLoad 18 kg'",
+     "D": "'Item Value\\r\\nGap 12 mm\\r\\nDelay 7 s\\r\\nLoad 18 kg'",
+     "E": "'Item Value\\r\\nGap 17 mm\\r\\nDelay 7 s\\r\\nLoad 18 kg'"
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "poppler_plain.presence",
+   "prediction": "P8/P9",
+   "description": "poppler_plain: B empty; A and D contain the authored strings; C contains the hidden strings incl. 17 mm",
+   "expected": {
+    "B_nonspace": 0,
+    "A": true,
+    "C": true,
+    "D": true
+   },
+   "observed": {
+    "nonspace_chars": {
+     "A": 31,
+     "B": 0,
+     "C": 31,
+     "D": 31,
+     "E": 31
+    },
+    "A": true,
+    "C": true,
+    "D": true,
+    "raw_repr": {
+     "A": "'Item\\n\\nValue\\n\\nGap\\n\\n12 mm\\n\\nDelay\\n\\n7 s\\n\\nLoad\\n\\n18 kg\\n\\n\\x0c'",
+     "B": "'\\x0c'",
+     "C": "'Item\\n\\nValue\\n\\nGap\\n\\n17 mm\\n\\nDelay\\n\\n7 s\\n\\nLoad\\n\\n18 kg\\n\\n\\x0c'",
+     "D": "'Item\\n\\nValue\\n\\nGap\\n\\n12 mm\\n\\nDelay\\n\\n7 s\\n\\nLoad\\n\\n18 kg\\n\\n\\x0c'",
+     "E": "'Item\\n\\nValue\\n\\nGap\\n\\n17 mm\\n\\nDelay\\n\\n7 s\\n\\nLoad\\n\\n18 kg\\n\\n\\x0c'"
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "poppler_layout.presence",
+   "prediction": "P8/P9",
+   "description": "poppler_layout: B empty; A and D contain the authored strings; C contains the hidden strings incl. 17 mm",
+   "expected": {
+    "B_nonspace": 0,
+    "A": true,
+    "C": true,
+    "D": true
+   },
+   "observed": {
+    "nonspace_chars": {
+     "A": 31,
+     "B": 0,
+     "C": 31,
+     "D": 31,
+     "E": 31
+    },
+    "A": true,
+    "C": true,
+    "D": true,
+    "raw_repr": {
+     "A": "'Item    Value\\nGap     12 mm\\nDelay   7 s\\nLoad    18 kg\\n\\x0c'",
+     "B": "'\\x0c'",
+     "C": "'Item    Value\\nGap     17 mm\\nDelay   7 s\\nLoad    18 kg\\n\\x0c'",
+     "D": "'Item    Value\\nGap     12 mm\\nDelay   7 s\\nLoad    18 kg\\n\\x0c'",
+     "E": "'Item    Value\\nGap     17 mm\\nDelay   7 s\\nLoad    18 kg\\n\\x0c'"
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "render_mode",
+   "prediction": "P10",
+   "description": "PDFium per-object render mode and pypdf Tr operators",
+   "expected": {
+    "pdfium": {
+     "A": [
+      0
+     ],
+     "B": [],
+     "C": [
+      3
+     ],
+     "D": [
+      3
+     ],
+     "E": [
+      0
+     ]
+    },
+    "pypdf_Tr": {
+     "A": [
+      [
+       "0"
+      ]
+     ],
+     "B": [],
+     "C": [
+      [
+       "3"
+      ]
+     ],
+     "D": [
+      [
+       "3"
+      ]
+     ],
+     "E": [
+      [
+       "0"
+      ]
+     ]
+    }
+   },
+   "observed": {
+    "pdfium": {
+     "A": [
+      0
+     ],
+     "B": [],
+     "C": [
+      3
+     ],
+     "D": [
+      3
+     ],
+     "E": [
+      0
+     ]
+    },
+    "pypdf_Tr": {
+     "A": [
+      [
+       "0"
+      ]
+     ],
+     "B": [],
+     "C": [
+      [
+       "3"
+      ]
+     ],
+     "D": [
+      [
+       "3"
+      ]
+     ],
+     "E": [
+      [
+       "0"
+      ]
+     ]
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "geometry.coverage_7_over_2",
+   "prediction": "P11",
+   "description": "share of the visible '2' ink inside each box reported for the wrong '7'",
+   "expected": ">= 0.95 for every box",
+   "observed": {
+    "boxes": {
+     "pdfplumber_char": [
+      144.0,
+      690.06,
+      150.0,
+      700.06
+     ],
+     "pdfium_tight": [
+      144.99000549316406,
+      692.0,
+      149.0,
+      698.0700073242188
+     ],
+     "pdfium_loose": [
+      144.0,
+      689.52001953125,
+      150.0,
+      700.030029296875
+     ],
+     "poppler_word_17": [
+      138.0,
+      690.4300000000001,
+      150.0,
+      698.29
+     ]
+    },
+    "coverage": {
+     "pdfplumber_char": 1.0,
+     "pdfium_tight": 0.659286,
+     "pdfium_loose": 1.0,
+     "poppler_word_17": 0.847857
+    }
+   },
+   "status": "fail",
+   "missing_condition": null
+  },
+  {
+   "check_id": "geometry.C_vs_D.pdfplumber",
+   "prediction": "P12",
+   "description": "pdfplumber: C and D chars identical except text at one index",
+   "expected": {
+    "geometry_identical": true,
+    "text_differences": 1
+   },
+   "observed": {
+    "counts": [
+     34,
+     34
+    ],
+    "geometry_identical": true,
+    "text_differences": [
+     [
+      13,
+      "7",
+      "2"
+     ]
+    ]
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "geometry.C_vs_D.pdfium",
+   "prediction": "P12",
+   "description": "PDFium: C and D chars identical except text at one index",
+   "expected": {
+    "box": true,
+    "loose_box": true,
+    "origin": true,
+    "render_mode": true,
+    "font_size": true,
+    "generated": true,
+    "text_differences": 1
+   },
+   "observed": {
+    "counts": [
+     44,
+     44
+    ],
+    "fields_identical": {
+     "box": false,
+     "loose_box": true,
+     "origin": true,
+     "render_mode": true,
+     "font_size": true,
+     "generated": true
+    },
+    "text_differences": [
+     [
+      17,
+      "7",
+      "2"
+     ]
+    ]
+   },
+   "status": "fail",
+   "missing_condition": null
+  },
+  {
+   "check_id": "cells.pdfplumber",
+   "prediction": "P14",
+   "description": "pdfplumber: cell strings (by geometry) vs visible truth",
+   "expected": {
+    "A": [],
+    "C": [
+     "r1c1"
+    ],
+    "D": []
+   },
+   "observed": {
+    "mismatches": {
+     "A": [],
+     "C": [
+      {
+       "cell_id": "r1c1",
+       "expected": "12 mm",
+       "observed": "17 mm"
+      }
+     ],
+     "D": [],
+     "E": [
+      {
+       "cell_id": "r1c1",
+       "expected": "12 mm",
+       "observed": "17 mm"
+      }
+     ]
+    },
+    "cell_strings": {
+     "A": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "12 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     },
+     "C": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "17 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     },
+     "D": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "12 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     },
+     "E": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "17 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     }
+    },
+    "unassigned": {
+     "A": [],
+     "C": [],
+     "D": [],
+     "E": []
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "cells.pdfium",
+   "prediction": "P14",
+   "description": "pdfium: cell strings (by geometry) vs visible truth",
+   "expected": {
+    "A": [],
+    "C": [
+     "r1c1"
+    ],
+    "D": []
+   },
+   "observed": {
+    "mismatches": {
+     "A": [],
+     "C": [
+      {
+       "cell_id": "r1c1",
+       "expected": "12 mm",
+       "observed": "17 mm"
+      }
+     ],
+     "D": [],
+     "E": [
+      {
+       "cell_id": "r1c1",
+       "expected": "12 mm",
+       "observed": "17 mm"
+      }
+     ]
+    },
+    "cell_strings": {
+     "A": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "12 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     },
+     "C": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "17 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     },
+     "D": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "12 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     },
+     "E": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "17 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     }
+    },
+    "unassigned": {
+     "A": [],
+     "C": [],
+     "D": [],
+     "E": []
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "cells.poppler",
+   "prediction": "P14",
+   "description": "poppler: cell strings (by geometry) vs visible truth",
+   "expected": {
+    "A": [],
+    "C": [
+     "r1c1"
+    ],
+    "D": []
+   },
+   "observed": {
+    "mismatches": {
+     "A": [],
+     "C": [
+      {
+       "cell_id": "r1c1",
+       "expected": "12 mm",
+       "observed": "17 mm"
+      }
+     ],
+     "D": [],
+     "E": [
+      {
+       "cell_id": "r1c1",
+       "expected": "12 mm",
+       "observed": "17 mm"
+      }
+     ]
+    },
+    "cell_strings": {
+     "A": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "12 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     },
+     "C": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "17 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     },
+     "D": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "12 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     },
+     "E": {
+      "r0c0": "Item",
+      "r0c1": "Value",
+      "r1c0": "Gap",
+      "r1c1": "17 mm",
+      "r2c0": "Delay",
+      "r2c1": "7 s",
+      "r3c0": "Load",
+      "r3c1": "18 kg"
+     }
+    },
+    "unassigned": {
+     "A": [],
+     "C": [],
+     "D": [],
+     "E": []
+    }
+   },
+   "status": "pass",
+   "missing_condition": null
+  },
+  {
+   "check_id": "derived.P15",
+   "prediction": "P15",
+   "description": "presence/geometry/render mode do not separate C from D; only image evidence shows the visible value",
+   "expected": "all dependency checks pass",
+   "observed": {
+    "pdfium.decode_C": "pass",
+    "pypdf_plain.presence": "pass",
+    "pypdf_layout.presence": "pass",
+    "pdfplumber_text.presence": "pass",
+    "pdfium_text.presence": "pass",
+    "poppler_plain.presence": "pass",
+    "poppler_layout.presence": "pass",
+    "render_mode": "pass",
+    "geometry.C_vs_D.pdfplumber": "pass",
+    "geometry.C_vs_D.pdfium": "fail",
+    "cells.pdfplumber": "pass",
+    "cells.pdfium": "pass",
+    "cells.poppler": "pass"
+   },
+   "status": "fail",
+   "missing_condition": null
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+Item    Value
+Gap     12 mm
+Delay   7 s
+Load    18 kg
+

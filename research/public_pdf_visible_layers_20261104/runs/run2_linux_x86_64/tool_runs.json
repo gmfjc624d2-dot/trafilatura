@@ -1,0 +1,305 @@
+{
+ "missing_conditions": {},
+ "fixtures": {
+  "A": {
+   "pdf": "fixtures/A_born_digital.pdf",
+   "pdf_sha256": "8247cfa270ff0eb877b600d177c834cf90c8544967c71ffa58d1be60dd7f4215",
+   "runs": {
+    "pdfium_render": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "poppler_render": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": "",
+     "cli": {
+      "argv": [
+       "pdftoppm",
+       "-r",
+       "144",
+       "-singlefile",
+       "fixtures/A_born_digital.pdf",
+       "<tmp>/page"
+      ],
+      "returncode": 0,
+      "stderr": ""
+     }
+    },
+    "pypdf_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "pdfplumber_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "pdfium_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "poppler_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    }
+   }
+  },
+  "B": {
+   "pdf": "fixtures/B_image_only.pdf",
+   "pdf_sha256": "6a1ab29ffc3edb8725b9803608f874c0fff848a669d3b28b10ebc840ed1f0727",
+   "runs": {
+    "pdfium_render": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "poppler_render": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": "",
+     "cli": {
+      "argv": [
+       "pdftoppm",
+       "-r",
+       "144",
+       "-singlefile",
+       "fixtures/B_image_only.pdf",
+       "<tmp>/page"
+      ],
+      "returncode": 0,
+      "stderr": ""
+     }
+    },
+    "pypdf_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "pdfplumber_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "pdfium_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "poppler_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    }
+   }
+  },
+  "C": {
+   "pdf": "fixtures/C_raster_hidden_wrong.pdf",
+   "pdf_sha256": "d9a2c35877bed31d41136055678238ad60cfa89b9b6132a85f9099317981bc71",
+   "runs": {
+    "pdfium_render": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "poppler_render": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": "",
+     "cli": {
+      "argv": [
+       "pdftoppm",
+       "-r",
+       "144",
+       "-singlefile",
+       "fixtures/C_raster_hidden_wrong.pdf",
+       "<tmp>/page"
+      ],
+      "returncode": 0,
+      "stderr": ""
+     }
+    },
+    "pypdf_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "pdfplumber_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "pdfium_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "poppler_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    }
+   }
+  },
+  "D": {
+   "pdf": "fixtures/D_raster_hidden_correct.pdf",
+   "pdf_sha256": "e1e41c9fc7ba99b860abdef278d162c31adf6ad5ab60f7927489be2176702e3a",
+   "runs": {
+    "pdfium_render": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "poppler_render": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": "",
+     "cli": {
+      "argv": [
+       "pdftoppm",
+       "-r",
+       "144",
+       "-singlefile",
+       "fixtures/D_raster_hidden_correct.pdf",
+       "<tmp>/page"
+      ],
+      "returncode": 0,
+      "stderr": ""
+     }
+    },
+    "pypdf_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "pdfplumber_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "pdfium_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "poppler_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    }
+   }
+  },
+  "E": {
+   "pdf": "fixtures/E_raster_visible_wrong.pdf",
+   "pdf_sha256": "d64538d1fa3d1907c44714e6d4f27f32f24fe6a5fbea46a073366d308c47aa57",
+   "runs": {
+    "pdfium_render": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "poppler_render": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": "",
+     "cli": {
+      "argv": [
+       "pdftoppm",
+       "-r",
+       "144",
+       "-singlefile",
+       "fixtures/E_raster_visible_wrong.pdf",
+       "<tmp>/page"
+      ],
+      "returncode": 0,
+      "stderr": ""
+     }
+    },
+    "pypdf_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "pdfplumber_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "pdfium_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    },
+    "poppler_text": {
+     "status": "ok",
+     "python_warnings": [],
+     "log_records": [],
+     "stdout": "",
+     "stderr": ""
+    }
+   }
+  }
+ }
+}

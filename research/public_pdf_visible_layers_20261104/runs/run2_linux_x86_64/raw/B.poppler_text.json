@@ -1,0 +1,41 @@
+{
+ "plain": {
+  "argv": [
+   "pdftotext",
+   "-enc",
+   "UTF-8",
+   "fixtures/B_image_only.pdf",
+   "-"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "text": "\f"
+ },
+ "layout": {
+  "argv": [
+   "pdftotext",
+   "-enc",
+   "UTF-8",
+   "-layout",
+   "fixtures/B_image_only.pdf",
+   "-"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "text": "\f"
+ },
+ "bbox_layout": {
+  "argv": [
+   "pdftotext",
+   "-enc",
+   "UTF-8",
+   "-bbox-layout",
+   "fixtures/B_image_only.pdf",
+   "-"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n</head>\n<body>\n<doc>\n  <page width=\"612.000000\" height=\"792.000000\">\n  </page>\n</doc>\n</body>\n</html>\n"
+ },
+ "words_pdf_coords": []
+}

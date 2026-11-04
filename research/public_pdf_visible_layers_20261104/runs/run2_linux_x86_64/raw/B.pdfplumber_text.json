@@ -1,0 +1,18 @@
+{
+ "chars": [],
+ "images": [
+  {
+   "x0": 72.0,
+   "x1": 192.0,
+   "top": 72.0,
+   "bottom": 136.0,
+   "srcsize": [
+    240,
+    128
+   ],
+   "bits": 1,
+   "name": "Im1"
+  }
+ ],
+ "extract_text": ""
+}

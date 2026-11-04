@@ -1,0 +1,21 @@
+{
+ "text": "",
+ "chars": [],
+ "objects": [
+  {
+   "type": 3,
+   "bounds": [
+    72.0,
+    656.0,
+    192.0,
+    720.0
+   ]
+  }
+ ],
+ "constants": {
+  "FPDF_PAGEOBJ_TEXT": 1,
+  "FPDF_PAGEOBJ_IMAGE": 3,
+  "FPDF_TEXTRENDERMODE_FILL": 0,
+  "FPDF_TEXTRENDERMODE_INVISIBLE": 3
+ }
+}

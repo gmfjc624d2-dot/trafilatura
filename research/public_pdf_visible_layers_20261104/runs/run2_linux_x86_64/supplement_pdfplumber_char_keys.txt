@@ -1,0 +1,6 @@
+supplementary actual tool run, 2026-11-04T07:12:45Z, Linux x86_64, hash-locked venv, after run2
+command (from research/public_pdf_visible_layers_20261104):
+python -I -c 'import pdfplumber,json,sys; p=pdfplumber.open(sys.argv[1]).pages[0]; c=p.chars[13]; print(json.dumps({"pdfplumber":pdfplumber.__version__,"char_index":13,"text":c["text"],"keys":sorted(c),"non_stroking_color":c["non_stroking_color"],"stroking_color":c["stroking_color"],"keys_containing_render":[k for k in c if "render" in k.lower()]}))' fixtures/C_raster_hidden_wrong.pdf
+output:
+{"pdfplumber": "0.11.9", "char_index": 13, "text": "7", "keys": ["adv", "bottom", "doctop", "fontname", "height", "matrix", "mcid", "ncs", "non_stroking_color", "object_type", "page_number", "size", "stroking_color", "tag", "text", "top", "upright", "width", "x0", "x1", "y0", "y1"], "non_stroking_color": [0], "stroking_color": [0], "keys_containing_render": []}
+exit=0
