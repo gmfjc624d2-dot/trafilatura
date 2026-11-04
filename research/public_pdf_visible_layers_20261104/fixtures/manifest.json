@@ -1,0 +1,1110 @@
+{
+ "request_id": "public-pdf-visible-table-and-text-layer-20261104-01",
+ "notice": "Fictional table authored for this experiment; not derived from any real document.",
+ "page": {
+  "MediaBox": [
+   0,
+   0,
+   612,
+   792
+  ]
+ },
+ "raster": {
+  "file": "raster/table.pbm",
+  "width_px": 240,
+  "height_px": 128,
+  "px_per_pt": 2,
+  "placed_at_pt": {
+   "x": 72,
+   "y": 656,
+   "w": 120,
+   "h": 64
+  },
+  "ink_pixels": 3860,
+  "pdf_image_data_sha256": "c2b9dda613a9e196d8f2e8cfde16e030ec3164aaccee37e91ff9a8e83e5a672c",
+  "pbm_sha256": "e395f13ab5aa485a40226f0e27346d9aac19768eaf63a8b6da1cd4a87b9eb67e",
+  "encoding": "PDF: DeviceGray 1 bpc uncompressed, 0 = black; PBM P4: 1 = black"
+ },
+ "bitmap_font": {
+  "cell_pt": [
+   6,
+   9
+  ],
+  "glyph_px": [
+   5,
+   9
+  ],
+  "font_px_pt": 1,
+  "rows": {
+   "I": ".###. ..#.. ..#.. ..#.. ..#.. ..#.. .###. ..... .....",
+   "t": ".#... .#... ####. .#... .#... .#..# ..##. ..... .....",
+   "e": "..... ..... .###. #...# ##### #.... .###. ..... .....",
+   "m": "..... ..... ##.#. #.#.# #.#.# #.#.# #.#.# ..... .....",
+   "V": "#...# #...# #...# #...# .#.#. .#.#. ..#.. ..... .....",
+   "a": "..... ..... .###. ....# .#### #...# .#### ..... .....",
+   "l": ".##.. ..#.. ..#.. ..#.. ..#.. ..#.. .###. ..... .....",
+   "u": "..... ..... #...# #...# #...# #..## .##.# ..... .....",
+   "G": ".###. #...# #.... #.### #...# #...# .###. ..... .....",
+   "p": "..... ..... ####. #...# #...# #...# ####. #.... #....",
+   "D": "####. #...# #...# #...# #...# #...# ####. ..... .....",
+   "y": "..... ..... #...# #...# #...# #...# .#### ....# .###.",
+   "L": "#.... #.... #.... #.... #.... #.... ##### ..... .....",
+   "o": "..... ..... .###. #...# #...# #...# .###. ..... .....",
+   "d": "....# ....# .#### #...# #...# #...# .#### ..... .....",
+   "1": "..#.. .##.. ..#.. ..#.. ..#.. ..#.. .###. ..... .....",
+   "2": ".###. #...# ....# ...#. ..#.. .#... ##### ..... .....",
+   "7": "##### ....# ...#. ..#.. .#... .#... .#... ..... .....",
+   "8": ".###. #...# #...# .###. #...# #...# .###. ..... .....",
+   "s": "..... ..... .#### #.... .###. ....# ####. ..... .....",
+   "k": "#.... #.... #..#. #.#.. ##... #.#.. #..#. ..... .....",
+   "g": "..... ..... .#### #...# #...# #...# .#### ....# .###.",
+   " ": "..... ..... ..... ..... ..... ..... ..... ..... ....."
+  },
+  "license": "authored for this experiment; Apache-2.0 with the repository"
+ },
+ "visible_truth": {
+  "source": "authored raster (these strings drawn with the bitmap font)",
+  "cells": [
+   {
+    "cell_id": "r0c0",
+    "row": 0,
+    "col": 0,
+    "text": "Item",
+    "origin_pt": [
+     78,
+     708
+    ],
+    "text_box_pt": [
+     78,
+     706,
+     102,
+     715
+    ],
+    "glyphs": [
+     {
+      "index": 0,
+      "char": "I",
+      "box_pt": [
+       78,
+       706,
+       83,
+       715
+      ],
+      "ink_font_px": 11
+     },
+     {
+      "index": 1,
+      "char": "t",
+      "box_pt": [
+       84,
+       706,
+       89,
+       715
+      ],
+      "ink_font_px": 12
+     },
+     {
+      "index": 2,
+      "char": "e",
+      "box_pt": [
+       90,
+       706,
+       95,
+       715
+      ],
+      "ink_font_px": 14
+     },
+     {
+      "index": 3,
+      "char": "m",
+      "box_pt": [
+       96,
+       706,
+       101,
+       715
+      ],
+      "ink_font_px": 15
+     }
+    ]
+   },
+   {
+    "cell_id": "r0c1",
+    "row": 0,
+    "col": 1,
+    "text": "Value",
+    "origin_pt": [
+     138,
+     708
+    ],
+    "text_box_pt": [
+     138,
+     706,
+     168,
+     715
+    ],
+    "glyphs": [
+     {
+      "index": 0,
+      "char": "V",
+      "box_pt": [
+       138,
+       706,
+       143,
+       715
+      ],
+      "ink_font_px": 13
+     },
+     {
+      "index": 1,
+      "char": "a",
+      "box_pt": [
+       144,
+       706,
+       149,
+       715
+      ],
+      "ink_font_px": 14
+     },
+     {
+      "index": 2,
+      "char": "l",
+      "box_pt": [
+       150,
+       706,
+       155,
+       715
+      ],
+      "ink_font_px": 10
+     },
+     {
+      "index": 3,
+      "char": "u",
+      "box_pt": [
+       156,
+       706,
+       161,
+       715
+      ],
+      "ink_font_px": 12
+     },
+     {
+      "index": 4,
+      "char": "e",
+      "box_pt": [
+       162,
+       706,
+       167,
+       715
+      ],
+      "ink_font_px": 14
+     }
+    ]
+   },
+   {
+    "cell_id": "r1c0",
+    "row": 1,
+    "col": 0,
+    "text": "Gap",
+    "origin_pt": [
+     78,
+     692
+    ],
+    "text_box_pt": [
+     78,
+     690,
+     96,
+     699
+    ],
+    "glyphs": [
+     {
+      "index": 0,
+      "char": "G",
+      "box_pt": [
+       78,
+       690,
+       83,
+       699
+      ],
+      "ink_font_px": 17
+     },
+     {
+      "index": 1,
+      "char": "a",
+      "box_pt": [
+       84,
+       690,
+       89,
+       699
+      ],
+      "ink_font_px": 14
+     },
+     {
+      "index": 2,
+      "char": "p",
+      "box_pt": [
+       90,
+       690,
+       95,
+       699
+      ],
+      "ink_font_px": 16
+     }
+    ]
+   },
+   {
+    "cell_id": "r1c1",
+    "row": 1,
+    "col": 1,
+    "text": "12 mm",
+    "origin_pt": [
+     138,
+     692
+    ],
+    "text_box_pt": [
+     138,
+     690,
+     168,
+     699
+    ],
+    "glyphs": [
+     {
+      "index": 0,
+      "char": "1",
+      "box_pt": [
+       138,
+       690,
+       143,
+       699
+      ],
+      "ink_font_px": 10
+     },
+     {
+      "index": 1,
+      "char": "2",
+      "box_pt": [
+       144,
+       690,
+       149,
+       699
+      ],
+      "ink_font_px": 14
+     },
+     {
+      "index": 2,
+      "char": " ",
+      "box_pt": [
+       150,
+       690,
+       155,
+       699
+      ],
+      "ink_font_px": 0
+     },
+     {
+      "index": 3,
+      "char": "m",
+      "box_pt": [
+       156,
+       690,
+       161,
+       699
+      ],
+      "ink_font_px": 15
+     },
+     {
+      "index": 4,
+      "char": "m",
+      "box_pt": [
+       162,
+       690,
+       167,
+       699
+      ],
+      "ink_font_px": 15
+     }
+    ]
+   },
+   {
+    "cell_id": "r2c0",
+    "row": 2,
+    "col": 0,
+    "text": "Delay",
+    "origin_pt": [
+     78,
+     676
+    ],
+    "text_box_pt": [
+     78,
+     674,
+     108,
+     683
+    ],
+    "glyphs": [
+     {
+      "index": 0,
+      "char": "D",
+      "box_pt": [
+       78,
+       674,
+       83,
+       683
+      ],
+      "ink_font_px": 18
+     },
+     {
+      "index": 1,
+      "char": "e",
+      "box_pt": [
+       84,
+       674,
+       89,
+       683
+      ],
+      "ink_font_px": 14
+     },
+     {
+      "index": 2,
+      "char": "l",
+      "box_pt": [
+       90,
+       674,
+       95,
+       683
+      ],
+      "ink_font_px": 10
+     },
+     {
+      "index": 3,
+      "char": "a",
+      "box_pt": [
+       96,
+       674,
+       101,
+       683
+      ],
+      "ink_font_px": 14
+     },
+     {
+      "index": 4,
+      "char": "y",
+      "box_pt": [
+       102,
+       674,
+       107,
+       683
+      ],
+      "ink_font_px": 16
+     }
+    ]
+   },
+   {
+    "cell_id": "r2c1",
+    "row": 2,
+    "col": 1,
+    "text": "7 s",
+    "origin_pt": [
+     138,
+     676
+    ],
+    "text_box_pt": [
+     138,
+     674,
+     156,
+     683
+    ],
+    "glyphs": [
+     {
+      "index": 0,
+      "char": "7",
+      "box_pt": [
+       138,
+       674,
+       143,
+       683
+      ],
+      "ink_font_px": 11
+     },
+     {
+      "index": 1,
+      "char": " ",
+      "box_pt": [
+       144,
+       674,
+       149,
+       683
+      ],
+      "ink_font_px": 0
+     },
+     {
+      "index": 2,
+      "char": "s",
+      "box_pt": [
+       150,
+       674,
+       155,
+       683
+      ],
+      "ink_font_px": 13
+     }
+    ]
+   },
+   {
+    "cell_id": "r3c0",
+    "row": 3,
+    "col": 0,
+    "text": "Load",
+    "origin_pt": [
+     78,
+     660
+    ],
+    "text_box_pt": [
+     78,
+     658,
+     102,
+     667
+    ],
+    "glyphs": [
+     {
+      "index": 0,
+      "char": "L",
+      "box_pt": [
+       78,
+       658,
+       83,
+       667
+      ],
+      "ink_font_px": 11
+     },
+     {
+      "index": 1,
+      "char": "o",
+      "box_pt": [
+       84,
+       658,
+       89,
+       667
+      ],
+      "ink_font_px": 12
+     },
+     {
+      "index": 2,
+      "char": "a",
+      "box_pt": [
+       90,
+       658,
+       95,
+       667
+      ],
+      "ink_font_px": 14
+     },
+     {
+      "index": 3,
+      "char": "d",
+      "box_pt": [
+       96,
+       658,
+       101,
+       667
+      ],
+      "ink_font_px": 16
+     }
+    ]
+   },
+   {
+    "cell_id": "r3c1",
+    "row": 3,
+    "col": 1,
+    "text": "18 kg",
+    "origin_pt": [
+     138,
+     660
+    ],
+    "text_box_pt": [
+     138,
+     658,
+     168,
+     667
+    ],
+    "glyphs": [
+     {
+      "index": 0,
+      "char": "1",
+      "box_pt": [
+       138,
+       658,
+       143,
+       667
+      ],
+      "ink_font_px": 10
+     },
+     {
+      "index": 1,
+      "char": "8",
+      "box_pt": [
+       144,
+       658,
+       149,
+       667
+      ],
+      "ink_font_px": 17
+     },
+     {
+      "index": 2,
+      "char": " ",
+      "box_pt": [
+       150,
+       658,
+       155,
+       667
+      ],
+      "ink_font_px": 0
+     },
+     {
+      "index": 3,
+      "char": "k",
+      "box_pt": [
+       156,
+       658,
+       161,
+       667
+      ],
+      "ink_font_px": 12
+     },
+     {
+      "index": 4,
+      "char": "g",
+      "box_pt": [
+       162,
+       658,
+       167,
+       667
+      ],
+      "ink_font_px": 18
+     }
+    ]
+   }
+  ]
+ },
+ "rules_pt": [
+  [
+   72,
+   719,
+   120,
+   1
+  ],
+  [
+   72,
+   656,
+   120,
+   1
+  ],
+  [
+   72,
+   656,
+   1,
+   64
+  ],
+  [
+   191,
+   656,
+   1,
+   64
+  ],
+  [
+   132,
+   656,
+   1,
+   64
+  ],
+  [
+   72,
+   703,
+   120,
+   1
+  ]
+ ],
+ "hidden_text": {
+  "font": "Courier (standard 14, not embedded)",
+  "size": 10,
+  "wrong_cell": {
+   "row": 1,
+   "col": 1,
+   "visible": "12 mm",
+   "searchable": "17 mm"
+  }
+ },
+ "fixtures": {
+  "A": {
+   "file": "A_born_digital.pdf",
+   "role": "born-digital: vector rules and visible Courier text",
+   "has_image": false,
+   "has_text_objects": true,
+   "text_render_mode_ops": [
+    "0 Tr"
+   ],
+   "operations": [
+    {
+     "op_index": 0,
+     "source": "q"
+    },
+    {
+     "op_index": 1,
+     "source": "0 g"
+    },
+    {
+     "op_index": 2,
+     "source": "72 719 120 1 re f"
+    },
+    {
+     "op_index": 3,
+     "source": "72 656 120 1 re f"
+    },
+    {
+     "op_index": 4,
+     "source": "72 656 1 64 re f"
+    },
+    {
+     "op_index": 5,
+     "source": "191 656 1 64 re f"
+    },
+    {
+     "op_index": 6,
+     "source": "132 656 1 64 re f"
+    },
+    {
+     "op_index": 7,
+     "source": "72 703 120 1 re f"
+    },
+    {
+     "op_index": 8,
+     "source": "Q"
+    },
+    {
+     "op_index": 9,
+     "source": "BT"
+    },
+    {
+     "op_index": 10,
+     "source": "/F1 10 Tf"
+    },
+    {
+     "op_index": 11,
+     "source": "0 Tr"
+    },
+    {
+     "op_index": 12,
+     "source": "1 0 0 1 78 708 Tm"
+    },
+    {
+     "op_index": 13,
+     "source": "(Item) Tj"
+    },
+    {
+     "op_index": 14,
+     "source": "1 0 0 1 138 708 Tm"
+    },
+    {
+     "op_index": 15,
+     "source": "(Value) Tj"
+    },
+    {
+     "op_index": 16,
+     "source": "1 0 0 1 78 692 Tm"
+    },
+    {
+     "op_index": 17,
+     "source": "(Gap) Tj"
+    },
+    {
+     "op_index": 18,
+     "source": "1 0 0 1 138 692 Tm"
+    },
+    {
+     "op_index": 19,
+     "source": "(12 mm) Tj"
+    },
+    {
+     "op_index": 20,
+     "source": "1 0 0 1 78 676 Tm"
+    },
+    {
+     "op_index": 21,
+     "source": "(Delay) Tj"
+    },
+    {
+     "op_index": 22,
+     "source": "1 0 0 1 138 676 Tm"
+    },
+    {
+     "op_index": 23,
+     "source": "(7 s) Tj"
+    },
+    {
+     "op_index": 24,
+     "source": "1 0 0 1 78 660 Tm"
+    },
+    {
+     "op_index": 25,
+     "source": "(Load) Tj"
+    },
+    {
+     "op_index": 26,
+     "source": "1 0 0 1 138 660 Tm"
+    },
+    {
+     "op_index": 27,
+     "source": "(18 kg) Tj"
+    },
+    {
+     "op_index": 28,
+     "source": "ET"
+    }
+   ],
+   "content_stream_sha256": "7b2616ebcfb6ae9cfb627df04c64b436b5c924df07b452c9eed4e4322dcc32fb",
+   "pdf_sha256": "8247cfa270ff0eb877b600d177c834cf90c8544967c71ffa58d1be60dd7f4215",
+   "pdf_bytes": 1360
+  },
+  "B": {
+   "file": "B_image_only.pdf",
+   "role": "image-only: the authored raster, no text",
+   "has_image": true,
+   "has_text_objects": false,
+   "text_render_mode_ops": [],
+   "operations": [
+    {
+     "op_index": 0,
+     "source": "q 120 0 0 64 72 656 cm"
+    },
+    {
+     "op_index": 1,
+     "source": "/Im1 Do"
+    },
+    {
+     "op_index": 2,
+     "source": "Q"
+    }
+   ],
+   "content_stream_sha256": "eee1e6d3926ec8f56e7b4370a41627913cc960cb3988322313fece6fd3c7cb83",
+   "pdf_sha256": "6a1ab29ffc3edb8725b9803608f874c0fff848a669d3b28b10ebc840ed1f0727",
+   "pdf_bytes": 4507
+  },
+  "C": {
+   "file": "C_raster_hidden_wrong.pdf",
+   "role": "raster + invisible (3 Tr) text layer; Gap value WRONG (17 mm over visible 12 mm)",
+   "has_image": true,
+   "has_text_objects": true,
+   "text_render_mode_ops": [
+    "3 Tr"
+   ],
+   "operations": [
+    {
+     "op_index": 0,
+     "source": "q 120 0 0 64 72 656 cm"
+    },
+    {
+     "op_index": 1,
+     "source": "/Im1 Do"
+    },
+    {
+     "op_index": 2,
+     "source": "Q"
+    },
+    {
+     "op_index": 3,
+     "source": "BT"
+    },
+    {
+     "op_index": 4,
+     "source": "/F1 10 Tf"
+    },
+    {
+     "op_index": 5,
+     "source": "3 Tr"
+    },
+    {
+     "op_index": 6,
+     "source": "1 0 0 1 78 708 Tm"
+    },
+    {
+     "op_index": 7,
+     "source": "(Item) Tj"
+    },
+    {
+     "op_index": 8,
+     "source": "1 0 0 1 138 708 Tm"
+    },
+    {
+     "op_index": 9,
+     "source": "(Value) Tj"
+    },
+    {
+     "op_index": 10,
+     "source": "1 0 0 1 78 692 Tm"
+    },
+    {
+     "op_index": 11,
+     "source": "(Gap) Tj"
+    },
+    {
+     "op_index": 12,
+     "source": "1 0 0 1 138 692 Tm"
+    },
+    {
+     "op_index": 13,
+     "source": "(17 mm) Tj"
+    },
+    {
+     "op_index": 14,
+     "source": "1 0 0 1 78 676 Tm"
+    },
+    {
+     "op_index": 15,
+     "source": "(Delay) Tj"
+    },
+    {
+     "op_index": 16,
+     "source": "1 0 0 1 138 676 Tm"
+    },
+    {
+     "op_index": 17,
+     "source": "(7 s) Tj"
+    },
+    {
+     "op_index": 18,
+     "source": "1 0 0 1 78 660 Tm"
+    },
+    {
+     "op_index": 19,
+     "source": "(Load) Tj"
+    },
+    {
+     "op_index": 20,
+     "source": "1 0 0 1 138 660 Tm"
+    },
+    {
+     "op_index": 21,
+     "source": "(18 kg) Tj"
+    },
+    {
+     "op_index": 22,
+     "source": "ET"
+    }
+   ],
+   "content_stream_sha256": "02026519334c7689effc677a4d43a4e04b91a68a54084644bd09d4ebecdcdeba",
+   "pdf_sha256": "d9a2c35877bed31d41136055678238ad60cfa89b9b6132a85f9099317981bc71",
+   "pdf_bytes": 5314
+  },
+  "D": {
+   "file": "D_raster_hidden_correct.pdf",
+   "role": "control: raster + invisible (3 Tr) text layer, all values correct",
+   "has_image": true,
+   "has_text_objects": true,
+   "text_render_mode_ops": [
+    "3 Tr"
+   ],
+   "operations": [
+    {
+     "op_index": 0,
+     "source": "q 120 0 0 64 72 656 cm"
+    },
+    {
+     "op_index": 1,
+     "source": "/Im1 Do"
+    },
+    {
+     "op_index": 2,
+     "source": "Q"
+    },
+    {
+     "op_index": 3,
+     "source": "BT"
+    },
+    {
+     "op_index": 4,
+     "source": "/F1 10 Tf"
+    },
+    {
+     "op_index": 5,
+     "source": "3 Tr"
+    },
+    {
+     "op_index": 6,
+     "source": "1 0 0 1 78 708 Tm"
+    },
+    {
+     "op_index": 7,
+     "source": "(Item) Tj"
+    },
+    {
+     "op_index": 8,
+     "source": "1 0 0 1 138 708 Tm"
+    },
+    {
+     "op_index": 9,
+     "source": "(Value) Tj"
+    },
+    {
+     "op_index": 10,
+     "source": "1 0 0 1 78 692 Tm"
+    },
+    {
+     "op_index": 11,
+     "source": "(Gap) Tj"
+    },
+    {
+     "op_index": 12,
+     "source": "1 0 0 1 138 692 Tm"
+    },
+    {
+     "op_index": 13,
+     "source": "(12 mm) Tj"
+    },
+    {
+     "op_index": 14,
+     "source": "1 0 0 1 78 676 Tm"
+    },
+    {
+     "op_index": 15,
+     "source": "(Delay) Tj"
+    },
+    {
+     "op_index": 16,
+     "source": "1 0 0 1 138 676 Tm"
+    },
+    {
+     "op_index": 17,
+     "source": "(7 s) Tj"
+    },
+    {
+     "op_index": 18,
+     "source": "1 0 0 1 78 660 Tm"
+    },
+    {
+     "op_index": 19,
+     "source": "(Load) Tj"
+    },
+    {
+     "op_index": 20,
+     "source": "1 0 0 1 138 660 Tm"
+    },
+    {
+     "op_index": 21,
+     "source": "(18 kg) Tj"
+    },
+    {
+     "op_index": 22,
+     "source": "ET"
+    }
+   ],
+   "content_stream_sha256": "89231234c5e5d33252d8fdf7939e50ae5a2aacf8e9fa75b4585c2edd3f2fb573",
+   "pdf_sha256": "e1e41c9fc7ba99b860abdef278d162c31adf6ad5ab60f7927489be2176702e3a",
+   "pdf_bytes": 5314
+  },
+  "E": {
+   "file": "E_raster_visible_wrong.pdf",
+   "role": "render-sensitivity control: C's text layer drawn visibly (0 Tr)",
+   "has_image": true,
+   "has_text_objects": true,
+   "text_render_mode_ops": [
+    "0 Tr"
+   ],
+   "operations": [
+    {
+     "op_index": 0,
+     "source": "q 120 0 0 64 72 656 cm"
+    },
+    {
+     "op_index": 1,
+     "source": "/Im1 Do"
+    },
+    {
+     "op_index": 2,
+     "source": "Q"
+    },
+    {
+     "op_index": 3,
+     "source": "BT"
+    },
+    {
+     "op_index": 4,
+     "source": "/F1 10 Tf"
+    },
+    {
+     "op_index": 5,
+     "source": "0 Tr"
+    },
+    {
+     "op_index": 6,
+     "source": "1 0 0 1 78 708 Tm"
+    },
+    {
+     "op_index": 7,
+     "source": "(Item) Tj"
+    },
+    {
+     "op_index": 8,
+     "source": "1 0 0 1 138 708 Tm"
+    },
+    {
+     "op_index": 9,
+     "source": "(Value) Tj"
+    },
+    {
+     "op_index": 10,
+     "source": "1 0 0 1 78 692 Tm"
+    },
+    {
+     "op_index": 11,
+     "source": "(Gap) Tj"
+    },
+    {
+     "op_index": 12,
+     "source": "1 0 0 1 138 692 Tm"
+    },
+    {
+     "op_index": 13,
+     "source": "(17 mm) Tj"
+    },
+    {
+     "op_index": 14,
+     "source": "1 0 0 1 78 676 Tm"
+    },
+    {
+     "op_index": 15,
+     "source": "(Delay) Tj"
+    },
+    {
+     "op_index": 16,
+     "source": "1 0 0 1 138 676 Tm"
+    },
+    {
+     "op_index": 17,
+     "source": "(7 s) Tj"
+    },
+    {
+     "op_index": 18,
+     "source": "1 0 0 1 78 660 Tm"
+    },
+    {
+     "op_index": 19,
+     "source": "(Load) Tj"
+    },
+    {
+     "op_index": 20,
+     "source": "1 0 0 1 138 660 Tm"
+    },
+    {
+     "op_index": 21,
+     "source": "(18 kg) Tj"
+    },
+    {
+     "op_index": 22,
+     "source": "ET"
+    }
+   ],
+   "content_stream_sha256": "e455430964f10d7789bcdf26b64a13f680312bb34f6f70d31c56068f8fd56c76",
+   "pdf_sha256": "d64538d1fa3d1907c44714e6d4f27f32f24fe6a5fbea46a073366d308c47aa57",
+   "pdf_bytes": 5314
+  }
+ }
+}

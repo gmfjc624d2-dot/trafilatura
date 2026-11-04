@@ -1,0 +1,23 @@
+q 120 0 0 64 72 656 cm
+/Im1 Do
+Q
+BT
+/F1 10 Tf
+0 Tr
+1 0 0 1 78 708 Tm
+(Item) Tj
+1 0 0 1 138 708 Tm
+(Value) Tj
+1 0 0 1 78 692 Tm
+(Gap) Tj
+1 0 0 1 138 692 Tm
+(17 mm) Tj
+1 0 0 1 78 676 Tm
+(Delay) Tj
+1 0 0 1 138 676 Tm
+(7 s) Tj
+1 0 0 1 78 660 Tm
+(Load) Tj
+1 0 0 1 138 660 Tm
+(18 kg) Tj
+ET
